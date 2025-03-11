@@ -1,105 +1,152 @@
 "use client";
 import Image from "next/image";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { fsMagistral, roboto } from "@/lib/font";
+import ExperienceIcon from "@/components/icons/experience-icon";
+import Link from "next/link";
+import { MoveRight } from "lucide-react";
+import ClientsIcon from "@/components/icons/clients-icon";
+import SupportIcon from "@/components/icons/support-icon";
+import React from "react";
+import GlobeIcon from "@/components/icons/globe-icon";
 
 export default function Home() {
   const isMobile = useIsMobile();
-  
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  type ExpItem = {
+    icon: React.JSX.Element;
+    title: string;
+    desc: string;
+  };
+
+  const expItems: ExpItem[] = [
+    {
+      icon: <ExperienceIcon />,
+      title: "20 năm",
+      desc: "kinh nghiệm",
+    },
+    {
+      icon: <ClientsIcon />,
+      title: "120 triệu",
+      desc: "khách hàng",
+    },
+    {
+      icon: <SupportIcon />,
+      title: "4.000+",
+      desc: "nhân sự hỗ trợ khách hàng 24/7 trên 63 tỉnh/thành",
+    },
+    {
+      icon: <GlobeIcon />,
+      title: "10",
+      desc: "quốc gia sử dụng dịch vụ",
+    },
+  ];
+
+  return (
+    <main>
+      <section className="bg-[#e7e7e7] h-[970px]"></section>
+      <section className="relative pb-[200px]">
+        <img
+          src="/images/043.png"
+          alt="043"
+          className="absolute left-0 top-0"
+        />
+        <div className="relative left-0 right-0 translate-y-[24%]">
+          <h1
+            className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Viettel CX <br /> nâng tầm trải nghiệm khách hàng
+          </h1>
+          <p
+            className={`${roboto.className} font-light text-3xl text-center text-[#858585] mt-1`}
           >
-            Read our docs
-          </a>
+            bằng công nghệ sáng tạo và sự thấu hiểu trái tim
+          </p>
+
+          <div className="flex justify-center mt-[85px] max-w-[1122px] mx-auto">
+            <ul className="grid grid-cols-4 gap-28">
+              {expItems.map(({ icon, title, desc }, index) => (
+                <li className="flex flex-col items-center" key={index}>
+                  <div className="border-2 border-solid border-[#D8D8D8] rounded-full p-4 w-[80px] h-[80px] flex justify-center items-center">
+                    {icon}
+                  </div>
+
+                  <p
+                    className={`${roboto.className} text-[50px] text-[#EA0033]`}
+                  >
+                    {title}
+                  </p>
+                  <p
+                    className={`${roboto.className} text-[20px] text-[#595959] text-center`}
+                  >
+                    {desc}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+
+        <img
+          src="/images/044.png"
+          alt="044"
+          className="absolute right-0 top-0 translate-y-[18%]"
+        />
+      </section>
+
+      <section className="relative flex flex-col items-center justify-center py-20">
+        <div className="">
+          <h1
+            className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
+          >
+            Hệ sinh thái dịch vụ
+          </h1>
+          <p
+            className={`${roboto.className} font-light text-3xl text-center text-[#858585] max-w-[850px] mx-auto mt-4`}
+          >
+            Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến
+            trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.
+          </p>
+        </div>
+
+        <Link
+          href="/"
+          className={`${roboto.className} flex items-center gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 font-medium`}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <MoveRight color="#EA0033" />
+          Tất cả dịch vụ Viettel CX
+        </Link>
+
+        <div>
+          <ul className={`${roboto.className} text-3xl text-[#9B9B9B] space-y-3`}>
+            <li >
+              <p className="font-medium text-[#D8D8D8]">BPO</p>
+            </li>
+            <li className="!my-6">
+              <p className="text-lg font-medium text-black">Dịch vụ</p>
+              <h4 className="font-medium text-[#EA0033]">Outsourcing Contact Center</h4>
+            </li>
+            <li>
+              <p className="font-medium">Gia tăng doanh số Upsale</p>
+            </li>
+            <li>
+              <p className="font-medium">Loyalty</p>
+            </li>
+            <li>
+              <p className="font-medium">CSKH VIP / Ưu tiên</p>
+            </li>
+            <li>
+              <p className="font-medium">Customer Experience</p>
+            </li>
+            <li>
+              <p className="font-medium">Voice of Customer</p>
+            </li>
+            <li>
+              <p className="font-medium">Bảo hành</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
   );
 }
