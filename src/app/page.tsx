@@ -9,15 +9,21 @@ import ClientsIcon from "@/components/icons/clients-icon";
 import SupportIcon from "@/components/icons/support-icon";
 import React from "react";
 import GlobeIcon from "@/components/icons/globe-icon";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import "swiper/css/navigation";
 
+import { EffectCards, Navigation } from "swiper/modules";
+
+type ExpItem = {
+  icon: React.JSX.Element;
+  title: string;
+  desc: string;
+};
 export default function Home() {
   const isMobile = useIsMobile();
-
-  type ExpItem = {
-    icon: React.JSX.Element;
-    title: string;
-    desc: string;
-  };
 
   const expItems: ExpItem[] = [
     {
@@ -105,7 +111,7 @@ export default function Home() {
             className={`${roboto.className} font-light text-3xl text-center text-[#858585] max-w-[850px] mx-auto mt-4`}
           >
             Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến
-            trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.
+            trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu
           </p>
         </div>
 
@@ -117,35 +123,206 @@ export default function Home() {
           Tất cả dịch vụ Viettel CX
         </Link>
 
-        <div>
-          <ul className={`${roboto.className} text-3xl text-[#9B9B9B] space-y-3`}>
-            <li >
-              <p className="font-medium text-[#D8D8D8]">BPO</p>
-            </li>
-            <li className="!my-6">
-              <p className="text-lg font-medium text-black">Dịch vụ</p>
-              <h4 className="font-medium text-[#EA0033]">Outsourcing Contact Center</h4>
-            </li>
-            <li>
-              <p className="font-medium">Gia tăng doanh số Upsale</p>
-            </li>
-            <li>
-              <p className="font-medium">Loyalty</p>
-            </li>
-            <li>
-              <p className="font-medium">CSKH VIP / Ưu tiên</p>
-            </li>
-            <li>
-              <p className="font-medium">Customer Experience</p>
-            </li>
-            <li>
-              <p className="font-medium">Voice of Customer</p>
-            </li>
-            <li>
-              <p className="font-medium">Bảo hành</p>
-            </li>
-          </ul>
+        <Tabs
+          defaultValue="outsourcing"
+          className="flex gap-[5.5rem] min-w-[1280px] mt-12"
+        >
+          <TabsList
+            className={`inline-flex flex-col items-start ${roboto.className} h-fit`}
+          >
+            {[
+              { value: "bpo", label: "BPO" },
+              { value: "outsourcing", label: "Outsourcing Contact Center" },
+              { value: "upsale", label: "Gia tăng doanh số Upsale" },
+              { value: "loyalty", label: "Loyalty" },
+              { value: "cskh", label: "CSKH VIP / Ưu tiên" },
+              { value: "customer-experience", label: "Customer Experience" },
+              { value: "voice-of-customer", label: "Voice of Customer" },
+              { value: "bao-hanh", label: "Bảo hành" },
+            ].map(({ value, label }) => (
+              <TabsTrigger
+                key={value}
+                value={value}
+                className="text-3xl transition-colors duration-300 ease-in-out group font-medium
+                        data-[state=active]:text-[#EA0033] 
+                          data-[state=active]:shadow-none 
+                          data-[state=active]:bg-transparent
+                        data-[state=inactive]:text-[#9B9B9B]
+                          data-[state=active]:py-6 transform
+                          flex flex-col items-start"
+              >
+                <p className="opacity-0 translate-y-2 text-lg font-medium text-black transition-all duration-300 ease-in-out group-data-[state=active]:opacity-100 group-data-[state=active]:translate-y-0">
+                  Dịch vụ
+                </p>
+
+                <span className="transition-all duration-300 ease-in-out font-medium">
+                  {label}
+                </span>
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
+          <TabsContent value="outsourcing" className="flex gap-5 items-end">
+            <div className="w-[304px] h-[304px] rounded-[20px] bg-[url(/images/bg-1.png)] bg-cover bg-no-repeat flex flex-col justify-between self-end px-8 pt-7 pb-4">
+              <div className="bg-white w-fit p-3 rounded-full">
+                <SupportIcon color="#EA0033" small />
+              </div>
+              <div className={`flex flex-col gap-4 ${roboto.className}`}>
+                <p>
+                  Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền
+                  tảng giải pháp, quy trình
+                </p>
+                <Link href="/" className="text-[#EA0033]">
+                  Khám phá dịch vụ
+                </Link>
+              </div>
+            </div>
+
+            <Image
+              src="/images/img-1.png"
+              alt="outsourcing"
+              width={389}
+              height={493}
+              className="rounded-[20px]"
+            />
+          </TabsContent>
+        </Tabs>
+      </section>
+
+      <section className="relative flex flex-col items-center justify-center py-20">
+        <div className="">
+          <h1
+            className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
+          >
+            Nền tảng, giải pháp <br /> phần mềm dịch vụ Khách hàng
+          </h1>
+          <p
+            className={`${roboto.className} font-light text-3xl text-center text-[#858585] max-w-[850px] mx-auto mt-4`}
+          >
+            Công nghệ dẫn lối, mở ra mọi kết nối với khách hàng
+          </p>
         </div>
+
+        <Link
+          href="/"
+          className={`${roboto.className} flex items-center gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 font-medium`}
+        >
+          <MoveRight color="#EA0033" />
+          Tất cả giải pháp Viettel CX
+        </Link>
+
+        <Swiper
+          // effect={"coverflow"}
+          // grabCursor={true}
+          // centeredSlides={true}
+          // slidesPerView={"auto"}
+          // coverflowEffect={{
+          //   rotate: 0,
+          //   stretch: 0,
+          //   depth: 100,
+          //   modifier: 1,
+          //   slideShadows: false,
+          // }}
+          // pagination={true}
+          // modules={[EffectCoverflow, Pagination]}
+          cardsEffect={{
+            slideShadows: false,
+            perSlideRotate: 0,
+            perSlideOffset: 50
+          }}
+          effect={"cards"}
+          grabCursor={true}
+          modules={[EffectCards, Navigation]}
+          className="mySwiper w-full"
+          centeredSlides={true}
+          navigation={true}
+          initialSlide={1}
+        >
+          <SwiperSlide className="!flex items-center justify-center">
+            <div className="max-w-[1120px] rounded-[20px] flex">
+              <div
+                className={`${roboto.className} bg-[#DCDCDC] rounded-s-[20px] px-[54px] py-16 min-w-[408px] flex flex-col justify-between`}
+              >
+                <div>
+                  <Image
+                    src="/images/x-omni.png"
+                    alt="x-omni"
+                    width={182}
+                    height={59}
+                  />
+                  <p className="text-[30px] text-[#595959]">Tổng đài đa kênh</p>
+                  <p className="mt-16 text-[#595959] text-lg">
+                    Giải pháp tương tác đa kênh hợp nhất, tích hợp tương tác
+                    khách hàng qua nhiều kênh: VoIP, Livechat, email, social
+                    media message, text, video chat... trong một giao diện hợp
+                    nhất
+                  </p>
+                </div>
+
+                <Link href="/" className="text-[#EA0033] text-lg">
+                  Tìm hiểu thêm
+                </Link>
+              </div>
+              <img src="/images/swipe-1.png" alt="swipe-1" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="!flex items-center justify-center">
+            <div className="max-w-[1120px]  rounded-[20px] flex">
+              <div
+                className={`${roboto.className} bg-[#DCDCDC] rounded-s-[20px] px-[54px] py-16 min-w-[408px] flex flex-col justify-between`}
+              >
+                <div>
+                  <Image
+                    src="/images/x-omni.png"
+                    alt="x-omni"
+                    width={182}
+                    height={59}
+                  />
+                  <p className="text-[30px] text-[#595959]">Tổng đài đa kênh</p>
+                  <p className="mt-16 text-[#595959] text-lg">
+                    Giải pháp tương tác đa kênh hợp nhất, tích hợp tương tác
+                    khách hàng qua nhiều kênh: VoIP, Livechat, email, social
+                    media message, text, video chat... trong một giao diện hợp
+                    nhất
+                  </p>
+                </div>
+
+                <Link href="/" className="text-[#EA0033] text-lg">
+                  Tìm hiểu thêm
+                </Link>
+              </div>
+              <img src="/images/swipe-1.png" alt="swipe-1" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="!flex items-center justify-center">
+            <div className="max-w-[1120px]  rounded-[20px] flex">
+              <div
+                className={`${roboto.className} bg-[#DCDCDC] rounded-s-[20px] px-[54px] py-16 min-w-[408px] flex flex-col justify-between`}
+              >
+                <div>
+                  <Image
+                    src="/images/x-omni.png"
+                    alt="x-omni"
+                    width={182}
+                    height={59}
+                  />
+                  <p className="text-[30px] text-[#595959]">Tổng đài đa kênh</p>
+                  <p className="mt-16 text-[#595959] text-lg">
+                    Giải pháp tương tác đa kênh hợp nhất, tích hợp tương tác
+                    khách hàng qua nhiều kênh: VoIP, Livechat, email, social
+                    media message, text, video chat... trong một giao diện hợp
+                    nhất
+                  </p>
+                </div>
+
+                <Link href="/" className="text-[#EA0033] text-lg">
+                  Tìm hiểu thêm
+                </Link>
+              </div>
+              <img src="/images/swipe-1.png" alt="swipe-1" />
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </section>
     </main>
   );
