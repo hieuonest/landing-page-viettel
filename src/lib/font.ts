@@ -27,3 +27,10 @@ export const fsMagistral = localFont({
   weight: "600",
   variable: "--font-fs-magistral",
 })
+
+export const fsMagistralBook = localFont({
+  src: "../assets/fonts/FS_Magistral-Book.woff2",
+  display: "swap",
+  weight: "400",
+  variable: "--font-fs-magistral-book",
+})

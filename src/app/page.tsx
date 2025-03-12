@@ -15,6 +15,8 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 
+import "@/app/styles/pages/home.scss";
+
 import { EffectCards, Navigation } from "swiper/modules";
 
 type ExpItem = {
@@ -27,24 +29,24 @@ export default function Home() {
 
   const expItems: ExpItem[] = [
     {
-      icon: <ExperienceIcon />,
+      icon: <ExperienceIcon color="#858585" />,
       title: "20 năm",
       desc: "kinh nghiệm",
     },
     {
-      icon: <ClientsIcon />,
+      icon: <ClientsIcon color="#858585"/>,
       title: "120 triệu",
       desc: "khách hàng",
     },
     {
-      icon: <SupportIcon />,
+      icon: <SupportIcon color="#858585"/>,
       title: "4.000+",
       desc: "nhân sự hỗ trợ khách hàng 24/7 trên 63 tỉnh/thành",
     },
     {
-      icon: <GlobeIcon />,
+      icon: <GlobeIcon color="#858585"/>,
       title: "10",
-      desc: "quốc gia sử dụng dịch vụ",
+      desc: "quốc gia/ vùng lãnh thổ sử dụng dịch vụ",
     },
   ];
 
@@ -53,7 +55,7 @@ export default function Home() {
       <section className="bg-[#e7e7e7] h-[970px]"></section>
       <section className="relative pb-[200px]">
         <img
-          src="/images/043.png"
+          src="/images/line-1.png"
           alt="043"
           className="absolute left-0 top-0"
         />
@@ -73,7 +75,7 @@ export default function Home() {
             <ul className="grid grid-cols-4 gap-28">
               {expItems.map(({ icon, title, desc }, index) => (
                 <li className="flex flex-col items-center" key={index}>
-                  <div className="border-2 border-solid border-[#D8D8D8] rounded-full p-4 w-[80px] h-[80px] flex justify-center items-center">
+                  <div className="border-2 border-solid border-[#858585] rounded-full p-4 w-[80px] h-[80px] flex justify-center items-center">
                     {icon}
                   </div>
 
@@ -83,7 +85,7 @@ export default function Home() {
                     {title}
                   </p>
                   <p
-                    className={`${roboto.className} text-[20px] text-[#595959] text-center`}
+                    className={`${roboto.className} text-[20px] text-[#595959] text-center w-[256px]`}
                   >
                     {desc}
                   </p>
@@ -94,9 +96,9 @@ export default function Home() {
         </div>
 
         <img
-          src="/images/044.png"
+          src="/images/line-2.png"
           alt="044"
-          className="absolute right-0 top-0 translate-y-[18%]"
+          className="absolute right-0 top-0 translate-y-[45%]"
         />
       </section>
 
@@ -212,19 +214,6 @@ export default function Home() {
         </Link>
 
         <Swiper
-          // effect={"coverflow"}
-          // grabCursor={true}
-          // centeredSlides={true}
-          // slidesPerView={"auto"}
-          // coverflowEffect={{
-          //   rotate: 0,
-          //   stretch: 0,
-          //   depth: 100,
-          //   modifier: 1,
-          //   slideShadows: false,
-          // }}
-          // pagination={true}
-          // modules={[EffectCoverflow, Pagination]}
           cardsEffect={{
             slideShadows: false,
             perSlideRotate: 0,
@@ -233,7 +222,7 @@ export default function Home() {
           effect={"cards"}
           grabCursor={true}
           modules={[EffectCards, Navigation]}
-          className="mySwiper w-full"
+          className="solution-swiper w-full mt-14"
           centeredSlides={true}
           navigation={true}
           initialSlide={1}
