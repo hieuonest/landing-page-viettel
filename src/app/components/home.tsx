@@ -126,10 +126,14 @@ export default function Home() {
 
           <Link
             href="/"
-            className={`${roboto.className} flex items-center gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 font-medium`}
+            className={`${roboto.className} flex items-center gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 font-medium
+            relative overflow-hidden group hover:border-white`}
           >
-            <MoveRight color="#EA0033" />
-            Tất cả dịch vụ Viettel CX
+            <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
+            <MoveRight className="relative z-10 transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
+            <span className="relative z-10 transition-all duration-300 group-hover:text-white">
+              Tất cả dịch vụ Viettel CX
+            </span>
           </Link>
 
           <Tabs
