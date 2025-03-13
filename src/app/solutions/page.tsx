@@ -6,7 +6,7 @@ import SolutionsSection from "../components/solutions-section";
 function Solutions() {
   return (
     <div>
-      <main className="bg-white">
+      <main className="bg-white pb-36">
         <CommonHeading
           title={
             <span>
