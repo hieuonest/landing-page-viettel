@@ -9,6 +9,7 @@ import checkIcon from "../../../public/svg/check.svg";
 import logicIcon from "../../../public/svg/logic.svg";
 import shieldIcon from "../../../public/svg/shield.svg";
 import { title } from "process";
+import CommonHeading from "../components/common-heading";
 
 export const metadata: Metadata = {
   title: "Về chúng tôi",
@@ -19,28 +20,22 @@ function About() {
   return (
     <div>
       <main className="bg-white">
-        <section className="max-w-[1120px] mx-auto pt-36 pb-[84px]">
-          <h1 className={`${fsMagistralBook.className} text-3xl`}>
-            Về Viettel CX
-          </h1>
-        </section>
-
-        <section className="max-h-[527px] bg-[#E7E7E7] flex pt-[77px] justify-center relative">
-          <h2
-            className={`${roboto.className} text-3xl font-light max-w-[365px]`}
-          >
-            <span className="text-[#EA0033]">Tiên phong</span> nâng tầm trải
-            nghiệm khách hàng bằng công nghệ sáng tạo
-          </h2>
-          <Image
-            src={aboutHero}
-            alt="About Hero"
-            className="relative -translate-y-[43.5%]"
-            quality={100}
-          />
-        </section>
+        <CommonHeading
+          title="Về Viettel CX"
+          image={aboutHero}
+          imageAlt="About Hero"
+          heroContent={
+            <h2
+              className={`${roboto.className} text-3xl font-light max-w-[365px]`}
+            >
+              <span className="text-[#EA0033]">Tiên phong</span> nâng tầm trải
+              nghiệm khách hàng bằng công nghệ sáng tạo
+            </h2>
+          }
+          background="#E7E7E7"
+        />
         <section
-          className={`${roboto.className} grid grid-cols-6 bg-[#E7E7E7]`}
+          className={`${roboto.className} grid grid-cols-6 bg-[#E7E7E7] pt-[80px]`}
         >
           <div className="h-[100px] relative top-16">
             <p className="font-semibold text-3xl text-center">21/3/2004</p>
@@ -179,13 +174,19 @@ function About() {
         <section className="min-h-[650px] bg-gradient-to-b from-[#585858] to-[#252525] flex items-center justify-center p-8 gap-20">
           <div className="relative">
             <Image src={radialGraph} alt="Radial Graph" />
-            <div className={`${roboto.className} text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center max-w-[298px]`}>
+            <div
+              className={`${roboto.className} text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center max-w-[298px]`}
+            >
               <h4 className="text-[60px] font-semibold">4.000+</h4>
-              <p className="font-light text-2xl">nhân sự hỗ trợ khách hàng 24/7 trên 63 tỉnh/ thành</p>
+              <p className="font-light text-2xl">
+                nhân sự hỗ trợ khách hàng 24/7 trên 63 tỉnh/ thành
+              </p>
             </div>
           </div>
 
-          <div className={`${roboto.className} text-white max-w-[465px] flex flex-col gap-10 text-lg`}>
+          <div
+            className={`${roboto.className} text-white max-w-[465px] flex flex-col gap-10 text-lg`}
+          >
             <p>
               Với triết lý phụng sự, trong hơn 20 năm thành lập và phát triển,
               hành trình của chúng tôi không chỉ là hỗ trợ, giải đáp, mà là hành
