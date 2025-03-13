@@ -134,13 +134,13 @@ function Footer() {
                   <Image src="/images/tiktok.svg" alt="Tiktok" width={28} height={28} />
                 </Link>
               </div>
-              <Image src={viettelCert} alt="Viettel Certificate" width={140} className="flex self-end"/>
+              <Image src={viettelCert} alt="Viettel Certificate" width={140} className="flex self-end" quality={100}/>
             </div>
 
             <div className="flex items-center gap-3">
-              <Image src={thongTinDienTu} alt="Cổng thông tin điện tử - Bộ Quốc Phòng" width={142} />
-              <Image src={dichVuCong} alt="Cổng dịch vụ công - Bộ Quốc Phòng" width={143}/>
-              <Image src={boCongThuong} alt="Đã thông báo Bộ Công Thương" width={132}/>
+              <Image src={thongTinDienTu} alt="Cổng thông tin điện tử - Bộ Quốc Phòng" width={142} quality={100} />
+              <Image src={dichVuCong} alt="Cổng dịch vụ công - Bộ Quốc Phòng" width={143} quality={100}/>
+              <Image src={boCongThuong} alt="Đã thông báo Bộ Công Thương" width={132} quality={100}/>
             </div>
           </div>
         </div>

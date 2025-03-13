@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { roboto } from "@/lib/font";
+import ButtonToTop from "@/components/ui/button-to-top";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +32,17 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
+        <aside
+          className={`bg-[#EA0033] w-fit px-4 py-3 fixed right-[0%] translate-x-12 top-[50%] z-[11]  rotate-90 rounded-b-xl`}
+        >
+          <p
+            className={` uppercase ${roboto.className} font-semibold text-white text-center antialiased`}
+          >
+            Yêu cầu ngay
+          </p>
+        </aside>
         {children}
+        <ButtonToTop />
         <Footer />
       </body>
     </html>
