@@ -1,6 +1,7 @@
 import { roboto } from "@/lib/font";
 import React from "react";
 import CommonHeading from "../components/common-heading";
+import SolutionsSection from "../components/solutions-section";
 
 function Solutions() {
   return (
@@ -22,9 +23,11 @@ function Solutions() {
               và kinh nghiệm phục vụ hàng triệu khách hàng trên toàn quốc.
             </h2>
           }
-          paddingBottomTitle="50px"
-          background="url(/images/solution-page-hero.png)"
+          paddingBottomTitle="pb-[50px]"
+          background="bg-[url(/images/solution-page-hero.png)]"
         />
+
+        <SolutionsSection />
       </main>
     </div>
   );

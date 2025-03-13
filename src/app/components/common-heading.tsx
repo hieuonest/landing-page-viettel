@@ -7,8 +7,8 @@ function CommonHeading({
   image,
   imageAlt,
   heroContent,
-  background,
-  paddingBottomTitle = "84px",
+  background = "bg-black",
+  paddingBottomTitle = "pb-[84px]",
 }: {
   title: string | ReactNode;
   image?: StaticImageData;
@@ -20,7 +20,7 @@ function CommonHeading({
   return (
     <div>
       <section
-        className={`max-w-[1120px] mx-auto pt-36 pb-[${paddingBottomTitle}]`}
+        className={`max-w-[1120px] mx-auto pt-36 ${paddingBottomTitle}`}
       >
         <h1 className={`${fsMagistralBook.className} text-3xl max-w-[400px]`}>
           {title}
@@ -28,8 +28,7 @@ function CommonHeading({
       </section>
 
       <section
-        className={`h-[401px] ${
-          background ? `bg-[${background}]` : "bg-black"
+        className={`h-[401px] ${background}
         } bg-no-repeat bg-cover bg-center pt-[77px] z-[1] relative`}
       >
         <div className="max-w-[1120px] mx-auto flex justify-center gap-11">

@@ -32,7 +32,7 @@ function About() {
               nghiệm khách hàng bằng công nghệ sáng tạo
             </h2>
           }
-          background="#E7E7E7"
+          background="bg-[#E7E7E7]"
         />
         <section
           className={`${roboto.className} grid grid-cols-6 bg-[#E7E7E7] pt-[80px]`}
