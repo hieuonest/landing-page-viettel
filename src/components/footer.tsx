@@ -13,13 +13,13 @@ import boCongThuong from "../../public/images/bo-cong-thuong.png";
 function Footer() {
   return (
     <div>
-      <div className="bg-[#595959] p-4 min-h-[141px] flex items-center justify-center gap-11">
-        <div className="flex items-start max-w-[522px]">
+      <div className="bg-[#595959] p-4 min-h-[141px] flex items-center justify-center gap-11 max-3xl:gap-8 ">
+        <div className="flex items-start w-[522px]" id="contact">
           <span className="relative top-2">
             <FooterArrow />
           </span>
           <p
-            className={`${fsMagistralBook.className} text-white text-[28px] text-right`}
+            className={`${fsMagistralBook.className} text-white text-[26px] text-right max-[1560px]:text-[24px] `}
           >
             Hãy để Viettel CX đồng hành cùng bạn nâng tầm trải nghiệm khách
             hàng!
@@ -34,7 +34,7 @@ function Footer() {
               id="name"
               name="name"
               placeholder="Họ và tên"
-              className="h-10 px-4 min-w-[267px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] active:outline-none focus:outline-none"
+              className="h-10 px-4 min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] active:outline-none focus:outline-none"
             />
           </div>
           <div>
@@ -43,7 +43,7 @@ function Footer() {
               id="email"
               name="email"
               placeholder="Email"
-              className="h-10 px-4 min-w-[267px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] active:outline-none focus:outline-none"
+              className="h-10 px-4 min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] active:outline-none focus:outline-none"
             />
           </div>
           <div>
@@ -52,7 +52,7 @@ function Footer() {
               id="phone"
               name="phone"
               placeholder="Số điện thoại"
-              className="h-10 px-4 min-w-[267px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] active:outline-none focus:outline-none cursor-[#858585]"
+              className="h-10 px-4 min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] active:outline-none focus:outline-none cursor-[#858585]"
             />
           </div>
 
@@ -65,7 +65,7 @@ function Footer() {
         </form>
       </div>
 
-      <footer className="border-t-[3px] border-[#EA0033] border-solid pt-8 pb-16 bg-white">
+      <footer className="border-t-[3px] border-[#EA0033] border-solid pt-8 pb-16 px-6 bg-white">
         <div className="max-w-[1572px] mx-auto flex justify-between">
           <div className="flex flex-col gap-4 ">
             <Image src={logo} alt="Viettel CX" priority width={155} />
@@ -125,13 +125,13 @@ function Footer() {
             <div className="flex flex-col gap-[10px]">
               <div className="flex items-center gap-1 justify-end">
                 <Link href="/" className="w-fit">
-                  <Image src="/images/facebook.svg" alt="Facebook" width={28} height={28} />
+                  <Image src="/svg/facebook.svg" alt="Facebook" width={28} height={28} />
                 </Link>
                 <Link href="/">
-                  <Image src="/images/zalo.svg" alt="Zalo" width={28} height={28} />
+                  <Image src="/svg/zalo.svg" alt="Zalo" width={28} height={28} />
                 </Link>
                 <Link href="/">
-                  <Image src="/images/tiktok.svg" alt="Tiktok" width={28} height={28} />
+                  <Image src="/svg/tiktok.svg" alt="Tiktok" width={28} height={28} />
                 </Link>
               </div>
               <Image src={viettelCert} alt="Viettel Certificate" width={140} className="flex self-end" quality={100}/>

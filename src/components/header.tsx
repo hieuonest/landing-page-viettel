@@ -12,7 +12,7 @@ function Header() {
     { href: '/about', label: 'Về chúng tôi' },
     { href: '/services', label: 'Dịch vụ' },
     { href: '/solutions', label: 'Giải pháp' },
-    { href: '/contact', label : 'Liên hệ'}
+    { href: '#contact', label : 'Liên hệ'}
   ]
 
   const [isScrolled, setIsScrolled] = useState(false)
@@ -29,7 +29,7 @@ function Header() {
   return (
     <header className={`
     flex items-center justify-between max-w-[1120px] min-h-[60px] mx-auto fixed top-0 left-0 right-0 z-10 bg-white px-4 transition-all duration-300
-    ${isScrolled ? 'mt-3 rounded-b-sm shadow-md ' : 'mt-7'}
+    ${isScrolled ? 'mt-2 rounded-sm shadow-md ' : 'mt-7'}
     `}>
       <Link href='/'>
       <Image src={logo} alt='Viettel CX' priority width={109} />

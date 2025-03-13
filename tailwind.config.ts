@@ -61,6 +61,9 @@ export default {
   		},
 			fontFamily: {
 				fsMagistral: ["var(--font-fs-magistral)", "sans-serif"],
+			},
+			screens: {
+				'3xl': '1572px'
 			}
   	}
   },
