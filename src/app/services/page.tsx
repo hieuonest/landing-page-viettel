@@ -29,8 +29,8 @@ function Services() {
         />
 
         <ServicesSection>
-          <section className="max-w-[1120px] mx-auto flex gap-20 mt-36">
-            <div className={`${roboto.className} space-y-6`}>
+          <section className="max-w-[1120px] mx-auto flex gap-20 mt-36" >
+            <article className={`${roboto.className} space-y-6`} id="outsourcing-contact-center">
               <h1 className="text-[50px] font-light">
                 Dịch vụ Outsourcing Contact Center
               </h1>
@@ -48,8 +48,8 @@ function Services() {
                 <li>Khảo sát khách hàng</li>
                 <li>Kiểm duyệt nội dung, nhập liệu, xác minh thông tin KH</li>
               </ul>
-            </div>
-            <Image src={outsourcing} alt="Outsourcing" quality={100}/>
+            </article>
+            <Image src={outsourcing} alt="Outsourcing" quality={100} className="pt-6"/>
           </section>
         </ServicesSection>
       </main>

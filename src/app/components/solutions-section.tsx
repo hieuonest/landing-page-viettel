@@ -36,7 +36,7 @@ function SolutionsSection() {
 }
 
 const NextComponent = () => (
-  <div className="flex items-center gap-2">
+  <div className="flex items-center self-end gap-2">
     <MoveRight className="text-[#EA0033]" />
     <span className="">Tìm hiểu thêm</span>
   </div>

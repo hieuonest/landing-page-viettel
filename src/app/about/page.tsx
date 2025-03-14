@@ -4,12 +4,10 @@ import aboutHero from "../../../public/images/about-page-hero.png";
 import radialGraph from "../../../public/images/radial.png";
 import Image from "next/image";
 import { Metadata } from "next";
-import settingIcon from "../../../public/svg/setting.svg";
-import checkIcon from "../../../public/svg/check.svg";
-import logicIcon from "../../../public/svg/logic.svg";
-import shieldIcon from "../../../public/svg/shield.svg";
+
 import { title } from "process";
 import CommonHeading from "../components/common-heading";
+import { dataWhyUs } from "@/lib/define-data";
 
 export const metadata: Metadata = {
   title: "Về chúng tôi",
@@ -109,46 +107,7 @@ function About() {
           </h1>
 
           <div className="grid grid-cols-4 w-full mt-10">
-            {[
-              {
-                title: "Chuyên nghiệp",
-                icon: settingIcon,
-                desc: [
-                  "Hơn 20 năm kinh nghiệm",
-                  "Đội ngũ quản lý chuyên nghiệp",
-                  "Nhân sự chất lượng cao",
-                  "Kho tri thức phong phú và đa dạng",
-                ],
-              },
-              {
-                title: "Hiệu quả",
-                icon: checkIcon,
-                desc: [
-                  "Giám sát và quản lý chủ động, toàn diện mọi hoạt động",
-                  "Quy trình chuyên nghiệp, nhanh chóng",
-                  "Tối ưu quy trình và chi phí vận hành",
-                ],
-              },
-              {
-                title: "Công nghệ tiên phong",
-                icon: logicIcon,
-                desc: [
-                  "Tích hợp công nghệ AI, Big Data, Robotics, Cloud computing",
-                  "Phát triển hệ thống linh hoạt, bắt kịp xu hướng thế giới",
-                  "Hệ thống tiêu biểu: Trung tâm điều hành thông minh vCOC",
-                ],
-              },
-              {
-                title: "Bảo mật",
-                icon: shieldIcon,
-                desc: [
-                  "Bảo vệ dữ liệu và hệ thống bằng các biện pháp an ninh mạng tiên tiến",
-                  "Tuân thủ các tiêu chuẩn bảo mật quốc tế: GDPR, ISO 27001",
-                  "Kiểm toán và đánh giá định kỳ",
-                  "Giám sát chủ động 24/7, phát hiện và xử lý mọi rủi ro tiềm ẩn",
-                ],
-              },
-            ].map((item, index) => (
+            {dataWhyUs.map((item, index) => (
               <div
                 key={index}
                 className={`${roboto.className} flex flex-col items-center gap-4 p-4`}
@@ -156,10 +115,10 @@ function About() {
                 <div className="min-h-[100px]">
                   <Image src={item.icon} alt="Setting Icon" />
                 </div>
-                <h6 className={`text-center text-3xl font-semibold`}>
+                <h6 className={`text-center text-3xl max-[1478px]:text-[26px] font-semibold`}>
                   {item.title}
                 </h6>
-                <ul className="text-lg text-[#595959] leading-[23px] flex flex-col p-10 gap-4">
+                <ul className="text-lg text-[#595959] leading-[23px] flex flex-col p-10 max-[1478px]:px-5 gap-4">
                   {item.desc.map((desc, index) => (
                     <li key={index}>
                       <p className="text-center text-lg">{desc}</p>

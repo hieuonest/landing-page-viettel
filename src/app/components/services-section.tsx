@@ -10,36 +10,7 @@ import voice from "../../../public/images/sevice-voice.png";
 import cx from "../../../public/images/service-cx.png";
 import baoHanh from "../../../public/images/service-bao-hanh.png";
 import { Separator } from "@/components/ui/separator";
-const items = [
-  {
-    href: "Outsourcing Contact center",
-    label: "Outsourcing Contact center",
-  },
-  {
-    href: "BPO",
-    label: "BPO",
-  },
-  {
-    href: "UPSALE",
-    label: "UPSALE",
-  },
-  {
-    href: "LOYATY",
-    label: "LOYATY",
-  },
-  {
-    href: "VOICE OF CUSTOMER",
-    label: "VOICE OF CUSTOMER",
-  },
-  {
-    href: "CUSTOMER EXPRIENCE",
-    label: "CUSTOMER EXPRIENCE",
-  },
-  {
-    href: "BẢO HÀNH",
-    label: "BẢO HÀNH",
-  },
-];
+import { dataServicesLinks } from "@/lib/define-data";
 
 const services = [
   {
@@ -60,6 +31,7 @@ const services = [
         </ul>
       </>
     ),
+    href: "bpo",
   },
   {
     title: "Dịch vụ Gia tăng doanh số Upsell",
@@ -85,6 +57,7 @@ const services = [
         </ul>
       </>
     ),
+    href: "upsale",
   },
   {
     title: "Dịch vụ CSKH VIP/ Ưu tiên",
@@ -109,6 +82,7 @@ const services = [
         </ul>
       </>
     ),
+    href: "loyalty",
   },
   {
     title: "Dịch vụ Voice of Customer",
@@ -145,6 +119,7 @@ const services = [
         </p>
       </>
     ),
+    href: "voice-of-customer",
   },
   {
     title: "Dịch vụ Customer Experience",
@@ -175,6 +150,7 @@ const services = [
         </ul>
       </>
     ),
+    href: "customer-experience",
   },
   {
     title: "Dịch vụ Bảo hành",
@@ -196,6 +172,7 @@ const services = [
         </ul>
       </>
     ),
+    href: "bao-hanh",
   },
 ];
 
@@ -204,7 +181,7 @@ function ServicesSection({ children }: { children?: React.ReactNode }) {
   return (
     <section>
       <div className="flex items-center justify-between max-w-[1120px] mx-auto py-8">
-        <CommonButtonList items={items} />
+        <CommonButtonList items={dataServicesLinks} />
         <CommonLayoutSwitch layout={layout} setLayout={setLayout} />
       </div>
 

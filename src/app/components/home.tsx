@@ -4,7 +4,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { fsMagistral, roboto } from "@/lib/font";
 import ExperienceIcon from "@/components/icons/experience-icon";
 import Link from "next/link";
-import { MoveRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, MoveRight } from "lucide-react";
 import ClientsIcon from "@/components/icons/clients-icon";
 import SupportIcon from "@/components/icons/support-icon";
 import React from "react";
@@ -21,7 +21,13 @@ import "@/app/styles/pages/home.scss";
 
 import { EffectCards, Navigation } from "swiper/modules";
 import { useCountUp } from "./use-count-up";
-import { dataServicesHome } from "@/lib/define-data";
+import { dataPartners, dataServicesHome } from "@/lib/define-data";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import client1 from "../../../public/images/image 2.png";
 
 type ExpItem = {
   icon: React.JSX.Element;
@@ -59,19 +65,24 @@ export default function Home() {
     },
   ];
 
+  const partners = [];
+  for (let i = 0; i < dataPartners.length; i += 5) {
+    partners.push(dataPartners.slice(i, i + 5));
+  }
+
   return (
     <div>
       <NextSeo
         title="Simple Usage Example"
         description="A short description goes here."
       />
-      <main>
+      <main className="bg-white">
         <section className="bg-[#e7e7e7] h-[970px]"></section>
         <section className="relative pb-[200px]">
           <img
             src="/images/line-1.png"
             alt="043"
-            className="absolute left-0 top-0"
+            className="absolute left-0 top-0 max-[1472px]:w-[40%] max-[1472px]:max-w-[500px] h-auto"
           />
           <div className="relative left-0 right-0 translate-y-[24%]">
             <h1
@@ -93,18 +104,22 @@ export default function Home() {
                       {icon}
                     </div>
 
-                    <p className={`${roboto.className} text-[50px] text-[#EA0033]`}>
+                    <p
+                      className={`${roboto.className} text-[50px] text-[#EA0033]`}
+                    >
                       {numberValue ? (
                         <>
                           {useCountUp(numberValue)}
-                          {numberValue === 120 && ' triệu'}
-                          {numberValue === 4000 && '+'}
+                          {numberValue === 120 && " triệu"}
+                          {numberValue === 4000 && "+"}
                         </>
                       ) : (
                         title
                       )}
                     </p>
-                    <p className={`${roboto.className} text-[20px] text-[#595959] text-center w-[256px]`}>
+                    <p
+                      className={`${roboto.className} text-[20px] text-[#595959] text-center w-[256px]`}
+                    >
                       {desc}
                     </p>
                   </li>
@@ -116,7 +131,7 @@ export default function Home() {
           <img
             src="/images/line-2.png"
             alt="044"
-            className="absolute right-0 top-0 translate-y-[45%]"
+            className="absolute right-0 top-0 translate-y-[45%] max-[1472px]:translate-y-[75%] max-[1472px]:w-[40%] max-[1472px]:max-w-[500px] h-auto"
           />
         </section>
 
@@ -241,11 +256,14 @@ export default function Home() {
             modules={[EffectCards, Navigation]}
             className="solution-swiper w-full mt-14"
             centeredSlides={true}
-            navigation={true}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
             initialSlide={1}
           >
             <SwiperSlide className="!flex items-center justify-center">
-              <div className="max-w-[1120px] rounded-[20px] flex">
+              <div className="max-w-[1120px] rounded-[20px] flex relative">
                 <div
                   className={`${roboto.className} bg-[#DCDCDC] rounded-s-[20px] px-[54px] py-16 max-w-[408px] flex flex-col justify-between`}
                 >
@@ -272,10 +290,12 @@ export default function Home() {
                   </Link>
                 </div>
                 <img src="/images/swipe-1.png" alt="swipe-1" />
+                <button className="swiper-button-prev absolute"></button>
+                <button className="swiper-button-next absolute"></button>
               </div>
             </SwiperSlide>
             <SwiperSlide className="!flex items-center justify-center">
-              <div className="max-w-[1120px]  rounded-[20px] flex">
+              <div className="max-w-[1120px] rounded-[20px] flex relative">
                 <div
                   className={`${roboto.className} bg-[#DCDCDC] rounded-s-[20px] px-[54px] py-16 max-w-[408px] flex flex-col justify-between`}
                 >
@@ -300,12 +320,14 @@ export default function Home() {
                   <Link href="/" className="text-[#EA0033] text-lg">
                     Tìm hiểu thêm
                   </Link>
+                  <button className="swiper-button-prev absolute"></button>
+                  <button className="swiper-button-next absolute"></button>
                 </div>
                 <img src="/images/swipe-1.png" alt="swipe-1" />
               </div>
             </SwiperSlide>
             <SwiperSlide className="!flex items-center justify-center">
-              <div className="max-w-[1120px]  rounded-[20px] flex">
+              <div className="max-w-[1120px]  rounded-[20px] flex relative">
                 <div
                   className={`${roboto.className} bg-[#DCDCDC] rounded-s-[20px] px-[54px] py-16 max-w-[408px] flex flex-col justify-between`}
                 >
@@ -330,6 +352,10 @@ export default function Home() {
                   <Link href="/" className="text-[#EA0033] text-lg">
                     Tìm hiểu thêm
                   </Link>
+                  <button className="swiper-button-prev">
+                </button>
+                <button className="swiper-button-next">
+                </button>
                 </div>
                 <img src="/images/swipe-1.png" alt="swipe-1" />
               </div>
@@ -337,7 +363,49 @@ export default function Home() {
           </Swiper>
         </section>
 
-        <section></section>
+        <section className="relative flex flex-col items-center justify-center py-20">
+          <div className="">
+            <h1
+              className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
+            >
+              Khách hàng của chúng tôi
+            </h1>
+            <div className="max-w-[1405px] mx-auto">
+              <Carousel className="mt-12">
+                <CarouselContent>
+                  <CarouselItem className="">
+                    {partners.map((group, slideIndex) => (
+                      <div className="grid grid-cols-5" key={slideIndex}>
+                        {group.map((item, index) => (
+                          <div
+                            key={index}
+                            className={`first:border-s-0 border border-t-0 border-solid border-e-0 border-[#DCDCDC] relative ${
+                              slideIndex === partners.length - 1
+                                ? "border-b-0"
+                                : ""
+                            }`}
+                          >
+                            <div
+                              key={index}
+                              className=" relative flex items-center justify-center h-[163px] w-[270px] bg-white"
+                            >
+                              <Image
+                                src={item.image}
+                                alt={item.name}
+                                quality={100}
+                              />
+                              <div className="w-[45px] h-[45px] rounded-full bg-white absolute right-0 bottom-0 translate-x-[50%] translate-y-[50%] z-10"></div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </CarouselItem>
+                </CarouselContent>
+              </Carousel>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Image
