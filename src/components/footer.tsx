@@ -89,10 +89,10 @@ function Footer() {
                 <Link href="/" className="w-fit">
                   <Image src="/svg/facebook.svg" alt="Facebook" width={28} height={28} />
                 </Link>
-                <Link href="/">
+                <Link href="https://zalo.me/1570758701534064697" target="_blank" rel="noopener noreferrer">
                   <Image src="/svg/zalo.svg" alt="Zalo" width={28} height={28} />
                 </Link>
-                <Link href="/">
+                <Link href="https://www.tiktok.com/@viettelcskh?_t=ZS-8ufLkoN6e1q&_r=1" target="_blank" rel="noopener noreferrer">
                   <Image src="/svg/tiktok.svg" alt="Tiktok" width={28} height={28} />
                 </Link>
               </div>
