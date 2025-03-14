@@ -40,7 +40,7 @@ function About() {
           <div className="h-[100px] relative top-16">
             <p className="font-semibold text-3xl text-center">21/3/2004</p>
             <div className="border-t-[20px] border-[#D9D9D9] border-solid bg-white flex flex-col items-center p-4 pt-6 ps-8 h-[200px] gap-2">
-              <h6 className="font-bold text-lg max-w-[160px]">
+              <h6 className="font-medium text-lg leading-[23px] max-w-[160px]">
                 Trung tâm Giải đáp Khách hàng ra đời
               </h6>
             </div>
@@ -48,8 +48,8 @@ function About() {
           <div className="h-[100px] relative top-11">
             <p className="font-semibold text-3xl ">03/2009</p>
             <div className="border-t-[20px] border-[#CCCCCC] border-solid bg-white flex flex-col items-start p-4 pt-8 ps-0 pe-10 h-[200px] gap-2">
-              <h6 className="font-bold text-lg">Thành lập Trung tâm CSKH</h6>
-              <p className="text-lg text-[#595959]">
+              <h6 className="font-medium text-lg leading-[23px]">Thành lập Trung tâm CSKH</h6>
+              <p className="text-lg text-[#595959] leading-[23px]">
                 Tiếp nhận giải đáp, hỗ trợ xử lý lỗi, giải quyết khiếu nại,
                 Triển khai các hoạt động CSKH
               </p>
@@ -58,10 +58,10 @@ function About() {
           <div className="h-[100px] relative top-6">
             <p className="font-semibold text-3xl">2010 - 2014</p>
             <div className="border-t-[20px] border-[#9B9B9B] border-solid bg-white flex flex-col items-start p-4 pt-8 ps-0 pe-10 h-[200px] gap-2">
-              <h6 className="font-bold text-lg">
+              <h6 className="font-medium text-lg leading-[23px]">
                 Triển khai mở rộng kinh doanh các dịch vụ tổng đài
               </h6>
-              <p className="text-lg text-[#595959]">
+              <p className="text-lg text-[#595959] leading-[23px]">
                 106x tư vấn thông tin kinh tế, văn hóa thể thao. Triển khai hoạt
                 động telesales, marketing
               </p>
@@ -70,10 +70,10 @@ function About() {
           <div className="h-[100px] relative top-[0.25rem]">
             <p className="font-semibold text-3xl ">2015 - 2017</p>
             <div className="border-t-[20px] border-[#858585] border-solid bg-white flex flex-col items-start p-4 pt-8 ps-0 pe-10 h-[200px] gap-2">
-              <h6 className="font-bold text-lg">
+              <h6 className="font-medium text-lg leading-[23px]">
                 Hiện diện tại 10 thị trường Viettel đầu tư
               </h6>
-              <p className="text-lg text-[#595959]">
+              <p className="text-lg text-[#595959] leading-[23px]">
                 Triển khai, tư vấn, xây dựng các dịch vụ tổng đài và chăm sóc
                 khách hàng
               </p>
@@ -82,10 +82,10 @@ function About() {
           <div className="h-[100px] relative -top-4">
             <p className="font-semibold text-3xl ">2017 - 2022</p>
             <div className="border-t-[20px] border-[#595959] border-solid bg-white flex flex-col items-start p-4 pt-8 ps-0 pe-10 h-[200px] gap-2">
-              <h6 className="font-bold text-lg">
+              <h6 className="font-medium text-lg leading-[23px]">
                 Thành lập Trung tâm Dịch vụ Khách hàng
               </h6>
-              <p className="text-lg text-[#595959]">
+              <p className="text-lg text-[#595959] leading-[23px]">
                 Mở rộng chăm sóc khách hàng cho cá Tổng công ty/ Công ty trong
                 và ngoài Tập đoàn
               </p>
@@ -94,7 +94,7 @@ function About() {
           <div className="h-[100px] relative -top-9">
             <p className="font-semibold text-3xl">2023 - 2025</p>
             <div className="border-t-[20px] border-black border-solid bg-white flex flex-col items-start p-4 pt-8 ps-0 pe-10 h-[200px] gap-2">
-              <h6 className="font-bold text-lg">
+              <h6 className="font-medium text-lg leading-[23px]">
                 Thành lập Công ty TNHH MTV Dịch vụ Khách hàng Viettel
               </h6>
             </div>
@@ -159,7 +159,7 @@ function About() {
                 <h6 className={`text-center text-3xl font-semibold`}>
                   {item.title}
                 </h6>
-                <ul className="text-lg text-[#595959] flex flex-col p-10 gap-4">
+                <ul className="text-lg text-[#595959] leading-[23px] flex flex-col p-10 gap-4">
                   {item.desc.map((desc, index) => (
                     <li key={index}>
                       <p className="text-center text-lg">{desc}</p>

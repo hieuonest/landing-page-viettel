@@ -48,7 +48,7 @@ const services = [
     alt: "BPO",
     desc: (
       <>
-        <p className="mt-9">
+        <p className="mt-[5px]">
           Tối ưu vận hành, tiết kiệm chi phí và nâng cao hiệu suất bằng dịch vụ
           BPO - thuê ngoài các quy trình, nhân sự nghiệp vụ.
         </p>
@@ -67,7 +67,7 @@ const services = [
     alt: "Upsell",
     desc: (
       <>
-        <p className="mt-9">
+        <p className="mt-[5px]">
           Tiếp cận khách hàng đa kênh, gia tăng độ phủ về kênh bán, thúc đẩy gia
           tăng doanh số cùng giải pháp từ Viettel CX:
         </p>
@@ -92,7 +92,7 @@ const services = [
     alt: "Chăm sóc khách hàng",
     desc: (
       <>
-        <p className="mt-9">
+        <p className="mt-[5px]">
           Tiếp cận khách hàng đa kênh, gia tăng độ phủ về kênh bán, thúc đẩy gia
           tăng doanh số cùng giải pháp từ Viettel CX:
         </p>
@@ -116,7 +116,7 @@ const services = [
     alt: "Voice of Customer",
     desc: (
       <>
-        <p className="mt-9">
+        <p className="mt-[5px]">
           Bảo vệ và phát triển thương hiệu của doanh nghiệp trên môi trường số.
           Viettel CX giúp doanh nghiệp thu thập, phân tích và khai thác ý kiến
           khách hàng từ nhiều kênh khác nhau, từ đó phát hiện và cảnh báo khủng
@@ -152,7 +152,7 @@ const services = [
     alt: "Customer Experience",
     desc: (
       <>
-        <p className="mt-9">
+        <p className="mt-[5px]">
           Dịch vụ Đánh giá & Nâng cao Trải nghiệm Khách hàng (CX) của Viettel CX
           giúp doanh nghiệp đo lường, phân tích và tối ưu hóa hành trình khách
           hàng, từ đó cải thiện sự hài lòng và tăng tỷ lệ trung thành.
@@ -182,7 +182,7 @@ const services = [
     alt: "Bảo hành",
     desc: (
       <>
-        <p className="mt-9">
+        <p className="mt-[5px]">
           Viettel CX cung cấp cho doanh nghiệp giải pháp bảo hành toàn diện, với
           đội ngũ nhân sự trên 10 năm kinh nghiệm và trạm sửa chữa trên 63 tỉnh
           thành, bao gồm

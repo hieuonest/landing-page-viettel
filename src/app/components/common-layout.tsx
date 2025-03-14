@@ -38,8 +38,8 @@ function CommonLayout({
                     className="w-full transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer"
                   />
                   </div>
-                  <h3 className="text-[26px] mt-3 cursor-pointer transition-colors duration-300 ease-in-out hover:text-[#e45d6f]">{title}</h3>
-                  <div className={` p-4 ps-0`}>{desc}</div>
+                  <h3 className="h-[70px] leading-[1.1] text-[26px] mt-3 cursor-pointer transition-colors duration-300 ease-in-out hover:text-[#e45d6f]">{title}</h3>
+                  <div className={` p-4 pt-0 ps-0`}>{desc}</div>
                   {href && <Link href={href}>{hrefText}</Link>}
                 </div>
               </li>
