@@ -30,8 +30,15 @@ function CommonLayout({
           ? items.map(({ title, image, desc, href, hrefText, alt }) => (
               <li key={`${title}${image}${desc}`}>
                 <div className={`${roboto.className} flex flex-col`}>
-                  <Image src={image} alt={alt} quality={100} className="w-full"/>
-                  <h3 className={`text-[26px] mt-3`}>{title}</h3>
+                <div className="overflow-hidden">
+                <Image 
+                    src={image} 
+                    alt={alt} 
+                    quality={100} 
+                    className="w-full transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer"
+                  />
+                  </div>
+                  <h3 className="text-[26px] mt-3 cursor-pointer transition-colors duration-300 ease-in-out hover:text-[#e45d6f]">{title}</h3>
                   <div className={` p-4 ps-0`}>{desc}</div>
                   {href && <Link href={href}>{hrefText}</Link>}
                 </div>

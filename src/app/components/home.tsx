@@ -20,11 +20,14 @@ import "swiper/css/navigation";
 import "@/app/styles/pages/home.scss";
 
 import { EffectCards, Navigation } from "swiper/modules";
+import { useCountUp } from "./use-count-up";
+import { dataServicesHome } from "@/lib/define-data";
 
 type ExpItem = {
   icon: React.JSX.Element;
   title: string;
   desc: string;
+  numberValue: number;
 };
 export default function Home() {
   const isMobile = useIsMobile();
@@ -32,21 +35,25 @@ export default function Home() {
   const expItems: ExpItem[] = [
     {
       icon: <ExperienceIcon color="#858585" />,
+      numberValue: 20,
       title: "20 năm",
       desc: "kinh nghiệm",
     },
     {
       icon: <ClientsIcon color="#858585" />,
+      numberValue: 120,
       title: "120 triệu",
       desc: "khách hàng",
     },
     {
       icon: <SupportIcon color="#858585" />,
+      numberValue: 4000,
       title: "4.000+",
       desc: "nhân sự hỗ trợ khách hàng 24/7 trên 63 tỉnh/thành",
     },
     {
       icon: <GlobeIcon color="#858585" />,
+      numberValue: 10,
       title: "10",
       desc: "quốc gia/ vùng lãnh thổ sử dụng dịch vụ",
     },
@@ -80,20 +87,24 @@ export default function Home() {
 
             <div className="flex justify-center mt-[85px] max-w-[1122px] mx-auto">
               <ul className="grid grid-cols-4 gap-28">
-                {expItems.map(({ icon, title, desc }, index) => (
+                {expItems.map(({ icon, numberValue, title, desc }, index) => (
                   <li className="flex flex-col items-center" key={index}>
                     <div className="border-2 border-solid border-[#858585] rounded-full p-4 w-[80px] h-[80px] flex justify-center items-center">
                       {icon}
                     </div>
 
-                    <p
-                      className={`${roboto.className} text-[50px] text-[#EA0033]`}
-                    >
-                      {title}
+                    <p className={`${roboto.className} text-[50px] text-[#EA0033]`}>
+                      {numberValue ? (
+                        <>
+                          {useCountUp(numberValue)}
+                          {numberValue === 120 && ' triệu'}
+                          {numberValue === 4000 && '+'}
+                        </>
+                      ) : (
+                        title
+                      )}
                     </p>
-                    <p
-                      className={`${roboto.className} text-[20px] text-[#595959] text-center w-[256px]`}
-                    >
+                    <p className={`${roboto.className} text-[20px] text-[#595959] text-center w-[256px]`}>
                       {desc}
                     </p>
                   </li>
@@ -143,16 +154,7 @@ export default function Home() {
             <TabsList
               className={`inline-flex flex-col items-start ${roboto.className} h-fit`}
             >
-              {[
-                { value: "bpo", label: "BPO" },
-                { value: "outsourcing", label: "Outsourcing Contact Center" },
-                { value: "upsale", label: "Gia tăng doanh số Upsale" },
-                { value: "loyalty", label: "Loyalty" },
-                { value: "cskh", label: "CSKH VIP / Ưu tiên" },
-                { value: "customer-experience", label: "Customer Experience" },
-                { value: "voice-of-customer", label: "Voice of Customer" },
-                { value: "bao-hanh", label: "Bảo hành" },
-              ].map(({ value, label }) => (
+              {dataServicesHome.map(({ value, label }) => (
                 <TabsTrigger
                   key={value}
                   value={value}
@@ -218,10 +220,14 @@ export default function Home() {
 
           <Link
             href="/"
-            className={`${roboto.className} flex items-center gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 font-medium`}
+            className={`${roboto.className} flex items-center gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 font-medium
+            relative overflow-hidden group hover:border-white`}
           >
-            <MoveRight color="#EA0033" />
-            Tất cả giải pháp Viettel CX
+            <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
+            <MoveRight className="relative z-10 transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
+            <span className="relative z-10 transition-all duration-300 group-hover:text-white">
+              Tất cả dịch vụ Viettel CX
+            </span>
           </Link>
 
           <Swiper

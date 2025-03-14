@@ -9,6 +9,8 @@ import viettelCert from "../../public/images/viettel-certificate.png";
 import thongTinDienTu from "../../public/images/thong-tin-dien-tu.png";
 import dichVuCong from "../../public/images/dich-vu-cong.png";
 import boCongThuong from "../../public/images/bo-cong-thuong.png";
+import { dataLink } from "@/lib/define-data";
+import FormContact from "./form/FormContact";
 
 function Footer() {
   return (
@@ -25,44 +27,7 @@ function Footer() {
             hàng!
           </p>
         </div>
-        <form
-          className={`flex items-center gap-2 [&>div]:min-h-10 ${roboto.className}`}
-        >
-          <div>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Họ và tên"
-              className="h-10 px-4 min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] active:outline-none focus:outline-none"
-            />
-          </div>
-          <div>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              className="h-10 px-4 min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] active:outline-none focus:outline-none"
-            />
-          </div>
-          <div>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Số điện thoại"
-              className="h-10 px-4 min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] active:outline-none focus:outline-none cursor-[#858585]"
-            />
-          </div>
-
-          <Button
-            type="submit"
-            className={`h-10 px-16 bg-white uppercase text-[#EA0033] !font-bold ${sarabun.className} text-lg hover:bg-white`}
-          >
-            Liên hệ
-          </Button>
-        </form>
+      <FormContact />
       </div>
 
       <footer className="border-t-[3px] border-[#EA0033] border-solid pt-8 pb-16 px-6 bg-white">
@@ -90,8 +55,10 @@ function Footer() {
           <div
             className={`${roboto.className} text-sm text-black space-y-3 flex flex-col max-w-[297px] self-end`}
           >
-            <p>Điện thoại: 02462656168</p>
-            <p>Email: viettelcx.com.vn</p>
+            <p>Điện thoại: <a href="tel:02462656168">
+              02462656168
+            </a></p>
+            <p>Email: <a href="mailto:viettelcx.com.vn" >viettelcx.com.vn</a></p>
             <p>
               Địa chỉ: Toà nhà OCT 3B Khu Đô thị mới Resco, Cổ Nhuế, Xuân Đỉnh,
               Bắc Từ Liêm, Hà Nội
@@ -102,12 +69,7 @@ function Footer() {
             className={`${roboto.className} space-y-1 flex flex-col max-w-[297px] uppercase  self-end`}
           >
             {
-              [
-                { href: "/about", label: "Về chúng tôi" },
-                { href: "/services", label: "Dịch vụ" },
-                { href: "/solutions", label: "Giải pháp" },
-                { href: "/contact", label: "Liên hệ" },
-              ].map(({ href, label }) => (
+              dataLink.map(({ href, label }) => (
                 <Link
                   key={`${href}${label}`}
                   href={href}
@@ -134,13 +96,13 @@ function Footer() {
                   <Image src="/svg/tiktok.svg" alt="Tiktok" width={28} height={28} />
                 </Link>
               </div>
-              <Image src={viettelCert} alt="Viettel Certificate" width={140} className="flex self-end" quality={100}/>
+              <Image src={viettelCert} alt="Viettel Certificate" width={140} className="flex self-end" quality={100} />
             </div>
 
             <div className="flex items-center gap-3">
               <Image src={thongTinDienTu} alt="Cổng thông tin điện tử - Bộ Quốc Phòng" width={142} quality={100} />
-              <Image src={dichVuCong} alt="Cổng dịch vụ công - Bộ Quốc Phòng" width={143} quality={100}/>
-              <Image src={boCongThuong} alt="Đã thông báo Bộ Công Thương" width={132} quality={100}/>
+              <Image src={dichVuCong} alt="Cổng dịch vụ công - Bộ Quốc Phòng" width={143} quality={100} />
+              <Image src={boCongThuong} alt="Đã thông báo Bộ Công Thương" width={132} quality={100} />
             </div>
           </div>
         </div>

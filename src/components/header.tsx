@@ -6,20 +6,16 @@ import logo from "../../public/images/viettel-cx-logo.png"
 import { sarabun } from '@/lib/font'
 import { Separator } from './ui/separator'
 import { Globe, Search } from 'lucide-react';
+import { dataLink } from '@/lib/define-data';
+import { usePathname } from 'next/navigation';
 
 function Header() {
-  const links = [
-    { href: '/about', label: 'Về chúng tôi' },
-    { href: '/services', label: 'Dịch vụ' },
-    { href: '/solutions', label: 'Giải pháp' },
-    { href: '#contact', label : 'Liên hệ'}
-  ]
-
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50) // Trigger effect after scrolling 50px
+      setIsScrolled(window.scrollY > 50)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -28,7 +24,7 @@ function Header() {
 
   return (
     <header className={`
-    flex items-center justify-between max-w-[1120px] min-h-[60px] mx-auto fixed top-0 left-0 right-0 z-10 bg-white px-4 transition-all duration-300
+    flex items-center justify-between max-w-[1120px] min-h-[60px] mx-auto fixed top-0 left-0 right-0 z-100 bg-white px-4 transition-all duration-300
     ${isScrolled ? 'mt-2 rounded-sm shadow-md ' : 'mt-7'}
     `}>
       <Link href='/'>
@@ -37,9 +33,9 @@ function Header() {
       <nav className='flex items-center gap-8'>
         <ul className='flex items-center gap-4'>
           {
-            links.map(({ href, label }) => (
+            dataLink.map(({ href, label }) => (
               <li key={`${href}${label}`} className='hover:text-[#ED1B36] text-black transition-colors duration-300 ease-in-out'>
-                <Link href={href} className={`${sarabun.className} font-semibold uppercase p-3`}>
+                <Link href={href} className={`${sarabun.className} font-semibold uppercase p-3 ${pathname === href ? 'text-[#ED1B36]' : ''}`}>
                   {label}
                 </Link>
               </li>
