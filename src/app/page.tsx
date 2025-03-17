@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { fsMagistral, roboto, sarabun } from "@/lib/font";
+import { fsMagistral, roboto } from "@/lib/font";
 import ExperienceIcon from "@/components/icons/experience-icon";
 import { MoveRight } from "lucide-react";
 import ClientsIcon from "@/components/icons/clients-icon";
@@ -14,7 +14,6 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import viettelLogo from "../../public/images/viettel-logo.png";
 import {
   fadeInBottomVariants,
   fadeInLeftVariants,
@@ -25,6 +24,7 @@ import HomeCounUp from "./components/home-count-up";
 import MotionWrapper from "@/components/ui/motion-wrapper";
 import line1 from "../../public/images/line-1.png";
 import line2 from "../../public/images/line-2.png";
+import ArrowDownIcon from "@/components/icons/arrow-down-icon";
 
 type ExpItem = {
   icon: React.JSX.Element;
@@ -69,60 +69,14 @@ export default function Home() {
   return (
     <div>
       <main className="bg-white">
-        <section className="bg-[#e7e7e7] !bg-white h-[970px] grid grid-cols-2 ">
-          <MotionWrapper
-            initial="hidden"
-            viewport={{ once: true, amount: 0.2 }}
-            whileInView="visible"
-            variants={fadeInLeftVariants}
-            className="col-span-1 flex flex-col justify-center items-center ml-56"
-          >
-            <div className="pulse"></div>
-            <Image
-              src={viettelLogo}
-              alt="Viettel Logo"
-              quality={100}
-              className=""
-            />
-          </MotionWrapper>
-          <div
-            className={`${fsMagistral.className} col-span-1 flex flex-col justify-center`}
-          >
-            <MotionWrapper
-              element="p"
-              initial="hidden"
-              viewport={{ once: true, amount: 0.2 }}
-              whileInView="visible"
-              variants={fadeInRightVariants}
-              className={`${sarabun.className} font-semibold mb-3 uppercase text-[#a6a6a6]`}
-            >
-              Viettel CX
-            </MotionWrapper>
-            <MotionWrapper
-              element="h1"
-              initial="hidden"
-              viewport={{ once: true, amount: 0.2 }}
-              whileInView="visible"
-              variants={fadeInRightVariants}
-              className="text-5xl mb-20"
-            >
-              Nâng tầm <br /> trải nghiệm khách hàng
-            </MotionWrapper>
-
-            <MotionWrapper
-              initial="hidden"
-              viewport={{ once: true, amount: 0.2 }}
-              whileInView="visible"
-              variants={fadeInBottomVariants}
-            >
-              <Link
-                href="/about"
-                className={`${sarabun.className} uppercase text-[#ea0033] pb-2 font-semibold w-fit see-more-link relative`}
-              >
-                Tìm hiểu thêm
-              </Link>
-            </MotionWrapper>
-          </div>
+        <section className="bg-[#e7e7e7] h-[970px] relative">
+          <video className="w-full h-full object-cover" autoPlay loop muted>
+            <source src="/videos/intro.mp4" type="video/mp4" />
+            Your browser does not support the video tag
+          </video>
+          <button className="absolute bottom-14 left-0 right-0 translate-x-1/2">
+            <ArrowDownIcon />
+          </button>
         </section>
         <section className="relative pb-[200px]">
           <Image
