@@ -23,6 +23,8 @@ import {
 import HomeSwiper from "./components/home-swiper";
 import HomeCounUp from "./components/home-count-up";
 import MotionWrapper from "@/components/ui/motion-wrapper";
+import line1 from "../../public/images/line-1.png";
+import line2 from "../../public/images/line-2.png";
 
 type ExpItem = {
   icon: React.JSX.Element;
@@ -123,10 +125,11 @@ export default function Home() {
           </div>
         </section>
         <section className="relative pb-[200px]">
-          <img
-            src="/images/line-1.png"
+          <Image
+            src={line1}
             alt="043"
             className="absolute left-0 top-0 max-[1472px]:w-[40%] max-[1472px]:max-w-[500px] h-auto"
+            quality={100}
           />
           <div className="relative left-0 right-0 translate-y-[24%]">
             <MotionWrapper
@@ -178,10 +181,11 @@ export default function Home() {
             </div>
           </div>
 
-          <img
-            src="/images/line-2.png"
+          <Image
+            src={line2}
             alt="044"
             className="absolute right-0 top-0 translate-y-[45%] max-[1472px]:translate-y-[75%] max-[1472px]:w-[40%] max-[1472px]:max-w-[500px] h-auto"
+            quality={100}
           />
         </section>
 
