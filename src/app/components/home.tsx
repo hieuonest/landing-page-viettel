@@ -27,26 +27,12 @@ import {
 import client1 from "../../../public/images/image 2.png";
 import { delay, easeInOut, motion } from "framer-motion";
 import viettelLogo from "../../../public/images/viettel-logo.png";
+import {
+  fadeInBottomVariants,
+  fadeInLeftVariants,
+  fadeInRightVariants,
+} from "@/lib/utils";
 
-const fadeInBottomVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, easeInOut } },
-};
-
-const fadeInVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.8, easeInOut } },
-};
-
-const fadeInLeftVariants = {
-  hidden: { opacity: 0, x: -30 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.8, easeInOut } },
-};
-
-const fadeInRightVariants = {
-  hidden: { opacity: 0, x: 30 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.8, easeInOut } },
-};
 type ExpItem = {
   icon: React.JSX.Element;
   title: string;
@@ -96,7 +82,13 @@ export default function Home() {
       />
       <main className="bg-white">
         <section className="bg-[#e7e7e7] !bg-white h-[970px] grid grid-cols-2 ">
-          <div className="col-span-1 flex flex-col justify-center items-center ml-56">
+          <motion.div
+            initial="hidden"
+            viewport={{ once: true, amount: 0.2 }}
+            whileInView="visible"
+            variants={fadeInLeftVariants}
+            className="col-span-1 flex flex-col justify-center items-center ml-56"
+          >
             <div className="pulse"></div>
             <Image
               src={viettelLogo}
@@ -104,7 +96,7 @@ export default function Home() {
               quality={100}
               className=""
             />
-          </div>
+          </motion.div>
           <div
             className={`${fsMagistral.className} col-span-1 flex flex-col justify-center`}
           >
@@ -231,16 +223,16 @@ export default function Home() {
           </div>
 
           <Link
-              href="/"
-              className={`${roboto.className} flex items-center gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 font-medium
+            href="/"
+            className={`${roboto.className} flex items-center gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 font-medium
             relative overflow-hidden group hover:border-white`}
-            >
-              <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
-              <MoveRight className="relative z-10 transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
-              <span className="relative z-10 transition-all duration-300 group-hover:text-white">
-                Tất cả dịch vụ Viettel CX
-              </span>
-            </Link>
+          >
+            <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
+            <MoveRight className="relative z-10 transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
+            <span className="relative z-10 transition-all duration-300 group-hover:text-white">
+              Tất cả dịch vụ Viettel CX
+            </span>
+          </Link>
 
           <Tabs
             defaultValue="outsourcing"
