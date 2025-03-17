@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useIsMobile } from "@/hooks/use-mobile";
-import { fsMagistral, roboto } from "@/lib/font";
-import ExperienceIcon from "@/components/icons/experience-icon";
 import Link from "next/link";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { fsMagistral, roboto, sarabun } from "@/lib/font";
+import ExperienceIcon from "@/components/icons/experience-icon";
 import { ChevronLeft, ChevronRight, MoveRight } from "lucide-react";
 import ClientsIcon from "@/components/icons/clients-icon";
 import SupportIcon from "@/components/icons/support-icon";
@@ -31,6 +31,7 @@ const fadeInVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, easeInOut } },
 };
+
 type ExpItem = {
   icon: React.JSX.Element;
   title: string;
@@ -79,7 +80,59 @@ export default function Home() {
         description="A short description goes here."
       />
       <main className="bg-white">
-        <section className="bg-[#e7e7e7] h-[970px]"></section>
+        <section className="bg-[#e7e7e7] !bg-white h-[970px] grid grid-cols-2">
+          <div className="col-span-1"></div>
+          <div
+            className={`${fsMagistral.className} col-span-1 flex flex-col justify-center `}
+          >
+            <motion.p
+              initial="hidden"
+              viewport={{ once: true, amount: 0.2 }}
+              whileInView="visible"
+              variants={{
+                hidden: { opacity: 0, x: 30 },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.8, easeInOut },
+                },
+              }}
+              className={`${sarabun.className} font-semibold mb-3 uppercase text-[#a6a6a6]`}
+            >
+              Viettel CX
+            </motion.p>
+            <motion.h1
+              initial="hidden"
+              viewport={{ once: true, amount: 0.2 }}
+              whileInView="visible"
+              variants={{
+                hidden: { opacity: 0, x: 30 },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.8, easeInOut },
+                },
+              }}
+              className="text-5xl mb-20"
+            >
+              Nâng tầm <br /> trải nghiệm khách hàng
+            </motion.h1>
+
+            <motion.div
+              initial="hidden"
+              viewport={{ once: true, amount: 0.2 }}
+              whileInView="visible"
+              variants={fadeInVariants}
+            >
+              <Link
+                href="/about"
+                className={`${sarabun.className} uppercase text-[#ea0033] pb-2 font-semibold w-fit see-more-link relative`}
+              >
+                Tìm hiểu thêm
+              </Link>
+            </motion.div>
+          </div>
+        </section>
         <section className="relative pb-[200px]">
           <img
             src="/images/line-1.png"

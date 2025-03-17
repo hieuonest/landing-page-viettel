@@ -1,6 +1,6 @@
 .solution-swiper {
   .swiper-button-prev {
-    background-image: url('../../../../public/svg/swipe-arrow-prev.svg');
+    background-image: url("../../../../public/svg/swipe-arrow-prev.svg");
     left: 0;
     transform: translateX(-50%);
 
@@ -10,7 +10,7 @@
   }
 
   .swiper-button-next {
-    background-image: url('../../../../public/svg/swipe-arrow-next.svg');
+    background-image: url("../../../../public/svg/swipe-arrow-next.svg");
     right: 0;
     transform: translateX(50%);
 
@@ -25,6 +25,41 @@
     width: 50px;
     height: 50px;
     transition: transform 0.2s ease-in-out;
+  }
+}
 
+.see-more-link {
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: #ee0033;
+    margin-top: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  &::before {
+    width: 0;
+    transition: width 0.4s ease;
+  }
+
+  &::after {
+    width: 100%;
+    transition: all 0.6s ease;
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+
+    &::after {
+      width: 0;
+      left: 100%;
+      transition: all 0.2s ease;
+    }
   }
 }

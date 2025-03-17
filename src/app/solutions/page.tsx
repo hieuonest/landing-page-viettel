@@ -2,6 +2,12 @@ import { roboto } from "@/lib/font";
 import React from "react";
 import CommonHeading from "../components/common-heading";
 import SolutionsSection from "../components/solutions-section";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Giải pháp",
+  description: "Nền tảng giải pháp, phần mềm của Viettel CX",
+}
 
 function Solutions() {
   return (

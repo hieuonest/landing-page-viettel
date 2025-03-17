@@ -5,6 +5,12 @@ import servicesHero from "../../../public/images/services-page-hero.png";
 import ServicesSection from "../components/services-section";
 import outsourcing from "../../../public/images/service-outsourcing.png"
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata ={
+  title: "Dịch vụ",
+  description: "Hệ sinh thái dịch vụ của Viettel CX"
+}
 
 function Services() {
   return (
