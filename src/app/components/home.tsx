@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/carousel";
 import client1 from "../../../public/images/image 2.png";
 import { easeInOut, motion } from "framer-motion";
+import viettelLogo from "../../../public/images/viettel-logo.png"
 
 const fadeInVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -80,10 +81,13 @@ export default function Home() {
         description="A short description goes here."
       />
       <main className="bg-white">
-        <section className="bg-[#e7e7e7] !bg-white h-[970px] grid grid-cols-2">
-          <div className="col-span-1"></div>
+        <section className="bg-[#e7e7e7] !bg-white h-[970px] grid grid-cols-2 ">
+          <div className="col-span-1 flex flex-col justify-center items-center ml-56">
+            <div className="pulse"></div>
+            <Image src={viettelLogo} alt="Viettel Logo" quality={100} className=""/>
+          </div>
           <div
-            className={`${fsMagistral.className} col-span-1 flex flex-col justify-center `}
+            className={`${fsMagistral.className} col-span-1 flex flex-col justify-center` }
           >
             <motion.p
               initial="hidden"
