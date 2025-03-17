@@ -12,13 +12,10 @@ import GlobeIcon from "@/components/icons/globe-icon";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { NextSeo } from "next-seo";
-
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/navigation";
-
 import "@/app/styles/pages/home.scss";
-
 import { EffectCards, Navigation } from "swiper/modules";
 import { useCountUp } from "./use-count-up";
 import { dataPartners, dataServicesHome } from "@/lib/define-data";
@@ -28,7 +25,12 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import client1 from "../../../public/images/image 2.png";
+import { easeInOut, motion } from "framer-motion";
 
+const fadeInVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, easeInOut } },
+};
 type ExpItem = {
   icon: React.JSX.Element;
   title: string;
@@ -85,11 +87,15 @@ export default function Home() {
             className="absolute left-0 top-0 max-[1472px]:w-[40%] max-[1472px]:max-w-[500px] h-auto"
           />
           <div className="relative left-0 right-0 translate-y-[24%]">
-            <h1
+            <motion.h1
+              initial="hidden"
+              viewport={{ once: true, amount: 0.2 }}
+              whileInView="visible"
+              variants={fadeInVariants}
               className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
             >
               Viettel CX <br /> nâng tầm trải nghiệm khách hàng
-            </h1>
+            </motion.h1>
             <p
               className={`${roboto.className} font-light text-3xl text-center text-[#858585] mt-1`}
             >
@@ -137,11 +143,15 @@ export default function Home() {
 
         <section className="relative flex flex-col items-center justify-center py-20">
           <div className="">
-            <h1
+            <motion.h1
+              initial="hidden"
+              viewport={{ once: true, amount: 0.2 }}
+              whileInView="visible"
+              variants={fadeInVariants}
               className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
             >
               Hệ sinh thái dịch vụ
-            </h1>
+            </motion.h1>
             <p
               className={`${roboto.className} font-light text-3xl text-center text-[#858585] max-w-[850px] mx-auto mt-4`}
             >
@@ -226,11 +236,15 @@ export default function Home() {
 
         <section className="relative flex flex-col items-center justify-center py-20">
           <div className="">
-            <h1
+            <motion.h1
+              initial="hidden"
+              viewport={{ once: true, amount: 0.2 }}
+              whileInView="visible"
+              variants={fadeInVariants}
               className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
             >
               Nền tảng, giải pháp <br /> phần mềm dịch vụ Khách hàng
-            </h1>
+            </motion.h1>
             <p
               className={`${roboto.className} font-light text-3xl text-center text-[#858585] max-w-[850px] mx-auto mt-4`}
             >
@@ -368,11 +382,15 @@ export default function Home() {
 
         <section className="relative flex flex-col items-center justify-center py-20">
           <div className="">
-            <h1
+            <motion.h1
+              initial="hidden"
+              viewport={{ once: true, amount: 0.2 }}
+              whileInView="visible"
+              variants={fadeInVariants}
               className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
             >
               Khách hàng của chúng tôi
-            </h1>
+            </motion.h1>
             <div className="max-w-[1405px] mx-auto">
               <Carousel className="mt-12">
                 <CarouselContent>
