@@ -26,7 +26,7 @@ import {
 } from "@/components/ui/carousel";
 import client1 from "../../../public/images/image 2.png";
 import { delay, easeInOut, motion } from "framer-motion";
-import viettelLogo from "../../../public/images/viettel-logo.png"
+import viettelLogo from "../../../public/images/viettel-logo.png";
 
 const fadeInBottomVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -35,8 +35,13 @@ const fadeInBottomVariants = {
 
 const fadeInVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.8, easeInOut} },
-}
+  visible: { opacity: 1, transition: { duration: 0.8, easeInOut } },
+};
+
+const fadeInLeftVariants = {
+  hidden: { opacity: 0, x: -30 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8, easeInOut } },
+};
 
 const fadeInRightVariants = {
   hidden: { opacity: 0, x: 30 },
@@ -93,10 +98,15 @@ export default function Home() {
         <section className="bg-[#e7e7e7] !bg-white h-[970px] grid grid-cols-2 ">
           <div className="col-span-1 flex flex-col justify-center items-center ml-56">
             <div className="pulse"></div>
-            <Image src={viettelLogo} alt="Viettel Logo" quality={100} className=""/>
+            <Image
+              src={viettelLogo}
+              alt="Viettel Logo"
+              quality={100}
+              className=""
+            />
           </div>
           <div
-            className={`${fsMagistral.className} col-span-1 flex flex-col justify-center` }
+            className={`${fsMagistral.className} col-span-1 flex flex-col justify-center`}
           >
             <motion.p
               initial="hidden"
@@ -221,92 +231,101 @@ export default function Home() {
           </div>
 
           <Link
-            href="/"
-            className={`${roboto.className} flex items-center gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 font-medium
+              href="/"
+              className={`${roboto.className} flex items-center gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 font-medium
             relative overflow-hidden group hover:border-white`}
-          >
-            <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
-            <MoveRight className="relative z-10 transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
-            <span className="relative z-10 transition-all duration-300 group-hover:text-white">
-              Tất cả dịch vụ Viettel CX
-            </span>
-          </Link>
+            >
+              <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
+              <MoveRight className="relative z-10 transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
+              <span className="relative z-10 transition-all duration-300 group-hover:text-white">
+                Tất cả dịch vụ Viettel CX
+              </span>
+            </Link>
 
-          <motion.div
-            initial="hidden"
-            viewport={{ once: true, amount: 0.2 }}
-            whileInView="visible"
-            variants={fadeInBottomVariants}
-            className=""
-          >
           <Tabs
             defaultValue="outsourcing"
             className="flex gap-[5.5rem] min-w-[1280px] mt-12"
             orientation="vertical"
           >
-            <TabsList
-              className={`inline-flex flex-col items-start ${roboto.className} h-fit`}
+            <motion.div
+              initial="hidden"
+              viewport={{ once: true, amount: 0.3 }}
+              whileInView="visible"
+              variants={fadeInLeftVariants}
+              className=""
             >
-              {dataServicesHome.map(({ value, label }) => (
-                <TabsTrigger
-                  key={value}
-                  value={value}
-                  className="text-3xl transition-all duration-300 ease-in-out group font-medium
+              <TabsList
+                className={`inline-flex flex-col items-start ${roboto.className} h-fit`}
+              >
+                {dataServicesHome.map(({ value, label }) => (
+                  <TabsTrigger
+                    key={value}
+                    value={value}
+                    className="text-3xl transition-all duration-300 ease-in-out group font-medium
                         data-[state=active]:text-[#EA0033] 
                           data-[state=active]:shadow-none 
                           data-[state=active]:bg-transparent
                         data-[state=inactive]:text-[#9B9B9B]
                           data-[state=active]:py-6 data-[state=active]:pb-2 transform
                           flex flex-col items-start"
-                >
-                  <p className="opacity-0 translate-y-2 text-lg font-medium text-black transition-all duration-300 ease-in-out group-data-[state=active]:opacity-100 group-data-[state=active]:translate-y-0">
-                    Dịch vụ
-                  </p>
+                  >
+                    <p className="opacity-0 translate-y-2 text-lg font-medium text-black transition-all duration-300 ease-in-out group-data-[state=active]:opacity-100 group-data-[state=active]:translate-y-0">
+                      Dịch vụ
+                    </p>
 
-                  <span className="transition-all duration-300 ease-in-out font-medium">
-                    {label}
-                  </span>
-                </TabsTrigger>
-              ))}
-            </TabsList>
+                    <span className="transition-all duration-300 ease-in-out font-medium">
+                      {label}
+                    </span>
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              viewport={{ once: true, amount: 0.3 }}
+              whileInView="visible"
+              variants={fadeInRightVariants}
+              className="flex flex-col justify-end"
+            >
+              {dataServicesHome.map((item, index) => (
+                <TabsContent value={item.value} className="" key={index}>
+                  <div className="flex gap-5 items-end h-full">
+                    <div className="w-[304px] h-[304px] rounded-[20px] bg-[url(/images/bg-1.png)] bg-cover bg-no-repeat flex flex-col justify-between self-end px-8 pt-7 pb-4">
+                      <div className="bg-white w-fit p-3 rounded-full">
+                        <SupportIcon color="#EA0033" small />
+                      </div>
+                      <div
+                        className={`flex flex-col gap-4 ${roboto.className}`}
+                      >
+                        <p>
+                          Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân
+                          sự, nền tảng giải pháp, quy trình
+                        </p>
+                        <Link href="/" className="text-[#EA0033]">
+                          Khám phá dịch vụ
+                        </Link>
+                      </div>
+                    </div>
 
-            {dataServicesHome.map((item, index) => (
-              <TabsContent value={item.value} className="" key={index}>
-                <div className="flex gap-5 items-end h-full">
-                  <div className="w-[304px] h-[304px] rounded-[20px] bg-[url(/images/bg-1.png)] bg-cover bg-no-repeat flex flex-col justify-between self-end px-8 pt-7 pb-4">
-                    <div className="bg-white w-fit p-3 rounded-full">
-                      <SupportIcon color="#EA0033" small />
-                    </div>
-                    <div className={`flex flex-col gap-4 ${roboto.className}`}>
-                      <p>
-                        Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân
-                        sự, nền tảng giải pháp, quy trình
-                      </p>
-                      <Link href="/" className="text-[#EA0033]">
-                        Khám phá dịch vụ
-                      </Link>
-                    </div>
+                    <Image
+                      src="/images/img-1.png"
+                      alt="outsourcing"
+                      width={389}
+                      height={493}
+                      className="rounded-[20px]"
+                    />
                   </div>
-
-                  <Image
-                    src="/images/img-1.png"
-                    alt="outsourcing"
-                    width={389}
-                    height={493}
-                    className="rounded-[20px]"
-                  />
-                </div>
-              </TabsContent>
-            ))}
+                </TabsContent>
+              ))}
+            </motion.div>
           </Tabs>
-          </motion.div>
         </section>
 
         <section className="relative flex flex-col items-center justify-center py-20">
           <div className="">
             <motion.h1
               initial="hidden"
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.4 }}
               whileInView="visible"
               variants={fadeInBottomVariants}
               className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
@@ -456,7 +475,7 @@ export default function Home() {
           <div className="">
             <motion.h1
               initial="hidden"
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.4 }}
               whileInView="visible"
               variants={fadeInBottomVariants}
               className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
