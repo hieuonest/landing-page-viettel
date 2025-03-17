@@ -13,8 +13,7 @@ function FormContact() {
   const {
     register,
     handleSubmit,
-    watch,
-    formState: { errors },
+    formState: { },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     const { name, email, phone } = data;

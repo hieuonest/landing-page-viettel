@@ -9,6 +9,7 @@ import { EffectCards, Navigation } from "swiper/modules";
 import Image from "next/image";
 import { roboto } from "@/lib/font";
 import Link from "next/link";
+import swipe1 from "../../../public/images/swipe-1.png";
 function HomeSwiper() {
   return (
     <Swiper
@@ -52,7 +53,7 @@ function HomeSwiper() {
               Tìm hiểu thêm
             </Link>
           </div>
-          <img src="/images/swipe-1.png" alt="swipe-1" />
+          <Image src={swipe1} alt="swipe-1" />
           <button className="swiper-button-prev absolute"></button>
           <button className="swiper-button-next absolute"></button>
         </div>
@@ -83,7 +84,7 @@ function HomeSwiper() {
             <button className="swiper-button-prev absolute"></button>
             <button className="swiper-button-next absolute"></button>
           </div>
-          <img src="/images/swipe-1.png" alt="swipe-1" />
+          <Image src={swipe1} alt="swipe-1" />
         </div>
       </SwiperSlide>
       <SwiperSlide className="!flex items-center justify-center">
@@ -112,7 +113,7 @@ function HomeSwiper() {
             <button className="swiper-button-prev"></button>
             <button className="swiper-button-next"></button>
           </div>
-          <img src="/images/swipe-1.png" alt="swipe-1" />
+          <Image src={swipe1} alt="swipe-1" />
         </div>
       </SwiperSlide>
     </Swiper>

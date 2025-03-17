@@ -1,7 +1,6 @@
 import React from "react";
-import { Button } from "./ui/button";
 import FooterArrow from "./icons/footer-arrow";
-import { fsMagistral, fsMagistralBook, roboto, sarabun } from "@/lib/font";
+import { fsMagistral, fsMagistralBook, roboto} from "@/lib/font";
 import Image from "next/image";
 import logo from "../../public/images/viettel-cx-logo.png";
 import Link from "next/link";

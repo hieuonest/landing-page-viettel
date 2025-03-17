@@ -1,5 +1,5 @@
 import { roboto } from "@/lib/font";
-import React, { lazy } from "react";
+import React from "react";
 import CommonHeading from "../components/common-heading";
 import servicesHero from "../../../public/images/services-page-hero.png";
 import ServicesSection from "../components/services-section";

@@ -1,4 +1,4 @@
-import { fsMagistralBook, roboto } from "@/lib/font";
+import { fsMagistralBook } from "@/lib/font";
 import Image, { StaticImageData } from "next/image";
 import React, { ReactNode } from "react";
 

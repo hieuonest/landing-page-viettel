@@ -39,7 +39,8 @@ export const setDataCookie = (
   expires: number | string
 ) => {
   try {
-    Cookies.set(key, JSON.stringify(value), { expires: expires });
+    const expiresOption = typeof expires === 'string' ? new Date(expires) : expires;
+    Cookies.set(key, JSON.stringify(value), { expires: expiresOption });
     return true;
   } catch (error) {
     console.log(error);
@@ -50,7 +51,7 @@ export const setDataCookie = (
 export const getDataCookie = (key: string) => {
   try {
     const dataCookie = Cookies.get(key);
-    return JSON.parse(dataCookie);
+    return dataCookie ? JSON.parse(dataCookie) : null;
   } catch (error) {
     console.log(error);
     return error;
