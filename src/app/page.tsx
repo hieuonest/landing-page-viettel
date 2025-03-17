@@ -25,6 +25,34 @@ import MotionWrapper from "@/components/ui/motion-wrapper";
 import line1 from "../../public/images/line-1.png";
 import line2 from "../../public/images/line-2.png";
 import ArrowDownIcon from "@/components/icons/arrow-down-icon";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Viettel Cx",
+    description: "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
+    openGraph: {
+      title: "Viettel Cx",
+      description: "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
+      url: "https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg",
+      type: "website",
+      images: [
+        {
+          url: "https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Viettel Cx",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Viettel Cx",
+      description: "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
+      images: ["https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg"],
+    },
+  };
+}
 
 type ExpItem = {
   icon: React.JSX.Element;
@@ -68,6 +96,7 @@ export default function Home() {
 
   return (
     <div>
+      
       <main className="bg-white">
         <section className="bg-[#e7e7e7] h-[970px] relative">
           <video className="w-full h-full object-cover" autoPlay loop muted>
