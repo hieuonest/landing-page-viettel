@@ -1,11 +1,9 @@
-import { fsMagistral, fsMagistralBook, roboto } from "@/lib/font";
+import { fsMagistralBook, roboto } from "@/lib/font";
 import React from "react";
-import aboutHero from "../../../public/images/about-page-hero.png";
 import radialGraph from "../../../public/images/radial.png";
 import Image from "next/image";
 import { Metadata } from "next";
 
-import { title } from "process";
 import CommonHeading from "../components/common-heading";
 import { dataWhyUs } from "@/lib/define-data";
 
@@ -20,8 +18,7 @@ function About() {
       <main className="bg-white">
         <CommonHeading
           title="Về Viettel CX"
-          image={aboutHero}
-          imageAlt="About Hero"
+          video="/videos/about-intro.mp4"
           heroContent={
             <h2
               className={`${roboto.className} text-3xl font-light max-w-[365px]`}

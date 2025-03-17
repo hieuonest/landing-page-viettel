@@ -3,8 +3,6 @@ import React from "react";
 import CommonButtonList from "./common-button-list";
 import CommonLayoutSwitch from "./common-layout-switch";
 import CommonLayout from "./common-layout";
-import Image from "next/image";
-import xomni from "../../../public/images/x-omni.png";
 import omni from "../../../public/images/solution-omni.png";
 import bot from "../../../public/images/solution-bot.png";
 import reputa from "../../../public/images/solution-reputa.png";
@@ -14,9 +12,7 @@ import knowledge from "../../../public/images/solution-knowledge.png";
 import workforce from "../../../public/images/solution-workforce.png";
 import crm from "../../../public/images/solution-crm.png";
 import loyalty from "../../../public/images/solution-loyalty.png";
-import Link from "next/link";
 import { MoveRight } from "lucide-react";
-import { title } from "process";
 
 function SolutionsSection() {
   const [layout, setLayout] = React.useState<"grid" | "list">("list");
