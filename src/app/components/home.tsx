@@ -25,14 +25,23 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import client1 from "../../../public/images/image 2.png";
-import { easeInOut, motion } from "framer-motion";
+import { delay, easeInOut, motion } from "framer-motion";
 import viettelLogo from "../../../public/images/viettel-logo.png"
 
-const fadeInVariants = {
+const fadeInBottomVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, easeInOut } },
 };
 
+const fadeInVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.8, easeInOut} },
+}
+
+const fadeInRightVariants = {
+  hidden: { opacity: 0, x: 30 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8, easeInOut } },
+};
 type ExpItem = {
   icon: React.JSX.Element;
   title: string;
@@ -93,14 +102,7 @@ export default function Home() {
               initial="hidden"
               viewport={{ once: true, amount: 0.2 }}
               whileInView="visible"
-              variants={{
-                hidden: { opacity: 0, x: 30 },
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.8, easeInOut },
-                },
-              }}
+              variants={fadeInRightVariants}
               className={`${sarabun.className} font-semibold mb-3 uppercase text-[#a6a6a6]`}
             >
               Viettel CX
@@ -109,14 +111,7 @@ export default function Home() {
               initial="hidden"
               viewport={{ once: true, amount: 0.2 }}
               whileInView="visible"
-              variants={{
-                hidden: { opacity: 0, x: 30 },
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.8, easeInOut },
-                },
-              }}
+              variants={fadeInRightVariants}
               className="text-5xl mb-20"
             >
               Nâng tầm <br /> trải nghiệm khách hàng
@@ -126,7 +121,7 @@ export default function Home() {
               initial="hidden"
               viewport={{ once: true, amount: 0.2 }}
               whileInView="visible"
-              variants={fadeInVariants}
+              variants={fadeInBottomVariants}
             >
               <Link
                 href="/about"
@@ -146,18 +141,22 @@ export default function Home() {
           <div className="relative left-0 right-0 translate-y-[24%]">
             <motion.h1
               initial="hidden"
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
               whileInView="visible"
-              variants={fadeInVariants}
+              variants={fadeInBottomVariants}
               className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
             >
               Viettel CX <br /> nâng tầm trải nghiệm khách hàng
             </motion.h1>
-            <p
+            <motion.p
+              initial="hidden"
+              viewport={{ once: true, amount: 0.5 }}
+              whileInView="visible"
+              variants={fadeInBottomVariants}
               className={`${roboto.className} font-light text-3xl text-center text-[#858585] mt-1`}
             >
               bằng công nghệ sáng tạo và sự thấu hiểu trái tim
-            </p>
+            </motion.p>
 
             <div className="flex justify-center mt-[85px] max-w-[1122px] mx-auto">
               <ul className="grid grid-cols-4 gap-28">
@@ -202,19 +201,23 @@ export default function Home() {
           <div className="">
             <motion.h1
               initial="hidden"
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.4 }}
               whileInView="visible"
-              variants={fadeInVariants}
+              variants={fadeInBottomVariants}
               className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
             >
               Hệ sinh thái dịch vụ
             </motion.h1>
-            <p
+            <motion.p
+              initial="hidden"
+              viewport={{ once: true, amount: 0.5 }}
+              whileInView="visible"
+              variants={fadeInBottomVariants}
               className={`${roboto.className} font-light text-3xl text-center text-[#858585] max-w-[850px] mx-auto mt-4`}
             >
               Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến
               trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu
-            </p>
+            </motion.p>
           </div>
 
           <Link
@@ -229,6 +232,13 @@ export default function Home() {
             </span>
           </Link>
 
+          <motion.div
+            initial="hidden"
+            viewport={{ once: true, amount: 0.2 }}
+            whileInView="visible"
+            variants={fadeInBottomVariants}
+            className=""
+          >
           <Tabs
             defaultValue="outsourcing"
             className="flex gap-[5.5rem] min-w-[1280px] mt-12"
@@ -289,6 +299,7 @@ export default function Home() {
               </TabsContent>
             ))}
           </Tabs>
+          </motion.div>
         </section>
 
         <section className="relative flex flex-col items-center justify-center py-20">
@@ -297,16 +308,20 @@ export default function Home() {
               initial="hidden"
               viewport={{ once: true, amount: 0.2 }}
               whileInView="visible"
-              variants={fadeInVariants}
+              variants={fadeInBottomVariants}
               className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
             >
               Nền tảng, giải pháp <br /> phần mềm dịch vụ Khách hàng
             </motion.h1>
-            <p
+            <motion.p
+              initial="hidden"
+              viewport={{ once: true, amount: 0.5 }}
+              whileInView="visible"
+              variants={fadeInBottomVariants}
               className={`${roboto.className} font-light text-3xl text-center text-[#858585] max-w-[850px] mx-auto mt-4`}
             >
               Công nghệ dẫn lối, mở ra mọi kết nối với khách hàng
-            </p>
+            </motion.p>
           </div>
 
           <Link
@@ -443,7 +458,7 @@ export default function Home() {
               initial="hidden"
               viewport={{ once: true, amount: 0.2 }}
               whileInView="visible"
-              variants={fadeInVariants}
+              variants={fadeInBottomVariants}
               className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
             >
               Khách hàng của chúng tôi
