@@ -165,6 +165,7 @@ export default function Home() {
           <Tabs
             defaultValue="outsourcing"
             className="flex gap-[5.5rem] min-w-[1280px] mt-12"
+            orientation="vertical"
           >
             <TabsList
               className={`inline-flex flex-col items-start ${roboto.className} h-fit`}
@@ -178,7 +179,7 @@ export default function Home() {
                           data-[state=active]:shadow-none 
                           data-[state=active]:bg-transparent
                         data-[state=inactive]:text-[#9B9B9B]
-                          data-[state=active]:py-6 transform
+                          data-[state=active]:py-6 data-[state=active]:pb-2 transform
                           flex flex-col items-start"
                 >
                   <p className="opacity-0 translate-y-2 text-lg font-medium text-black transition-all duration-300 ease-in-out group-data-[state=active]:opacity-100 group-data-[state=active]:translate-y-0">
@@ -192,30 +193,34 @@ export default function Home() {
               ))}
             </TabsList>
 
-            <TabsContent value="outsourcing" className="flex gap-5 items-end">
-              <div className="w-[304px] h-[304px] rounded-[20px] bg-[url(/images/bg-1.png)] bg-cover bg-no-repeat flex flex-col justify-between self-end px-8 pt-7 pb-4">
-                <div className="bg-white w-fit p-3 rounded-full">
-                  <SupportIcon color="#EA0033" small />
-                </div>
-                <div className={`flex flex-col gap-4 ${roboto.className}`}>
-                  <p>
-                    Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự,
-                    nền tảng giải pháp, quy trình
-                  </p>
-                  <Link href="/" className="text-[#EA0033]">
-                    Khám phá dịch vụ
-                  </Link>
-                </div>
-              </div>
+            {dataServicesHome.map((item, index) => (
+              <TabsContent value={item.value} className="" key={index}>
+                <div className="flex gap-5 items-end h-full">
+                  <div className="w-[304px] h-[304px] rounded-[20px] bg-[url(/images/bg-1.png)] bg-cover bg-no-repeat flex flex-col justify-between self-end px-8 pt-7 pb-4">
+                    <div className="bg-white w-fit p-3 rounded-full">
+                      <SupportIcon color="#EA0033" small />
+                    </div>
+                    <div className={`flex flex-col gap-4 ${roboto.className}`}>
+                      <p>
+                        Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân
+                        sự, nền tảng giải pháp, quy trình
+                      </p>
+                      <Link href="/" className="text-[#EA0033]">
+                        Khám phá dịch vụ
+                      </Link>
+                    </div>
+                  </div>
 
-              <Image
-                src="/images/img-1.png"
-                alt="outsourcing"
-                width={389}
-                height={493}
-                className="rounded-[20px]"
-              />
-            </TabsContent>
+                  <Image
+                    src="/images/img-1.png"
+                    alt="outsourcing"
+                    width={389}
+                    height={493}
+                    className="rounded-[20px]"
+                  />
+                </div>
+              </TabsContent>
+            ))}
           </Tabs>
         </section>
 
@@ -352,10 +357,8 @@ export default function Home() {
                   <Link href="/" className="text-[#EA0033] text-lg">
                     Tìm hiểu thêm
                   </Link>
-                  <button className="swiper-button-prev">
-                </button>
-                <button className="swiper-button-next">
-                </button>
+                  <button className="swiper-button-prev"></button>
+                  <button className="swiper-button-next"></button>
                 </div>
                 <img src="/images/swipe-1.png" alt="swipe-1" />
               </div>
