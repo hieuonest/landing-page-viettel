@@ -7,9 +7,31 @@ import outsourcing from "../../../public/images/service-outsourcing.png"
 import Image from "next/image";
 import { Metadata } from "next";
 
-export const metadata: Metadata ={
-  title: "Dịch vụ",
-  description: "Hệ sinh thái dịch vụ của Viettel CX"
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Viettel Cx",
+    description: "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
+    openGraph: {
+      title: "Viettel Cx",
+      description: "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
+      url: "https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg",
+      type: "website",
+      images: [
+        {
+          url: "https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Viettel Cx",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Viettel Cx",
+      description: "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
+      images: ["https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg"],
+    },
+  };
 }
 
 function Services() {

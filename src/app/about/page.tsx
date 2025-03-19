@@ -3,14 +3,35 @@ import React from "react";
 import radialGraph from "../../../public/images/radial.png";
 import Image from "next/image";
 import { Metadata } from "next";
-
 import CommonHeading from "../components/common-heading";
 import { dataWhyUs } from "@/lib/define-data";
 
-export const metadata: Metadata = {
-  title: "Về chúng tôi",
-  description: "Công ty TNHH MTV dịch vụ khách hàng Viettel",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Viettel Cx",
+    description: "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo.",
+    openGraph: {
+      title: "Viettel Cx",
+      description: "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo.",
+      url: "",
+      type: "website",
+      images: [
+        {
+          url: "",
+          width: 1200,
+          height: 630,
+          alt: "Viettel Cx",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Viettel Cx",
+      description: "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo.",
+      images: [""],
+    },
+  };
+}
 
 function About() {
   return (
