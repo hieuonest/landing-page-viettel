@@ -63,7 +63,13 @@ export default {
 				fsMagistral: ["var(--font-fs-magistral)", "sans-serif"],
 			},
 			screens: {
-				'3xl': '1572px'
+				'3xl': '1572px',
+				'xxs': "400px",
+				'xs': '480px',
+				'sm': '640px', 
+				'md': '768px',
+				'lg': '992px',
+				'xl': '1200px',
 			}
   	}
   },

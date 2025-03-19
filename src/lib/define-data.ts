@@ -85,9 +85,7 @@ export const dataWhyUs: {
     title: "Chuyên nghiệp",
     icon: settingIcon,
     desc: [
-      "Hơn 20 năm kinh nghiệm",
-      "Đội ngũ quản lý chuyên nghiệp",
-      "Nhân sự chất lượng cao",
+      "Hơn 20 năm kinh nghiệm triển khai dịch vụ, đội ngũ quản lý chuyên nghiệp, chất lượng cao",
       "Kho tri thức phong phú và đa dạng",
     ],
   },
@@ -115,8 +113,7 @@ export const dataWhyUs: {
     desc: [
       "Bảo vệ dữ liệu và hệ thống bằng các biện pháp an ninh mạng tiên tiến",
       "Tuân thủ các tiêu chuẩn bảo mật quốc tế: GDPR, ISO 27001",
-      "Kiểm toán và đánh giá định kỳ",
-      "Giám sát chủ động 24/7, phát hiện và xử lý mọi rủi ro tiềm ẩn",
+      "Kiểm toán, đánh giá định kỳ, chủ động 24/7, phát hiện và xử lý mọi rủi ro",
     ],
   },
 ]
