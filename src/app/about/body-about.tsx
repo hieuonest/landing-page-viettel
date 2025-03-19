@@ -2,13 +2,22 @@ import React from "react";
 import { fsMagistralBook, roboto } from "@/lib/font";
 import { dataWhyUs } from "@/lib/define-data";
 import Image from "next/image";
+import MotionWrapper from "@/components/ui/motion-wrapper";
+import { fadeInBottomVariants } from "@/lib/utils";
 
 export default function BodyAbout() {
   return (
     <section className="mt-[150px] px-20 flex flex-col items-center gap-10">
-      <h1 className={`${fsMagistralBook.className} text-[45px] text-center`}>
+      <MotionWrapper
+        element="h1"
+        initial="hidden"
+        viewport={{ once: true, amount: 0.4 }}
+        whileInView="visible"
+        variants={fadeInBottomVariants}
+        className={`${fsMagistralBook.className} text-[45px] text-center`}
+      >
         Vì sao lựa chọn Viettel CX?
-      </h1>
+      </MotionWrapper>
 
       <div className="grid grid-cols-4 w-full mt-10 gap-10">
         {dataWhyUs.map((item, index) => (
@@ -27,7 +36,9 @@ export default function BodyAbout() {
             <ul className="text-lg text-[#595959] leading-[23px] flex flex-col p-5 max-[1478px]:px-5 gap-4">
               {item.desc.map((desc, index) => (
                 <li key={index}>
-                  <p className="text-center text-[18px] text-[#595959]">{desc}</p>
+                  <p className="text-center text-[18px] text-[#595959]">
+                    {desc}
+                  </p>
                 </li>
               ))}
             </ul>

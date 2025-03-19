@@ -7,18 +7,30 @@ import iconLine2004 from "../../../public/svg/line-2004.svg";
 import iconLine2013 from "../../../public/svg/line-2013.svg";
 import { roboto, fsMagistralBook } from "@/lib/font";
 import iconLoa from "../../../public/images/icon-loa.png";
+import MotionWrapper from "@/components/ui/motion-wrapper";
+import { easeInOut } from "framer-motion";
 
 export default function HeaderAbout() {
   return (
     <>
       <div className="bg-[#595959] h-[520px] mt-[245px] relative">
         <div className="max-w-[90%] xl:max-w-[1120px] flex justify-between mx-auto container">
-          <div
+          <MotionWrapper
+            element="div"
             className={`${fsMagistralBook.className} text-[#FFFFFF] text-[30px] mt-[80px]`}
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.75 }}
           >
             Về chúng tôi
-          </div>
-          <div className="relative mt-[-115px]">
+          </MotionWrapper>
+          <MotionWrapper
+            element="div"
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.25 }}
+            className="relative mt-[-115px]"
+          >
             <Image src={bgHeader} alt="bgHeader" className="" />
             <div
               className={`${roboto.className} absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] text-center`}
@@ -35,11 +47,17 @@ export default function HeaderAbout() {
                 </span>
               </div>
             </div>
-          </div>
+          </MotionWrapper>
         </div>
       </div>
 
-      <div className="max-w-[1120px] flex justify-between mx-auto relative">
+      <MotionWrapper
+        element="div"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="max-w-[1120px] flex justify-between mx-auto relative"
+      >
         <Image
           src={bgYear}
           alt="background year"
@@ -75,11 +93,26 @@ export default function HeaderAbout() {
             </div>
           </div>
         </div>
-      </div>
+      </MotionWrapper>
 
       <div className="mt-[60px] max-w-[1120px] flex justify-between mx-auto">
         <div className="flex w-[100%]">
-          <div className="relative w-35/100">
+          <MotionWrapper
+            element="div"
+            initial="hidden"
+            viewport={{ once: true, amount: 0.4 }}
+            whileInView="visible"
+            transition={{ duration: 1 }}
+            className="relative w-35/100"
+            variants={{
+              hidden: { opacity: 0, x: -120 },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { duration: 1, easeInOut },
+              },
+            }}
+          >
             <div className="bg-[#EA0033] absolute w-[100%] h-[100%] z-10 top-[-20px] rounded-[20px]" />
             <div
               className={`${roboto.className} h-[285px] text-[30px] text-[#000000] leading-[35px] px-[30px] rounded-[20px] bg-[#E7E7E7] pt-[45px] flex relative z-20`}
@@ -91,9 +124,24 @@ export default function HeaderAbout() {
                 </div>
               </div>
             </div>
-          </div>
+          </MotionWrapper>
 
-          <div className="relative w-75/100">
+          <MotionWrapper
+             element="div"
+             initial="hidden"
+             viewport={{ once: true, amount: 0.4 }}
+             whileInView="visible"
+             transition={{ duration: 1 }}
+             variants={{
+               hidden: { opacity: 0, x: 120 },
+               visible: {
+                 opacity: 1,
+                 x: 0,
+                 transition: { duration: 1, easeInOut },
+               },
+             }}
+            className="relative w-75/100"
+          >
             <div className="bg-[#000000] absolute w-[100%] h-[100%] z-10 top-[-20px] rounded-[20px]" />
             <div
               className={`${roboto.className} h-[285px] text-[30px] text-[#000000] leading-[35px] px-[30px] rounded-[20px] bg-[#E7E7E7] pt-[45px]  relative z-20`}
@@ -109,7 +157,7 @@ export default function HeaderAbout() {
                 marketing. Mở rộng kết nối, gia tăng giá trị cho khách hàng.
               </div>
             </div>
-          </div>
+          </MotionWrapper>
         </div>
       </div>
     </>

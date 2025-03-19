@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const useCountUp = (endValue: number, duration: number = 4000) => {
+export const useCountUp = (endValue: number, duration: number = 4000, step : number  = 1) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export const useCountUp = (endValue: number, duration: number = 4000) => {
       const progress = (currentTime - startTime) / duration;
 
       if (progress < 1) {
-        setCount(Math.floor(endValue * progress));
+        setCount(Math.floor(endValue * progress / step) * step);
         animationFrame = requestAnimationFrame(animate);
       } else {
         setCount(endValue);
@@ -21,7 +21,7 @@ export const useCountUp = (endValue: number, duration: number = 4000) => {
 
     animationFrame = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(animationFrame);
-  }, [endValue, duration]);
+  }, [endValue, duration, step]);
 
   return count;
 };
