@@ -395,27 +395,31 @@ export default function Home() {
           </div>
         </section>
 
-        <MarqueeWrapper className="items-start justify-between" pauseOnHover={true}>
-          <div>
-            <Image
-              src={insightci}
-              alt="Insight CI"
-              quality={100}
-              className="flex items-start"
-            />
-          </div>
-          <div className="w-[16px] h-[16px] rounded-full bg-[#D9D9D9]"></div>
-          <div>
-            <Image
-              src={workforcex}
-              alt="Workforce X"
-              quality={100}
-              className="flex items-start"
-            />
+        <MarqueeWrapper
+          className="items-start justify-between"
+          // pauseOnHover={true}
+          autoFill={true}
+          gradient={true}
+        >
+          <div className="flex items-center justify-between w-full gap-16 overflow-visible h-[332px]">
+              <Image
+                src={insightci}
+                alt="Insight CI"
+                quality={100}
+                className="flex items-start relative top-[20px]"
+              />
+            <div className="w-[16px] h-[16px] rounded-full bg-[#D9D9D9]"></div>
+              <Image
+                src={workforcex}
+                alt="Workforce X"
+                quality={100}
+                className="flex items-start"
+              />
+              <div className="w-[16px] h-[16px] rounded-full bg-[#D9D9D9]"></div>
           </div>
         </MarqueeWrapper>
 
-        <section className="relative flex flex-col items-center justify-center py-20">
+        <section className="relative flex items-center max-w-[1560px] py-20 mx-auto">
           <div className="">
             <MotionWrapper
               element="h1"
@@ -423,11 +427,11 @@ export default function Home() {
               viewport={{ once: true, amount: 0.4 }}
               whileInView="visible"
               variants={fadeInBottomVariants}
-              className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
+              className={`${fsMagistralBook.className} text-[45px]`}
             >
-              Khách hàng của chúng tôi
+              Khách hàng <br/> của chúng tôi
             </MotionWrapper>
-            <div className="max-w-[1405px] mx-auto">
+            {/* <div className="max-w-[1405px] mx-auto">
               <Carousel className="mt-12">
                 <CarouselContent>
                   <CarouselItem className="">
@@ -460,7 +464,11 @@ export default function Home() {
                   </CarouselItem>
                 </CarouselContent>
               </Carousel>
-            </div>
+            </div> */}
+          </div>
+
+          <div className="grid grid-cols-5 ">
+
           </div>
         </section>
       </main>
