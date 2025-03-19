@@ -9,7 +9,6 @@ function HomeCounUp({
   return (
     <>
       {useCountUp(numberValue)}
-      {numberValue === 120 && " triệu"}
       {numberValue === 4000 && "+"}
     </>
   );

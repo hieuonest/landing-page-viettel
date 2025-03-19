@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { fsMagistral, roboto } from "@/lib/font";
+import { fsMagistral, fsMagistralBook, roboto } from "@/lib/font";
 import ExperienceIcon from "@/components/icons/experience-icon";
-import { MoveRight } from "lucide-react";
+import { ArrowUpRight, MoveRight } from "lucide-react";
 import ClientsIcon from "@/components/icons/clients-icon";
 import SupportIcon from "@/components/icons/support-icon";
 import React from "react";
 import GlobeIcon from "@/components/icons/globe-icon";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { dataPartners, dataServicesHome } from "@/lib/define-data";
 import {
   Carousel,
@@ -18,22 +18,29 @@ import {
   fadeInBottomVariants,
   fadeInLeftVariants,
   fadeInRightVariants,
+  fadeInTopVariants,
 } from "@/lib/utils";
 import HomeSwiper from "./components/home-swiper";
 import HomeCounUp from "./components/home-count-up";
 import MotionWrapper from "@/components/ui/motion-wrapper";
-import line1 from "../../public/images/line-1.png";
-import line2 from "../../public/images/line-2.png";
 import ArrowDownIcon from "@/components/icons/arrow-down-icon";
 import { Metadata } from "next";
+import gradientBg from "../../public/images/gradient-bg.png";
+import gradientRedBg from "../../public/images/gradient-bg-red.png";
+import HomeCarousel from "./components/home-carousel";
+import MarqueeWrapper from "@/components/ui/marquee-wrapper";
+import insightci from "../../public/svg/insight-ci.svg";
+import workforcex from "../../public/svg/workforce-x.svg";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Viettel Cx",
-    description: "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
+    description:
+      "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
     openGraph: {
       title: "Viettel Cx",
-      description: "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
+      description:
+        "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
       url: "",
       type: "website",
       images: [
@@ -48,7 +55,8 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: "Viettel Cx",
-      description: "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
+      description:
+        "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
       images: [""],
     },
   };
@@ -57,35 +65,39 @@ export async function generateMetadata(): Promise<Metadata> {
 type ExpItem = {
   icon: React.JSX.Element;
   title: string;
+  tailing: string;
   desc: string;
   numberValue: number;
 };
 export default function Home() {
-
   const expItems: ExpItem[] = [
     {
       icon: <ExperienceIcon color="#858585" />,
       numberValue: 20,
-      title: "20 năm",
+      title: "20",
+      tailing: "năm",
       desc: "kinh nghiệm",
     },
     {
       icon: <ClientsIcon color="#858585" />,
       numberValue: 120,
-      title: "120 triệu",
+      title: "120",
+      tailing: "Triệu",
       desc: "khách hàng",
     },
     {
       icon: <SupportIcon color="#858585" />,
       numberValue: 4000,
       title: "4.000+",
-      desc: "nhân sự hỗ trợ khách hàng 24/7 trên 63 tỉnh/thành",
+      tailing: "Nhân sự",
+      desc: "hỗ trợ khách hàng 24/7 trên 63 tỉnh/thành",
     },
     {
       icon: <GlobeIcon color="#858585" />,
       numberValue: 10,
       title: "10",
-      desc: "quốc gia/ vùng lãnh thổ sử dụng dịch vụ",
+      tailing: "Quốc gia vùng lãnh thổ",
+      desc: "sử dụng dịch vụ",
     },
   ];
 
@@ -96,10 +108,14 @@ export default function Home() {
 
   return (
     <div>
-      
-      <main className="bg-white">
-        <section className="lg:bg-[#e7e7e7] lg:h-[970px] relative">
-          <video className="lg:w-full min-h-[400px] lg:h-full object-cover" autoPlay loop muted>
+      <main className="">
+        <section className="lg:bg-[#e7e7e7] lg:h-[932px] relative">
+          <video
+            className="lg:w-full min-h-[400px] lg:h-full object-cover"
+            autoPlay
+            loop
+            muted
+          >
             <source src="/videos/intro.mp4" type="video/mp4" />
             Your browser does not support the video tag
           </video>
@@ -107,80 +123,119 @@ export default function Home() {
             <ArrowDownIcon />
           </button>
         </section>
-        <section className="relative pb-[200px]">
-          <Image
-            src={line1}
-            alt="043"
-            className="absolute left-0 top-0 max-[1472px]:w-[40%] max-[1472px]:max-w-[500px] max-[1400px]:max-h-[185px] h-[110px] md:h-auto"
-            quality={100}
-          />
-          <div className="relative left-0 right-0 translate-y-[50px] md:translate-y-[105px]">
-            <MotionWrapper
-              element="h1"
-              initial="hidden"
-              viewport={{ once: true, amount: 0.5 }}
-              whileInView="visible"
-              variants={fadeInBottomVariants}
-              className={`${fsMagistral.className} text-center font-semibold text-[34px] md:text-[45px]`}
-            >
-              Viettel CX <br /> nâng tầm trải nghiệm khách hàng
-            </MotionWrapper>
-            <MotionWrapper
-              element="p"
-              initial="hidden"
-              viewport={{ once: true, amount: 0.5 }}
-              whileInView="visible"
-              variants={fadeInBottomVariants}
-              className={`${roboto.className} font-light text-[20px] md:text-3xl text-center text-[#858585] mt-1`}
-            >
-              bằng công nghệ sáng tạo và sự thấu hiểu trái tim
-            </MotionWrapper>
+        <section className="relative">
+          <div className="relative z-[2]">
+            <div className="flex relative top-0 -translate-y-full">
+              <div className="h-[158px] w-[62px] bg-transparent relative">
+                <Image
+                  src="/svg/cutout-left.svg"
+                  alt="cutout"
+                  width={20}
+                  height={20}
+                  className="absolute bottom-0 right-0"
+                />
+              </div>
+              <div className="flex-1 bg-white rounded-t-[20px] relative max-h-[158px] overflow-visible">
+                <MotionWrapper
+                  element="h1"
+                  initial="hidden"
+                  viewport={{ once: true, amount: 0.4 }}
+                  whileInView="visible"
+                  variants={fadeInTopVariants}
+                  className={`${fsMagistralBook.className} text-center font-semibold text-[34px] md:text-[45px] pt-[68px] leading-[50px]`}
+                >
+                  <span className="">
+                    Viettel Customer Service <br /> nâng tầm trải nghiệm khách
+                    hàng
+                  </span>
+                </MotionWrapper>
+                <MotionWrapper
+                  element="p"
+                  initial="hidden"
+                  viewport={{ once: true, amount: 0.5 }}
+                  whileInView="visible"
+                  variants={fadeInBottomVariants}
+                  className={`${roboto.className} text-[20px] text-center text-[#595959] mt-3`}
+                >
+                  bằng công nghệ sáng tạo và sự thấu hiểu trái tim
+                </MotionWrapper>
+                <MotionWrapper
+                  initial="hidden"
+                  viewport={{ once: true, amount: 0.5 }}
+                  whileInView="visible"
+                  variants={fadeInBottomVariants}
+                  className={`${roboto.className} text-lg text-center text-[#EA0033] flex justify-center mt-6`}
+                >
+                  <Link
+                    href="/about"
+                    className="flex items-center relative see-more-link group transition-all duration-300"
+                  >
+                    Tìm hiểu thêm
+                    <ArrowUpRight
+                      color="#000"
+                      size={18}
+                      className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                    />
+                  </Link>
+                </MotionWrapper>
+              </div>
+              <div className="h-[158px] w-[62px] bg-transparent relative">
+                <Image
+                  src="/svg/cutout-right.svg"
+                  alt="cutout"
+                  width={20}
+                  height={20}
+                  className="absolute bottom-0 left-0"
+                />
+              </div>
+            </div>
 
-            <div className="flex justify-center mt-[85px] max-w-[1122px] mx-auto">
-              <ul className="grid grid-cols-4 gap-28">
-                {expItems.map(({ icon, numberValue, title, desc }, index) => (
-                  <li className="flex flex-col items-center" key={index}>
-                    <div className="border-2 border-solid border-[#858585] rounded-full p-4 w-[80px] h-[80px] flex justify-center items-center">
+            <div className="flex justify-center mx-auto max-w-[1274px]">
+              <ul className="grid grid-cols-4 gap-5">
+                {expItems.map(
+                  ({ icon, numberValue, title, tailing, desc }, index) => (
+                    <li
+                      className="flex flex-col items-center  min-w-[304px] min-h-[356px] bg-white rounded-[20px] p-[52px] pb-8 gap-[50px]"
+                      key={index}
+                    >
                       {icon}
-                    </div>
 
-                    <p
-                      className={`${roboto.className} text-[50px] text-[#EA0033]`}
-                    >
-                      {numberValue ? (
-                        <HomeCounUp numberValue={numberValue} />
-                      ) : (
-                        title
-                      )}
-                    </p>
-                    <p
-                      className={`${roboto.className} text-[20px] text-[#595959] text-center w-[256px]`}
-                    >
-                      {desc}
-                    </p>
-                  </li>
-                ))}
+                      <div className="flex flex-col items-center">
+                        <p
+                          className={`${roboto.className} text-[65px] font-light text-[#A28F5D]`}
+                        >
+                          {numberValue ? (
+                            <HomeCounUp numberValue={numberValue} />
+                          ) : (
+                            title
+                          )}
+                        </p>
+                        <p
+                          className={`${roboto.className} text-2xl font-semibold uppercase text-[#595959] text-center max-w-[187px]`}
+                        >
+                          {tailing}
+                        </p>
+                        <p
+                          className={`${roboto.className} text-[20px] text-[#595959] text-center w-[256px]`}
+                        >
+                          {desc}
+                        </p>
+                      </div>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
           </div>
 
-          <Image
-            src={line2}
-            alt="044"
-            className="absolute right-0 top-[0px] translate-y-[45%] max-[1472px]:translate-y-[75%] max-[1472px]:w-[40%] max-[1472px]:max-w-[500px] max-[1300px]:right-[-60px] max-[1300px]:w-[490px] max-[1200px]:top-[-120px] max-[768px]:w-[305px] max-[768px]:top-[-80px] max-[768px]:right-[0px] max-[576px]:right-[-10%] max-[500px]:right-[-20%] max-[500px]:right-[-30%] max-[500px]:hidden h-auto"
-            quality={100}
-          />
-        </section>
-
-        <section className="relative flex flex-col items-center justify-center py-20">
-          <div className="">
+          <div className="mt-36 relative">
             <MotionWrapper
               element="h1"
               initial="hidden"
               viewport={{ once: true, amount: 0.4 }}
               whileInView="visible"
               variants={fadeInBottomVariants}
-              className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
+              className={`${fsMagistralBook.className} text-center font-semibold text-[45px] leading-[50px]`}
             >
               Hệ sinh thái dịch vụ
             </MotionWrapper>
@@ -190,26 +245,35 @@ export default function Home() {
               viewport={{ once: true, amount: 0.5 }}
               whileInView="visible"
               variants={fadeInBottomVariants}
-              className={`${roboto.className} font-light text-3xl text-center text-[#858585] max-w-[850px] mx-auto mt-4`}
+              className={`${roboto.className} text-[20px] text-center text-black max-w-[633px] mx-auto mt-4`}
             >
               Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến
               trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu
             </MotionWrapper>
           </div>
 
+          <Image
+            src={gradientBg}
+            alt="gradient-bg"
+            quality={100}
+            className="absolute bottom-0 translate-y-1/2 z-[-1]"
+          />
+        </section>
+
+        <section className="relative flex flex-col items-center justify-center mt-16">
           <Link
-            href="/"
-            className={`${roboto.className} flex items-center gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 font-medium
-            relative overflow-hidden group hover:border-white`}
+            href="/services"
+            className={`${roboto.className} text-[#D8D8D8] text-[20px] font-medium flex items-center gap-6 border-solid bg-black rounded-sm px-4 py-2 overflow-hidden group absolute top-0 -translate-y-1/2 z-10`}
           >
             <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
-            <MoveRight className="relative z-10 transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
-            <span className="relative z-10 transition-all duration-300 group-hover:text-white">
-              Tất cả dịch vụ Viettel CX
+            <MoveRight className="relative transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
+            <span className="relative transition-all duration-300 group-hover:text-white">
+              Tất cả dịch vụ
             </span>
           </Link>
+          <HomeCarousel />
 
-          <Tabs
+          {/* <Tabs
             defaultValue="outsourcing"
             className="flex gap-[5.5rem] min-w-[1280px] mt-12"
             orientation="vertical"
@@ -285,47 +349,71 @@ export default function Home() {
                 </TabsContent>
               ))}
             </MotionWrapper>
-          </Tabs>
+          </Tabs> */}
         </section>
 
-        <section className="relative flex flex-col items-center justify-center py-20">
-          <div className="">
+        <section className="relative flex flex-col items-center justify-center">
+          <div className="pt-32 relavtive w-full bg-white">
+            <Image
+              src={gradientRedBg}
+              alt="Gradient Red"
+              className="absolute top-0 left-1/2 -translate-x-[50%] bottom-0 -translate-y-[70%] z-0"
+            />
             <MotionWrapper
-              element="h1"
               initial="hidden"
               viewport={{ once: true, amount: 0.4 }}
               whileInView="visible"
               variants={fadeInBottomVariants}
-              className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
+              className="relative z-1"
             >
-              Nền tảng, giải pháp <br /> phần mềm dịch vụ Khách hàng
-            </MotionWrapper>
-            <MotionWrapper
-              element="p"
-              initial="hidden"
-              viewport={{ once: true, amount: 0.5 }}
-              whileInView="visible"
-              variants={fadeInBottomVariants}
-              className={`${roboto.className} font-light text-3xl text-center text-[#858585] max-w-[850px] mx-auto mt-4`}
-            >
-              Công nghệ dẫn lối, mở ra mọi kết nối với khách hàng
+              <h1
+                className={`${fsMagistralBook.className} text-center font-semibold text-[45px]`}
+              >
+                Nền tảng - Giải pháp
+              </h1>
+              <p
+                className={`${roboto.className} text-[20px] text-center text-black max-w-[633px] mx-auto`}
+              >
+                Công nghệ dẫn lối, mở ra mọi kết nối với khách hàng
+              </p>
             </MotionWrapper>
           </div>
 
           <Link
-            href="/"
-            className={`${roboto.className} flex items-center gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 font-medium
+            href="/solutions"
+            className={`${roboto.className} flex items-center text-[20px] gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 
             relative overflow-hidden group hover:border-white`}
           >
             <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
             <MoveRight className="relative z-10 transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
-            <span className="relative z-10 transition-all duration-300 group-hover:text-white">
-              Tất cả dịch vụ Viettel CX
+            <span className="relative z-10 transition-all duration-300 group-hover:text-white font-medium">
+              Tất cả Nền tảng - Giải pháp
             </span>
           </Link>
-
-          <HomeSwiper />
+          <div className="max-w-[1120px]">
+            <HomeSwiper />
+          </div>
         </section>
+
+        <MarqueeWrapper className="items-start justify-between" pauseOnHover={true}>
+          <div>
+            <Image
+              src={insightci}
+              alt="Insight CI"
+              quality={100}
+              className="flex items-start"
+            />
+          </div>
+          <div className="w-[16px] h-[16px] rounded-full bg-[#D9D9D9]"></div>
+          <div>
+            <Image
+              src={workforcex}
+              alt="Workforce X"
+              quality={100}
+              className="flex items-start"
+            />
+          </div>
+        </MarqueeWrapper>
 
         <section className="relative flex flex-col items-center justify-center py-20">
           <div className="">
