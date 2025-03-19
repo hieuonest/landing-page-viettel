@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <Header />
         <aside
-          className={`bg-[#EA0033] w-fit px-4 py-3 fixed right-[0%] translate-x-12 top-[50%] z-[11]  rotate-90 rounded-b-xl`}
+          className={`bg-[#EA0033] w-fit px-3 py-2 sm:py-3 sm:px-4  fixed right-[0%] translate-x-12 top-[50%] z-[11]  rotate-90 rounded-b-xl`}
         >
           <p
             className={` uppercase ${roboto.className} font-semibold text-white text-center antialiased`}

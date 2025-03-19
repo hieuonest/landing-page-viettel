@@ -13,11 +13,11 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: "Viettel Cx",
       description: "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo.",
-      url: "https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg",
+      url: "",
       type: "website",
       images: [
         {
-          url: "https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg",
+          url: "",
           width: 1200,
           height: 630,
           alt: "Viettel Cx",
@@ -28,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "Viettel Cx",
       description: "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo.",
-      images: ["https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg"],
+      images: [""],
     },
   };
 }

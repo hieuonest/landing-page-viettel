@@ -34,11 +34,11 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: "Viettel Cx",
       description: "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
-      url: "https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg",
+      url: "",
       type: "website",
       images: [
         {
-          url: "https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg",
+          url: "",
           width: 1200,
           height: 630,
           alt: "Viettel Cx",
@@ -49,7 +49,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "Viettel Cx",
       description: "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
-      images: ["https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg"],
+      images: [""],
     },
   };
 }
@@ -98,12 +98,12 @@ export default function Home() {
     <div>
       
       <main className="bg-white">
-        <section className="bg-[#e7e7e7] h-[970px] relative">
-          <video className="w-full h-full object-cover" autoPlay loop muted>
+        <section className="lg:bg-[#e7e7e7] lg:h-[970px] relative">
+          <video className="lg:w-full min-h-[400px] lg:h-full object-cover" autoPlay loop muted>
             <source src="/videos/intro.mp4" type="video/mp4" />
             Your browser does not support the video tag
           </video>
-          <button className="absolute bottom-14 left-0 right-0 translate-x-1/2">
+          <button className="absolute bottom-4 left-0 right-0 translate-x-1/2">
             <ArrowDownIcon />
           </button>
         </section>
@@ -111,17 +111,17 @@ export default function Home() {
           <Image
             src={line1}
             alt="043"
-            className="absolute left-0 top-0 max-[1472px]:w-[40%] max-[1472px]:max-w-[500px] h-auto"
+            className="absolute left-0 top-0 max-[1472px]:w-[40%] max-[1472px]:max-w-[500px] max-[1400px]:max-h-[185px] h-[110px] md:h-auto"
             quality={100}
           />
-          <div className="relative left-0 right-0 translate-y-[24%]">
+          <div className="relative left-0 right-0 translate-y-[50px] md:translate-y-[105px]">
             <MotionWrapper
               element="h1"
               initial="hidden"
               viewport={{ once: true, amount: 0.5 }}
               whileInView="visible"
               variants={fadeInBottomVariants}
-              className={`${fsMagistral.className} text-center font-semibold text-[45px]`}
+              className={`${fsMagistral.className} text-center font-semibold text-[34px] md:text-[45px]`}
             >
               Viettel CX <br /> nâng tầm trải nghiệm khách hàng
             </MotionWrapper>
@@ -131,7 +131,7 @@ export default function Home() {
               viewport={{ once: true, amount: 0.5 }}
               whileInView="visible"
               variants={fadeInBottomVariants}
-              className={`${roboto.className} font-light text-3xl text-center text-[#858585] mt-1`}
+              className={`${roboto.className} font-light text-[20px] md:text-3xl text-center text-[#858585] mt-1`}
             >
               bằng công nghệ sáng tạo và sự thấu hiểu trái tim
             </MotionWrapper>
@@ -167,7 +167,7 @@ export default function Home() {
           <Image
             src={line2}
             alt="044"
-            className="absolute right-0 top-0 translate-y-[45%] max-[1472px]:translate-y-[75%] max-[1472px]:w-[40%] max-[1472px]:max-w-[500px] h-auto"
+            className="absolute right-0 top-[0px] translate-y-[45%] max-[1472px]:translate-y-[75%] max-[1472px]:w-[40%] max-[1472px]:max-w-[500px] max-[1300px]:right-[-60px] max-[1300px]:w-[490px] max-[1200px]:top-[-120px] max-[768px]:w-[305px] max-[768px]:top-[-80px] max-[768px]:right-[0px] max-[576px]:right-[-10%] max-[500px]:right-[-20%] max-[500px]:right-[-30%] max-[500px]:hidden h-auto"
             quality={100}
           />
         </section>
