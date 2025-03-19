@@ -1,20 +1,9 @@
 // import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { roboto } from "@/lib/font";
 import ButtonToTop from "@/components/ui/button-to-top";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 // export const metadata: Metadata = {
 //   title: "Viettel CX",
@@ -29,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="antialiased"
       >
         <Header />
         <aside
