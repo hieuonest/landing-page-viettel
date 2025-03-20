@@ -13,46 +13,81 @@ function FormContact() {
   const {
     register,
     handleSubmit,
-    formState: { },
+    formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     const { name, email, phone } = data;
+    if (!name.trim() || !email.trim() || !phone.trim()) {
+      return null;
+    }
     const mailtoLink = `mailto:viettelcx.com.vn?subject=Contact Form Submission&body=Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}`;
     window.location.href = mailtoLink;
   };
+
   return (
     <>
       <form
         className={`flex items-center justify-center w-[100dvw] md:w-full gap-2 [&>div]:min-h-10 ${roboto.className}`}
         onSubmit={handleSubmit(onSubmit)}
       >
-        <input
-          {...register("name")}
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Họ và tên"
-          className="text-white h-10 px-4 max-md:min-w-[87%] min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] outline-none focus:border-[rgb(203,202,202)] focus:border-1  transition-all duration-300 ease-in-out"
-        />
-        <div>
+        <div className="relative">
           <input
-            {...register("email")}
+            {...register("name", { required: true })}
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Họ và tên"
+            className="text-white h-10 px-4 max-md:min-w-[87%] min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] outline-none focus:border-[rgb(203,202,202)] focus:border-1  transition-all duration-300 ease-in-out"
+          />
+          {errors.name ? (
+            <div className="absolute bottom-[-22px] text-[#EB6363] italic text-[13px]">
+              Họ và tên không được để trống
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
+
+        <div className="relative">
+          <input
+            {...register("email", { required: true })}
             type="email"
             id="email"
             name="email"
             placeholder="Email"
             className="text-white h-10 px-4 max-md:min-w-[50%] min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] outline-none focus:border-[rgb(203,202,202)] focus:border-1  transition-all duration-300 ease-in-out"
           />
+          {errors.email ? (
+            <div className="absolute bottom-[-22px] text-[#EB6363] italic text-[13px]">
+              Email không được để trống
+            </div>
+          ) : (
+            ""
+          )}
         </div>
-        <div>
+
+        <div className="relative">
           <input
-            {...register("phone")}
+            {...register("phone", { required: true })}
             type="tel"
             id="phone"
             name="phone"
             placeholder="Số điện thoại"
-            className="text-white h-10 px-4 max-md:min-w-[50%] min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] outline-none focus:border-[rgb(203,202,202)] focus:border-1  transition-all duration-300 ease-in-out"
+            onKeyDown={(e) => {
+              if (!/[0-9+]/.test(e.key) && e.key !== "Backspace") {
+                e.preventDefault();
+              }
+            }}
+            className="text-white h-10 px-4 max-md:min-w-[50%] min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] outline-none focus:border-[rgb(203,202,202)] focus:border-1 transition-all duration-300 ease-in-out"
           />
+
+          {errors.phone ? (
+            <div className="absolute bottom-[-22px] text-[#EB6363] italic text-[13px]">
+              Số điện thoại không được để trống
+            </div>
+          ) : (
+            ""
+          )}
         </div>
 
         <Button

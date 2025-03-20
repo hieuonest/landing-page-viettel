@@ -38,7 +38,7 @@ function Header() {
           {
             dataLink.map(({ href, label }) => (
               <li key={`${href}${label}`} className='hover:text-[#ED1B36] text-black transition-colors duration-300 ease-in-out'>
-                <Link href={href} className={`${sarabun.className} font-semibold uppercase p-3 ${pathname === href ? 'text-[#ED1B36]' : ''}`}>
+                <Link href={href} className={`${sarabun.className} text-[16px] font-semibold uppercase p-3 ${pathname === href ? 'text-[#ED1B36]' : ''}`}>
                   {label}
                 </Link>
               </li>
