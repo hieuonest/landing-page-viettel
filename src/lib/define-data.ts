@@ -142,3 +142,40 @@ export const dataPartners: {
     name: "Bộ Y Tế"
   },
 ]
+
+export const slug_solution: {
+    href: string;
+    label: string;
+    id: number;
+}[] = [
+  {
+    href: "TỔNG ĐÀI ĐA KÊNH",
+    label: "TỔNG ĐÀI ĐA KÊNH",
+    id: 1,
+  },
+  {
+    href: "TỔNG ĐÀI ẢO",
+    label: "TỔNG ĐÀI ẢO",
+    id: 2,
+  },
+  {
+    href: "QUẢN LÝ DANH TIẾNG",
+    label: "QUẢN LÝ DANH TIẾNG",
+    id: 3,
+  },
+  {
+    href: "TƯƠNG TÁC KHÁCH HÀNG",
+    label: "TƯƠNG TÁC KHÁCH HÀNG",
+    id: 4,
+  },
+  {
+    href: "QUẢN LÝ TRI THỨC",
+    label: "QUẢN LÝ TRI THỨC",
+    id: 5,
+  },
+  {
+    href: "BẢO HÀNH",
+    label: "BẢO HÀNH",
+    id: 6,
+  },
+];
