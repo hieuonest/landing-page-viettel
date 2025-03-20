@@ -13,6 +13,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import ServicesCarousel from "./services-carousel";
 import "../styles/pages/services.scss";
+import { Separator } from "@/components/ui/separator";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -117,6 +118,8 @@ function Services() {
         <ServicesSection></ServicesSection>
 
         <ServicesCarousel />
+
+        <Separator className="mt-16 bg-[#D9D9D9]" />
       </main>
     </div>
   );
