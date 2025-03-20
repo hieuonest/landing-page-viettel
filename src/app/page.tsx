@@ -34,11 +34,11 @@ import workforcex from "../../public/svg/workforce-x.svg";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Viettel Cx",
+    title: "Viettel Customer Services",
     description:
       "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
     openGraph: {
-      title: "Viettel Cx",
+      title: "Viettel Customer Services",
       description:
         "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
       url: "",
@@ -195,14 +195,14 @@ export default function Home() {
                 {expItems.map(
                   ({ icon, numberValue, title, tailing, desc }, index) => (
                     <li
-                      className="flex flex-col items-center  min-w-[304px] min-h-[356px] bg-white rounded-[20px] p-[52px] pb-8 gap-[50px]"
+                      className="flex flex-col items-center  min-w-[204px] min-h-[356px] xl-2:min-w-[304px] bg-white rounded-[20px] p-[52px] pb-8 gap-[50px]"
                       key={index}
                     >
                       {icon}
 
                       <div className="flex flex-col items-center">
                         <p
-                          className={`${roboto.className} text-[65px] font-light text-[#A28F5D]`}
+                          className={`${roboto.className} xl:text-[65px] text-[55px] font-light text-[#A28F5D]`}
                         >
                           {numberValue ? (
                             <HomeCounUp numberValue={numberValue} />
@@ -211,12 +211,12 @@ export default function Home() {
                           )}
                         </p>
                         <p
-                          className={`${roboto.className} text-2xl font-semibold uppercase text-[#595959] text-center max-w-[187px]`}
+                          className={`${roboto.className} xl:text-2xl text-lg font-semibold uppercase text-[#595959] text-center max-w-[187px]`}
                         >
                           {tailing}
                         </p>
                         <p
-                          className={`${roboto.className} text-[20px] text-[#595959] text-center w-[256px]`}
+                          className={`${roboto.className} xl:text-[20px] text-base text-[#595959] text-center w-[256px]`}
                         >
                           {desc}
                         </p>
@@ -256,7 +256,7 @@ export default function Home() {
             src={gradientBg}
             alt="gradient-bg"
             quality={100}
-            className="absolute bottom-0 translate-y-1/2 z-[-1]"
+            className="absolute bottom-0 translate-y-[40%] z-[-1] w-full object-cover"
           />
         </section>
 
@@ -271,94 +271,19 @@ export default function Home() {
               Tất cả dịch vụ
             </span>
           </Link>
-          <HomeCarousel />
-
-          {/* <Tabs
-            defaultValue="outsourcing"
-            className="flex gap-[5.5rem] min-w-[1280px] mt-12"
-            orientation="vertical"
-          >
-            <MotionWrapper
-              initial="hidden"
-              viewport={{ once: true, amount: 0.3 }}
-              whileInView="visible"
-              variants={fadeInLeftVariants}
-              className=""
-            >
-              <TabsList
-                className={`inline-flex flex-col items-start ${roboto.className} h-fit`}
-              >
-                {dataServicesHome.map(({ value, label }) => (
-                  <TabsTrigger
-                    key={value}
-                    value={value}
-                    className="text-3xl transition-all duration-300 ease-in-out group font-medium
-                        data-[state=active]:text-[#EA0033] 
-                          data-[state=active]:shadow-none 
-                          data-[state=active]:bg-transparent
-                        data-[state=inactive]:text-[#9B9B9B]
-                          data-[state=active]:py-6 data-[state=active]:pb-2 transform
-                          flex flex-col items-start"
-                  >
-                    <p className="opacity-0 translate-y-2 text-lg font-medium text-black transition-all duration-300 ease-in-out group-data-[state=active]:opacity-100 group-data-[state=active]:translate-y-0">
-                      Dịch vụ
-                    </p>
-
-                    <span className="transition-all duration-300 ease-in-out font-medium">
-                      {label}
-                    </span>
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </MotionWrapper>
-            <MotionWrapper
-              initial="hidden"
-              viewport={{ once: true, amount: 0.3 }}
-              whileInView="visible"
-              variants={fadeInRightVariants}
-              className="flex flex-col justify-end"
-            >
-              {dataServicesHome.map((item, index) => (
-                <TabsContent value={item.value} className="" key={index}>
-                  <div className="flex gap-5 items-end h-full">
-                    <div className="w-[304px] h-[304px] rounded-[20px] bg-[url(/images/bg-1.png)] bg-cover bg-no-repeat flex flex-col justify-between self-end px-8 pt-7 pb-4">
-                      <div className="bg-white w-fit p-3 rounded-full">
-                        <SupportIcon color="#EA0033" small />
-                      </div>
-                      <div
-                        className={`flex flex-col gap-4 ${roboto.className}`}
-                      >
-                        <p>
-                          Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân
-                          sự, nền tảng giải pháp, quy trình
-                        </p>
-                        <Link href="/" className="text-[#EA0033]">
-                          Khám phá dịch vụ
-                        </Link>
-                      </div>
-                    </div>
-
-                    <Image
-                      src="/images/img-1.png"
-                      alt="outsourcing"
-                      width={389}
-                      height={493}
-                      className="rounded-[20px]"
-                    />
-                  </div>
-                </TabsContent>
-              ))}
-            </MotionWrapper>
-          </Tabs> */}
-        </section>
-
-        <section className="relative flex flex-col items-center justify-center">
-          <div className="pt-32 relavtive w-full bg-white">
+          <div className="relative bg-white">
+            <HomeCarousel />
             <Image
               src={gradientRedBg}
               alt="Gradient Red"
-              className="absolute top-0 left-1/2 -translate-x-[50%] bottom-0 -translate-y-[70%] z-0"
+              quality={100}
+              className="absolute left-1/2 -translate-x-[50%] bottom-0 translate-y-[30%] z-[-2] w-full h-full object-contain"
             />
+          </div>
+        </section>
+
+        <section className="relative flex flex-col items-center justify-center">
+          <div className="pt-32 relavtive w-full">
             <MotionWrapper
               initial="hidden"
               viewport={{ once: true, amount: 0.4 }}
@@ -402,20 +327,20 @@ export default function Home() {
           gradient={true}
         >
           <div className="flex items-center justify-between w-full gap-16 overflow-visible h-[332px]">
-              <Image
-                src={insightci}
-                alt="Insight CI"
-                quality={100}
-                className="flex items-start relative top-[20px]"
-              />
+            <Image
+              src={insightci}
+              alt="Insight CI"
+              quality={100}
+              className="flex items-start relative top-[20px]"
+            />
             <div className="w-[16px] h-[16px] rounded-full bg-[#D9D9D9]"></div>
-              <Image
-                src={workforcex}
-                alt="Workforce X"
-                quality={100}
-                className="flex items-start"
-              />
-              <div className="w-[16px] h-[16px] rounded-full bg-[#D9D9D9]"></div>
+            <Image
+              src={workforcex}
+              alt="Workforce X"
+              quality={100}
+              className="flex items-start"
+            />
+            <div className="w-[16px] h-[16px] rounded-full bg-[#D9D9D9]"></div>
           </div>
         </MarqueeWrapper>
 
@@ -429,7 +354,7 @@ export default function Home() {
               variants={fadeInBottomVariants}
               className={`${fsMagistralBook.className} text-[45px]`}
             >
-              Khách hàng <br/> của chúng tôi
+              Khách hàng <br /> của chúng tôi
             </MotionWrapper>
             {/* <div className="max-w-[1405px] mx-auto">
               <Carousel className="mt-12">
@@ -467,9 +392,7 @@ export default function Home() {
             </div> */}
           </div>
 
-          <div className="grid grid-cols-5 ">
-
-          </div>
+          <div className="grid grid-cols-5 "></div>
         </section>
       </main>
 
