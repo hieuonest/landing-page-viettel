@@ -5,18 +5,18 @@ import logicIcon from "../../public/svg/logic.svg";
 import shieldIcon from "../../public/svg/shield.svg";
 import dvc from "../../public/images/image 2.png"
 import dvc2 from "../../public/images/image 3.png"
-import dvc3 from "../../public/images/image 4.png"
-import dvc4 from "../../public/images/image 6.png"
-import dvc5 from "../../public/images/image 7.png"
-import dvc6 from "../../public/images/image 8.png"
-import dvc7 from "../../public/images/image 9.png"
-import dvc8 from "../../public/images/Layer_1.png"
-import dvc9 from "../../public/images/Layer_1-1.png"
-import dvc10 from "../../public/images/Layer_1-2.png"
-import dvc11 from "../../public/images/Layer_1-3.png"
-import dvc12 from "../../public/images/Layer_1-4.png"
-import dvc13 from "../../public/images/Layer_1-5.png"
-import dvc14 from "../../public/images/Layer_1-6.png"
+import boyte from "../../public/images/bo-y-te.png"
+import be from "../../public/images/be.png"
+import longan from "../../public/images/long-an.png"
+import bachmai from "../../public/images/bach-mai.png"
+import mb from "../../public/images/mb.png"
+import vttelecom from "../../public/images/viettel-telecom.png"
+import vtcyberspace from "../../public/images/viettel-cyberspace.png"
+import vtdigital from "../../public/images/viettel-digital.png"
+import vthightech from "../../public/images/viettel-hightech.png"
+import vtmedia from "../../public/images/viettel-media.png"
+import vtpost from "../../public/images/viettel-post.png"
+import vtsolutions from "../../public/images/viettel-solutions.png"
 
 export const dataLink: {
   href: string;
@@ -25,7 +25,6 @@ export const dataLink: {
   { href: "/about", label: "Về chúng tôi" },
   { href: "/services", label: "Dịch vụ" },
   { href: "/solutions", label: "Giải pháp" },
-  { href: "/contact", label: "Liên hệ" },
 ];
 
 export const dataServicesHome: {
@@ -123,63 +122,23 @@ export const dataPartners: {
   name: string;
 }[] = [
   {
-    image: dvc,
-    name: "Dịch vụ công"
+    image: mb,
+    name: "MB"
   },
   {
-    image: dvc2,
-    name: "Bảo hiểm"
+    image: bachmai,
+    name: "Bạch Mai"
   },
   {
-    image: dvc2,
-    name: "Bảo hiểm"
+    image: be,
+    name: "Bộ Giáo Dục"
   },
   {
-    image: dvc3,
-    name: "Ngân hàng"
+    image: vttelecom,
+    name: "Viettel Telecom"
   },
   {
-    image: dvc4,
-    name: "Bán lẻ"
+    image: boyte,
+    name: "Bộ Y Tế"
   },
-  {
-    image: dvc5,
-    name: "Du lịch"
-  },
-  {
-    image: dvc6,
-    name: "Giao thông"
-  },
-  {
-    image: dvc7,
-    name: "Y tế"
-  },
-  {
-    image: dvc8,
-    name: "Dịch vụ công"
-  },
-  {
-    image: dvc9,
-    name: "Bảo hiểm"
-  },
-  {
-    image: dvc10,
-    name: "Ngân hàng"
-  },
-  {
-    image: dvc11,
-    name: "Bán lẻ"
-  },
-  {
-    image: dvc12,
-    name: "Du lịch"
-  },
-  {
-    image: dvc13,
-    name: "Giao thông"
-  },
-  {
-    image: dvc14,
-    name: "Y tế"
-  }
 ]

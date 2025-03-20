@@ -175,3 +175,34 @@ html {
 .z-100{
   z-index: 100;
 }
+
+.see-more-link {
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #ee0033;
+    margin-top: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    transition: all 0.6s ease;
+  }
+
+
+  &:hover {
+
+    &::after {
+      width: 100%;
+      
+      transition: all 0.4s ease;
+    }
+  }
+
+  &.underline-white {
+    &::after {
+      background-color: #fff;
+    }
+  }
+}

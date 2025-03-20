@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className="antialiased"
+        className="antialiased max-w-[100dvw] overflow-x-hidden"
       >
         <Header />
         <aside

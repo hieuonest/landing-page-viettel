@@ -23,7 +23,7 @@ function FormContact() {
   return (
     <>
       <form
-        className={`flex items-center gap-2 [&>div]:min-h-10 ${roboto.className}`}
+        className={`flex items-center justify-center w-[100dvw] md:w-full gap-2 [&>div]:min-h-10 ${roboto.className}`}
         onSubmit={handleSubmit(onSubmit)}
       >
         <input
@@ -32,7 +32,7 @@ function FormContact() {
           id="name"
           name="name"
           placeholder="Họ và tên"
-          className="text-white h-10 px-4 min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] outline-none focus:border-[rgb(203,202,202)] focus:border-1  transition-all duration-300 ease-in-out"
+          className="text-white h-10 px-4 max-md:min-w-[87%] min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] outline-none focus:border-[rgb(203,202,202)] focus:border-1  transition-all duration-300 ease-in-out"
         />
         <div>
           <input
@@ -41,7 +41,7 @@ function FormContact() {
             id="email"
             name="email"
             placeholder="Email"
-            className="text-white h-10 px-4 min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] outline-none focus:border-[rgb(203,202,202)] focus:border-1  transition-all duration-300 ease-in-out"
+            className="text-white h-10 px-4 max-md:min-w-[50%] min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] outline-none focus:border-[rgb(203,202,202)] focus:border-1  transition-all duration-300 ease-in-out"
           />
         </div>
         <div>
@@ -51,13 +51,13 @@ function FormContact() {
             id="phone"
             name="phone"
             placeholder="Số điện thoại"
-            className="text-white h-10 px-4 min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] outline-none focus:border-[rgb(203,202,202)] focus:border-1  transition-all duration-300 ease-in-out"
+            className="text-white h-10 px-4 max-md:min-w-[50%] min-w-[267px] max-[1524px]:min-w-[227px] rounded-sm bg-transparent border border-[#858585] border-solid placeholder:text-[#858585] outline-none focus:border-[rgb(203,202,202)] focus:border-1  transition-all duration-300 ease-in-out"
           />
         </div>
 
         <Button
           type="submit"
-          className={`h-10 px-16 bg-white uppercase text-[#EA0033] !font-bold ${sarabun.className} text-lg hover:bg-white`}
+          className={`h-10 px-10 md:px-16 bg-white uppercase text-[#EA0033] !font-bold ${sarabun.className} text-sm md:text-lg hover:bg-white`}
         >
           Liên hệ
         </Button>

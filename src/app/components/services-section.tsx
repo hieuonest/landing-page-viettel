@@ -11,6 +11,11 @@ import cx from "../../../public/images/service-cx.png";
 import baoHanh from "../../../public/images/service-bao-hanh.png";
 import { Separator } from "@/components/ui/separator";
 import { dataServicesLinks } from "@/lib/define-data";
+import { roboto } from "@/lib/font";
+import { ArrowDownLeft, ArrowUpRight } from "lucide-react";
+import contact from "../../../public/images/contact.jpeg";
+import Image from "next/image";
+import ServicesCarousel from "../services/services-carousel";
 
 const services = [
   {
@@ -177,20 +182,71 @@ const services = [
 ];
 
 function ServicesSection({ children }: { children?: React.ReactNode }) {
-  const [layout, setLayout] = React.useState<"grid" | "list">("grid");
   return (
-    <section>
-      <div className="flex items-center justify-between max-w-[1120px] mx-auto py-8">
+    <section className="max-w-[1596px] mx-auto">
+      <div className="flex items-center justify-between py-8">
         <CommonButtonList items={dataServicesLinks} />
-        <CommonLayoutSwitch layout={layout} setLayout={setLayout} />
       </div>
+      <article className="flex items-center h-[452px] gap-5">
+        <div className={`${roboto.className} bg-white p-8 rounded-[20px] max-w-[950px] h-full`}
+        >
+          <h1 className="text-3xl font-medium text-[#9B9B9B]">
+            Dịch vụ{" "}
+            <span className="font-medium text-black">
+              Outsourcing Contact Center
+            </span>
+          </h1>
+          <p className="max-w-[645px] text-lg mt-3">
+            Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng
+            giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng
+            của doanh nghiệp, giúp:
+          </p>
 
-      {children}
+          <div className="flex items-end justify-between gap-10 mt-12 text-[#595959] text-lg">
+            <ul className="list-disc ml-6 space-y-2 max-w-[375px]">
+              <li>Tư vấn, hỗ trợ, giải đáp</li>
+              <li>Giải quyết khiếu nại, xử lý sự cố, hỗ trợ kỹ thuật</li>
+              <li>Chủ động CSKH</li>
+              <li>Khảo sát khách hàng</li>
+              <li>Kiểm duyệt nội dung, nhập liệu, xác minh thông tin KH </li>
+            </ul>
 
-      <div className="max-w-[1192px] mx-auto">
-        <Separator className="my-[75px]" />
-        <CommonLayout items={services} layout={layout} />
-      </div>
+            <div>
+              <p>
+                Với hệ thống tổng đài hiện đại và đội ngũ chuyên nghiệp, Viettel
+                CX giúp:
+              </p>
+              <div className="space-y-6 mt-6">
+                <div className="flex items-center gap-3">
+                  <p className="flex items-end justify-end text-right text-[28px] text-black min-w-[130px]">
+                    <ArrowUpRight size={18} color="#EA0033" />
+                    30 - 40%
+                  </p>
+                  <p>chi phí vận hành</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <p className="flex items-end justify-end text-right text-[28px] text-black min-w-[130px]">
+                    <ArrowDownLeft size={18} color="#EA0033" />
+                    95%
+                  </p>
+                  <p>tỷ lệ kết nối thành công</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <p className="text-right text-[28px] text-black min-w-[130px]">
+                    1 triệu
+                  </p>
+                  <p>cuộc gọi / ngày</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="overflow-hidden rounded-[20px] h-full">
+          <Image src={contact} alt="Contact" className="max-w-[626px] min-h-[452px] " />
+        </div>
+      </article>
+
     </section>
   );
 }

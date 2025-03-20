@@ -1,0 +1,29 @@
+.services-carousel {
+  position: unset;
+  
+  .services-carousel__swiper-button-prev {
+    background-image: url("../../../../public/svg/chevron-left.svg");
+    left: 0;
+
+    &:hover {
+      // transform: translateX(-60%) scale(1.1);
+    }
+  }
+
+  .services-carousel__swiper-button-next {
+    background-image: url("../../../../public/svg/chevron-right.svg");
+    right: 0;
+
+    &:hover {
+      // transform: translateX(60%) scale(1.1);
+    }
+  }
+
+  .services-carousel__swiper-button-prev,
+  .services-carousel__swiper-button-next {
+    color: transparent;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease-in-out;
+  }
+}

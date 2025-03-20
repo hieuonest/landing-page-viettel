@@ -3,17 +3,26 @@ import React from "react";
 import CommonHeading from "../components/common-heading";
 import servicesHero from "../../../public/images/services-page-hero.png";
 import ServicesSection from "../components/services-section";
-import outsourcing from "../../../public/images/service-outsourcing.png"
+import outsourcing from "../../../public/images/service-outsourcing.png";
 import Image from "next/image";
 import { Metadata } from "next";
+import hero from "../../../public/images/Group_8919.png";
+import MotionWrapper from "@/components/ui/motion-wrapper";
+import { fadeInBottomVariants } from "@/lib/utils";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import ServicesCarousel from "./services-carousel";
+import "../styles/pages/services.scss";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Viettel Cx",
-    description: "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
+    description:
+      "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
     openGraph: {
       title: "Viettel Cx",
-      description: "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
+      description:
+        "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
       url: "https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg",
       type: "website",
       images: [
@@ -28,8 +37,11 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: "Viettel Cx",
-      description: "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
-      images: ["https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg"],
+      description:
+        "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
+      images: [
+        "https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg",
+      ],
     },
   };
 }
@@ -37,8 +49,8 @@ export async function generateMetadata(): Promise<Metadata> {
 function Services() {
   return (
     <div>
-      <main className="bg-white pb-20">
-        <CommonHeading
+      <main className="bg-[#E6E7E9] pb-20">
+        {/* <CommonHeading
           title={
             <span>
               Hệ sinh thái <br /> Dịch vụ của chúng tôi
@@ -53,33 +65,58 @@ function Services() {
               Bạn có chắc mình đã kết nối với khách hàng trên mọi điểm chạm?
             </h2>
           }
+            
           paddingBottomTitle="pb-[50px]"
-        />
+        /> */}
 
-        <ServicesSection>
-          <section className="max-w-[1120px] mx-auto flex gap-20 mt-36" >
-            <article className={`${roboto.className} space-y-6`} id="outsourcing-contact-center">
-              <h1 className="text-[50px] font-light">
-                Dịch vụ Outsourcing Contact Center
-              </h1>
+        <div
+          className={`${roboto.className} bg-[url(/images/Group_8919.png)]  bg-cover bg-center bg-no-repeat min-h-[769px] max-w-[100dvw] flex flex-col items-center justify-center text-center`}
+        >
+          <h1 className="text-[#9B9B9B] text-[40px] mt-10">
+            <p className="font-medium">
+              Bạn có chắc mình đã kết nối với khách hàng
+            </p>
+            <p className="font-medium">
+              trên{" "}
+              <span className="text-black font-medium">mọi điểm chạm?</span>
+            </p>
+          </h1>
 
-              <p>
-                Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền
-                tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc
-                khách hàng của doanh nghiệp, giúp:
-              </p>
+          <MotionWrapper
+            element="p"
+            initial="hidden"
+            viewport={{ once: true, amount: 0.5 }}
+            whileInView="visible"
+            variants={fadeInBottomVariants}
+            className={`${roboto.className} text-sm md:text-[20px] text-center text-black mt-3 w-[496px]`}
+          >
+            Viettel Customer services sẽ giúp bạn kết nối, lắng nghe khách hàng
+            trên mọi hành trình trải nghiệm
+          </MotionWrapper>
+          <MotionWrapper
+            initial="hidden"
+            viewport={{ once: true, amount: 0.5 }}
+            whileInView="visible"
+            variants={fadeInBottomVariants}
+            className={`${roboto.className} text-base md:text-lg text-center text-[#EA0033] flex justify-center mt-6`}
+          >
+            <Link
+              href="/about"
+              className="flex items-center relative see-more-link group transition-all duration-300"
+            >
+              Tìm hiểu thêm
+              <ArrowUpRight
+                color="#000"
+                size={18}
+                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+              />
+            </Link>
+          </MotionWrapper>
+        </div>
 
-              <ul className="list-disc ms-4 space-y-2">
-                <li>Tư vấn, hỗ trợ, giải đáp</li>
-                <li>Giải quyết khiếu nại, xử lý sự cố, hỗ trợ kỹ thuật</li>
-                <li>Chủ động CSKH</li>
-                <li>Khảo sát khách hàng</li>
-                <li>Kiểm duyệt nội dung, nhập liệu, xác minh thông tin KH</li>
-              </ul>
-            </article>
-            <Image src={outsourcing} alt="Outsourcing" quality={100} className="pt-6"/>
-          </section>
-        </ServicesSection>
+        <ServicesSection></ServicesSection>
+
+        <ServicesCarousel />
       </main>
     </div>
   );
