@@ -1,5 +1,6 @@
+// bug: Stuck at index 4
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,32 +17,37 @@ function ServicesCarousel({}) {
     <div className="w-[1596px] relative mt-28">
       <Swiper
         modules={[Navigation]}
-        // autoplay={{
-        //   delay: 250,
-        //   disableOnInteraction: false,
-        // }}
         navigation={{
           nextEl: ".services-carousel__swiper-button-next",
           prevEl: ".services-carousel__swiper-button-prev",
         }}
-        // navigation={{
-        //   enabled: true,
-        // }}
         className="services-carousel"
         slidesPerView={"auto"}
-        // initialSlide={6}
+        initialSlide={3}
         spaceBetween={20}
         onSlideChange={(swiper) => {
+          console.log("Active index:", swiper.activeIndex);
+          console.log("Is at end?", swiper.isEnd);
+          console.log("Is at beginning?", swiper.isBeginning);
           setActiveIndex(swiper.activeIndex);
         }}
+        watchSlidesProgress={true}
       >
         <div className="">
-          {Array.from({ length: 7 }).map((_, index) => (
+          {Array.from({ length: 4 }).map((_, index) => (
             <SwiperSlide className="!w-[465px]" key={index}>
-              <div className="w-[465px] h-[465px] overflow-hidden bg-white rounded-[20px] relative">
-                {activeIndex === index && <Image src={loyalty} alt="" className="absolute top-0 right-0 left-0 bottom-0 z-1" />}
+              <div className={`${roboto.className} w-[465px] h-[465px] overflow-hidden bg-white rounded-[20px] relative p-8`}>
+                
+                  <Image
+                    src={loyalty}
+                    alt=""
+                    className={
+                      `absolute top-0 right-0 left-0 bottom-0 z-1 ${activeIndex === index ? "opacity-100" : "opacity-0"} transition-opacity duration-300 ease-in-out`
+                    }
+                  />
+                
                 <h1 className="text-3xl font-medium text-[#D8D8D8] relative z-[2]">
-                  Dịch vụ
+                  Dịch vụ{" "}
                   <span
                     className={`font-medium ${
                       activeIndex === index ? "text-white" : "text-black"
@@ -52,7 +58,7 @@ function ServicesCarousel({}) {
                 </h1>
 
                 <p
-                  className={`text-lg relative z-[2] ${
+                  className={`text-lg relative z-[2] mt-14   ${
                     activeIndex === index ? "text-white" : "text-[#595959]"
                   }`}
                 >
@@ -64,7 +70,7 @@ function ServicesCarousel({}) {
             </SwiperSlide>
           ))}
         </div>
-        <div className="absolute !top-0 !right-[-10%] translate-x-[10%] flex justify-between min-h-[40px] min-w-[92px] z-10">
+        <div className="absolute !top-0 !right-[-10%] !translate-x-[10%] flex justify-between min-h-[40px] min-w-[92px] z-10">
           <button className="services-carousel__swiper-button-prev swiper-button-prev"></button>
           <button className="services-carousel__swiper-button-next swiper-button-next"></button>
         </div>
