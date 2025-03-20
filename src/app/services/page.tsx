@@ -115,7 +115,7 @@ function Services() {
           </MotionWrapper>
         </div>
 
-        <ServicesSection></ServicesSection>
+        <ServicesSection />
 
         <ServicesCarousel />
 
