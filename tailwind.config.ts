@@ -66,6 +66,7 @@ export default {
 				'3xl': '1572px',
 				'xxs': "400px",
 				'xs': '480px',
+				'xm': '576px',
 				'sm': '640px', 
 				'md': '768px',
 				'lg': '992px',

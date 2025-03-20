@@ -38,8 +38,6 @@ function Solutions() {
     <div>
       <HeaderSolution />
       <BodySolution />
-
-
     </div>
   );
 }

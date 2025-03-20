@@ -100,3 +100,14 @@ export const deleteDatasessionStorage = (key: string) => {
     return error;
   }
 };
+export const screenDetail = {
+  '3xl': '1572px',
+  'xxs': "400px",
+	'xs': '480px',
+  'xm': '576px',
+	'sm': '640px', 
+	'md': '768px',
+	'lg': '992px',
+	'xl': '1200px',
+  'xl-2': '1280px'
+}

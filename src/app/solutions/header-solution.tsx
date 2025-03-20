@@ -19,14 +19,14 @@ export default function HeaderSolution() {
         className="absolute top-0 right-0 z-10"
         style={{ width: "110%", height: "auto" }}
       />
-      <div className="max-w-[90%] pt-[130px] xl:max-w-[1120px] mx-auto container relative z-20">
+      <div className="max-w-[95%] pt-[130px] xl:max-w-[1120px] mx-auto container relative z-20 xm:max-w-[90%]">
         <div
-          className={`${roboto.className} text-[#9B9B9B] text-[39px] text-center mx-auto leading-[46px]`}
+          className={`${roboto.className} text-[#9B9B9B] text-[24px] sm:text-[39px] text-center mx-auto leading-[30px] sm:leading-[46px]`}
         >
-          <div className="font-medium">
+          <div className={`font-medium inline sm:block`}>
             Tiên phong nâng tầm trải nghiệm khách hàng
           </div>
-          <div className="font-medium">
+          <div className={`font-medium inline sm:block`}>
             {" "}
             bằng{" "}
             <span className="text-[#000000] font-medium">
