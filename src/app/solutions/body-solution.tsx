@@ -11,15 +11,26 @@ import imgSolution4 from "../../../public/images/image-solution-4.png";
 import imgSolution5 from "../../../public/images/image-solution-5.png";
 import imgBgFooter1 from "../../../public/images/shutterstock.png";
 import imgBgFooter2 from "../../../public/images/shutterstock-1.png";
+import MotionWrapper from "@/components/ui/motion-wrapper";
 
 export default function BodySolution() {
   return (
     <main className="bg-white">
       <div className="max-w-[90%] pt-[50px] xl:max-w-[1120px] mx-auto container relative z-20">
         <div className="grid grid-cols-7 justify-between gap-8">
-          <div className="col-span-3">
+          <MotionWrapper
+            element="div"
+            viewport={{ once: true, amount: 0.4 }}
+            initial="hidden"
+            whileInView="visible"
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0, transition: { duration: 1.5 } },
+            }}
+            className="col-span-3"
+          >
             <Image src={imgSolution} alt="" />
-          </div>
+          </MotionWrapper>
           <div className="col-span-4">
             <div
               className={`${roboto.className} font-medium text-[30px] leading-[35px] font-medium`}
@@ -64,17 +75,45 @@ export default function BodySolution() {
             </div>
           </div>
 
-          <div className="col-span-1">
+          <MotionWrapper
+            element="div"
+            // initial={{ opacity: 0, x: 100 }}
+            // animate={{ opacity: 1, x: 0 }}
+            // transition={{ duration: 1.5 }}
+
+            viewport={{ once: true, amount: 0.4 }}
+            initial="hidden"
+            whileInView="visible"
+            variants={{
+              hidden: { opacity: 0, x: 100 },
+              visible: { opacity: 1, x: 0, transition: { duration: 1.5 } },
+            }}
+            className="col-span-1"
+          >
             <Image src={imgSolution1} alt="" />
-          </div>
+          </MotionWrapper>
         </div>
 
         <hr className="mt-[74px] mb-[74px]" />
 
         <div className="grid grid-cols-7 justify-between gap-8">
-          <div className="col-span-3">
+          <MotionWrapper
+            element="div"
+            // initial={{ opacity: 0, x: -100 }}
+            // animate={{ opacity: 1, x: 0 }}
+            // transition={{ duration: 1.5 }}
+
+            viewport={{ once: true, amount: 0.4 }}
+            initial="hidden"
+            whileInView="visible"
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0, transition: { duration: 1.5 } },
+            }}
+            className="col-span-3"
+          >
             <Image src={imgSolution2} alt="" className="h-[100%]" />
-          </div>
+          </MotionWrapper>
           <div className="col-span-4">
             <div
               className={`${roboto.className} font-medium text-[30px] leading-[35px]`}
@@ -110,8 +149,16 @@ export default function BodySolution() {
       </div>
 
       <div className="relative mt-[100px] pt-[80px]">
-        <Image src={imgBgFooter1} alt="" className="absolute top-[0px] z-1 w-[100vw] h-[50%]" />
-        <Image src={imgBgFooter2} alt="" className="absolute bottom-[0px] z-2 w-[100vw] h-[50%]" />
+        <Image
+          src={imgBgFooter1}
+          alt=""
+          className="absolute top-[0px] z-1 w-[100vw] h-[50%]"
+        />
+        <Image
+          src={imgBgFooter2}
+          alt=""
+          className="absolute bottom-[0px] z-2 w-[100vw] h-[50%]"
+        />
         <div className="max-w-[90%] xl:max-w-[1120px] mx-auto container relative z-20">
           <div className="grid grid-cols-2 justify-between gap-8">
             <div className="col-span-1">
@@ -134,15 +181,48 @@ export default function BodySolution() {
               </div>
             </div>
 
-            <div className="col-span-1">
+            <MotionWrapper
+              element="div"
+              // initial={{ opacity: 0, x: 100, rotate: 45 }}
+              // animate={{ opacity: 1, x: 0, rotate: 0 }}
+              // transition={{ duration: 2 }}
+              viewport={{ once: true, amount: 0.4 }}
+              initial="hidden"
+              whileInView="visible"
+              variants={{
+                hidden: { opacity: 0, x: 100, rotate: 45 },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  rotate: 0,
+                  transition: { duration: 2 },
+                },
+              }}
+              className="col-span-1"
+            >
               <Image src={imgSolution3} alt="" />
-            </div>
+            </MotionWrapper>
           </div>
 
           <div className="grid grid-cols-7 justify-between mt-[50px] gap-8">
-            <div className="col-span-3">
+            <MotionWrapper
+              element="div"
+              className="col-span-3"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={{
+                hidden: { opacity: 0, x: -100, rotate: -45 },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  rotate: 0,
+                  transition: { duration: 2 },
+                },
+              }}
+            >
               <Image src={imgSolution4} alt="" className="h-[100%]" />
-            </div>
+            </MotionWrapper>
             <div className="col-span-4">
               <div
                 className={`${roboto.className} font-medium text-[30px] leading-[35px]`}
@@ -197,9 +277,19 @@ export default function BodySolution() {
               </div>
             </div>
 
-            <div className="col-span-1">
+            <MotionWrapper
+              element="div"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={{
+                hidden: { opacity: 0, x: 100 },
+                visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+              }}
+              className="col-span-1"
+            >
               <Image src={imgSolution5} alt="" />
-            </div>
+            </MotionWrapper>
           </div>
         </div>
       </div>

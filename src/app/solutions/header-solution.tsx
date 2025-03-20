@@ -4,7 +4,6 @@ import BgHeader from "../../../public/images/bg-solution.png";
 import Omni from "../../../public/images/Omni.png";
 import { roboto } from "@/lib/font";
 import MotionWrapper from "@/components/ui/motion-wrapper";
-import { fadeInBottomVariants } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowUpRight, MoveRight } from "lucide-react";
 import iconOnix from "../../../public/svg/icon-omnix.svg";
@@ -20,7 +19,15 @@ export default function HeaderSolution() {
         style={{ width: "110%", height: "auto" }}
       />
       <div className="max-w-[95%] pt-[130px] xl:max-w-[1120px] mx-auto container relative z-20 xm:max-w-[90%]">
-        <div
+        <MotionWrapper
+          element="div"
+          viewport={{ once: true, amount: 0.4 }}
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            hidden: { opacity: 0, y: -50 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.75 } },
+          }}
           className={`${roboto.className} text-[#9B9B9B] text-[24px] sm:text-[39px] text-center mx-auto leading-[30px] sm:leading-[46px]`}
         >
           <div className={`font-medium inline sm:block`}>
@@ -33,13 +40,12 @@ export default function HeaderSolution() {
               công nghệ sáng tạo
             </span>
           </div>
-        </div>
+        </MotionWrapper>
 
         <MotionWrapper
-          initial="hidden"
-          viewport={{ once: true, amount: 0.5 }}
-          whileInView="visible"
-          variants={fadeInBottomVariants}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.75 }}
           className={`${roboto.className} text-lg text-center text-[#EA0033] flex justify-center mt-6`}
         >
           <Link
@@ -87,9 +93,14 @@ export default function HeaderSolution() {
                 </Link>
               </div>
             </div>
-            <div>
+            <MotionWrapper
+              element="div"
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.5 }}
+            >
               <Image src={Omni} alt="" />
-            </div>
+            </MotionWrapper>
           </div>
         </div>
 
