@@ -14,6 +14,10 @@ import { ArrowUpRight } from "lucide-react";
 import ServicesCarousel from "./services-carousel";
 import "../styles/pages/services.scss";
 import { Separator } from "@/components/ui/separator";
+import guy from "../../../public/images/guy.png";
+import woman from "../../../public/images/woman.png";
+import woman2 from "../../../public/images/woman-2.png";
+import lady from "../../../public/images/lady.png";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -52,7 +56,7 @@ function Services() {
     <div>
       <main className="bg-[#E6E7E9] pb-20">
         <div
-          className={`${roboto.className} bg-[url(/images/Group_8919.png)]  bg-cover bg-center bg-no-repeat min-h-[769px] max-w-[100dvw] flex flex-col items-center justify-center text-center`}
+          className={`relative ${roboto.className} bg-[url(/images/Group_8919.png)] max-sm:bg-[url(/images/bgr_1.png)]  bg-cover bg-center bg-no-repeat min-h-[769px] max-w-[100dvw] flex flex-col items-center justify-center text-center`}
         >
           <MotionWrapper
             element="h1"
@@ -101,6 +105,13 @@ function Services() {
               />
             </Link>
           </MotionWrapper>
+
+          
+          <Image src={guy} alt="guy" quality={100} className="absolute top-[15%] right-[20%] translate-x-1/2 sm:hidden" />
+          <Image src={lady} alt="lady" quality={100} className="absolute top-[25%] -translate-x-1/2 left-[20%] sm:hidden" />
+          <Image src={woman} alt="woman" quality={100} className="absolute bottom-[10%] translate-x-1/4 right-[15%] sm:hidden" />
+          <Image src={woman2} alt="woman2" quality={100} className="absolute bottom-[15%] -translate-x-1/2 left-[20%] sm:hidden" />
+          
         </div>
 
         <ServicesSection />
