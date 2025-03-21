@@ -36,11 +36,11 @@ function HomeCarousel() {
       {Array.from({ length: 7 }).map((_, index) => (
         <SwiperSlide className="relative !w-full" key={index}>
           <div className="relative overflow-hidden">
-            <Image src={upsale} alt="upsale" className="object-cover w-full min-h-[325px]" />
+            <Image src={upsale} alt="upsale" className="object-cover w-full min-h-[350px]" />
           </div>
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black min-h-[351px] flex items-end justify-center">
             <div
-              className={`${roboto.className} flex flex-col gap-4 items-center text-center justify-end pb-10 md:pb-9 text-white max-w-[485px]`}
+              className={`${roboto.className} flex flex-col gap-4 items-center text-center justify-end pb-12 md:pb-9 text-white max-w-[485px]`}
             >
               <h1 className="text-[45px] md:text-[55px] font-light leading-[60px]">Upsale</h1>
               <h2 className="text-sm md:text-lg font-medium uppercase">

@@ -7,9 +7,7 @@ import ClientsIcon from "@/components/icons/clients-icon";
 import SupportIcon from "@/components/icons/support-icon";
 import React from "react";
 import GlobeIcon from "@/components/icons/globe-icon";
-import {
-  fadeInBottomVariants,
-} from "@/lib/utils";
+import { fadeInBottomVariants } from "@/lib/utils";
 import HomeSwiper from "./components/home-swiper";
 import HomeCounUp from "./components/home-count-up";
 import MotionWrapper from "@/components/ui/motion-wrapper";
@@ -24,7 +22,6 @@ import workforcex from "../../public/svg/workforce-x.svg";
 import HomePartnersCarousel from "./components/home-partners-carousel";
 
 export async function generateMetadata(): Promise<Metadata> {
-  
   return {
     title: "Viettel Customer Services",
     description:
@@ -62,8 +59,6 @@ type ExpItem = {
   numberValue: number;
 };
 export default function Home() {
-  
-
   const expItems: ExpItem[] = [
     {
       icon: <ExperienceIcon color="#858585" />,
@@ -351,21 +346,19 @@ export default function Home() {
           </div>
         </MarqueeWrapper>
 
-        <section className="relative flex flex-col md:flex-row items-center gap-2 md:gap-0 max-w-[1560px] py-9 md:py-20 mx-auto justify-between px-3 md:px-8">
+        <section className="relative flex flex-col lg:flex-row items-center gap-4 md:gap-0 max-w-[1560px] py-9 md:py-20 mx-auto justify-between px-3 md:px-8">
           <MotionWrapper
             element="h1"
             initial="hidden"
             viewport={{ once: true, amount: 0.4 }}
             whileInView="visible"
             variants={fadeInBottomVariants}
-            className={`${fsMagistralBook.className} text-[22px] md:text-[26px] lg:text-[28px] xl:text-[35px] max-w-[287px]`}
+            className={`${fsMagistralBook.className} text-[30px] lg:text-[28px] xl:text-[35px] max-lg:text-center lg:max-w-[287px]`}
           >
             Khách hàng của chúng tôi
           </MotionWrapper>
 
-          <div
-            
-          >
+          <div>
             <HomePartnersCarousel />
           </div>
         </section>
