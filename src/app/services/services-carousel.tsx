@@ -1,4 +1,3 @@
-// bug: Stuck at index 4
 "use client";
 import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -22,57 +21,59 @@ function ServicesCarousel({}) {
           prevEl: ".services-carousel__swiper-button-prev",
         }}
         className="services-carousel"
-        slidesPerView={"auto"}
-        initialSlide={3}
+        initialSlide={6}
         spaceBetween={20}
         onSlideChange={(swiper) => {
           console.log("Active index:", swiper.activeIndex);
           console.log("Is at end?", swiper.isEnd);
           console.log("Is at beginning?", swiper.isBeginning);
-          setActiveIndex(swiper.activeIndex);
+          setActiveIndex(swiper.realIndex);
         }}
+        loop={true}
         watchSlidesProgress={true}
+        slidesPerView={"auto"}
+        centeredSlides={false}
+        dir="rtl"
       >
-        <div className="">
-          {Array.from({ length: 4 }).map((_, index) => (
-            <SwiperSlide className="!w-[465px]" key={index}>
-              <div className={`${roboto.className} w-[465px] h-[465px] overflow-hidden bg-white rounded-[20px] relative p-8`}>
-                
-                  <Image
-                    src={loyalty}
-                    alt=""
-                    className={
-                      `absolute top-0 right-0 left-0 bottom-0 z-1 ${activeIndex === index ? "opacity-100" : "opacity-0"} transition-opacity duration-300 ease-in-out`
-                    }
-                  />
-                
-                <h1 className="text-3xl font-medium text-[#D8D8D8] relative z-[2]">
-                  Dịch vụ{" "}
-                  <span
-                    className={`font-medium ${
-                      activeIndex === index ? "text-white" : "text-black"
-                    }`}
-                  >
-                    Loyalty
-                  </span>
-                </h1>
+        {Array.from({ length: 7 }).map((_, index) => (
+          <SwiperSlide className="!w-[465px]" key={index}>
+            <div
+              className={`${roboto.className} w-[465px] h-[465px] overflow-hidden bg-white rounded-[20px] relative p-8 !text-left`}
+            >
+              <Image
+                src={loyalty}
+                alt=""
+                className={`absolute top-0 right-0 left-0 bottom-0 z-1 ${
+                  activeIndex === index ? "opacity-100" : "opacity-0"
+                } transition-opacity duration-300 ease-in-out`}
+              />
 
-                <p
-                  className={`text-lg relative z-[2] mt-14   ${
-                    activeIndex === index ? "text-white" : "text-[#595959]"
+              <h1 className="text-3xl font-medium text-[#D8D8D8] relative z-[2]">
+                Dịch vụ{" "}
+                <span
+                  className={`font-medium ${
+                    activeIndex === index ? "text-white" : "text-black"
                   }`}
                 >
-                  Giải pháp của Viettel CX giúp doanh nghiệp xây dựng, duy trì
-                  và gia tăng sự gắn bó của khách hàng thông qua các chương
-                  trình tích điểm, ưu đãi, đặc quyền và cá nhân hóa trải nghiệm.
-                </p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </div>
+                  Loyalty
+                </span>
+              </h1>
+
+              <p
+                className={`text-lg relative z-[2] mt-14   ${
+                  activeIndex === index ? "text-white" : "text-[#595959]"
+                }`}
+              >
+                Giải pháp của Viettel CX giúp doanh nghiệp xây dựng, duy trì và
+                gia tăng sự gắn bó của khách hàng thông qua các chương trình
+                tích điểm, ưu đãi, đặc quyền và cá nhân hóa trải nghiệm.
+              </p>
+            </div>
+          </SwiperSlide>
+        ))}
         <div className="absolute !top-0 !right-[-10%] !translate-x-[10%] flex justify-between min-h-[40px] min-w-[92px] z-10">
-          <button className="services-carousel__swiper-button-prev swiper-button-prev"></button>
-          <button className="services-carousel__swiper-button-next swiper-button-next"></button>
+          <button className="services-carousel__swiper-button-next swiper-button-next !relative !translate-y-0 !top-0 !mt-0"></button>
+          <button className="services-carousel__swiper-button-prev swiper-button-prev !relative !translate-y-0 !top-0 !mt-0"></button>
         </div>
       </Swiper>
     </div>

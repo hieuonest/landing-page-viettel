@@ -17,7 +17,7 @@ export default function BodySolution() {
   return (
     <main className="bg-white">
       <div className="max-w-[90%] pt-[50px] xl:max-w-[1120px] mx-auto container relative z-20">
-        <div className="grid grid-cols-7 justify-between gap-8">
+        <div className="block sm:grid sm:grid-cols-7 justify-between gap-8">
           <MotionWrapper
             element="div"
             viewport={{ once: true, amount: 0.4 }}
@@ -27,7 +27,7 @@ export default function BodySolution() {
               hidden: { opacity: 0, x: -100 },
               visible: { opacity: 1, x: 0, transition: { duration: 1.5 } },
             }}
-            className="col-span-3"
+            className="col-span-3 mb-[12px] sm:mb[0]"
           >
             <Image src={imgSolution} alt="" />
           </MotionWrapper>
@@ -54,8 +54,8 @@ export default function BodySolution() {
 
         <hr className="mt-[74px] mb-[74px]" />
 
-        <div className="grid grid-cols-2 justify-between gap-8">
-          <div className="col-span-1">
+        <div className="block sm:grid sm:grid-cols-2 justify-between gap-8">
+          <div className="col-span-1 mb-[12px] sm:mb-[0]">
             <div
               className={`${roboto.className} font-medium text-[30px] leading-[35px]`}
             >
@@ -96,7 +96,7 @@ export default function BodySolution() {
 
         <hr className="mt-[74px] mb-[74px]" />
 
-        <div className="grid grid-cols-7 justify-between gap-8">
+        <div className="block sm:grid sm:grid-cols-7 justify-between gap-8">
           <MotionWrapper
             element="div"
             // initial={{ opacity: 0, x: -100 }}
@@ -110,7 +110,7 @@ export default function BodySolution() {
               hidden: { opacity: 0, x: -100 },
               visible: { opacity: 1, x: 0, transition: { duration: 1.5 } },
             }}
-            className="col-span-3"
+            className="col-span-3 mb-[12px] sm:mb[0]"
           >
             <Image src={imgSolution2} alt="" className="h-[100%]" />
           </MotionWrapper>
@@ -160,8 +160,8 @@ export default function BodySolution() {
           className="absolute bottom-[0px] z-2 w-[100vw] h-[50%]"
         />
         <div className="max-w-[90%] xl:max-w-[1120px] mx-auto container relative z-20">
-          <div className="grid grid-cols-2 justify-between gap-8">
-            <div className="col-span-1">
+          <div className="block sm:grid  sm:grid-cols-2 justify-between gap-8">
+            <div className="col-span-1  mb-[12px] sm:mb-[0px]">
               <div
                 className={`${roboto.className} font-medium text-[30px] leading-[35px]`}
               >
@@ -204,10 +204,10 @@ export default function BodySolution() {
             </MotionWrapper>
           </div>
 
-          <div className="grid grid-cols-7 justify-between mt-[50px] gap-8">
+          <div className="block sm:grid  sm:grid-cols-7 justify-between mt-[50px] gap-8">
             <MotionWrapper
               element="div"
-              className="col-span-3"
+              className="col-span-3 mb-[12px] sm:mb-[0]"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.4 }}
@@ -244,7 +244,7 @@ export default function BodySolution() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 justify-between mt-[50px] gap-8">
+          <div className="block sm:grid  sm:grid-cols-2 justify-between mt-[50px] gap-8">
             <div className="col-span-1">
               <div
                 className={`${roboto.className} font-medium text-[30px] leading-[35px]`}
