@@ -219,7 +219,7 @@ export default function Home() {
             </MotionWrapper>
           </div>
 
-          <div className="mt-6 md:mt-36 relative px-8 md:px-0">
+          <div className="mt-24 md:mt-36 relative px-8 md:px-0">
             <MotionWrapper
               element="h1"
               initial="hidden"
