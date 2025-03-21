@@ -51,29 +51,17 @@ function Services() {
   return (
     <div>
       <main className="bg-[#E6E7E9] pb-20">
-        {/* <CommonHeading
-          title={
-            <span>
-              Hệ sinh thái <br /> Dịch vụ của chúng tôi
-            </span>
-          }
-          image={servicesHero}
-          imageAlt="Services Hero"
-          heroContent={
-            <h2
-              className={`${roboto.className} text-3xl font-light max-w-[365px] text-white`}
-            >
-              Bạn có chắc mình đã kết nối với khách hàng trên mọi điểm chạm?
-            </h2>
-          }
-            
-          paddingBottomTitle="pb-[50px]"
-        /> */}
-
         <div
           className={`${roboto.className} bg-[url(/images/Group_8919.png)]  bg-cover bg-center bg-no-repeat min-h-[769px] max-w-[100dvw] flex flex-col items-center justify-center text-center`}
         >
-          <h1 className="text-[#9B9B9B] text-[40px] mt-10">
+          <MotionWrapper
+            element="h1"
+            initial="hidden"
+            viewport={{ once: true, amount: 0.5 }}
+            whileInView="visible"
+            variants={fadeInBottomVariants}
+            className="text-[#9B9B9B] text-[20px] md:text-[30px] lg:text-[40px] mt-10"
+          >
             <p className="font-medium">
               Bạn có chắc mình đã kết nối với khách hàng
             </p>
@@ -81,7 +69,7 @@ function Services() {
               trên{" "}
               <span className="text-black font-medium">mọi điểm chạm?</span>
             </p>
-          </h1>
+          </MotionWrapper>
 
           <MotionWrapper
             element="p"
@@ -89,7 +77,7 @@ function Services() {
             viewport={{ once: true, amount: 0.5 }}
             whileInView="visible"
             variants={fadeInBottomVariants}
-            className={`${roboto.className} text-sm md:text-[20px] text-center text-black mt-3 w-[496px]`}
+            className={`${roboto.className} text-sm md:text-[20px] text-center text-black mt-3 max-w-[85dvw] md:max-w-[496px]`}
           >
             Viettel Customer services sẽ giúp bạn kết nối, lắng nghe khách hàng
             trên mọi hành trình trải nghiệm
@@ -119,7 +107,7 @@ function Services() {
 
         <ServicesCarousel />
 
-        <Separator className="mt-16 bg-[#D9D9D9]" />
+        <Separator className="mt-16 bg-[#D9D9D9] w-[90dvw] mx-auto" />
       </main>
     </div>
   );

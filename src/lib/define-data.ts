@@ -141,6 +141,26 @@ export const dataPartners: {
     image: boyte,
     name: "Bộ Y Tế"
   },
+  {
+    image: mb,
+    name: "MB"
+  },
+  {
+    image: bachmai,
+    name: "Bạch Mai"
+  },
+  {
+    image: be,
+    name: "Bộ Giáo Dục"
+  },
+  {
+    image: vttelecom,
+    name: "Viettel Telecom"
+  },
+  {
+    image: boyte,
+    name: "Bộ Y Tế"
+  },
 ]
 
 export const slug_solution: {

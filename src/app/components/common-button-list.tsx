@@ -12,12 +12,12 @@ function CommonButtonList({
 }) {
   return (
     <div className=''>
-      <ul className='flex flex-wrap gap-2'>
+      <ul className='flex gap-2'>
         {items.map(({ href, label }) => (
-          <li key={`${href}${label}`} className={`${roboto.className} text-sm text-[#858585] hover:text-black font-medium transition-colors duration-300 ease-in-out hover:border-black border-[#858585] border-solid border px-3 py-2 uppercase cursor-pointer rounded-full`}>
+          <li key={`${href}${label}`} className={`${roboto.className} text-sm text-[#858585] hover:text-black font-medium transition-colors duration-300 ease-in-out hover:border-black border-[#858585] border-solid border px-3 py-2 uppercase cursor-pointer rounded-full  h-fit`}>
             <Link
               href={href}
-              className=""
+              className="whitespace-nowrap"
             >
               {label}
             </Link>

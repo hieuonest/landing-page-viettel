@@ -13,9 +13,11 @@ import { Separator } from "@/components/ui/separator";
 import { dataServicesLinks } from "@/lib/define-data";
 import { roboto } from "@/lib/font";
 import { ArrowDownLeft, ArrowUpRight } from "lucide-react";
-import contact from "../../../public/images/contact.jpeg";
+import contact from "../../../public/images/contact.png";
 import Image from "next/image";
 import ServicesCarousel from "../services/services-carousel";
+import MotionWrapper from "@/components/ui/motion-wrapper";
+import { fadeInBottomVariants } from "@/lib/utils";
 
 const services = [
   {
@@ -183,26 +185,42 @@ const services = [
 
 function ServicesSection({ children }: { children?: React.ReactNode }) {
   return (
-    <section className="max-w-[1596px] mx-auto">
-      <div className="flex items-center justify-between py-8">
+    <section className="max-w-[1596px] mx-auto px-4">
+      <MotionWrapper
+        initial="hidden"
+        viewport={{ once: true, amount: 0.4 }}
+        whileInView="visible"
+        variants={fadeInBottomVariants}
+        className="flex items-center justify-between pt-8 pb-3 mb-8 overflow-x-auto common-list"
+      >
         <CommonButtonList items={dataServicesLinks} />
-      </div>
-      <article className="flex items-center h-[452px] gap-5">
-        <div className={`${roboto.className} bg-white p-8 rounded-[20px] max-w-[950px] h-full`}
+      </MotionWrapper>
+      <MotionWrapper
+        element="article"
+        initial="hidden"
+        viewport={{ once: true, amount: 0.3 }}
+        whileInView="visible"
+        variants={fadeInBottomVariants}
+        className="flex items-center flex-col min-[896px]:flex-row min-[896px]:h-[452px] min-[896px]:gap-3 lg:gap-5"
+      >
+        <div
+          className={`${roboto.className} bg-white p-8 rounded-t-[20px] min-[896px]:rounded-[20px] max-w-[950px] h-full basis-[65%] xl:basis-[60%] flex flex-col justify-between`}
         >
-          <h1 className="text-3xl font-medium text-[#9B9B9B]">
-            Dịch vụ{" "}
-            <span className="font-medium text-black">
-              Outsourcing Contact Center
-            </span>
-          </h1>
-          <p className="max-w-[645px] text-lg mt-3">
-            Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng
-            giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng
-            của doanh nghiệp, giúp:
-          </p>
+          <div>
+            <h1 className="text-lg xs:text-2xl lg:text-3xl font-medium text-[#9B9B9B]">
+              Dịch vụ{" "}
+              <span className="font-medium text-black">
+                Outsourcing Contact Center
+              </span>
+            </h1>
+            <p className="max-w-[645px] text-sm xs:text-base xl:text-lg mt-3">
+              Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng
+              giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng
+              của doanh nghiệp, giúp:
+            </p>
+          </div>
 
-          <div className="flex items-end justify-between gap-10 mt-12 text-[#595959] text-lg">
+          <div className="flex items-start justify-between flex-col sm:flex-row mt-3 gap-3 lg:gap-10 text-[#595959] text-sm xs:text-base 1080px:text-lg ">
             <ul className="list-disc ml-6 space-y-2 max-w-[375px]">
               <li>Tư vấn, hỗ trợ, giải đáp</li>
               <li>Giải quyết khiếu nại, xử lý sự cố, hỗ trợ kỹ thuật</li>
@@ -216,37 +234,42 @@ function ServicesSection({ children }: { children?: React.ReactNode }) {
                 Với hệ thống tổng đài hiện đại và đội ngũ chuyên nghiệp, Viettel
                 CX giúp:
               </p>
-              <div className="space-y-6 mt-6">
-                <div className="flex items-center gap-3">
-                  <p className="flex items-end justify-end text-right text-[28px] text-black min-w-[130px]">
+              <div className="space-y-3 1080px:space-y-6 mt-2 1080px:mt-6">
+                <div className="flex items-center gap-2 xl:gap-3">
+                  <p className="flex items-end text-right text-[20px] lg:text-[24px] xl:text-[28px] text-black">
                     <ArrowUpRight size={18} color="#EA0033" />
                     30 - 40%
                   </p>
                   <p>chi phí vận hành</p>
                 </div>
-                <div className="flex items-center gap-3">
-                  <p className="flex items-end justify-end text-right text-[28px] text-black min-w-[130px]">
+                <div className="flex items-center gap-2 xl:gap-3">
+                  <p className="flex items-end text-right text-[20px] lg:text-[24px] xl:text-[28px] text-black ">
                     <ArrowDownLeft size={18} color="#EA0033" />
                     95%
                   </p>
                   <p>tỷ lệ kết nối thành công</p>
                 </div>
-                <div className="flex items-center gap-3">
-                  <p className="text-right text-[28px] text-black min-w-[130px]">
+                <div className="flex items-center gap-2 xl:gap-3">
+                  <p className="text-right text-[20px] lg:text-[24px] xl:text-[28px] text-black">
                     1 triệu
                   </p>
                   <p>cuộc gọi / ngày</p>
                 </div>
               </div>
+
+              
             </div>
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-[20px] h-full">
-          <Image src={contact} alt="Contact" className="max-w-[626px] min-h-[452px] " />
+        <div className="bg-[url(/images/contact.jpeg)] bg-cover bg-no-repeat bg-center overflow-hidden w-full min-h-[252px] xs:min-h-[352px] min-[896px]:min-h-[452px] max-w-full min-[896px]:max-w-[626px] rounded-b-[20px] min-[896px]:rounded-[20px] basis-1/2 1080px:basis-[40%]">
+          {/* <Image
+            src={contact}
+            alt="Contact"
+            className="w-full lg:max-w-[626px] min-h-[452px]"
+          /> */}
         </div>
-      </article>
-
+      </MotionWrapper>
     </section>
   );
 }

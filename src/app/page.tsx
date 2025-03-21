@@ -9,11 +9,7 @@ import React from "react";
 import GlobeIcon from "@/components/icons/globe-icon";
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { dataPartners, dataServicesHome } from "@/lib/define-data";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+
 import {
   fadeInBottomVariants,
   fadeInLeftVariants,
@@ -31,8 +27,10 @@ import HomeCarousel from "./components/home-carousel";
 import MarqueeWrapper from "@/components/ui/marquee-wrapper";
 import insightci from "../../public/svg/insight-ci.svg";
 import workforcex from "../../public/svg/workforce-x.svg";
+import HomePartnersCarousel from "./components/home-partners-carousel";
 
 export async function generateMetadata(): Promise<Metadata> {
+  
   return {
     title: "Viettel Customer Services",
     description:
@@ -70,6 +68,8 @@ type ExpItem = {
   numberValue: number;
 };
 export default function Home() {
+  
+
   const expItems: ExpItem[] = [
     {
       icon: <ExperienceIcon color="#858585" />,
@@ -100,11 +100,6 @@ export default function Home() {
       desc: "sử dụng dịch vụ",
     },
   ];
-
-  const partners = [];
-  for (let i = 0; i < dataPartners.length; i += 5) {
-    partners.push(dataPartners.slice(i, i + 5));
-  }
 
   return (
     <div>
@@ -191,7 +186,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex justify-center mx-auto max-w-[1274px]">
+            <MotionWrapper
+              initial="hidden"
+              viewport={{ once: true, amount: 0.5 }}
+              whileInView="visible"
+              variants={fadeInBottomVariants}
+              className="flex justify-center mx-auto max-w-[1274px]"
+            >
               <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-5">
                 {expItems.map(
                   ({ icon, numberValue, title, tailing, desc }, index) => (
@@ -226,7 +227,7 @@ export default function Home() {
                   )
                 )}
               </ul>
-            </div>
+            </MotionWrapper>
           </div>
 
           <div className="mt-6 md:mt-36 relative px-8 md:px-0">
@@ -257,31 +258,38 @@ export default function Home() {
             src={gradientBg}
             alt="gradient-bg"
             quality={100}
-            className="absolute bottom-0 translate-y-[40%] z-[-1] w-full h-full object-cover"
+            className="absolute bottom-0 translate-y-[40%] z-[-1] w-full max-md:h-full object-cover"
           />
         </section>
 
-        <section className="relative flex flex-col items-center justify-center mt-16">
-          <Link
-            href="/services"
-            className={`${roboto.className} text-[#D8D8D8] text-sm md:text-[20px] font-medium flex items-center gap-6 border-solid bg-black rounded-sm px-4 py-2 overflow-hidden group absolute top-0 -translate-y-1/2 z-10`}
-          >
-            <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
-            <MoveRight className="relative transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
-            <span className="relative transition-all duration-300 group-hover:text-white">
-              Tất cả dịch vụ
-            </span>
-          </Link>
-          <div className="relative bg-white">
-            <HomeCarousel />
-            <Image
-              src={gradientRedBg}
-              alt="Gradient Red"
-              quality={100}
-              className="absolute left-1/2 -translate-x-[50%] bottom-0 translate-y-[30%] z-[-2] w-full h-full object-contain"
-            />
-          </div>
-        </section>
+        <MotionWrapper
+          initial="hidden"
+          viewport={{ once: true, amount: 0.4 }}
+          whileInView="visible"
+          variants={fadeInBottomVariants}
+        >
+          <section className="relative flex flex-col items-center justify-center mt-16">
+            <Link
+              href="/services"
+              className={`${roboto.className} text-[#D8D8D8] text-sm md:text-[20px] font-medium flex items-center gap-6 border-solid bg-black rounded-sm px-4 py-2 overflow-hidden group absolute top-0 -translate-y-1/2 z-10`}
+            >
+              <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
+              <MoveRight className="relative transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
+              <span className="relative transition-all duration-300 group-hover:text-white">
+                Tất cả dịch vụ
+              </span>
+            </Link>
+            <div className="relative bg-white">
+              <HomeCarousel />
+              <Image
+                src={gradientRedBg}
+                alt="Gradient Red"
+                quality={100}
+                className="absolute left-1/2 -translate-x-[50%] bottom-0 translate-y-[30%] z-[-2] w-full h-full object-contain"
+              />
+            </div>
+          </section>
+        </MotionWrapper>
 
         <section className="relative flex flex-col items-center justify-center">
           <div className="pt-14 md:pt-32 relavtive w-full">
@@ -305,20 +313,25 @@ export default function Home() {
             </MotionWrapper>
           </div>
 
-          <Link
-            href="/solutions"
-            className={`${roboto.className} flex items-center text-sm md:text-[20px] gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 
-            relative overflow-hidden group hover:border-white`}
+          <MotionWrapper
+            initial="hidden"
+            viewport={{ once: true, amount: 0.3 }}
+            whileInView="visible"
+            variants={fadeInBottomVariants}
           >
-            <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
-            <MoveRight className="relative z-10 transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
-            <span className="relative z-10 transition-all duration-300 group-hover:text-white font-medium">
-              Tất cả Nền tảng - Giải pháp
-            </span>
-          </Link>
-          {/* <div className="max-w-[90dvw] md:max-w-[1120px]"> */}
-          <HomeSwiper />
-          {/* </div> */}
+            <Link
+              href="/solutions"
+              className={`${roboto.className} flex items-center justify-center text-sm md:text-[20px] gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 
+            relative overflow-hidden group hover:border-white w-fit mx-auto`}
+            >
+              <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
+              <MoveRight className="relative z-10 transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
+              <span className="relative z-10 transition-all duration-300 group-hover:text-white font-medium">
+                Tất cả Nền tảng - Giải pháp
+              </span>
+            </Link>
+            <HomeSwiper />
+          </MotionWrapper>
         </section>
 
         <MarqueeWrapper
@@ -345,40 +358,22 @@ export default function Home() {
         </MarqueeWrapper>
 
         <section className="relative flex flex-col md:flex-row items-center gap-2 md:gap-0 max-w-[1560px] py-9 md:py-20 mx-auto justify-between px-3 md:px-8">
-          <div className="">
-            <MotionWrapper
-              element="h1"
-              initial="hidden"
-              viewport={{ once: true, amount: 0.4 }}
-              whileInView="visible"
-              variants={fadeInBottomVariants}
-              className={`${fsMagistralBook.className} text-[22px] md:text-[26px] lg:text-[28px] xl:text-[35px] max-w-[287px]`}
-            >
-              Khách hàng của chúng tôi
-            </MotionWrapper>
-          </div>
-
           <MotionWrapper
+            element="h1"
             initial="hidden"
             viewport={{ once: true, amount: 0.4 }}
             whileInView="visible"
-            variants={fadeInRightVariants}
-            className="grid gap-3 grid-cols-5 md:gap-0"
+            variants={fadeInBottomVariants}
+            className={`${fsMagistralBook.className} text-[22px] md:text-[26px] lg:text-[28px] xl:text-[35px] max-w-[287px]`}
           >
-            {dataPartners.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center bg-white min-w-[80px] lg:min-w-[220px]"
-              >
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  quality={100}
-                  className="grayscale max-md:max-w-[60px]"
-                />
-              </div>
-            ))}
+            Khách hàng của chúng tôi
           </MotionWrapper>
+
+          <div
+            
+          >
+            <HomePartnersCarousel />
+          </div>
         </section>
       </main>
 

@@ -27,3 +27,9 @@
     transition: transform 0.2s ease-in-out;
   }
 }
+
+.common-list {
+  &::-webkit-scrollbar {
+    height: 3px;
+  }
+}
