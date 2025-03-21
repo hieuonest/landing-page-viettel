@@ -1,20 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { fsMagistral, fsMagistralBook, roboto } from "@/lib/font";
+import { fsMagistralBook, roboto } from "@/lib/font";
 import ExperienceIcon from "@/components/icons/experience-icon";
 import { ArrowUpRight, MoveRight } from "lucide-react";
 import ClientsIcon from "@/components/icons/clients-icon";
 import SupportIcon from "@/components/icons/support-icon";
 import React from "react";
 import GlobeIcon from "@/components/icons/globe-icon";
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { dataPartners, dataServicesHome } from "@/lib/define-data";
-
 import {
   fadeInBottomVariants,
-  fadeInLeftVariants,
-  fadeInRightVariants,
-  fadeInTopVariants,
 } from "@/lib/utils";
 import HomeSwiper from "./components/home-swiper";
 import HomeCounUp from "./components/home-count-up";

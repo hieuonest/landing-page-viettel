@@ -1,12 +1,8 @@
 import { roboto } from "@/lib/font";
 import React from "react";
-import CommonHeading from "../components/common-heading";
-import servicesHero from "../../../public/images/services-page-hero.png";
 import ServicesSection from "../components/services-section";
-import outsourcing from "../../../public/images/service-outsourcing.png";
 import Image from "next/image";
 import { Metadata } from "next";
-import hero from "../../../public/images/Group_8919.png";
 import MotionWrapper from "@/components/ui/motion-wrapper";
 import { fadeInBottomVariants } from "@/lib/utils";
 import Link from "next/link";

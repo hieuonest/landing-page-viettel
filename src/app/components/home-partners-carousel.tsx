@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/carousel";
 
 function HomePartnersCarousel({}) {
-  const [activeIndex, setActiveIndex] = React.useState(0);
   const plugin = React.useRef(
     Autoplay({ delay: 3000})
   );

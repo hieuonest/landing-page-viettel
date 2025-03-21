@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -7,7 +7,6 @@ import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import { roboto } from "@/lib/font";
-import Link from "next/link";
 import loyalty from "../../../public/images/loyalty.png";
 import MotionWrapper from "@/components/ui/motion-wrapper";
 import { fadeInBottomVariants } from "@/lib/utils";

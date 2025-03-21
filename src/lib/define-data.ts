@@ -142,25 +142,41 @@ export const dataPartners: {
     name: "Bộ Y Tế"
   },
   {
-    image: mb,
-    name: "MB"
+    image: longan,
+    name: "Long An"
   },
   {
-    image: bachmai,
-    name: "Bạch Mai"
+    image: vtcyberspace,
+    name: "Viettel Cyberspace"
   },
   {
-    image: be,
-    name: "Bộ Giáo Dục"
+    image: vtdigital,
+    name: "Viettel Digital"
   },
   {
-    image: vttelecom,
-    name: "Viettel Telecom"
+    image: vthightech,
+    name: "Viettel Hightech"
   },
   {
-    image: boyte,
-    name: "Bộ Y Tế"
+    image: vtmedia,
+    name: "Viettel Media"
   },
+  {
+    image: vtpost,
+    name: "Viettel Post"
+  },
+  {
+    image: vtsolutions,
+    name: "Viettel Solutions"
+  },
+  {
+    image: dvc,
+    name: "DVC"
+  },
+  {
+    image: dvc2,
+    name: "DVC"
+  }
 ]
 
 export const slug_solution: {
