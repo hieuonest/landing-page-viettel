@@ -8,13 +8,13 @@ import FooterDestop from "./desktop/footer-desktop";
 function Footer() {
   return (
     <div>
-      <div className="bg-[#595959] p-4 min-h-[141px] flex items-center flex-col md:flex-row justify-center gap-11 max-3xl:gap-8 ">
-        <div className="flex items-start min-w-[90dvw] md:min-w-[522px]" id="contact">
-          <span className="relative top-2">
+      <div className="bg-[#595959] p-4 min-h-[175px] flex items-center flex-col xl:flex-row justify-start xl:justify-center gap-5 xl:gap-11">
+        <div className="flex items-start min-w-[80%] justify-center xl:min-w-[522px]" id="contact">
+          <span className="relative mr-2 xl:top-2">
             <FooterArrow />
           </span>
           <p
-            className={`${fsMagistralBook.className} text-white text-base md:text-[26px] text-right max-[1560px]:text-[24px] `}
+            className={`${fsMagistralBook.className} text-white text-base min-[400px]:text-[20px] sm:text-[24px] xl:text-[26px] text-left xl:text-right `}
           >
             Hãy để Viettel CX đồng hành cùng bạn nâng tầm trải nghiệm khách
             hàng!

@@ -111,7 +111,7 @@ export default function Home() {
         <section className="relative">
           <div className="relative z-[2]">
             <div className="flex relative top-0 -translate-y-full">
-              <div className="h-[80px] md:h-[108px] lg:h-[158px] w-[28px] md:w-[62px] bg-transparent relative">
+              <div className="h-[80px] md:h-[108px] lg:h-[158px] w-[18px] xs:w-[28px] md:w-[62px] bg-transparent relative">
                 <Image
                   src="/svg/cutout-left.svg"
                   alt="cutout"
@@ -127,7 +127,7 @@ export default function Home() {
                   viewport={{ once: true, amount: 0.4 }}
                   whileInView="visible"
                   variants={fadeInBottomVariants}
-                  className={`${fsMagistralBook.className} text-center font-semibold text-[22px] sm:text-[35px] lg:text-[45px] pt-[24px] sm:pt-[32px] md:pt-[56px] lg:pt-[68px] sm:leading-[50px]`}
+                  className={`${fsMagistralBook.className} text-center font-semibold text-[21px] xs:text-[30px] sm:text-[35px] lg:text-[45px] pt-[24px] sm:pt-[32px] md:pt-[56px] lg:pt-[68px] sm:leading-[50px]`}
                 >
                   <span className="">
                     Viettel Customer Service <br /> nâng tầm trải nghiệm khách
@@ -153,7 +153,7 @@ export default function Home() {
                 >
                   <Link
                     href="/about"
-                    className="flex items-center relative see-more-link group transition-all duration-300"
+                    className="flex items-center relative see-more-link group transition-all duration-300 max-xs:text-sm"
                   >
                     Tìm hiểu thêm
                     <ArrowUpRight
@@ -164,7 +164,7 @@ export default function Home() {
                   </Link>
                 </MotionWrapper>
               </div>
-              <div className="h-[80px] md:h-[108px] lg:h-[158px] w-[28px] md:w-[62px] bg-transparent relative">
+              <div className="h-[80px] md:h-[108px] lg:h-[158px] w-[18px] xs:w-[28px] md:w-[62px] bg-transparent relative">
                 <Image
                   src="/svg/cutout-right.svg"
                   alt="cutout"
@@ -180,20 +180,20 @@ export default function Home() {
               viewport={{ once: true, amount: 0.3 }}
               whileInView="visible"
               variants={fadeInBottomVariants}
-              className="flex justify-center mx-auto max-w-[1274px] mt-6 md:mt-0"
+              className="flex justify-center mx-auto max-w-[1274px] mt-6 "
             >
-              <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-5">
+              <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-5">
                 {expItems.map(
                   ({ icon, numberValue, title, tailing, desc }, index) => (
                     <li
-                      className="flex flex-col items-center min-w-[204px] min-h-[256px] sm:min-h-[356px] xl-2:min-w-[304px] bg-white rounded-[20px] py-[40px] sm:py-[52px] lg:px-8 px-4 pb-8 gap-[50px]"
+                      className="flex flex-col items-center  xs:min-h-[256px] sm:min-h-[356px] xl-2:min-w-[304px] bg-white rounded-[20px] py-[40px] sm:py-[52px] lg:px-8 px-4 pb-4 lg:pb-8 gap-[50px]"
                       key={index}
                     >
                       {icon}
 
                       <div className="flex flex-col items-center">
                         <p
-                          className={`${roboto.className} text-[45px] sm:text-[55px] xl:text-[65px] font-light text-[#A28F5D]`}
+                          className={`${roboto.className} text-[35px] xs:text-[45px] sm:text-[55px] xl:text-[65px] font-light text-[#A28F5D]`}
                         >
                           {numberValue ? (
                             <HomeCounUp numberValue={numberValue} />
@@ -202,12 +202,12 @@ export default function Home() {
                           )}
                         </p>
                         <p
-                          className={`${roboto.className} xl:text-2xl text-lg font-semibold uppercase text-[#595959] text-center max-w-[187px]`}
+                          className={`${roboto.className} text-base sm:text-lg xl:text-2xl font-semibold uppercase text-[#595959] text-center max-w-[187px]`}
                         >
                           {tailing}
                         </p>
                         <p
-                          className={`${roboto.className} xl:text-[20px] text-base text-[#595959] text-center max-w-[256px]`}
+                          className={`${roboto.className} text-[13px] sm:text-base xl:text-[20px]  text-[#595959] text-center max-w-[256px]`}
                         >
                           {desc}
                         </p>
@@ -353,7 +353,7 @@ export default function Home() {
             viewport={{ once: true, amount: 0.4 }}
             whileInView="visible"
             variants={fadeInBottomVariants}
-            className={`${fsMagistralBook.className} text-[30px] lg:text-[28px] xl:text-[35px] max-lg:text-center lg:max-w-[287px]`}
+            className={`${fsMagistralBook.className} text-[28px] xl:text-[35px] max-lg:text-center lg:max-w-[287px]`}
           >
             Khách hàng của chúng tôi
           </MotionWrapper>

@@ -46,31 +46,31 @@ export const dataServicesLinks: {
   label: string;
 }[] = [
   {
-    href: "#outsourcing-contact-center",
+    href: "#",
     label: "Outsourcing Contact center",
   },
   {
-    href: "#bpo",
+    href: "#",
     label: "BPO",
   },
   {
-    href: "#upsale",
+    href: "#",
     label: "UPSALE",
   },
   {
-    href: "#loyalty",
+    href: "#",
     label: "LOYATY",
   },
   {
-    href: "#voice-of-customer",
+    href: "#",
     label: "VOICE OF CUSTOMER",
   },
   {
-    href: "#customer-experience",
+    href: "#",
     label: "CUSTOMER EXPRIENCE",
   },
   {
-    href: "#bao-hanh",
+    href: "#",
     label: "BẢO HÀNH",
   },
 ];

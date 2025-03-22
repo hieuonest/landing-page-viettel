@@ -193,7 +193,7 @@ function ServicesSection() {
       <MotionWrapper
         element="article"
         initial="hidden"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.2 }}
         whileInView="visible"
         variants={fadeInBottomVariants}
         className="flex items-center flex-col min-[896px]:flex-row min-[896px]:h-[452px] min-[896px]:gap-3 lg:gap-5"
