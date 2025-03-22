@@ -60,15 +60,11 @@ function Services() {
             viewport={{ once: true, amount: 0.5 }}
             whileInView="visible"
             variants={fadeInBottomVariants}
-            className="text-[#9B9B9B] text-[20px] md:text-[30px] lg:text-[40px] mt-10"
+            className="text-[#9B9B9B] text-lg xs:text-[20px] md:text-[30px] lg:text-[40px] mt-10 md:leading-[50px] font-medium"
           >
-            <p className="font-medium">
-              Bạn có chắc mình đã kết nối với khách hàng
-            </p>
-            <p className="font-medium">
-              trên{" "}
-              <span className="text-black font-medium">mọi điểm chạm?</span>
-            </p>
+            Bạn có chắc mình đã kết nối với khách hàng <br />
+            trên {""}
+            <span className="text-black font-medium">mọi điểm chạm?</span>
           </MotionWrapper>
 
           <MotionWrapper
@@ -102,12 +98,30 @@ function Services() {
             </Link>
           </MotionWrapper>
 
-          
-          <Image src={guy} alt="guy" quality={100} className="absolute top-[15%] right-[20%] translate-x-1/2 sm:hidden" />
-          <Image src={lady} alt="lady" quality={100} className="absolute top-[25%] -translate-x-1/2 left-[20%] sm:hidden" />
-          <Image src={woman} alt="woman" quality={100} className="absolute bottom-[10%] translate-x-1/4 right-[15%] sm:hidden" />
-          <Image src={woman2} alt="woman2" quality={100} className="absolute bottom-[15%] -translate-x-1/2 left-[20%] sm:hidden" />
-          
+          <Image
+            src={guy}
+            alt="guy"
+            quality={100}
+            className="absolute top-[15%] right-[20%] translate-x-1/2 sm:hidden"
+          />
+          <Image
+            src={lady}
+            alt="lady"
+            quality={100}
+            className="absolute top-[25%] -translate-x-1/2 left-[20%] sm:hidden"
+          />
+          <Image
+            src={woman}
+            alt="woman"
+            quality={100}
+            className="absolute bottom-[10%] translate-x-1/4 right-[15%] sm:hidden"
+          />
+          <Image
+            src={woman2}
+            alt="woman2"
+            quality={100}
+            className="absolute bottom-[15%] -translate-x-1/2 left-[20%] sm:hidden"
+          />
         </div>
 
         <ServicesSection />
