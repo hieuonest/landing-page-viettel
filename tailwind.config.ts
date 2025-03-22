@@ -70,6 +70,7 @@ export default {
 				'sm': '640px', 
 				'md': '768px',
 				'lg': '992px',
+				'1080px': '1080px',
 				'xl': '1200px',
         'xl-2': '1280px'
 			}

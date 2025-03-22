@@ -24,7 +24,7 @@ function HomeSwiper() {
       effect={"cards"}
       grabCursor={true}
       modules={[EffectCards, Navigation]}
-      className="solution-swiper w-[90dvw] md:w-[95dvw] lg:w-[1120px] mt-14"
+      className="solution-swiper max-w-[90dvw] md:max-w-[95dvw] xl:max-w-[1120px] mt-14"
       centeredSlides={true}
       navigation={{
         nextEl: ".solution-swiper__swiper-button-next",
@@ -75,7 +75,7 @@ function HomeSwiper() {
               </Link>
             </div>
             <div className="max-sm:w-full relative flex self-center justify-end overflow-hidden rounded-b-[20px] sm:rounded-s-[20px]">
-              <Image src={homeInsightCi} alt="swipe-1" quality={100} className="w-full md:w-[424px] lg:w-[648px] "/>
+              <Image src={homeInsightCi} alt="swipe-1" quality={100} className="w-full md:w-[424px] lg:w-[548px] xl:w-[648px] "/>
             </div>
             
             <div className={`absolute bottom-0 left-0 right-0 w-full h-full bg-[#c5c5c5] rounded-[20px] pointer-events-none transition-opacity duration-700 ease-in-out ${activeIndex === index ? "opacity-0" : "opacity-60"}`} />

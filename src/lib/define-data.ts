@@ -141,6 +141,42 @@ export const dataPartners: {
     image: boyte,
     name: "Bộ Y Tế"
   },
+  {
+    image: longan,
+    name: "Long An"
+  },
+  {
+    image: vtcyberspace,
+    name: "Viettel Cyberspace"
+  },
+  {
+    image: vtdigital,
+    name: "Viettel Digital"
+  },
+  {
+    image: vthightech,
+    name: "Viettel Hightech"
+  },
+  {
+    image: vtmedia,
+    name: "Viettel Media"
+  },
+  {
+    image: vtpost,
+    name: "Viettel Post"
+  },
+  {
+    image: vtsolutions,
+    name: "Viettel Solutions"
+  },
+  {
+    image: dvc,
+    name: "DVC"
+  },
+  {
+    image: dvc2,
+    name: "DVC"
+  }
 ]
 
 export const slug_solution: {
