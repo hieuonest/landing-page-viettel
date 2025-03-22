@@ -27,7 +27,7 @@ function Header() {
   return (
     <header className={`
     flex items-center justify-between max-w-[100dvw] md:max-w-[1120px] min-h-[60px] md:mx-auto fixed top-0 left-0 right-0 z-100 bg-white px-4 transition-all duration-300
-    ${isScrolled ? 'mt-0 sm:mt-2 sm:rounded-sm shadow-md ' : 'mt-7'}
+    ${isScrolled ? 'mt-0 sm:mt-2 sm:rounded-sm shadow-md' : 'mt-0 sm:mt-7'}
     `}>
       <Link href='/'>
         <Image src={logo} alt='Viettel CX' priority width={109} />
