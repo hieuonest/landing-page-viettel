@@ -8,7 +8,7 @@ import { useCountUp } from "../components/use-count-up";
 
 export default function FooterAbout() {
   return (
-    <section className="mt-[130px] min-h-[395px] xl:min-h-[510px] bg-[#191213] block sm:flex items-center justify-center p-8 gap-5 md:gap-10 xl:gap-20">
+    <section className="mt-[60px] xs:mt-[130px] min-h-[395px] xl:min-h-[510px] bg-[#191213] block sm:flex items-center justify-center p-8 gap-5 md:gap-10 xl:gap-20">
       <div className="relative mx-auto sm:mx-0 w-[316px] mb-[1.75rem] sm:mb-[0] xl:w-[auto]">
         <MotionWrapper
           initial={{ opacity: 0, rotate: 0 }}

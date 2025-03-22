@@ -6,30 +6,33 @@ import FooterAbout from "./footer-about";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Viettel Cx",
+    title: "Viettel Cx | về chúng tôi",
     description:
       "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo.",
     openGraph: {
-      title: "Viettel Cx",
+      title: "Viettel Cx | về chúng tôi",
       description:
         "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo.",
       url: "",
       type: "website",
       images: [
         {
-          url: "",
-          width: 1200,
-          height: 630,
+          url: "/images/contact.jpeg",
+          width: 1151,
+          height: 768,
           alt: "Viettel Cx",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Viettel Cx",
+      title: "Viettel Cx | về chúng tôi",
       description:
         "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo.",
-      images: [""],
+      images: ["/images/contact.jpeg"],
+    },
+    alternates: {
+      canonical: "/images/contact.jpeg",
     },
   };
 }

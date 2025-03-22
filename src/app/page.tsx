@@ -30,13 +30,13 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Viettel Customer Services",
       description:
         "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
-      url: "",
+      // url: "/images/contact.jpeg",
       type: "website",
       images: [
         {
-          url: "",
-          width: 1200,
-          height: 630,
+          url: "/images/contact.jpeg",
+          width: 1151,
+          height: 768,
           alt: "Viettel Cx",
         },
       ],
@@ -46,7 +46,10 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Viettel Cx",
       description:
         "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
-      images: [""],
+      images: ["/images/contact.jpeg"],
+    },
+    alternates: {
+      canonical: "/images/contact.jpeg",
     },
   };
 }

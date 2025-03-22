@@ -19,21 +19,25 @@ export default function BodyAbout() {
         Vì sao lựa chọn Viettel CX?
       </MotionWrapper>
 
-      <div className="grid grid-cols-1 xxs:grid-cols-2 xl:grid-cols-4 w-full mt-3 xxs:mt-10 gap-5 lg:gap-10">
+      <div className="grid grid-cols-1 xxs:grid-cols-2 xl:grid-cols-4 w-full mt-3 xxs:mt-10 gap-3 xs:gap-5 lg:gap-10">
         {dataWhyUs.map((item, index) => (
-          <div
+          <MotionWrapper
+          initial="hidden"
+          viewport={{ once: true, amount: 0.5 }}
+          whileInView="visible"
+          variants={fadeInBottomVariants}
             key={index}
-            className={`${roboto.className} flex flex-col items-center gap-2 xxs:gap-6 p-2 lg:p-4`}
+            className={`${roboto.className} flex flex-col items-center gap-2 xs:gap-6 p-2 px-0 xs:px-2 lg:p-4`}
           >
             <div className="min-h-[91px] flex align-bottom">
               <Image src={item.icon} alt="Setting Icon" />
             </div>
             <h6
-              className={`text-center text-[22px] md:text-3xl xl-2:text-[26px] font-semibold`}
+              className={`text-center text-[22px] xxs:text-[19px] xs:text-[22px] md:text-3xl xl-2:text-[26px] font-semibold`}
             >
               {item.title}
             </h6>
-            <ul className="text-lg text-[#595959] leading-[23px] flex flex-col p-3 xm:p-5 xl-2:px-5 gap-2 xxs:gap-4">
+            <ul className="text-lg text-[#595959] leading-[23px] flex flex-col p-3 px-0 xs:px-3 xm:p-5 xl-2:px-5 gap-2 xs:gap-4">
               {item.desc.map((desc, index) => (
                 <li key={index}>
                   <p className="text-center text-[14px] xm:text-[16px] md:text-[18px] text-[#595959]">
@@ -42,7 +46,7 @@ export default function BodyAbout() {
                 </li>
               ))}
             </ul>
-          </div>
+          </MotionWrapper>
         ))}
       </div>
     </section>
