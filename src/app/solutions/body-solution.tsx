@@ -33,7 +33,7 @@ export default function BodySolution() {
           </MotionWrapper>
           <div className="col-span-4">
             <div
-              className={`${roboto.className} font-medium text-[30px] leading-[35px] font-medium`}
+              className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px] font-medium`}
             >
               CXBot2
               <div className="text-[#858585] mt-[3px] font-medium">
@@ -41,7 +41,7 @@ export default function BodySolution() {
               </div>
             </div>
             <div
-              className={`${roboto.className} mt-[30px] text-[#595959] text-[18px]`}
+              className={`${roboto.className} mt-[20px] sm:mt-[30px] text-[#595959] text-[14px] sm:text-[18px]`}
             >
               CXBot là trợ lý ảo AI giúp doanh nghiệp tự động hóa quy trình chăm
               sóc khách hàng. Giải quyết nhanh chóng yêu cầu, trả lời thông minh
@@ -52,12 +52,12 @@ export default function BodySolution() {
           </div>
         </div>
 
-        <hr className="mt-[74px] mb-[74px]" />
+        <hr className="mt-[50px] mb-[50px] sm:mt-[74px] sm:mb-[74px]" />
 
         <div className="block sm:grid sm:grid-cols-2 justify-between gap-8">
           <div className="col-span-1 mb-[12px] sm:mb-[0]">
             <div
-              className={`${roboto.className} font-medium text-[30px] leading-[35px]`}
+              className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px]`}
             >
               InsightCI
               <div className="text-[#858585] mt-[3px] font-medium">
@@ -65,7 +65,7 @@ export default function BodySolution() {
               </div>
             </div>
             <div
-              className={`${roboto.className} mt-[30px] text-[#595959] text-[18px]`}
+              className={`${roboto.className} mt-[20px] sm:mt-[30px] text-[#595959] text-[14px] sm:text-[18px]`}
             >
               InsightCI là nền tảng phân tích tương tác khách hàng mạnh mẽ, ứng
               dụng công nghệ Big Data để khai thác và phân tích mọi tương tác
@@ -94,7 +94,7 @@ export default function BodySolution() {
           </MotionWrapper>
         </div>
 
-        <hr className="mt-[74px] mb-[74px]" />
+        <hr className="mt-[50px] mb-[50px] sm:mt-[74px] sm:mb-[74px]" />
 
         <div className="block sm:grid sm:grid-cols-7 justify-between gap-8">
           <MotionWrapper
@@ -116,7 +116,7 @@ export default function BodySolution() {
           </MotionWrapper>
           <div className="col-span-4">
             <div
-              className={`${roboto.className} font-medium text-[30px] leading-[35px]`}
+              className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px]`}
             >
               vCOC
               <div className="text-[#858585] mt-[3px] font-medium">
@@ -124,7 +124,7 @@ export default function BodySolution() {
               </div>
             </div>
             <div
-              className={`${roboto.className} mt-[30px] text-[#595959] text-[18px]`}
+              className={`${roboto.className} mt-[20px] sm:mt-[30px] text-[#595959] text-[14px] sm:text-[18px]`}
             >
               vCOC giúp doanh nghiệp giám sát và điều hành toàn bộ hoạt động
               dịch vụ khách hàng một cách trực quan và chính xác. Cung cấp KPI
@@ -135,11 +135,11 @@ export default function BodySolution() {
             <div className={`${roboto.className} mt-[30px] `}>
               <Link
                 href="#"
-                className={`${roboto.className} w-[200px] text-[#000] text-[20px] flex items-center gap-2 border border-[#000000] rounded-[5px] bg-white px-4 py-2 overflow-hidden group relative justify-between z-10`}
+                className={`${roboto.className} w-[160px] sm:w-[180px] lg:w-[200px] text-[#000] text-[14px] sm:text-[16px] lg:text-[20px] flex items-center gap-2 border border-[#000000] rounded-[5px] bg-white px-4 py-2 overflow-hidden group relative justify-between z-10`}
               >
                 <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
                 <MoveRight className="relative transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
-                <span className="relative  font-medium transition-all duration-300 group-hover:text-white">
+                <span className="relative font-medium transition-all duration-300 group-hover:text-white">
                   Yêu cầu Demo
                 </span>
               </Link>
@@ -148,7 +148,7 @@ export default function BodySolution() {
         </div>
       </div>
 
-      <div className="relative mt-[100px] pt-[80px]">
+      <div className="relative mt-[50px] sm:mt-[100px] pt-[30px] sm:pt-[80px]">
         <Image
           src={imgBgFooter1}
           alt=""
@@ -163,7 +163,7 @@ export default function BodySolution() {
           <div className="block sm:grid  sm:grid-cols-2 justify-between gap-8">
             <div className="col-span-1  mb-[12px] sm:mb-[0px]">
               <div
-                className={`${roboto.className} font-medium text-[30px] leading-[35px]`}
+                className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px]`}
               >
                 KnowX Hub
                 <div className="text-[#858585] mt-[3px] font-medium">
@@ -171,7 +171,7 @@ export default function BodySolution() {
                 </div>
               </div>
               <div
-                className={`${roboto.className} mt-[30px] text-[#595959] text-[18px]`}
+                className={`${roboto.className} mt-[20px] sm:mt-[30px] text-[#595959] text-[14px] sm:text-[18px]`}
               >
                 KnowX Hub là trung tâm tri thức hiện đại giúp doanh nghiệp lưu
                 trữ, tổ chức và truy xuất thông tin nhanh chóng. Tích hợp AI để
@@ -225,7 +225,7 @@ export default function BodySolution() {
             </MotionWrapper>
             <div className="col-span-4">
               <div
-                className={`${roboto.className} font-medium text-[30px] leading-[35px]`}
+                className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px]`}
               >
                 WorkforceX
                 <div className="text-[#858585] mt-[3px] font-medium">
@@ -233,7 +233,7 @@ export default function BodySolution() {
                 </div>
               </div>
               <div
-                className={`${roboto.className} mt-[30px] text-[#595959] text-[18px]`}
+                className={`${roboto.className} mt-[20px] sm:mt-[30px] text-[#595959] text-[14px] sm:text-[18px]`}
               >
                 WorkforceX là hệ thống quản lý nhân sự chuyên biệt cho tổng đài,
                 giúp tự động lên lịch, phân công nhân lực, giám sát hiệu suất và
@@ -247,7 +247,7 @@ export default function BodySolution() {
           <div className="block sm:grid  sm:grid-cols-2 justify-between mt-[50px] gap-8">
             <div className="col-span-1">
               <div
-                className={`${roboto.className} font-medium text-[30px] leading-[35px]`}
+                className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px]`}
               >
                 Reputa X
                 <div className="text-[#858585] mt-[3px] font-medium">
@@ -255,7 +255,7 @@ export default function BodySolution() {
                 </div>
               </div>
               <div
-                className={`${roboto.className} mt-[30px] text-[#595959] text-[18px]`}
+                className={`${roboto.className} mt-[20px] sm:mt-[30px] text-[#595959] text-[14px] sm:text-[18px]`}
               >
                 ReputaX là công cụ giám sát và phân tích thương hiệu mạnh mẽ, sử
                 dụng AI và Big Data để theo dõi phản hồi của khách hàng trên
@@ -266,11 +266,11 @@ export default function BodySolution() {
               <div className={`${roboto.className} mt-[30px] `}>
                 <Link
                   href="#"
-                  className={`${roboto.className} w-[200px] text-[#000] text-[20px] flex items-center gap-2 border border-[#000000] rounded-[5px] bg-white px-4 py-2 overflow-hidden group relative justify-between z-10`}
+                  className={`${roboto.className} w-[160px] sm:w-[180px] lg:w-[200px] text-[#000] text-[14px] sm:text-[16px] lg:text-[20px] flex items-center gap-2 border border-[#000000] rounded-[5px] bg-white px-4 py-2 overflow-hidden group relative justify-between z-10`}
                 >
                   <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
                   <MoveRight className="relative transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
-                  <span className="relative  font-medium transition-all duration-300 group-hover:text-white">
+                  <span className="relative font-medium transition-all duration-300 group-hover:text-white">
                     Yêu cầu Demo
                   </span>
                 </Link>

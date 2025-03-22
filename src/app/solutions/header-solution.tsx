@@ -81,7 +81,7 @@ export default function HeaderSolution() {
             <div>
               <Image src={iconOnix} alt="" />
               <div
-                className={`${roboto.className} font-medium text-[30px] leading-[35px]`}
+                className={`${roboto.className} font-medium text-[24px] sm:text-[30px] leading-[35px]`}
               >
                 Tổng đài đa kênh hợp nhất
               </div>
@@ -98,7 +98,7 @@ export default function HeaderSolution() {
               <div className={`${roboto.className} mt-[20px] lg:mt-[30px] `}>
                 <Link
                   href="#"
-                  className={`${roboto.className} w-[180px] lg:w-[200px] text-[#000] text-[16px] lg:text-[20px] flex items-center gap-2 border border-[#000000] rounded-[5px] bg-white px-4 py-2 overflow-hidden group relative justify-between z-10`}
+                  className={`${roboto.className} w-[160px] sm:w-[180px] lg:w-[200px] text-[#000] text-[14px] sm:text-[16px] lg:text-[20px] flex items-center gap-2 border border-[#000000] rounded-[5px] bg-white px-4 py-2 overflow-hidden group relative justify-between z-10`}
                 >
                   <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
                   <MoveRight className="relative transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
