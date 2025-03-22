@@ -21,7 +21,11 @@ export default function BodyAbout() {
 
       <div className="grid grid-cols-1 xxs:grid-cols-2 xl:grid-cols-4 w-full mt-3 xxs:mt-10 gap-5 lg:gap-10">
         {dataWhyUs.map((item, index) => (
-          <div
+          <MotionWrapper
+          initial="hidden"
+          viewport={{ once: true, amount: 0.5 }}
+          whileInView="visible"
+          variants={fadeInBottomVariants}
             key={index}
             className={`${roboto.className} flex flex-col items-center gap-2 xxs:gap-6 p-2 lg:p-4`}
           >
@@ -42,7 +46,7 @@ export default function BodyAbout() {
                 </li>
               ))}
             </ul>
-          </div>
+          </MotionWrapper>
         ))}
       </div>
     </section>
