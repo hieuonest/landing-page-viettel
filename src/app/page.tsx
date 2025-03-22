@@ -95,7 +95,7 @@ export default function Home() {
       <main className="">
         <section className="lg:bg-[#e7e7e7] lg:h-[932px] relative">
           <video
-            className="min-w-[100dvw] lg:w-full min-h-[80dvh] lg:h-full object-cover"
+            className="min-w-[100dvw] lg:w-full min-h-[300px] lg:h-full object-cover"
             autoPlay
             loop
             muted
@@ -111,7 +111,7 @@ export default function Home() {
         <section className="relative">
           <div className="relative z-[2]">
             <div className="flex relative top-0 -translate-y-full">
-              <div className="h-[108px] md:h-[158px] w-[28px] md:w-[62px] bg-transparent relative">
+              <div className="h-[80px] md:h-[108px] lg:h-[158px] w-[28px] md:w-[62px] bg-transparent relative">
                 <Image
                   src="/svg/cutout-left.svg"
                   alt="cutout"
@@ -120,14 +120,14 @@ export default function Home() {
                   className="absolute bottom-0 right-0"
                 />
               </div>
-              <div className="flex-1 bg-white rounded-t-[20px] relative max-h-[108px] md:max-h-[158px] overflow-visible">
+              <div className="flex-1 bg-white rounded-t-[20px] relative max-h-[80px] md:max-h-[108px] lg:max-h-[158px] overflow-visible">
                 <MotionWrapper
                   element="h1"
                   initial="hidden"
                   viewport={{ once: true, amount: 0.4 }}
                   whileInView="visible"
                   variants={fadeInBottomVariants}
-                  className={`${fsMagistralBook.className} text-center font-semibold text-[22px] sm:text-[35px] md:text-[45px] pt-[32px] md:pt-[68px] leading-[50px]`}
+                  className={`${fsMagistralBook.className} text-center font-semibold text-[22px] sm:text-[35px] lg:text-[45px] pt-[24px] sm:pt-[32px] md:pt-[56px] lg:pt-[68px] sm:leading-[50px]`}
                 >
                   <span className="">
                     Viettel Customer Service <br /> nâng tầm trải nghiệm khách
@@ -164,7 +164,7 @@ export default function Home() {
                   </Link>
                 </MotionWrapper>
               </div>
-              <div className="h-[108px] md:h-[158px] w-[28px] md:w-[62px] bg-transparent relative">
+              <div className="h-[80px] md:h-[108px] lg:h-[158px] w-[28px] md:w-[62px] bg-transparent relative">
                 <Image
                   src="/svg/cutout-right.svg"
                   alt="cutout"
@@ -177,10 +177,10 @@ export default function Home() {
 
             <MotionWrapper
               initial="hidden"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
               whileInView="visible"
               variants={fadeInBottomVariants}
-              className="flex justify-center mx-auto max-w-[1274px]"
+              className="flex justify-center mx-auto max-w-[1274px] mt-6 md:mt-0"
             >
               <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-5">
                 {expItems.map(
