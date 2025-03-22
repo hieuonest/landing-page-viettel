@@ -17,32 +17,33 @@ import lady from "../../../public/images/lady.png";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Viettel Cx",
+    title: "Viettel Cx | Dịch vụ",
     description:
       "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
     openGraph: {
-      title: "Viettel Cx",
+      title: "Viettel Cx | Dịch vụ",
       description:
         "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
-      url: "https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg",
+      url: "",
       type: "website",
       images: [
         {
-          url: "https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg",
-          width: 1200,
-          height: 630,
+          url: "/images/contact.jpeg",
+          width: 1151,
+          height: 768,
           alt: "Viettel Cx",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Viettel Cx",
+      title: "Viettel Cx | Dịch vụ",
       description:
         "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
-      images: [
-        "https://chamsua.vn/wp-content/uploads/2024/12/300anh-gai-xinh-toc-ngang-vai-2k2-2k3-2k4-2k6-2k7-2k9-tuyen-49.jpg",
-      ],
+      images: ["/images/contact.jpeg"],
+    },
+    alternates: {
+      canonical: "/images/contact.jpeg",
     },
   };
 }
@@ -102,12 +103,30 @@ function Services() {
             </Link>
           </MotionWrapper>
 
-          
-          <Image src={guy} alt="guy" quality={100} className="absolute top-[15%] right-[20%] translate-x-1/2 sm:hidden" />
-          <Image src={lady} alt="lady" quality={100} className="absolute top-[25%] -translate-x-1/2 left-[20%] sm:hidden" />
-          <Image src={woman} alt="woman" quality={100} className="absolute bottom-[10%] translate-x-1/4 right-[15%] sm:hidden" />
-          <Image src={woman2} alt="woman2" quality={100} className="absolute bottom-[15%] -translate-x-1/2 left-[20%] sm:hidden" />
-          
+          <Image
+            src={guy}
+            alt="guy"
+            quality={100}
+            className="absolute top-[15%] right-[20%] translate-x-1/2 sm:hidden"
+          />
+          <Image
+            src={lady}
+            alt="lady"
+            quality={100}
+            className="absolute top-[25%] -translate-x-1/2 left-[20%] sm:hidden"
+          />
+          <Image
+            src={woman}
+            alt="woman"
+            quality={100}
+            className="absolute bottom-[10%] translate-x-1/4 right-[15%] sm:hidden"
+          />
+          <Image
+            src={woman2}
+            alt="woman2"
+            quality={100}
+            className="absolute bottom-[15%] -translate-x-1/2 left-[20%] sm:hidden"
+          />
         </div>
 
         <ServicesSection />
