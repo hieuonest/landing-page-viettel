@@ -244,7 +244,7 @@ export default function BodySolution() {
             </div>
           </div>
 
-          <div className="block sm:grid  sm:grid-cols-2 justify-between mt-[50px] gap-8">
+          <div className="block sm:grid  sm:grid-cols-2 justify-between mt-[50px] gap-8 pb-[0px] sm:pb-[30px] xl:pb-[0px]">
             <div className="col-span-1">
               <div
                 className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px]`}
