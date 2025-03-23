@@ -156,9 +156,9 @@ export default function HeaderAbout() {
               },
             }}
           >
-            <div className="bg-[#EA0033] absolute w-[100%] h-[100%] z-10 top-[-20px] rounded-[20px]" />
+            <div className="bg-[#EA0033] absolute w-[100%] h-[100%] z-9 top-[-20px] rounded-[20px]" />
             <div
-              className={`${roboto.className} h-auto pb-[20px] md:pb-[0px] md:h-[230px] lg:h-[285px] text-[24px] leading-[32px] lg:text-[30px] text-[#000000] lg:leading-[35px] px-[20px] lg:px-[30px] rounded-[20px] bg-[#E7E7E7] pt-[20px] md:pt-[45px] flex relative z-20`}
+              className={`${roboto.className} h-auto pb-[20px] md:pb-[0px] md:h-[230px] lg:h-[285px] text-[24px] leading-[32px] lg:text-[30px] text-[#000000] lg:leading-[35px] px-[20px] lg:px-[30px] rounded-[20px] bg-[#E7E7E7] pt-[20px] md:pt-[45px] flex relative z-11`}
             >
               <div className="flex items-center h-fit gap-[14px]">
                 <Image src={iconLoa} alt="icon" className="w-[56px] h-[56px]" />
@@ -187,7 +187,7 @@ export default function HeaderAbout() {
           >
             <div className="bg-[#000000] absolute w-[100%] h-[100%] z-10 top-[-20px] rounded-[20px]" />
             <div
-              className={`${roboto.className} h-auto pb-[30px] md:pb-[0px] md:h-[230px] lg:h-[285px] text-[24px] lg:text-[30px] text-[#000000] leading-[32px] lg:leading-[35px] px-[30px] rounded-[20px] bg-[#E7E7E7] pt-[20px] md:pt-[45px]  relative z-20`}
+              className={`${roboto.className} h-auto pb-[30px] md:pb-[0px] md:h-[230px] lg:h-[285px] text-[24px] lg:text-[30px] text-[#000000] leading-[32px] lg:leading-[35px] px-[30px] rounded-[20px] bg-[#E7E7E7] pt-[20px] md:pt-[45px]  relative z-10`}
             >
               <div className="font-medium text-[#EA0033]">
                 Mở rộng <br />{" "}
