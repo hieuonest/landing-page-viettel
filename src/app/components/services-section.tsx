@@ -180,7 +180,7 @@ import { fadeInBottomVariants } from "@/lib/utils";
 
 function ServicesSection() {
   return (
-    <section className="max-w-[1596px] mx-auto px-4">
+    <section className="max-w-[90%] mx-auto">
       <MotionWrapper
         initial="hidden"
         viewport={{ once: true, amount: 0.4 }}
