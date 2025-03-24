@@ -24,6 +24,7 @@ function HomeSwiper() {
         perSlideOffset: 15,
       }}
       effect={"cards"}
+      speed= {800}
       grabCursor={true}
       modules={[EffectCards, Navigation, Pagination]}
       className="solution-swiper max-w-[90dvw] md:max-w-[95dvw] xl:max-w-[1120px] mt-14"
