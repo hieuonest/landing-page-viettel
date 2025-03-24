@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
@@ -15,9 +16,12 @@ import { ArrowUpRight } from "lucide-react";
 import { homeSolutions } from "@/lib/define-data";
 function HomeSwiper() {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const swiperRef = useRef<any>(null);
 
   return (
+    <div className="relative container-swiper-home">
     <Swiper
+    onSwiper={(swiper) => (swiperRef.current = swiper)}
       cardsEffect={{
         slideShadows: false,
         perSlideRotate: 0,
@@ -50,7 +54,7 @@ function HomeSwiper() {
     >
       {homeSolutions.map((item, index) => (
         <SwiperSlide
-          className={`!flex items-center justify-center`}
+          className={`!flex items-center justify-center `}
           key={index}
         >
           <div className="w-full lg:min-h-[650px] rounded-[20px] bg-[#3E3E3E] flex max-sm:flex-col max-sm:gap-3 relative justify-between pt-4 sm:py-[32px] md:py-[48px] lg:py-[70px] pl-0 sm:pl-[36px]">
@@ -107,8 +111,16 @@ function HomeSwiper() {
         />
       </button>
 
-      <div className="swiper-pagination !absolute !w-fit px-4 min-h-[20px] bg-black rounded-full !bottom-2 md:!bottom-9 !left-2 md:!left-16 flex items-center gap-3"></div>
+      <div className="swiper-pagination !absolute !w-fit px-4 min-h-[20px] bg-black rounded-full !bottom-2 md:!bottom-6 !left-2 md:!left-16 flex items-center gap-3"></div>
+      <div className="swiper-pagination !absolute !w-fit px-4 min-h-[20px] bg-black rounded-full !bottom-2 md:!bottom-6 !left-2 md:!left-16 flex items-center gap-3"></div>
+     
     </Swiper>
+    {/* BUTTON BÊN PHẢI */}
+    <div className="absolute w-[100%] container-btn-action">
+        <button className="home-carousel__swiper-button-next swiper-button-next relative" onClick={() => swiperRef.current?.slideNext()} />
+        <button className="home-carousel__swiper-button-prev swiper-button-prev relative right-[60px] left-auto" onClick={() => swiperRef.current?.slidePrev()}/>
+      </div>
+    </div>
   );
 }
 
