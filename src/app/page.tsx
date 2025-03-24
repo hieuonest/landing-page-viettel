@@ -328,7 +328,9 @@ export default function Home() {
             <HomeSwiper />
           </MotionWrapper>
         </section>
+
         <HomeSolutionsCarousel />
+        
         <section className="relative flex flex-col lg:flex-row items-center gap-4 md:gap-3 max-w-[1560px] py-9 md:py-20 mx-auto px-3 md:px-8">
           <MotionWrapper
             element="h1"

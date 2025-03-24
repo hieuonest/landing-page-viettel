@@ -24,6 +24,15 @@ import cxbot from "../../public/svg/cxbot.svg";
 import knowxhub from "../../public/svg/knowx-hub.svg";
 import reputax from "../../public/svg/reputa-x.svg";
 
+import outsourcing from "../../public/images/01. Outsousce Contact center.png";
+import bpo from "../../public/images/02. BPO.png";
+import upsale from "../../public/images/03. Upsale.png";
+import baohanh from "../../public/images/04. BAO HANH.png";
+import loyalty from "../../public/images/05. Loyalty.png";
+import vip from "../../public/images/06. VIP.png";
+import voiceofcustomer from "../../public/images/07. Voice of Customer.png";
+import customerexperience from "../../public/images/08. Customer Experience.png";
+
 export const dataLink: {
   href: string;
   label: string;
@@ -36,15 +45,74 @@ export const dataLink: {
 export const dataServicesHome: {
   value: string;
   label: string;
+  image: StaticImageData;
+  desc: string;
+  detail: string;
 }[] = [
-  { value: "bpo", label: "BPO" },
-  { value: "outsourcing", label: "Outsourcing Contact Center" },
-  { value: "upsale", label: "Gia tăng doanh số Upsale" },
-  { value: "loyalty", label: "Loyalty" },
-  { value: "cskh", label: "CSKH VIP / Ưu tiên" },
-  { value: "customer-experience", label: "Customer Experience" },
-  { value: "voice-of-customer", label: "Voice of Customer" },
-  { value: "bao-hanh", label: "Bảo hành" },
+  {
+    value: "outsourcing",
+    label: "Outsourcing Contact Center",
+    image: outsourcing,
+    desc: "Dịch vụ Outsourcing Contact Center",
+    detail:
+      "Viettel Customer Service cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp",
+  },
+  {
+    value: "bpo",
+    label: "BPO",
+    image: bpo,
+    desc: "Dịch vụ BPO",
+    detail:
+      "Tối ưu vận hành, tiết kiệm chi phí và nâng cao hiệu suất bằng dịch vụ BPO - thuê ngoài các quy trình, nhân sự nghiệp vụ",
+  },
+  {
+    value: "upsale",
+    label: "Upsale",
+    image: upsale,
+    desc: "Dịch vụ gia tăng doanh số",
+    detail:
+      "Tiếp cận khách hàng đa kênh, gia tăng độ phủ về kênh bán, thúc đẩy gia tăng doanh số cùng giải pháp từ Viettel Customer Service",
+  },
+  {
+    value: "bao-hanh",
+    label: "Bảo hành",
+    image: baohanh,
+    desc: "Dịch vụ Bảo hành",
+    detail:
+      "Viettel Customer Service cung cấp cho doanh nghiệp giải pháp bảo hành toàn diện, với đội ngũ nhân sự trên 10 năm kinh nghiệm và trạm sửa chữa trên 63 tỉnh thành",
+  },
+  {
+    value: "loyalty",
+    label: "Loyalty",
+    image: loyalty,
+    desc: "Dịch vụ Loyalty",
+    detail:
+      "Giải pháp của Viettel CX giúp doanh nghiệp xây dựng, duy trì và gia tăng sự gắn bó của khách hàng thông qua các chương trình tích điểm, ưu đãi, đặc quyền và cá nhân hóa trải nghiệm",
+    },
+  {
+    value: "cskh",
+    label: "CSKH VIP / Ưu tiên",
+    image: vip,
+    desc: "Dịch vụ CSKH VIP / Ưu tiên",
+    detail:
+      "Giải pháp cung cấp quà tặng cá nhân hóa theo từng nhóm khách hàng, dịch vụ sự kiện giúp doanh nghiệp tri ân, gắn kết và nâng cao trải nghiệm khách hàng",
+  },
+  {
+    value: "voice-of-customer",
+    label: "Voice of Customer",
+    image: voiceofcustomer,
+    desc: "Dịch vụ Voice of Customer",
+    detail:
+      "Bảo vệ và phát triển thương hiệu của doanh nghiệp trên môi trường số. Viettel CX giúp doanh nghiệp thu thập, phân tích và khai thác ý kiến khách hàng từ nhiều kênh khác nhau, từ đó phát hiện và cảnh báo khủng hoảng truyền thông",
+  },
+  {
+    value: "customer-experience",
+    label: "Customer Experience",
+    image: customerexperience,
+    desc: "Dịch vụ Customer Experience",
+    detail:
+      "Dịch vụ Đánh giá & Nâng cao Trải nghiệm Khách hàng (CX) của Viettel CX giúp doanh nghiệp đo lường, phân tích và tối ưu hóa hành trình khách hàng, từ đó cải thiện sự hài lòng và tăng tỷ lệ trung thành",
+  },
 ];
 
 export const dataServicesLinks: {
@@ -228,7 +296,7 @@ export const homeSolutions: {
   title: string;
   desc: string;
 }[] = [
-  { 
+  {
     key: "insightci",
     icon: insightci,
     title: "Insight CI",

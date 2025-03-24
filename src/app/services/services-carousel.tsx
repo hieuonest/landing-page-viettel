@@ -10,6 +10,8 @@ import { roboto } from "@/lib/font";
 import loyalty from "../../../public/images/loyalty.png";
 import MotionWrapper from "@/components/ui/motion-wrapper";
 import { fadeInBottomVariants } from "@/lib/utils";
+import { dataServicesHome } from "@/lib/define-data";
+import { FormItem } from "@/components/ui/form";
 
 function ServicesCarousel({}) {
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -45,42 +47,48 @@ function ServicesCarousel({}) {
         centeredSlides={false}
         dir="rtl"
       >
-        {Array.from({ length: 7 }).map((_, index) => (
-          <SwiperSlide className="!w-[265px] xs:!w-[325px] lg:!w-[465px]" key={index}>
-            <div
-              className={`${roboto.className} w-[265px] h-[265px] xs:w-[325px] xs:h-[325px] lg:w-[465px] lg:h-[465px] overflow-hidden bg-white rounded-[20px] relative p-8 !text-left`}
+        {dataServicesHome
+          .filter((item) => item.value !== "outsourcing")
+          .map((item, index) => (
+            <SwiperSlide
+              className="!w-[300px] xs:!w-[325px] lg:!w-[465px]"
+              key={index}
             >
-              <Image
-                src={loyalty}
-                alt=""
-                className={`absolute top-0 right-0 left-0 bottom-0 z-1 ${
-                  activeIndex === index ? "opacity-100" : "opacity-0"
-                } transition-opacity duration-300 ease-in-out`}
-              />
+              <div
+                className={`${roboto.className} w-[300px] h-[300px] xs:w-[325px] xs:h-[325px] lg:w-[465px] lg:h-[465px] overflow-hidden bg-white rounded-[20px] relative p-8 !text-left`}
+              >
+                <div className="overflow-hidden absolute top-0 right-0 left-0 bottom-0 z-1 ">
+                  <Image
+                    src={item.image}
+                    alt=""
+                    className={`w-full h-full object-cover ${activeIndex === index ? "opacity-100" : "opacity-0"}${item.value === "bpo" ? "object-[85%_0]" : ""}${item.value === "upsale" ? "object-[55%_0]" : ""}${item.value === "loyalty" ? "object-[40%_0]" : ""}${item.value === "cskh" ? "object-[80%_0]" : ""}${item.value === "customer-experience" ? "object-[70%_0]" : ""}`}
+                    quality={100}
+                  />
+                </div>
+                {activeIndex === index && (
+                  <div className="absolute top-0 right-0 left-0 bottom-0 z-[2] bg-black opacity-40"></div>
+                )}
+                <h1 className="text-lg xs:text-2xl lg:text-3xl font-medium text-[#D8D8D8] relative z-[3]">
+                  Dịch vụ{" "}
+                  <span
+                    className={`font-medium ${
+                      activeIndex === index ? "text-white" : "text-black"
+                    } `}
+                  >
+                    {item.label}
+                  </span>
+                </h1>
 
-              <h1 className="text-lg xs:text-2xl lg:text-3xl font-medium text-[#D8D8D8] relative z-[2]">
-                Dịch vụ{" "}
-                <span
-                  className={`font-medium ${
-                    activeIndex === index ? "text-white" : "text-black"
+                <p
+                  className={`text-sm xs:text-base lg:text-lg relative z-[2] mt-6 lg:mt-14   ${
+                    activeIndex === index ? "text-white" : "text-[#595959]"
                   }`}
                 >
-                  Loyalty
-                </span>
-              </h1>
-
-              <p
-                className={`text-sm xs:text-base lg:text-lg relative z-[2] mt-6 lg:mt-14   ${
-                  activeIndex === index ? "text-white" : "text-[#595959]"
-                }`}
-              >
-                Giải pháp của Viettel CX giúp doanh nghiệp xây dựng, duy trì và
-                gia tăng sự gắn bó của khách hàng thông qua các chương trình
-                tích điểm, ưu đãi, đặc quyền và cá nhân hóa trải nghiệm
-              </p>
-            </div>
-          </SwiperSlide>
-        ))}
+                  {item.detail}
+                </p>
+              </div>
+            </SwiperSlide>
+          ))}
         <div className="absolute !top-[-10%] xs:[!top-0] !translate-y-[-100%] xl:!translate-y-[100%] !right-[0] !translate-x-1/2 flex justify-between min-h-[40px] min-w-[92px] z-10">
           <button className="services-carousel__swiper-button-next swiper-button-next !relative !translate-y-0 !top-0 !mt-0"></button>
           <button className="services-carousel__swiper-button-prev swiper-button-prev !relative !translate-y-0 !top-0 !mt-0"></button>

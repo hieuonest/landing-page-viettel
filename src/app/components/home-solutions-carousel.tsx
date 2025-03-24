@@ -32,11 +32,11 @@ function HomeSolutionsCarousel() {
                 src={item.icon}
                 alt={item.title}
                 quality={100}
-                className={`relative overflow-visible transition-all duration-300 ease-in-out cursor-pointer h-[170px] ${
+                className={`relative overflow-visible transition-all duration-300 ease-in-out cursor-pointer h-[170px] max-xs:w-[80%] ${
                   item.key === "insightci" || item.key === "reputax"
-                    ? "top-[20px] "
+                    ? "top-[10px] xs:top-[20px]"
                     : ""
-                }`}
+                } ${item.key === "vcoc" || item.key === "cxbot" ? "w-[70%]" : ""}`}
                 draggable={false}
               />
               <div className="absolute !w-[16px] !h-[16px] rounded-full bg-[#D9D9D9] z-10 left-0 -translate-x-1/2"></div>
