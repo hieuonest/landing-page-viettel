@@ -329,19 +329,19 @@ export default function Home() {
           </MotionWrapper>
         </section>
         <HomeSolutionsCarousel />
-        <section className="relative flex flex-col lg:flex-row items-center gap-4 md:gap-0 max-w-[1560px] py-9 md:py-20 mx-auto justify-between px-3 md:px-8">
+        <section className="relative flex flex-col lg:flex-row items-center gap-4 md:gap-3 max-w-[1560px] py-9 md:py-20 mx-auto px-3 md:px-8">
           <MotionWrapper
             element="h1"
             initial="hidden"
             viewport={{ once: true, amount: 0.4 }}
             whileInView="visible"
             variants={fadeInBottomVariants}
-            className={`${fsMagistralBook.className} text-[28px] xl:text-[35px] max-lg:text-center lg:max-w-[287px]`}
+            className={`${fsMagistralBook.className} text-[28px] xl:text-[35px] max-lg:text-center lg:max-w-[245px] basis-1/3`}
           >
             Khách hàng của chúng tôi
           </MotionWrapper>
 
-          <div>
+          <div className="flex-1">
             <HomePartnersCarousel />
           </div>
         </section>

@@ -180,7 +180,7 @@ import { fadeInBottomVariants } from "@/lib/utils";
 
 function ServicesSection() {
   return (
-    <section className="max-w-[90%] mx-auto">
+    <section className="max-w-[95%] min-[1596px]:max-w-[1596px] mx-auto">
       <MotionWrapper
         initial="hidden"
         viewport={{ once: true, amount: 0.4 }}
@@ -199,7 +199,7 @@ function ServicesSection() {
         className="flex items-center flex-col min-[896px]:flex-row min-[896px]:h-[452px] min-[896px]:gap-3 lg:gap-5"
       >
         <div
-          className={`${roboto.className} bg-white p-8 rounded-t-[20px] min-[896px]:rounded-[20px] max-w-[950px] h-full basis-[65%] xl:basis-[60%] flex flex-col justify-between`}
+          className={`${roboto.className} bg-white p-8 rounded-t-[20px] min-[896px]:rounded-[20px] flex-1  basis-[65%] xl:basis-[60%] h-full flex flex-col justify-between`}
         >
           <div>
             <h1 className="text-lg xs:text-2xl lg:text-3xl font-medium text-[#9B9B9B]">
@@ -231,7 +231,7 @@ function ServicesSection() {
               </p>
               <div className="space-y-3 1080px:space-y-6 mt-2 1080px:mt-6">
                 <div className="flex items-center gap-2 xl:gap-3">
-                  <p className="flex items-end text-right text-[20px] lg:text-[24px] xl:text-[28px] text-black">
+                  <p className="flex items-end text-right text-[20px] lg:text-[23px] xl:text-[28px] text-black">
                     <ArrowDownLeft size={18} color="#EA0033" />
                     30 - 40%
                   </p>

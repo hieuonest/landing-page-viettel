@@ -4,8 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "@/app/styles/pages/home.scss";
-import { EffectCards, Navigation } from "swiper/modules";
+import { EffectCards, Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 import { roboto } from "@/lib/font";
 import Link from "next/link";
@@ -23,7 +24,7 @@ function HomeSwiper() {
       }}
       effect={"cards"}
       grabCursor={true}
-      modules={[EffectCards, Navigation]}
+      modules={[EffectCards, Navigation, Pagination]}
       className="solution-swiper max-w-[90dvw] md:max-w-[95dvw] xl:max-w-[1120px] mt-14"
       centeredSlides={true}
       navigation={{
@@ -34,7 +35,14 @@ function HomeSwiper() {
       onSlideChange={(swiper) => {
         setActiveIndex(swiper.activeIndex);
       }}
-
+      pagination={{
+        clickable: true,
+        el: ".swiper-pagination",
+        renderBullet: function (index, className) {
+          return `<span class="${className} custom-bullet"></span>`;
+        },
+      }}
+      
     >
       {Array.from({ length: 3 }).map((_, index) => (
         <SwiperSlide
@@ -99,6 +107,8 @@ function HomeSwiper() {
           height={40}
         />
       </button>
+
+      <div className="swiper-pagination !absolute !w-fit px-4 min-h-[20px] bg-black rounded-full !bottom-2 md:!bottom-9 !left-2 md:!left-16 flex items-center gap-3"></div>
     </Swiper>
   );
 }
