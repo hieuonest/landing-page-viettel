@@ -95,7 +95,7 @@ export default function HeaderSolution() {
                 tối ưu hiệu suất vận hành và đảm bảo an toàn dữ liệu vượt trội.
               </div>
 
-              <div className={`${roboto.className} mt-[20px] lg:mt-[30px] `}>
+              {/* <div className={`${roboto.className} mt-[20px] lg:mt-[30px] `}>
                 <Link
                   href="#"
                   className={`${roboto.className} w-[160px] sm:w-[180px] lg:w-[200px] text-[#000] text-[14px] sm:text-[16px] lg:text-[20px] flex items-center gap-2 border border-[#000000] rounded-[5px] bg-white px-4 py-2 overflow-hidden group relative justify-between z-10`}
@@ -106,7 +106,7 @@ export default function HeaderSolution() {
                     Yêu cầu Demo
                   </span>
                 </Link>
-              </div>
+              </div> */}
             </div>
             <MotionWrapper
               element="div"
