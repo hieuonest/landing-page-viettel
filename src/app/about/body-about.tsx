@@ -7,7 +7,7 @@ import { fadeInBottomVariants } from "@/lib/utils";
 
 export default function BodyAbout() {
   return (
-    <section className="mt-[60px] xs:mt-[80px] md:mt-[100px] lg:mt-[150px] max-w-[95%] mx-auto lg:px-20 flex flex-col items-center gap-3 lg:gap-10">
+    <section className="mt-[60px] xs:mt-[80px] md:mt-[100px] lg:mt-[150px] max-w-[95%] mx-auto lg:px-20 big-pc:px-5 3xl:px-20 flex flex-col items-center gap-3 lg:gap-10">
       <MotionWrapper
         element="h1"
         initial="hidden"
@@ -16,10 +16,10 @@ export default function BodyAbout() {
         variants={fadeInBottomVariants}
         className={`${fsMagistralBook.className} text-[26px] xxs:text-[32px] xm:text-[38px] lg:text-[45px] text-center`}
       >
-        Vì sao lựa chọn Viettel CX?
+        Vì sao lựa chọn Viettel Customer Service?
       </MotionWrapper>
 
-      <div className="grid grid-cols-1 xxs:grid-cols-2 xl:grid-cols-4 w-full mt-3 xxs:mt-10 gap-3 xs:gap-5 lg:gap-10">
+      <div className="grid grid-cols-1 xxs:grid-cols-2 big-pc:grid-cols-4 w-full mt-3 xxs:mt-10 gap-3 xs:gap-5 lg:gap-10">
         {dataWhyUs.map((item, index) => (
           <MotionWrapper
           initial="hidden"
@@ -33,7 +33,7 @@ export default function BodyAbout() {
               <Image src={item.icon} alt="Setting Icon" />
             </div>
             <h6
-              className={`text-center text-[22px] xxs:text-[19px] xs:text-[22px] md:text-3xl xl-2:text-[26px] font-semibold`}
+              className="text-center text-[22px] xxs:text-[18px] xs:text-[18px] xm:text-[22px] md:text-3xl xl-2:text-[26px] font-semibold"
             >
               {item.title}
             </h6>

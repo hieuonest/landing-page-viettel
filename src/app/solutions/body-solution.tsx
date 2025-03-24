@@ -35,7 +35,7 @@ export default function BodySolution() {
             <div
               className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px] font-medium`}
             >
-              CXBot2
+              CXBot
               <div className="text-[#858585] mt-[3px] font-medium">
                 Nhân viên tổng đài AI ảo
               </div>
@@ -132,7 +132,7 @@ export default function BodySolution() {
               chóng, đảm bảo hiệu suất vận hành luôn ở mức tối ưu.
             </div>
 
-            <div className={`${roboto.className} mt-[30px] `}>
+            {/* <div className={`${roboto.className} mt-[30px] `}>
               <Link
                 href="#"
                 className={`${roboto.className} w-[160px] sm:w-[180px] lg:w-[200px] text-[#000] text-[14px] sm:text-[16px] lg:text-[20px] flex items-center gap-2 border border-[#000000] rounded-[5px] bg-white px-4 py-2 overflow-hidden group relative justify-between z-10`}
@@ -143,7 +143,7 @@ export default function BodySolution() {
                   Yêu cầu Demo
                 </span>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -263,7 +263,7 @@ export default function BodySolution() {
                 thời với khủng hoảng truyền thông, đồng thời cung cấp báo cáo
                 chi tiết về hình ảnh thương hiệu so với đối thủ cạnh tranh.
               </div>
-              <div className={`${roboto.className} mt-[30px] `}>
+              {/* <div className={`${roboto.className} mt-[30px] `}>
                 <Link
                   href="#"
                   className={`${roboto.className} w-[160px] sm:w-[180px] lg:w-[200px] text-[#000] text-[14px] sm:text-[16px] lg:text-[20px] flex items-center gap-2 border border-[#000000] rounded-[5px] bg-white px-4 py-2 overflow-hidden group relative justify-between z-10`}
@@ -274,7 +274,7 @@ export default function BodySolution() {
                     Yêu cầu Demo
                   </span>
                 </Link>
-              </div>
+              </div> */}
             </div>
 
             <MotionWrapper

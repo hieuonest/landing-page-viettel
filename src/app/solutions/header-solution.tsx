@@ -21,10 +21,10 @@ export default function HeaderSolution() {
       <Image
         src={BgHeader}
         alt="Solutions header background"
-        className="absolute top-0 right-0 z-10"
+        className="absolute top-0 right-0 z-2"
         style={{ width: "110%", height: "auto" }}
       />
-      <div className="max-w-[90%] pt-[130px] xl:max-w-[1120px] mx-auto container relative z-20 xm:max-w-[90%]">
+      <div className="max-w-[90%] pt-[130px] xl:max-w-[1120px] mx-auto container relative z-3 xm:max-w-[90%]">
         <MotionWrapper
           element="div"
           viewport={{ once: true, amount: 0.4 }}
@@ -89,13 +89,13 @@ export default function HeaderSolution() {
                 className={`${roboto.className}  text-[#595959] mt-[20px] lg:mt-[30px] text-[14px] lg:text-[18px]`}
               >
                 OmniX là nền tảng tổng đài thông minh trên nền tảng điện toán
-                đá30m mây, tích hợp AI giúp doanh nghiệp quản lý tất cả các
+                đám mây, tích hợp AI giúp doanh nghiệp quản lý tất cả các
                 tương tác khách hàng trên một hệ thống duy nhất, từ thoại,
                 email, SMS, OTT đến mạng xã hội. Cung cấp trải nghiệm liền mạch,
                 tối ưu hiệu suất vận hành và đảm bảo an toàn dữ liệu vượt trội.
               </div>
 
-              <div className={`${roboto.className} mt-[20px] lg:mt-[30px] `}>
+              {/* <div className={`${roboto.className} mt-[20px] lg:mt-[30px] `}>
                 <Link
                   href="#"
                   className={`${roboto.className} w-[160px] sm:w-[180px] lg:w-[200px] text-[#000] text-[14px] sm:text-[16px] lg:text-[20px] flex items-center gap-2 border border-[#000000] rounded-[5px] bg-white px-4 py-2 overflow-hidden group relative justify-between z-10`}
@@ -106,7 +106,7 @@ export default function HeaderSolution() {
                     Yêu cầu Demo
                   </span>
                 </Link>
-              </div>
+              </div> */}
             </div>
             <MotionWrapper
               element="div"
@@ -148,7 +148,8 @@ export default function HeaderSolution() {
               navigation={false}
               pagination={false}
               breakpoints={{
-                0: { slidesPerView: 2.25 },
+                0: { slidesPerView: 1.75 },
+                425: {slidesPerView: 2.25},
                 576: { slidesPerView: 3.25 },
                 768: { slidesPerView: 4.25 },
               }}
