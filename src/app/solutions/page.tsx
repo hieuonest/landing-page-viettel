@@ -7,11 +7,11 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Giải pháp | Viettel Cx",
     description:
-      "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo và đổi mới trên mọi lĩnh vực.",
+      "Viettel Customer Service cung cấp giải pháp, phần mềm tương tác đa kênh hợp nhất OmniX, tổng đài ảo AI bot, tổng đài thông minh, hệ thống điều hành thông minh, phần mềm CSKH,…",
     openGraph: {
       title: "Giải pháp | Viettel Cx",
       description:
-        "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo và đổi mới trên mọi lĩnh vực.",
+        "Viettel Customer Service cung cấp giải pháp, phần mềm tương tác đa kênh hợp nhất OmniX, tổng đài ảo AI bot, tổng đài thông minh, hệ thống điều hành thông minh, phần mềm CSKH,…",
       url: "",
       type: "website",
       images: [
@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "Viettel Cx",
       description:
-        "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo và đổi mới trên mọi lĩnh vực.",
+        "Viettel Customer Service cung cấp giải pháp, phần mềm tương tác đa kênh hợp nhất OmniX, tổng đài ảo AI bot, tổng đài thông minh, hệ thống điều hành thông minh, phần mềm CSKH,…",
       images: ["/images/contact.jpeg"],
     },
     alternates: {
