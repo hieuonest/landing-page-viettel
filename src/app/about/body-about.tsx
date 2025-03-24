@@ -30,7 +30,7 @@ export default function BodyAbout() {
             className={`${roboto.className} flex flex-col items-center gap-2 xs:gap-6 p-2 px-0 xs:px-2 lg:p-4`}
           >
             <div className="min-h-[91px] flex align-bottom">
-              <Image src={item.icon} alt="Setting Icon" />
+              <Image src={item.icon} alt="Setting Icon" quality={100}/>
             </div>
             <h6 className="text-center text-[22px] xxs:text-[18px] xs:text-[18px] xm:text-[22px] md:text-3xl xl-2:text-[26px] font-semibold">
               {item.title}

@@ -23,6 +23,7 @@ export default function HeaderSolution() {
         alt="Solutions header background"
         className="absolute top-0 right-0 z-2"
         style={{ width: "110%", height: "auto" }}
+        quality={100}
       />
       <div className="max-w-[90%] pt-[130px] xl:max-w-[1120px] mx-auto container relative z-3 xm:max-w-[90%]">
         <MotionWrapper
@@ -76,10 +77,10 @@ export default function HeaderSolution() {
               transition={{ duration: 1.5 }}
               className="flex items-center justify-center md:hidden mb-[12px]"
             >
-              <Image src={Omni} alt="" />
+              <Image src={Omni} alt="" quality={100}/>
             </MotionWrapper>
             <div>
-              <Image src={iconOnix} alt="" quality={100} />
+              <Image src={iconOnix} alt="Omni X" quality={100} />
               <div
                 className={`${roboto.className} font-medium text-[24px] sm:text-[30px] leading-[35px]`}
               >
@@ -115,7 +116,7 @@ export default function HeaderSolution() {
               transition={{ duration: 1.5 }}
               className="items-center justify-center hidden md:block"
             >
-              <Image src={Omni} alt="" />
+              <Image src={Omni} alt="Omni" quality={100}/>
             </MotionWrapper>
           </div>
         </div>

@@ -245,7 +245,7 @@ export default function Home() {
               variants={fadeInBottomVariants}
               className={`${roboto.className} text-sm md:text-[20px] text-center text-black max-w-[95%] sm:max-w-[70%] md:max-w-[633px] mx-auto mt-4 leading-[25px] `}
             >
-              Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến
+              Viettel Customer Service là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến
               trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu
             </MotionWrapper>
           </div>
