@@ -112,7 +112,7 @@ export const dataServicesHome: {
     image: customerexperience,
     desc: "Dịch vụ Customer Experience",
     detail:
-      "Dịch vụ Đánh giá & Nâng cao Trải nghiệm Khách hàng (CX) của Viettel CX giúp doanh nghiệp đo lường, phân tích và tối ưu hóa hành trình khách hàng, từ đó cải thiện sự hài lòng và tăng tỷ lệ trung thành",
+      "Dịch vụ Đánh giá & Nâng cao Trải nghiệm Khách hàng (CX) của Viettel Customer Service giúp doanh nghiệp đo lường, phân tích và tối ưu hóa hành trình khách hàng, từ đó cải thiện sự hài lòng và tăng tỷ lệ trung thành",
   },
 ];
 
