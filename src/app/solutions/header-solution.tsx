@@ -21,10 +21,10 @@ export default function HeaderSolution() {
       <Image
         src={BgHeader}
         alt="Solutions header background"
-        className="absolute top-0 right-0 z-10"
+        className="absolute top-0 right-0 z-2"
         style={{ width: "110%", height: "auto" }}
       />
-      <div className="max-w-[90%] pt-[130px] xl:max-w-[1120px] mx-auto container relative z-2 xm:max-w-[90%]">
+      <div className="max-w-[90%] pt-[130px] xl:max-w-[1120px] mx-auto container relative z-3 xm:max-w-[90%]">
         <MotionWrapper
           element="div"
           viewport={{ once: true, amount: 0.4 }}
@@ -148,7 +148,8 @@ export default function HeaderSolution() {
               navigation={false}
               pagination={false}
               breakpoints={{
-                0: { slidesPerView: 2.25 },
+                0: { slidesPerView: 1.5 },
+                425: {slidesPerView: 1.5},
                 576: { slidesPerView: 3.25 },
                 768: { slidesPerView: 4.25 },
               }}

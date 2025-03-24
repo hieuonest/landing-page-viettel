@@ -106,7 +106,7 @@ export default function FooterMobile() {
           />
         </div>
 
-        <div className="flex items-center gap-3 pt-2">
+        <div className="grid grid-cols-3 xs:flex items-center gap-3 pt-2">
           <Image
             src={thongTinDienTu}
             alt="Cổng thông tin điện tử - Bộ Quốc Phòng"
