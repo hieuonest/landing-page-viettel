@@ -53,7 +53,7 @@ export default function FooterDestop() {
                 <Link
                   key={`${href}${label}`}
                   href={href}
-                  className="hover:text-[#EA0033] transition-colors duration-300 ease-in-out text-sm text-black"
+                  className="hover:text-[#EA0033] transition-colors duration-300 ease-in-out text-sm text-black whitespace-nowrap break-keep"
                 >
                   {label}
                 </Link>
@@ -66,7 +66,7 @@ export default function FooterDestop() {
           >
             <div className="flex flex-col gap-[10px] absolute top-0 right-0 xl:relative xl:top-auto xl:right-auto">
               <div className="flex items-center gap-1 justify-start xl:justify-end">
-                <Link href="/" className="w-fit">
+                <Link href="/" className="">
                   <Image src="/svg/facebook.svg" alt="Facebook" width={28} height={28} />
                 </Link>
                 <Link href="https://zalo.me/1570758701534064697" target="_blank" rel="noopener noreferrer">

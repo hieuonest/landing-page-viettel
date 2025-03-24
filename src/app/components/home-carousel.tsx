@@ -10,6 +10,7 @@ import upsale from "../../../public/images/upsale.png";
 import { ArrowUpRight} from "lucide-react";
 import { roboto } from "@/lib/font";
 import Link from "next/link";
+import { dataServicesHome } from "@/lib/define-data";
 
 function HomeCarousel() {
   return (
@@ -31,25 +32,24 @@ function HomeCarousel() {
         nextEl: ".home-carousel__swiper-button-next",
         prevEl: ".home-carousel__swiper-button-prev",
       }}
-      className="w-full relative home-carousel "
+      className="w-full relative home-carousel"
     >
-      {Array.from({ length: 7 }).map((_, index) => (
+      {dataServicesHome.map((item, index) => (
         <SwiperSlide className="relative !w-full" key={index}>
-          <div className="relative overflow-hidden ">
-            <Image src={upsale} alt="upsale" className="object-cover w-full min-h-[500px] sm:min-h-[350px]" />
+          <div className="relative overflow-hidden">
+            <Image src={item.image} alt={item.value} className={`${item.value === "outsourcing" ? "object-[65%_0]" : ""}${item.value === "bpo" ? "object-[85%_0]" : ""}${item.value === "upsale" ? "object-[55%_0]" : ""}${item.value === "loyalty" ? "object-[40%_0]" : ""}${item.value === "cskh" ? "object-[80%_0]" : ""}${item.value === "customer-experience" ? "object-[70%_0]" : ""} md:object-center object-cover w-[100dvw] min-h-[500px] sm:min-h-[375px] h-full`} quality={100}/>
           </div>
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black min-h-[351px] flex items-end justify-center">
             <div
-              className={`${roboto.className} flex flex-col gap-4 items-center text-center justify-end pb-12 md:pb-9 text-white max-w-[485px]`}
+              className={`${roboto.className} flex flex-col gap-4 items-center text-center justify-end pb-12 md:pb-9 text-white `}
             >
-              <h1 className="text-[45px] md:text-[55px] font-light leading-[60px]">Upsale</h1>
+              <h1 className="text-[40px] md:text-[55px] font-light leading-[60px]">{item.label}</h1>
               <h2 className="text-sm md:text-lg font-medium uppercase">
-                Dịch vụ gia tăng doanh số
+                {item.desc}
               </h2>
 
               <p className="text-[#D9D9D9] text-sm md:text-lg max-w-[90%] xs:max-w-[80%] md:max-w-[485px]">
-                Tiếp cận khách hàng đa kênh, gia tăng độ phủ về kênh bán, thúc
-                đẩy gia tăng doanh số cùng giải pháp từ Viettel CX
+                {item.detail}
               </p>
               <Link
                 href="/solutions"
