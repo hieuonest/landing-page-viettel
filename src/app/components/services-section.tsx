@@ -209,7 +209,7 @@ function ServicesSection() {
               </span>
             </h1>
             <p className="max-w-[645px] text-sm xs:text-base xl:text-lg mt-3">
-              Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng
+              Viettel Customer Service cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng
               giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng
               của doanh nghiệp, giúp:
             </p>
@@ -232,14 +232,14 @@ function ServicesSection() {
               <div className="space-y-3 1080px:space-y-6 mt-2 1080px:mt-6">
                 <div className="flex items-center gap-2 xl:gap-3">
                   <p className="flex items-end text-right text-[20px] lg:text-[24px] xl:text-[28px] text-black">
-                    <ArrowUpRight size={18} color="#EA0033" />
+                    <ArrowDownLeft size={18} color="#EA0033" />
                     30 - 40%
                   </p>
                   <p>chi phí vận hành</p>
                 </div>
                 <div className="flex items-center gap-2 xl:gap-3">
                   <p className="flex items-end text-right text-[20px] lg:text-[24px] xl:text-[28px] text-black ">
-                    <ArrowDownLeft size={18} color="#EA0033" />
+                    <ArrowUpRight size={18} color="#EA0033" />
                     95%
                   </p>
                   <p>tỷ lệ kết nối thành công</p>

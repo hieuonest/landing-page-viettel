@@ -35,8 +35,8 @@ function HomeCarousel() {
     >
       {Array.from({ length: 7 }).map((_, index) => (
         <SwiperSlide className="relative !w-full" key={index}>
-          <div className="relative overflow-hidden">
-            <Image src={upsale} alt="upsale" className="object-cover w-full min-h-[350px]" />
+          <div className="relative overflow-hidden ">
+            <Image src={upsale} alt="upsale" className="object-cover w-full min-h-[500px] sm:min-h-[350px]" />
           </div>
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black min-h-[351px] flex items-end justify-center">
             <div
@@ -47,7 +47,7 @@ function HomeCarousel() {
                 Dịch vụ gia tăng doanh số
               </h2>
 
-              <p className="text-[#D9D9D9] text-sm md:text-lg">
+              <p className="text-[#D9D9D9] text-sm md:text-lg max-w-[90%] xs:max-w-[80%] md:max-w-[485px]">
                 Tiếp cận khách hàng đa kênh, gia tăng độ phủ về kênh bán, thúc
                 đẩy gia tăng doanh số cùng giải pháp từ Viettel CX
               </p>

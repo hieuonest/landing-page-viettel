@@ -11,7 +11,7 @@ import {
 
 function HomePartnersCarousel({}) {
   const plugin = React.useRef(
-    Autoplay({ delay: 3000})
+    Autoplay({ delay: 2000})
   );
   return (
     <Carousel
@@ -26,7 +26,7 @@ function HomePartnersCarousel({}) {
         {dataPartners.map((item, index) => (
           <CarouselItem
             key={index}
-            className="basis-1/5 gap-3 flex items-center justify-center"
+            className="basis-1/3 md:basis-1/5 gap-3 flex items-center justify-center"
           >
             <Image
               src={item.image}

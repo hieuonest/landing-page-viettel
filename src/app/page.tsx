@@ -16,10 +16,9 @@ import { Metadata } from "next";
 import gradientBg from "../../public/images/gradient-bg.png";
 import gradientRedBg from "../../public/images/gradient-bg-red.png";
 import HomeCarousel from "./components/home-carousel";
-import MarqueeWrapper from "@/components/ui/marquee-wrapper";
-import insightci from "../../public/svg/insight-ci.svg";
-import workforcex from "../../public/svg/workforce-x.svg";
+
 import HomePartnersCarousel from "./components/home-partners-carousel";
+import HomeSolutionsCarousel from "./components/home-solutions-carousel";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -57,7 +56,7 @@ export async function generateMetadata(): Promise<Metadata> {
 type ExpItem = {
   icon: React.JSX.Element;
   title: string;
-  tailing: string;
+  tailing: string | React.ReactNode;
   desc: string;
   numberValue: number;
 };
@@ -88,7 +87,11 @@ export default function Home() {
       icon: <GlobeIcon color="#858585" />,
       numberValue: 10,
       title: "10",
-      tailing: "Quốc gia vùng lãnh thổ",
+      tailing: (
+        <>
+          Quốc gia <br /> vùng lãnh thổ
+        </>
+      ),
       desc: "sử dụng dịch vụ",
     },
   ];
@@ -112,7 +115,7 @@ export default function Home() {
           </button>
         </section>
         <section className="relative">
-          <div className="relative z-[2]">
+          <div className="relative">
             <div className="flex relative top-0 -translate-y-full">
               <div className="h-[80px] md:h-[108px] lg:h-[158px] w-[18px] xs:w-[28px] md:w-[62px] bg-transparent relative">
                 <Image
@@ -130,7 +133,7 @@ export default function Home() {
                   viewport={{ once: true, amount: 0.4 }}
                   whileInView="visible"
                   variants={fadeInBottomVariants}
-                  className={`${fsMagistralBook.className} text-center font-semibold text-[21px] xs:text-[30px] sm:text-[35px] lg:text-[45px] pt-[24px] sm:pt-[32px] md:pt-[56px] lg:pt-[68px] sm:leading-[50px]`}
+                  className={`${fsMagistralBook.className} text-center font-semibold text-[21px] xs:text-[28px] sm:text-[35px] lg:text-[45px] pt-[24px] sm:pt-[32px] md:pt-[56px] lg:pt-[68px] sm:leading-[50px]`}
                 >
                   <span className="">
                     Viettel Customer Service <br /> nâng tầm trải nghiệm khách
@@ -183,20 +186,20 @@ export default function Home() {
               viewport={{ once: true, amount: 0.3 }}
               whileInView="visible"
               variants={fadeInBottomVariants}
-              className="flex justify-center mx-auto max-w-[1274px] mt-6 "
+              className="flex justify-center mx-auto max-w-[1274px] "
             >
-              <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-5">
+              <ul className="grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-5 max-sm:mx-3 mt-16 lg:mt-6">
                 {expItems.map(
                   ({ icon, numberValue, title, tailing, desc }, index) => (
                     <li
-                      className="flex flex-col items-center  xs:min-h-[256px] sm:min-h-[356px] xl-2:min-w-[304px] bg-white rounded-[20px] py-[40px] sm:py-[52px] lg:px-8 px-4 pb-4 lg:pb-8 gap-[50px]"
+                      className="flex flex-col items-center xs:min-h-[256px] sm:min-h-[356px] xl-2:min-w-[304px] bg-white rounded-[20px] py-[40px] lg:py-[52px] lg:px-8 px-4 pb-[32px] lg:pb-12 gap-[50px] max-md:shadow-md"
                       key={index}
                     >
                       {icon}
 
                       <div className="flex flex-col items-center">
                         <p
-                          className={`${roboto.className} text-[35px] xs:text-[45px] sm:text-[55px] xl:text-[65px] font-light text-[#A28F5D]`}
+                          className={`${roboto.className} text-[45px] xs:text-[55px] xl:text-[65px] font-light text-[#A28F5D]`}
                         >
                           {numberValue ? (
                             <HomeCounUp numberValue={numberValue} />
@@ -205,12 +208,12 @@ export default function Home() {
                           )}
                         </p>
                         <p
-                          className={`${roboto.className} text-base sm:text-lg xl:text-2xl font-semibold uppercase text-[#595959] text-center max-w-[187px]`}
+                          className={`${roboto.className} text-base sm:text-lg xl:text-2xl font-semibold uppercase text-[#595959] text-center`}
                         >
                           {tailing}
                         </p>
                         <p
-                          className={`${roboto.className} text-[13px] sm:text-base xl:text-[20px]  text-[#595959] text-center max-w-[256px]`}
+                          className={`${roboto.className} text-base sm:text-base xl:text-[20px]  text-[#595959] text-center max-w-[256px]`}
                         >
                           {desc}
                         </p>
@@ -222,7 +225,7 @@ export default function Home() {
             </MotionWrapper>
           </div>
 
-          <div className="mt-24 md:mt-36 relative px-8 md:px-0">
+          <div className="mt-24 lg:mt-36 relative">
             <MotionWrapper
               element="h1"
               initial="hidden"
@@ -239,7 +242,7 @@ export default function Home() {
               viewport={{ once: true, amount: 0.5 }}
               whileInView="visible"
               variants={fadeInBottomVariants}
-              className={`${roboto.className} text-sm md:text-[20px] text-center text-black max-w-[633px] mx-auto mt-4`}
+              className={`${roboto.className} text-sm md:text-[20px] text-center text-black max-w-[95%] sm:max-w-[70%] md:max-w-[633px] mx-auto mt-4 leading-[25px] `}
             >
               Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến
               trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu
@@ -263,7 +266,7 @@ export default function Home() {
           <section className="relative flex flex-col items-center justify-center mt-16">
             <Link
               href="/services"
-              className={`${roboto.className} text-[#D8D8D8] text-sm md:text-[20px] font-medium flex items-center gap-6 border-solid bg-black rounded-sm px-4 py-2 overflow-hidden group absolute top-0 -translate-y-1/2 z-10`}
+              className={`${roboto.className} text-[#D8D8D8] text-sm md:text-[20px] font-medium flex items-center gap-2 border-solid bg-black rounded-sm px-4 py-2 overflow-hidden group absolute top-0 -translate-y-1/2 z-10`}
             >
               <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
               <MoveRight className="relative transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
@@ -298,7 +301,7 @@ export default function Home() {
                 Nền tảng - Giải pháp
               </h1>
               <p
-                className={`${roboto.className} text-sm md:text-[20px] text-center text-black max-w-[633px] mx-auto`}
+                className={`${roboto.className} text-sm md:text-[20px] text-center text-black max-w-[95%] sm:max-w-[70%] md:max-w-[633px] mx-auto`}
               >
                 Công nghệ dẫn lối, mở ra mọi kết nối với khách hàng
               </p>
@@ -313,7 +316,7 @@ export default function Home() {
           >
             <Link
               href="/solutions"
-              className={`${roboto.className} flex items-center justify-center text-sm md:text-[20px] gap-6 border-solid border border-black rounded-sm px-4 py-2 mt-8 
+              className={`${roboto.className} flex items-center justify-center text-sm md:text-[20px] gap-2 border-solid border border-black rounded-sm px-4 py-2 mt-8 
             relative overflow-hidden group hover:border-white w-fit mx-auto`}
             >
               <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
@@ -325,30 +328,7 @@ export default function Home() {
             <HomeSwiper />
           </MotionWrapper>
         </section>
-
-        <MarqueeWrapper
-          className="items-start justify-between"
-          // pauseOnHover={true}
-          autoFill={true}
-        >
-          <div className="flex items-center justify-between w-full gap-16 overflow-visible h-[232px] md:h-[332px]">
-            <Image
-              src={insightci}
-              alt="Insight CI"
-              quality={100}
-              className="flex items-start relative top-[10px] md:top-[20px] max-md:w-[400px]"
-            />
-            <div className="w-[16px] h-[16px] rounded-full bg-[#D9D9D9]"></div>
-            <Image
-              src={workforcex}
-              alt="Workforce X"
-              quality={100}
-              className="flex items-start max-md:max-w-[500px]"
-            />
-            <div className="w-[16px] h-[16px] rounded-full bg-[#D9D9D9]"></div>
-          </div>
-        </MarqueeWrapper>
-
+        <HomeSolutionsCarousel />
         <section className="relative flex flex-col lg:flex-row items-center gap-4 md:gap-0 max-w-[1560px] py-9 md:py-20 mx-auto justify-between px-3 md:px-8">
           <MotionWrapper
             element="h1"
@@ -366,14 +346,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <Image
-        src="/images/footer-pic-1.png"
-        alt="Footer Image 1"
-        width={1920}
-        height={506}
-        quality={100}
-      />
     </div>
   );
 }

@@ -8,7 +8,7 @@ import FooterDestop from "./desktop/footer-desktop";
 function Footer() {
   return (
     <div>
-      <div className="bg-[#595959] p-4 min-h-[175px] flex items-center flex-col xl:flex-row justify-start xl:justify-center gap-5 xl:gap-11">
+      <div className="bg-[#595959] p-4 min-h-[141px] flex items-center flex-col xl:flex-row justify-center gap-5 xl:gap-11">
         <div className="flex items-start min-w-[80%] justify-center xl:min-w-[522px]" id="contact">
           <span className="relative mr-2 xl:top-2">
             <FooterArrow />

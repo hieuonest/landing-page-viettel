@@ -3,20 +3,26 @@ import settingIcon from "../../public/svg/setting.svg";
 import checkIcon from "../../public/svg/check.svg";
 import logicIcon from "../../public/svg/logic.svg";
 import shieldIcon from "../../public/svg/shield.svg";
-import dvc from "../../public/images/image 2.png"
-import dvc2 from "../../public/images/image 3.png"
-import boyte from "../../public/images/bo-y-te.png"
-import be from "../../public/images/be.png"
-import longan from "../../public/images/long-an.png"
-import bachmai from "../../public/images/bach-mai.png"
-import mb from "../../public/images/mb.png"
-import vttelecom from "../../public/images/viettel-telecom.png"
-import vtcyberspace from "../../public/images/viettel-cyberspace.png"
-import vtdigital from "../../public/images/viettel-digital.png"
-import vthightech from "../../public/images/viettel-hightech.png"
-import vtmedia from "../../public/images/viettel-media.png"
-import vtpost from "../../public/images/viettel-post.png"
-import vtsolutions from "../../public/images/viettel-solutions.png"
+import dvc from "../../public/images/image 2.png";
+import dvc2 from "../../public/images/image 3.png";
+import boyte from "../../public/images/bo-y-te.png";
+import be from "../../public/images/be.png";
+import longan from "../../public/images/long-an.png";
+import bachmai from "../../public/images/bach-mai.png";
+import mb from "../../public/images/mb.png";
+import vttelecom from "../../public/images/viettel-telecom.png";
+import vtcyberspace from "../../public/images/viettel-cyberspace.png";
+import vtdigital from "../../public/images/viettel-digital.png";
+import vthightech from "../../public/images/viettel-hightech.png";
+import vtmedia from "../../public/images/viettel-media.png";
+import vtpost from "../../public/images/viettel-post.png";
+import vtsolutions from "../../public/images/viettel-solutions.png";
+import insightci from "../../public/svg/insight-ci.svg";
+import workforcex from "../../public/svg/workforce-x.svg";
+import vcoc from "../../public/svg/vcoc.svg";
+import cxbot from "../../public/svg/cxbot.svg";
+import knowxhub from "../../public/svg/knowx-hub.svg";
+import reputax from "../../public/svg/reputa-x.svg";
 
 export const dataLink: {
   href: string;
@@ -115,7 +121,7 @@ export const dataWhyUs: {
       "Kiểm toán, đánh giá định kỳ, chủ động 24/7, phát hiện và xử lý mọi rủi ro",
     ],
   },
-]
+];
 
 export const dataPartners: {
   image: StaticImageData;
@@ -123,66 +129,66 @@ export const dataPartners: {
 }[] = [
   {
     image: mb,
-    name: "MB"
+    name: "MB",
   },
   {
     image: bachmai,
-    name: "Bạch Mai"
+    name: "Bạch Mai",
   },
   {
     image: be,
-    name: "Bộ Giáo Dục"
+    name: "Bộ Giáo Dục",
   },
   {
     image: vttelecom,
-    name: "Viettel Telecom"
+    name: "Viettel Telecom",
   },
   {
     image: boyte,
-    name: "Bộ Y Tế"
+    name: "Bộ Y Tế",
   },
   {
     image: longan,
-    name: "Long An"
+    name: "Long An",
   },
   {
     image: vtcyberspace,
-    name: "Viettel Cyberspace"
+    name: "Viettel Cyberspace",
   },
   {
     image: vtdigital,
-    name: "Viettel Digital"
+    name: "Viettel Digital",
   },
   {
     image: vthightech,
-    name: "Viettel Hightech"
+    name: "Viettel Hightech",
   },
   {
     image: vtmedia,
-    name: "Viettel Media"
+    name: "Viettel Media",
   },
   {
     image: vtpost,
-    name: "Viettel Post"
+    name: "Viettel Post",
   },
   {
     image: vtsolutions,
-    name: "Viettel Solutions"
+    name: "Viettel Solutions",
   },
   {
     image: dvc,
-    name: "DVC"
+    name: "DVC",
   },
   {
     image: dvc2,
-    name: "DVC"
-  }
-]
+    name: "DVC",
+  },
+];
 
 export const slug_solution: {
-    href: string;
-    label: string;
-    id: number;
+  href: string;
+  label: string;
+  id: number;
 }[] = [
   {
     href: "TỔNG ĐÀI ĐA KÊNH",
@@ -213,5 +219,49 @@ export const slug_solution: {
     href: "BẢO HÀNH",
     label: "BẢO HÀNH",
     id: 6,
+  },
+];
+
+export const homeSolutions: {
+  key: string;
+  icon: StaticImageData;
+  title: string;
+  desc: string;
+}[] = [
+  { 
+    key: "insightci",
+    icon: insightci,
+    title: "Insight CI",
+    desc: "Giải pháp quản lý danh tiếng và khảo sát thị trường",
+  },
+  {
+    key: "workforcex",
+    icon: workforcex,
+    title: "Workforce X",
+    desc: "Giải pháp quản lý nhân sự và tương tác khách hàng",
+  },
+  {
+    key: "vcoc",
+    icon: vcoc,
+    title: "vCOC",
+    desc: "Giải pháp tổng đài điều hành thông minh",
+  },
+  {
+    key: "cxbot",
+    icon: cxbot,
+    title: "CXBOT",
+    desc: "Giải pháp quản lý tri thức và tương tác khách hàng",
+  },
+  {
+    key: "knowxhub",
+    icon: knowxhub,
+    title: "KnowX Hub",
+    desc: "Giải pháp quản lý tri thức và tương tác khách hàng",
+  },
+  {
+    key: "reputax",
+    icon: reputax,
+    title: "Reputa X",
+    desc: "Giải pháp quản lý danh tiếng và khảo sát thị trường",
   },
 ];

@@ -9,7 +9,7 @@ function HomeCounUp({
   return (
     <>
       {useCountUp(numberValue)}
-      {numberValue === 4000 && "+"}
+      {(numberValue === 4000 || numberValue === 20) && "+"}
     </>
   );
 }
