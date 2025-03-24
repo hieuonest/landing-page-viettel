@@ -23,7 +23,7 @@ import vcoc from "../../public/svg/vcoc.svg";
 import cxbot from "../../public/svg/cxbot.svg";
 import knowxhub from "../../public/svg/knowx-hub.svg";
 import reputax from "../../public/svg/reputa-x.svg";
-
+import omnix from "../../public/svg/omnix.svg";
 import outsourcing from "../../public/images/01. Outsousce Contact center.png";
 import bpo from "../../public/images/02. BPO.png";
 import upsale from "../../public/images/03. Upsale.png";
@@ -32,6 +32,7 @@ import loyalty from "../../public/images/05. Loyalty.png";
 import vip from "../../public/images/06. VIP.png";
 import voiceofcustomer from "../../public/images/07. Voice of Customer.png";
 import customerexperience from "../../public/images/08. Customer Experience.png";
+import { JSX } from "react";
 
 export const dataLink: {
   href: string;
@@ -158,35 +159,36 @@ export const dataWhyUs: {
     title: "Chuyên nghiệp",
     icon: settingIcon,
     desc: [
-      "Hơn 20 năm kinh nghiệm triển khai dịch vụ, đội ngũ quản lý chuyên nghiệp, chất lượng cao",
-      "Kho tri thức phong phú và đa dạng",
+      "Hơn 20 năm kinh nghiệm triển&nbsp;khai&nbsp;dịch&nbsp;vụ",
+      "Đội ngũ quản lý chuyên nghiệp, chất&nbsp;lượng&nbsp;cao",
+      "Kho tri thức phong phú và&nbsp;đa&nbsp;dạng",
     ],
   },
   {
     title: "Hiệu quả",
     icon: checkIcon,
     desc: [
-      "Giám sát và quản lý chủ động, toàn diện mọi hoạt động",
-      "Quy trình chuyên nghiệp, nhanh chóng",
-      "Tối ưu quy trình và chi phí vận hành",
+      "Giám sát và quản lý chủ động, toàn&nbsp;diện&nbsp;mọi&nbsp;hoạt&nbsp;động",
+      "Quy trình chuyên nghiệp, nhanh&nbsp;chóng",
+      "Tối ưu quy trình và chi&nbsp;phí&nbsp;vận&nbsp;hành",
     ],
   },
   {
     title: "Công nghệ tiên phong",
     icon: logicIcon,
     desc: [
-      "Tích hợp công nghệ AI, Big Data, Robotics, Cloud computing",
-      "Phát triển hệ thống linh hoạt, bắt kịp xu hướng thế giới",
-      "Hệ thống tiêu biểu: Trung tâm điều hành thông minh vCOC",
+      "Tích hợp công nghệ AI, Big Data, Robotics, Cloud&nbsp;computing",
+      "Phát triển hệ thống linh hoạt, bắt kịp xu&nbsp;hướng&nbsp;thế&nbsp;giới",
+      "Hệ thống tiêu biểu: Trung tâm điều hành thông&nbsp;minh&nbsp;vCOC",
     ],
   },
   {
     title: "Bảo mật",
     icon: shieldIcon,
     desc: [
-      "Bảo vệ dữ liệu và hệ thống bằng các biện pháp an ninh mạng tiên tiến",
-      "Tuân thủ các tiêu chuẩn bảo mật quốc tế: GDPR, ISO 27001",
-      "Kiểm toán, đánh giá định kỳ, chủ động 24/7, phát hiện và xử lý mọi rủi ro",
+      "Bảo vệ dữ liệu và hệ thống bằng các biện pháp an ninh mạng tiên&nbsp;tiến",
+      "Tuân thủ các tiêu chuẩn bảo mật quốc tế: GDPR,&nbsp;ISO&nbsp;27001",
+      "Kiểm toán, đánh giá định kỳ, chủ động 24/7, phát hiện và xử lý mọi&nbsp;rủi&nbsp;ro",
     ],
   },
 ];
@@ -294,42 +296,56 @@ export const homeSolutions: {
   key: string;
   icon: StaticImageData;
   title: string;
-  desc: string;
+  desc: string | JSX.Element;
+  detail: string;
 }[] = [
+  {
+    key: "omni-x",
+    icon: omnix,
+    title: "Omni-X",
+    desc: "Tổng đài đa kênh hợp nhất, nâng tầm trải nghiệm khách hàng",
+    detail: "OmniX là nền tảng tổng đài thông minh trên nền tảng điện toán đám mây, tích hợp AI giúp doanh nghiệp quản lý tất cả các tương tác khách hàng trên một hệ thống duy nhất, từ thoại, email, SMS, OTT đến mạng xã hội. Cung cấp trải nghiệm liền mạch, tối ưu hiệu suất vận hành và đảm bảo an toàn dữ liệu vượt trội.",
+  },
   {
     key: "insightci",
     icon: insightci,
     title: "Insight CI",
-    desc: "Giải pháp quản lý danh tiếng và khảo sát thị trường",
+    desc: "Hiểu khách hàng sâu hơn, tối ưu dịch vụ tốt hơn",
+    detail: "InsightCI là nền tảng phân tích tương tác khách hàng mạnh mẽ, ứng dụng công nghệ Big Data để khai thác và phân tích mọi tương tác trên đa kênh. Giúp doanh nghiệp thấu hiểu nhu cầu khách hàng, tối ưu quy trình dịch vụ và nâng cao mức độ hài lòng, từ đó thúc đẩy tăng trưởng bền vững."
   },
   {
     key: "workforcex",
     icon: workforcex,
     title: "Workforce X",
-    desc: "Giải pháp quản lý nhân sự và tương tác khách hàng",
+    desc: "Quản lý nguồn lực thông minh, tối ưu hiệu suất tổng đài",
+    detail: "WorkforceX là hệ thống quản lý nhân sự chuyên biệt cho tổng đài, giúp tự động lên lịch, phân công nhân lực, giám sát hiệu suất và tối ưu hóa nguồn lực theo nhu cầu thực tế. Ứng dụng AI và phân tích dữ liệu để dự báo và điều phối nhân sự linh hoạt, đảm bảo chất lượng dịch vụ khách hàng luôn đạt chuẩn cao nhất."
   },
   {
     key: "vcoc",
     icon: vcoc,
     title: "vCOC",
-    desc: "Giải pháp tổng đài điều hành thông minh",
+    desc: "Điều hành dịch vụ khách hàng theo thời gian thực",
+    detail: "vCOC giúp doanh nghiệp giám sát và điều hành toàn bộ hoạt động dịch vụ khách hàng một cách trực quan và chính xác. Cung cấp KPI theo thời gian thực, cảnh báo sớm và hỗ trợ ra quyết định nhanh chóng, đảm bảo hiệu suất vận hành luôn ở mức tối ưu."
   },
   {
     key: "cxbot",
     icon: cxbot,
     title: "CXBOT",
-    desc: "Giải pháp quản lý tri thức và tương tác khách hàng",
+    desc: "Nhân viên tổng đài AI ảo, tăng tốc hỗ trợ khách hàng",
+    detail: "CXBot là trợ lý ảo AI giúp doanh nghiệp tự động hóa quy trình chăm sóc khách hàng. Giải quyết nhanh chóng yêu cầu, trả lời thông minh 24/7 trên mọi kênh giao tiếp. Giảm tải công việc cho tổng đài viên, rút ngắn thời gian phản hồi và nâng cao trải nghiệm khách hàng trên kênh số."
   },
   {
     key: "knowxhub",
     icon: knowxhub,
     title: "KnowX Hub",
-    desc: "Giải pháp quản lý tri thức và tương tác khách hàng",
+    desc: "Quản lý tri thức thông minh, hỗ trợ nhân viên & khách hàng",
+    detail: "KnowX Hub là trung tâm tri thức hiện đại giúp doanh nghiệp lưu trữ, tổ chức và truy xuất thông tin nhanh chóng. Tích hợp AI để hỗ trợ tìm kiếm thông minh, giúp nhân viên tổng đài và khách hàng tiếp cận thông tin chính xác tức thì, tối ưu hóa quy trình giải quyết vấn đề."
   },
   {
     key: "reputax",
     icon: reputax,
     title: "Reputa X",
-    desc: "Giải pháp quản lý danh tiếng và khảo sát thị trường",
+    desc: " Theo dõi & quản lý danh tiếng thương hiệu bằng AI",
+    detail: "ReputaX là công cụ giám sát và phân tích thương hiệu mạnh mẽ, sử dụng AI và Big Data để theo dõi phản hồi của khách hàng trên mạng xã hội. Giúp doanh nghiệp bảo vệ danh tiếng, ứng phó kịp thời với khủng hoảng truyền thông, đồng thời cung cấp báo cáo chi tiết về hình ảnh thương hiệu so với đối thủ cạnh tranh."
   },
 ];

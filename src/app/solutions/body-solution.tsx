@@ -27,7 +27,7 @@ export default function BodySolution() {
             }}
             className="col-span-3 mb-[12px] sm:mb[0]"
           >
-            <Image src={imgSolution} alt="" />
+            <Image src={imgSolution} alt="" quality={100}/>
           </MotionWrapper>
           <div className="col-span-4">
             <div
@@ -88,7 +88,7 @@ export default function BodySolution() {
             }}
             className="col-span-1"
           >
-            <Image src={imgSolution1} alt="" />
+            <Image src={imgSolution1} alt="" quality={100}/>
           </MotionWrapper>
         </div>
 
@@ -110,7 +110,7 @@ export default function BodySolution() {
             }}
             className="col-span-3 mb-[12px] sm:mb[0]"
           >
-            <Image src={imgSolution2} alt="" className="h-[100%]" />
+            <Image src={imgSolution2} alt="" className="h-[100%]" quality={100}/>
           </MotionWrapper>
           <div className="col-span-4">
             <div
@@ -151,11 +151,13 @@ export default function BodySolution() {
           src={imgBgFooter1}
           alt=""
           className="absolute top-[0px] z-1 w-[100vw] h-[50%]"
+          quality={100}
         />
         <Image
           src={imgBgFooter2}
           alt=""
           className="absolute bottom-[0px] z-2 w-[100vw] h-[50%]"
+          quality={100}
         />
         <div className="max-w-[90%] xl:max-w-[1120px] mx-auto container relative z-20">
           <div className="block sm:grid  sm:grid-cols-2 justify-between gap-8">
@@ -198,7 +200,7 @@ export default function BodySolution() {
               }}
               className="col-span-1"
             >
-              <Image src={imgSolution3} alt="" />
+              <Image src={imgSolution3} alt="" quality={100}/>
             </MotionWrapper>
           </div>
 
@@ -219,7 +221,7 @@ export default function BodySolution() {
                 },
               }}
             >
-              <Image src={imgSolution4} alt="" className="h-[100%]" />
+              <Image src={imgSolution4} alt="" className="h-[100%]" quality={100}/>
             </MotionWrapper>
             <div className="col-span-4">
               <div
@@ -286,7 +288,7 @@ export default function BodySolution() {
               }}
               className="col-span-1"
             >
-              <Image src={imgSolution5} alt="" />
+              <Image src={imgSolution5} alt="" quality={100}/>
             </MotionWrapper>
           </div>
         </div>

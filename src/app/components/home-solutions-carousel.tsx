@@ -8,22 +8,35 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { homeSolutions } from "@/lib/define-data";
+import MarqueeWrapper from "@/components/ui/marquee-wrapper";
 
 function HomeSolutionsCarousel() {
-  const plugin = React.useRef(Autoplay({ delay: 3000 }));
+  // const plugin = React.useRef(Autoplay({ delay: 3000 }));
+  // return (
+  //   <Carousel
+  //     opts={{
+  //       loop: true,
+  //     }}
+  //     plugins={[plugin.current]}
+  //     onMouseEnter={plugin.current.stop}
+  //     onMouseLeave={() => plugin.current.play()}
+  //     className="overflow-visible"
+  //   >
+  //     <CarouselContent className="overflow-visible">
+        
+  //     </CarouselContent>
+  //   </Carousel>
+  // );
+
   return (
-    <Carousel
-      opts={{
-        loop: true,
-      }}
-      plugins={[plugin.current]}
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={() => plugin.current.play()}
-      className="overflow-visible"
+    <MarqueeWrapper
+      speed={100}
+      // gradient
+      pauseOnClick
+      pauseOnHover
     >
-      <CarouselContent className="overflow-visible">
-        {homeSolutions.map((item, index) => (
-          <CarouselItem
+      {homeSolutions.map((item, index) => (
+          <div
             key={index}
             className={`flex items-center justify-center min-h-[250px] max-w-fit relative overflow-visible px-10`}
           >
@@ -36,16 +49,15 @@ function HomeSolutionsCarousel() {
                   item.key === "insightci" || item.key === "reputax"
                     ? "top-[10px] xs:top-[20px]"
                     : ""
-                } ${item.key === "vcoc" || item.key === "cxbot" ? "w-[70%]" : ""}`}
+                } ${item.key === "vcoc" || item.key === "cxbot" ? "" : ""}`}
                 draggable={false}
               />
               <div className="absolute !w-[16px] !h-[16px] rounded-full bg-[#D9D9D9] z-10 left-0 -translate-x-1/2"></div>
             </div>
-          </CarouselItem>
+          </div>
         ))}
-      </CarouselContent>
-    </Carousel>
-  );
+    </MarqueeWrapper>
+  )
 }
 
 export default HomeSolutionsCarousel;

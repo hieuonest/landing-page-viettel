@@ -12,6 +12,7 @@ import { roboto } from "@/lib/font";
 import Link from "next/link";
 import homeInsightCi from "../../../public/images/home-insight-ci.png";
 import { ArrowUpRight } from "lucide-react";
+import { homeSolutions } from "@/lib/define-data";
 function HomeSwiper() {
   const [activeIndex, setActiveIndex] = React.useState(0);
 
@@ -31,7 +32,9 @@ function HomeSwiper() {
         nextEl: ".solution-swiper__swiper-button-next",
         prevEl: ".solution-swiper__swiper-button-prev",
       }}
-      initialSlide={1}
+      initialSlide={
+        homeSolutions.length > 0 ? Math.floor(homeSolutions.length / 2) : 0
+      }
       onSlideChange={(swiper) => {
         setActiveIndex(swiper.activeIndex);
       }}
@@ -44,7 +47,7 @@ function HomeSwiper() {
       }}
       
     >
-      {Array.from({ length: 3 }).map((_, index) => (
+      {homeSolutions.map((item, index) => (
         <SwiperSlide
           className={`!flex items-center justify-center`}
           key={index}
@@ -55,18 +58,13 @@ function HomeSwiper() {
             >
               <div>
                 <h1 className="text-[35px] md:text-[40px] lg:text-[55px] text-white font-light">
-                  Insight CI
+                  {item.title}
                 </h1>
-                <h2 className="text-[#C4C4C4] text-xs md:text-base lg:text-lg font-medium uppercase mt-4">
-                  Hiểu khách hàng sâu hơn,
-                  <br /> tối ưu dịch vụ tốt hơn
+                <h2 className="text-[#C4C4C4] text-xs md:text-base lg:text-lg font-medium uppercase mt-4 ">
+                  {item.desc}
                 </h2>
                 <p className="mt-7 md:mt-11 text-[#C4C4C4] text-xs md:text-base lg:text-lg">
-                  InsightCI là nền tảng phân tích tương tác khách hàng mạnh mẽ,
-                  ứng dụng công nghệ Big Data để khai thác và phân tích mọi
-                  tương tác trên đa kênh. Giúp doanh nghiệp thấu hiểu nhu cầu
-                  khách hàng, tối ưu quy trình dịch vụ và nâng cao mức độ hài
-                  lòng, từ đó thúc đẩy tăng trưởng bền vững.
+                  {item.detail}
                 </p>
               </div>
 

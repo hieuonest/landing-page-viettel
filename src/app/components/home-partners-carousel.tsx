@@ -11,18 +11,36 @@ import {
 
 function HomePartnersCarousel({}) {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000})
+    Autoplay({ delay: 2500})
   );
+
+  React.useEffect(() => {
+    plugin.current.reset();
+  }, []);
+
+  const handlePlay = () => {
+    plugin.current.play();
+  }
+
+  const handleStop = () => {
+    plugin.current.stop();
+  }
+
   return (
     <Carousel
       opts={{
         loop: true,
       }}
       plugins={[plugin.current]}
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={() => plugin.current.play()}
+      onMouseEnter={handleStop}
+      onMouseLeave={handlePlay}
+      onTouchStart={handleStop}
+      onTouchEnd={handlePlay}
+      onTouchCancel={handlePlay}
     >
-      <CarouselContent>
+      <CarouselContent
+        
+      >
         {dataPartners.map((item, index) => (
           <CarouselItem
             key={index}

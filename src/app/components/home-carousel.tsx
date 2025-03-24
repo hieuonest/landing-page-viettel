@@ -52,7 +52,7 @@ function HomeCarousel() {
                 {item.detail}
               </p>
               <Link
-                href="/solutions"
+                href="/services"
                 className="flex items-center relative text-[#EA0033] text-lg group transition-all duration-300 see-more-link"
               >
                 Tìm hiểu thêm

@@ -34,7 +34,7 @@ export default function HeaderSolution() {
             hidden: { opacity: 0, y: -50 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.75 } },
           }}
-          className={`${roboto.className} text-[#9B9B9B] text-[24px] xs:text-[32px] sm:text-[39px] text-center mx-auto leading-[30px] xs:leading-[38px] sm:leading-[46px]`}
+          className={`${roboto.className} text-[#9B9B9B] text-[24px] xs:text-[32px] sm:text-[34px] lg:text-[39px] text-center mx-auto leading-[30px] xs:leading-[38px] sm:leading-[46px]`}
         >
           <div className={`font-medium inline md:block`}>
             Tiên phong nâng tầm trải nghiệm khách hàng
@@ -43,7 +43,7 @@ export default function HeaderSolution() {
             {" "}
             bằng{" "}
             <span className="text-[#000000] font-medium">
-              công nghệ sáng tạo
+              công nghệ sáng&nbsp;tạo
             </span>
           </div>
         </MotionWrapper>
@@ -79,7 +79,7 @@ export default function HeaderSolution() {
               <Image src={Omni} alt="" />
             </MotionWrapper>
             <div>
-              <Image src={iconOnix} alt="" />
+              <Image src={iconOnix} alt="" quality={100} />
               <div
                 className={`${roboto.className} font-medium text-[24px] sm:text-[30px] leading-[35px]`}
               >
