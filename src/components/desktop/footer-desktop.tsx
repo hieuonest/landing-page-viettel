@@ -38,7 +38,7 @@ export default function FooterDestop() {
             <p>Điện thoại: <a href="tel:02462656168">
               02462656168
             </a></p>
-            <p>Email: <a href="mailto:viettelcx.com.vn" >viettelcx.com.vn</a></p>
+            <p>Email: <a href="mailto:viettelcx.com.vn">cskh@viettel.com.vn</a></p>
             <p>
               Địa chỉ: Toà nhà OCT 3B Khu Đô thị mới Resco, Cổ Nhuế, Xuân Đỉnh,
               Bắc Từ Liêm, Hà Nội

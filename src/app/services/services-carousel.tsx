@@ -15,6 +15,7 @@ import { FormItem } from "@/components/ui/form";
 
 function ServicesCarousel({}) {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  
   return (
     <MotionWrapper
       initial="hidden"
@@ -61,7 +62,7 @@ function ServicesCarousel({}) {
                   <Image
                     src={item.image}
                     alt=""
-                    className={`w-full h-full object-cover ${activeIndex === index ? "opacity-100" : "opacity-0"}${item.value === "bpo" ? "object-[85%_0]" : ""}${item.value === "upsale" ? "object-[55%_0]" : ""}${item.value === "loyalty" ? "object-[40%_0]" : ""}${item.value === "cskh" ? "object-[80%_0]" : ""}${item.value === "customer-experience" ? "object-[70%_0]" : ""}`}
+                    className={`w-full h-full object-cover ${activeIndex === index ? "opacity-100" : "opacity-0"} ${item.value === "bpo" ? "object-[85%_0]" : ""}${item.value === "upsale" ? "object-[55%_0]" : ""}${item.value === "loyalty" ? "object-[40%_0]" : ""}${item.value === "cskh" ? "object-[80%_0]" : ""}${item.value === "customer-experience" ? "object-[70%_0]" : ""}`}
                     quality={100}
                   />
                 </div>

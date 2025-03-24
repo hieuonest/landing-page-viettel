@@ -87,7 +87,7 @@ export const dataServicesHome: {
     image: loyalty,
     desc: "Dịch vụ Loyalty",
     detail:
-      "Giải pháp của Viettel CX giúp doanh nghiệp xây dựng, duy trì và gia tăng sự gắn bó của khách hàng thông qua các chương trình tích điểm, ưu đãi, đặc quyền và cá nhân hóa trải nghiệm",
+      "Giải pháp của Viettel Customer Service giúp doanh nghiệp xây dựng, duy trì và gia tăng sự gắn bó của khách hàng thông qua các chương trình tích điểm, ưu đãi, đặc quyền và cá nhân hóa trải nghiệm",
     },
   {
     value: "cskh",
@@ -103,7 +103,7 @@ export const dataServicesHome: {
     image: voiceofcustomer,
     desc: "Dịch vụ Voice of Customer",
     detail:
-      "Bảo vệ và phát triển thương hiệu của doanh nghiệp trên môi trường số. Viettel CX giúp doanh nghiệp thu thập, phân tích và khai thác ý kiến khách hàng từ nhiều kênh khác nhau, từ đó phát hiện và cảnh báo khủng hoảng truyền thông",
+      "Bảo vệ và phát triển thương hiệu của doanh nghiệp trên môi trường số. Viettel Customer Service giúp doanh nghiệp thu thập, phân tích và khai thác ý kiến khách hàng từ nhiều kênh khác nhau, từ đó phát hiện và cảnh báo khủng hoảng truyền thông",
   },
   {
     value: "customer-experience",

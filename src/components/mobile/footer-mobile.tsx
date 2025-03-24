@@ -52,7 +52,7 @@ export default function FooterMobile() {
             Điện thoại: <a href="tel:02462656168">02462656168</a>
           </div>
           <div>
-            Email: <a href="mailto:viettelcx.com.vn">viettelcx.com.vn</a>
+            Email: <a href="mailto:viettelcx.com.vn">cskh@viettel.com.vn</a>
           </div>
           <div>
             Địa chỉ: Toà nhà OCT 3B Khu Đô thị mới Resco, Cổ Nhuế, Xuân Đỉnh,
