@@ -127,7 +127,9 @@ function Services() {
 
         <ServicesSection />
 
-        <ServicesCarousel />
+        <div className="overflow-visible relative w-[90%] lg:w-[90%] xl:w-[93%] min-[1596px]:w-[90%]">
+          <ServicesCarousel />
+        </div>
 
         <Separator className="mt-16 bg-[#D9D9D9] w-[90dvw] mx-auto" />
       </main>
