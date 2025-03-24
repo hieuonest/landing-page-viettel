@@ -89,7 +89,7 @@ export default function HeaderSolution() {
                 className={`${roboto.className}  text-[#595959] mt-[20px] lg:mt-[30px] text-[14px] lg:text-[18px]`}
               >
                 OmniX là nền tảng tổng đài thông minh trên nền tảng điện toán
-                đá30m mây, tích hợp AI giúp doanh nghiệp quản lý tất cả các
+                đám mây, tích hợp AI giúp doanh nghiệp quản lý tất cả các
                 tương tác khách hàng trên một hệ thống duy nhất, từ thoại,
                 email, SMS, OTT đến mạng xã hội. Cung cấp trải nghiệm liền mạch,
                 tối ưu hiệu suất vận hành và đảm bảo an toàn dữ liệu vượt trội.
@@ -148,8 +148,8 @@ export default function HeaderSolution() {
               navigation={false}
               pagination={false}
               breakpoints={{
-                0: { slidesPerView: 1.5 },
-                425: {slidesPerView: 1.5},
+                0: { slidesPerView: 1.75 },
+                425: {slidesPerView: 2.25},
                 576: { slidesPerView: 3.25 },
                 768: { slidesPerView: 4.25 },
               }}

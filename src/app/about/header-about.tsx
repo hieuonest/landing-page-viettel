@@ -16,7 +16,7 @@ import { easeInOut } from "framer-motion";
 export default function HeaderAbout() {
   return (
     <>
-      <div className="bg-[#595959] h-[320px] xm:h-[345px] lg:h-[520px] mt-[245px] relative">
+      <div className="bg-[#595959] h-[245px] xxs:h-[320px] xm:h-[345px] lg:h-[520px] mt-[245px] relative">
         <div className="max-w-[90%] xl:max-w-[1120px]  xm:grid xm:grid-cols-[145px_auto] md:grid-cols-[185px_auto] lg:flex lg:justify-between mx-auto container">
           {/* web */}
           <MotionWrapper
@@ -38,23 +38,23 @@ export default function HeaderAbout() {
             <Image
               src={bgHeader}
               alt="bgHeaders"
-              className="h-[300px] xm:h-[400px] lg:h-auto"
+              className="h-[235px] xxs:h-[300px] xm:h-[400px] lg:h-auto"
             />
             <div
               className={`${roboto.className} absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] text-center`}
             >
-              <div className="text-[20px] sm:text-[24px] lg:text-[30px] leading-[35px] text-[#C4C4C4] mb-1">
+              <div className="text-[16px] xxs:text-[20px] sm:text-[24px] lg:text-[30px] leading-[35px] text-[#C4C4C4] mb-1">
                 Trưởng thành từ hai thập kỷ
               </div>
               <div className="flex items-center text-center justify-center">
-                <span className="text-[#ffffff] text-[32px] sm:text-[38px] lg:text-[50px] pt-[2px]">
+                <span className="text-[#ffffff] text-[20px] xxs:text-[32px] sm:text-[38px] lg:text-[50px] pt-[2px]">
                   Chăm sóc và
                 </span>{" "}
                 <span>
                   <Image
                     src={titleThauHieu}
                     alt=""
-                    className="w-auto h-[35px] lg:w-auto lg:h-auto"
+                    className="w-[110px] h-auto xxs:h-[35px] lg:w-auto lg:h-auto"
                   />
                 </span>
               </div>
@@ -63,7 +63,7 @@ export default function HeaderAbout() {
           {/* mobile */}
           <MotionWrapper
             element="div"
-            className={`${fsMagistralBook.className} block xm:hidden text-[#FFFFFF] text-[30px] mt-[-50px] text-center`}
+            className={`${fsMagistralBook.className} block xm:hidden text-[#FFFFFF] text-[22px] xxs:text-[30px] mt-[-50px] text-center`}
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.75 }}
@@ -158,7 +158,7 @@ export default function HeaderAbout() {
           >
             <div className="bg-[#EA0033] absolute w-[100%] h-[100%] z-9 top-[-20px] rounded-[20px]" />
             <div
-              className={`${roboto.className} h-auto pb-[20px] md:pb-[0px] md:h-[230px] lg:h-[285px] text-[24px] leading-[32px] lg:text-[30px] text-[#000000] lg:leading-[35px] px-[20px] lg:px-[30px] rounded-[20px] bg-[#E7E7E7] pt-[20px] md:pt-[45px] flex relative z-11`}
+              className={`${roboto.className} h-auto pb-[20px] md:pb-[0px] md:h-[210px] text-[24px] leading-[32px] lg:text-[30px] text-[#000000] lg:leading-[35px] px-[20px] lg:px-[30px] rounded-[20px] bg-[#E7E7E7] pt-[20px] md:pt-[30px] flex relative z-11`}
             >
               <div className="flex items-center h-fit gap-[14px]">
                 <Image src={iconLoa} alt="icon" className="w-[56px] h-[56px]" />
@@ -187,7 +187,7 @@ export default function HeaderAbout() {
           >
             <div className="bg-[#000000] absolute w-[100%] h-[100%] z-10 top-[-20px] rounded-[20px]" />
             <div
-              className={`${roboto.className} h-auto pb-[30px] md:pb-[0px] md:h-[230px] lg:h-[285px] text-[24px] lg:text-[30px] text-[#000000] leading-[32px] lg:leading-[35px] px-[30px] rounded-[20px] bg-[#E7E7E7] pt-[20px] md:pt-[45px]  relative z-10`}
+              className={`${roboto.className} h-auto pb-[30px] md:pb-[0px] md:h-[210px] text-[24px] lg:text-[30px] text-[#000000] leading-[32px] lg:leading-[35px] px-[30px] rounded-[20px] bg-[#E7E7E7] pt-[20px] md:pt-[30px]  relative z-10`}
             >
               <div className="font-medium text-[#EA0033]">
                 Mở rộng <br />{" "}

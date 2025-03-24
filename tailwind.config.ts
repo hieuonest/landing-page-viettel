@@ -72,6 +72,7 @@ export default {
 				'lg': '992px',
 				'1080px': '1080px',
 				'xl': '1200px',
+				'big-pc': '1400px',
         'xl-2': '1280px'
 			}
   	}

@@ -35,7 +35,7 @@ export default function BodySolution() {
             <div
               className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px] font-medium`}
             >
-              CXBot2
+              CXBot
               <div className="text-[#858585] mt-[3px] font-medium">
                 Nhân viên tổng đài AI ảo
               </div>
