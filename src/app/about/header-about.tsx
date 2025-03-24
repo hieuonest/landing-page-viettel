@@ -81,6 +81,7 @@ export default function HeaderAbout() {
           src={bgYear}
           alt="background year"
           className="relative h-[110px]"
+          quality={100}
         />
         <div className="px-[40px] absolute w-[100%]">
           <div className="flex">
@@ -90,6 +91,7 @@ export default function HeaderAbout() {
                   src={iconLine2004}
                   alt="line 2004"
                   className="mt-[12px] absolute"
+                  quality={100}
                 />
                 <div className="pl-[10px] xl:pl-[12px]">2004</div>
               </div>
@@ -99,6 +101,7 @@ export default function HeaderAbout() {
                   src={iconLine2013}
                   alt="line 2004"
                   className="absolute top-[-17px]"
+                  quality={100}
                 />
                 <div className="absolute leading-[100px] top-[-40px] left-[40px]">
                   2013
@@ -126,11 +129,13 @@ export default function HeaderAbout() {
           src={imgYearMobile}
           alt="year"
           className="hidden xm:block md:hidden mx-auto"
+          quality={100}
         />
         <Image
           src={imgYearMobilexm}
           alt="year"
           className="block xm:hidden mx-auto"
+          quality={100}
         />
       </MotionWrapper>
 
@@ -157,7 +162,7 @@ export default function HeaderAbout() {
               className={`${roboto.className} h-auto pb-[20px] md:pb-[0px] md:h-[210px] text-[24px] leading-[32px] lg:text-[30px] text-[#000000] lg:leading-[35px] px-[20px] lg:px-[30px] rounded-[20px] bg-[#E7E7E7] pt-[20px] md:pt-[30px] flex relative z-11`}
             >
               <div className="flex items-center h-fit gap-[14px]">
-                <Image src={iconLoa} alt="icon" className="w-[56px] h-[56px]" />
+                <Image src={iconLoa} alt="icon" className="w-[56px] h-[56px]" quality={100}/>
                 <div className="font-medium ">
                   Triển khai dịch vụ tổng đài & Telesales
                 </div>

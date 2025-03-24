@@ -16,7 +16,7 @@ export default function FooterAbout() {
           transition={{ duration: 3, ease: "easeInOut" }}
           viewport={{ once: true }}
         >
-          <Image src={radialGraph} alt="Radial Graph" />
+          <Image src={radialGraph} alt="Radial Graph" quality={100}/>
         </MotionWrapper>
         <div
           className={`${roboto.className} text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center max-w-[298px]`}
