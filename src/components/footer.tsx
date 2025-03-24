@@ -8,20 +8,19 @@ import FooterDestop from "./desktop/footer-desktop";
 function Footer() {
   return (
     <div>
-      <div className="bg-[#595959] p-4 min-h-[175px] flex items-center flex-col xl:flex-row justify-start xl:justify-center gap-5 xl:gap-11">
+      <div className="bg-[#595959] p-8 min-h-[175px] flex items-center flex-col xl:flex-row justify-start xl:justify-center gap-5 xl:gap-11">
         <div className="xl:max-w-[1572px] w-[100%] flex gap-[40px] min-[300px]:gap-5 flex-col xl:flex-row justify-start xl:justify-center ">
           <div
-            className="flex items-start min-w-[80%] justify-center relative xl:min-w-[522px]"
+            className="flex items-start max-w-[80%] justify-center relative xl:max-w-[40%] mx-auto gap-1"
             id="contact"
           >
-            <span className="relative lg:absolute lg:left-[-45px] xl:left-[0] xl:relative mr-5 xl:mr-2 top-2 z-2 ">
+            <span className="mt-2 relative 3xl:left-0">
               <FooterArrow />
             </span>
             <p
-              className={`${fsMagistralBook.className} text-white text-base min-[400px]:text-[20px] sm:text-[22px] xl:text-[28px] leading-[25px] md:leading-[35px]  text-left xl:text-right`}
+              className={`${fsMagistralBook.className} text-white text-base min-[400px]:text-[20px] sm:text-[22px] xl:text-[27px] leading-[25px] md:leading-[35px]  text-left xl:text-right`}
             >
-              Hãy để Viettel CX đồng hành cùng bạn nâng tầm trải nghiệm khách
-              hàng!
+              Hãy để chúng tôi đồng hành cùng bạn nâng tầm trải nghiệm khách hàng!
             </p>
           </div>
           <FormContact />

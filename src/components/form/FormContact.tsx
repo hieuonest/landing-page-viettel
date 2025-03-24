@@ -26,7 +26,7 @@ function FormContact() {
 
   return (
     <form
-      className={`flex items-center justify-center flex-col w-[100%] md:flex-row md:w-full gap-5 xs:gap-5 [&>div]:min-h-10 ${roboto.className}`}
+      className={`flex items-center justify-center flex-col w-[100%] flex-1 md:flex-row gap-5 xs:gap-2 [&>div]:min-h-10 ${roboto.className}`}
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="relative w-[calc(100%-42px)] md:w-auto max-xs:min-w-[80%] min-[1600px]:min-w-[267px] flex justify-center">

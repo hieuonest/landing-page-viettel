@@ -127,7 +127,7 @@ function Services() {
 
         <ServicesSection />
 
-        <div className="overflow-visible relative w-[90%] lg:w-[90%] xl:w-[93%] min-[1596px]:w-[90%]">
+        <div className="overflow-visible relative w-[85%] xs:w-[90%] lg:w-[90%] xl:w-[93%] min-[1596px]:w-[90%]">
           <ServicesCarousel />
         </div>
 

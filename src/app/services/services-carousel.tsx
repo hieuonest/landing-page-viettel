@@ -19,7 +19,7 @@ function ServicesCarousel({}) {
       viewport={{ once: true, amount: 0.5 }}
       whileInView="visible"
       variants={fadeInBottomVariants}
-      className="w-[95dvw] xl:w-[85dvw] 2xl:w-[85dvw] 3xl:w-[85dvw] mt-28 overflow-visible"
+      className="w-[97dvw] xl:w-[85dvw] 2xl:w-[85dvw] 3xl:w-[85dvw] mt-28 overflow-visible"
     >
       <Swiper
         modules={[Navigation, Autoplay]}
