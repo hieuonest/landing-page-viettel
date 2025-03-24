@@ -6,11 +6,11 @@ import FooterAbout from "./footer-about";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Viettel Cx | về chúng tôi",
+    title: "Viettel Customer Services | về chúng tôi",
     description:
       "Viettel Customer Service tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo. Chúng tôi là chuyên gia dẫn đầu về các giải pháp, dịch vụ khách hàng.",
     openGraph: {
-      title: "Viettel Cx | về chúng tôi",
+      title: "Viettel Customer Services | về chúng tôi",
       description:
         "Viettel Customer Service tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo. Chúng tôi là chuyên gia dẫn đầu về các giải pháp, dịch vụ khách hàng.",
       url: "http://171.244.63.137:8280/about",
@@ -20,19 +20,19 @@ export async function generateMetadata(): Promise<Metadata> {
           url: "http://171.244.63.137:8280/images/website.png",
           width: 1151,
           height: 768,
-          alt: "Viettel Cx",
+          alt: "Viettel Customer Services",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Viettel Cx | về chúng tôi",
+      title: "Viettel Customer Services | về chúng tôi",
       description:
         "Viettel Customer Service tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo. Chúng tôi là chuyên gia dẫn đầu về các giải pháp, dịch vụ khách hàng.",
       images: ["http://171.244.63.137:8280/images/website.png"],
     },
     alternates: {
-      canonical: "http://171.244.63.137:8280/images/website.png",
+      canonical: "http://171.244.63.137:8280/about",
     },
   };
 }
