@@ -7,16 +7,16 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Giải pháp | Viettel Cx",
     description:
-      "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo và đổi mới trên mọi lĩnh vực.",
+      "Viettel Customer Service cung cấp giải pháp, phần mềm tương tác đa kênh hợp nhất OmniX, tổng đài ảo AI bot, tổng đài thông minh, hệ thống điều hành thông minh, phần mềm CSKH,…",
     openGraph: {
       title: "Giải pháp | Viettel Cx",
       description:
-        "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo và đổi mới trên mọi lĩnh vực.",
-      url: "",
+        "Viettel Customer Service cung cấp giải pháp, phần mềm tương tác đa kênh hợp nhất OmniX, tổng đài ảo AI bot, tổng đài thông minh, hệ thống điều hành thông minh, phần mềm CSKH,…",
+      url: "http://171.244.63.137:8280/solutions",
       type: "website",
       images: [
         {
-          url: "/images/contact.jpeg",
+          url: "http://171.244.63.137:8280/images/website.png",
           width: 1151,
           height: 768,
           alt: "Giải pháp | Viettel Cx",
@@ -27,11 +27,11 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "Viettel Cx",
       description:
-        "Viettel CX tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo và đổi mới trên mọi lĩnh vực.",
-      images: ["/images/contact.jpeg"],
+        "Viettel Customer Service cung cấp giải pháp, phần mềm tương tác đa kênh hợp nhất OmniX, tổng đài ảo AI bot, tổng đài thông minh, hệ thống điều hành thông minh, phần mềm CSKH,…",
+      images: ["http://171.244.63.137:8280/images/website.png"],
     },
     alternates: {
-      canonical: "/images/contact.jpeg",
+      canonical: "http://171.244.63.137:8280/images/website.png",
     },
   };
 }

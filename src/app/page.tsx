@@ -24,16 +24,16 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Viettel Customer Services",
     description:
-      "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
+      "Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…",
     openGraph: {
       title: "Viettel Customer Services",
       description:
-        "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
-      // url: "/images/contact.jpeg",
+        "Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…",
+      url: "http://171.244.63.137:8280/",
       type: "website",
       images: [
         {
-          url: "/images/contact.jpeg",
+          url: "http://171.244.63.137:8280/images/website.png",
           width: 1151,
           height: 768,
           alt: "Viettel Cx",
@@ -44,11 +44,11 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "Viettel Cx",
       description:
-        "Viettel CX là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu.",
-      images: ["/images/contact.jpeg"],
+        "Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…",
+      images: ["http://171.244.63.137:8280/images/website.png"],
     },
     alternates: {
-      canonical: "/images/contact.jpeg",
+      canonical: "http://171.244.63.137:8280/images/website.png",
     },
   };
 }

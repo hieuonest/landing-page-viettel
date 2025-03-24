@@ -1,7 +1,5 @@
 import { roboto } from "@/lib/font";
-import { MoveRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import imgSolution from "../../../public/images/image-solution.png";
 import imgSolution1 from "../../../public/images/image-solution-1.png";
@@ -33,7 +31,7 @@ export default function BodySolution() {
           </MotionWrapper>
           <div className="col-span-4">
             <div
-              className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px] font-medium`}
+              className={`${roboto.className} text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px] font-medium`}
             >
               CXBot
               <div className="text-[#858585] mt-[3px] font-medium">

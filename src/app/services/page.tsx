@@ -19,16 +19,16 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Viettel Cx | Dịch vụ",
     description:
-      "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
+      "Viettel Customer Service cung cấp hệ sinh thái: dịch vụ tổng đài Contact center outsourcing, BPO, Upsell, telesales, tư vấn trải nghiệm khách hàng CX, Voice of Customer, loyalty, quà tặng…",
     openGraph: {
       title: "Viettel Cx | Dịch vụ",
       description:
-        "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
-      url: "",
+        "Viettel Customer Service cung cấp hệ sinh thái: dịch vụ tổng đài Contact center outsourcing, BPO, Upsell, telesales, tư vấn trải nghiệm khách hàng CX, Voice of Customer, loyalty, quà tặng…",
+      url: "http://171.244.63.137:8280/services",
       type: "website",
       images: [
         {
-          url: "/images/contact.jpeg",
+          url: "http://171.244.63.137:8280/images/website.png",
           width: 1151,
           height: 768,
           alt: "Viettel Cx",
@@ -39,11 +39,11 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "Viettel Cx | Dịch vụ",
       description:
-        "Viettel CX cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp.",
-      images: ["/images/contact.jpeg"],
+        "Viettel Customer Service cung cấp hệ sinh thái: dịch vụ tổng đài Contact center outsourcing, BPO, Upsell, telesales, tư vấn trải nghiệm khách hàng CX, Voice of Customer, loyalty, quà tặng…",
+      images: ["http://171.244.63.137:8280/images/website.png"],
     },
     alternates: {
-      canonical: "/images/contact.jpeg",
+      canonical: "http://171.244.63.137:8280/images/website.png",
     },
   };
 }
