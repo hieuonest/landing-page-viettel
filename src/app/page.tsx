@@ -27,6 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…",
     openGraph: {
       title: "Viettel Customer Services",
+      siteName: "Viettel Customer Services",
       description:
         "Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…",
       url: "http://171.244.63.137:8280/",
@@ -48,7 +49,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: ["http://171.244.63.137:8280/images/website.png"],
     },
     alternates: {
-      canonical: "http://171.244.63.137:8280/images/website.png",
+      canonical: "http://171.244.63.137:8280/",
     },
   };
 }
