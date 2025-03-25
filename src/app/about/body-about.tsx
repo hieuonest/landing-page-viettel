@@ -16,7 +16,7 @@ export default function BodyAbout() {
         variants={fadeInBottomVariants}
         className={`${fsMagistralBook.className} text-[26px] xxs:text-[32px] xm:text-[38px] lg:text-[45px] text-center`}
       >
-        Vì sao lựa chọn Viettel Customer Service?
+        Vì sao lựa chọn <span className="whitespace-nowrap">Viettel Customer Service?</span>
       </MotionWrapper>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 big-pc:grid-cols-4 w-full mt-3 xs:mt-10 gap-3 xs:gap-5 lg:gap-10">
