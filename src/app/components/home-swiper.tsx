@@ -11,7 +11,6 @@ import { EffectCards, Navigation, Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import { roboto } from "@/lib/font";
 import Link from "next/link";
-import homeInsightCi from "../../../public/images/home-insight-ci.png";
 import { ArrowUpRight } from "lucide-react";
 import { homeSolutions } from "@/lib/define-data";
 import { Swiper as SwiperType } from "swiper";

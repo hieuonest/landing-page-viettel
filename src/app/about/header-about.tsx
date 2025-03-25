@@ -1,10 +1,7 @@
 "use client";
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import Image from "next/image";
 import bgHeader from "../../../public/images/bg-header-about.png";
-import imgYear from "../../../public/images/img-year-desk.png";
-import imgYearMobile from "../../../public/images/img-year-mobile.png";
-import imgYearMobilexm from "../../../public/images/img-year-mobile-sm.png";
 import bgYearMobile from "../../../public/images/vector-2.png";
 import bgYear from "../../../public/images/Vector 1.png";
 import iconLine2004 from "../../../public/svg/line-2004.svg";
