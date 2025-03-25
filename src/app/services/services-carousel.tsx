@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { Fragment } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -45,7 +45,7 @@ function ServicesCarousel({}) {
           .map((item, index) => (
             <SwiperSlide
               className="!w-[368px] xs:!w-[475px] lg:!w-[510px]"
-              key={index}
+              key={item.value}
             >
               <div
                 className={`${roboto.className} w-[350px] h-[450px] xs:w-[475px] xs:h-[475px] lg:w-[510px] lg:h-[510px] overflow-hidden bg-white rounded-[20px] relative p-8 !text-left`}
@@ -99,17 +99,17 @@ function ServicesCarousel({}) {
                 >
                   {Array.isArray(item.detail) &&
                     item.detail.map((item, index) => (
-                      <>
+                      <Fragment key={`detail_${index}`}>
                         <p className="font-medium">{item.title}</p>
                         <ul className="ml-4 space-y-1"
                         >
                           {item.list.map((item, index) => (
-                            <li key={index} className="list-disc">
+                            <li key={`list_${index}`} className="list-disc">
                               {item}
                             </li>
                           ))}
                         </ul>
-                      </>
+                      </Fragment>
                     ))}
 
                   {Array.isArray(item.additional) ? (
@@ -117,7 +117,7 @@ function ServicesCarousel({}) {
                       className="mt-2 ml-4 space-y-1"
                     >
                       {item.additional.map((item, index) => (
-                        <li key={index} className="">
+                        <li key={`add_${index}`} className="">
                           {item}
                         </li>
                       ))}
