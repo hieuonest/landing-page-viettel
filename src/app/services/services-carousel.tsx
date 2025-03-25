@@ -26,13 +26,12 @@ function ServicesCarousel({}) {
         initialSlide={6}
         spaceBetween={20}
         onSlideChange={(swiper) => {
-          console.log("Active index:", swiper.activeIndex);
-          console.log("Is at end?", swiper.isEnd);
-          console.log("Is at beginning?", swiper.isBeginning);
           setActiveIndex(swiper.realIndex);
         }}
         autoplay={{
           delay: 5000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }}
         loop={true}
         watchSlidesProgress={true}

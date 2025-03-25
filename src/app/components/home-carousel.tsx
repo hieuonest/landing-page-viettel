@@ -19,9 +19,9 @@ function HomeCarousel() {
       centeredSlides={true}
       slidesPerView="auto"
       coverflowEffect={{
-        rotate: 20,
+        rotate: 0,
         stretch: 0,
-        depth: 100,
+        depth: 100, 
         modifier: 1,
         slideShadows: true,
       }}
@@ -30,6 +30,7 @@ function HomeCarousel() {
       autoplay={{
         delay: 5000,
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       }}
       pagination={{
         clickable: true,
