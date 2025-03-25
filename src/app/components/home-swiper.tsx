@@ -57,25 +57,25 @@ function HomeSwiper() {
           className={`!flex items-center justify-center `}
           key={index}
         >
-          <div className="w-full lg:min-h-[650px] rounded-[20px] bg-[#3E3E3E] flex max-sm:flex-col max-sm:gap-3 relative justify-between pt-4 sm:py-[32px] md:py-[48px] lg:py-[70px] pl-0 sm:pl-[36px]">
+          <div className="w-full min-h-[520px] lg:min-h-[650px] rounded-[20px] bg-[#3E3E3E] flex max-lg:flex-col max-sm:gap-3 relative justify-between pt-4 sm:py-[20px] md:py-[48px] lg:py-[70px] pl-0 sm:pl-[36px] sm:pr-[36px] gap-[10px] md:gap-[0]">
             <div
-              className={`${roboto.className} max-w-[408px] flex flex-col pr-2 md:pr-[42px] flex-1 pl-4 sm:pl-0`}
+              className={`${roboto.className} lg:max-w-[408px] flex flex-col pr-2 md:pr-[42px] flex-1 pl-4 sm:pl-0`}
             >
               <div>
                 <h1 className="text-[35px] md:text-[40px] lg:text-[55px] text-white font-light">
                   {item.title}
                 </h1>
-                <h2 className="text-[#C4C4C4] text-xs md:text-base lg:text-lg font-medium uppercase mt-4 ">
+                <h2 className="text-[#C4C4C4] text-[13px] md:text-base lg:text-lg font-medium uppercase mt-2 md:mt-4 h-[39px] flex items-center">
                   {item.desc}
                 </h2>
-                <p className="mt-7 md:mt-11 text-[#C4C4C4] text-xs md:text-base lg:text-lg">
+                <p className="mt-4 md:mt-11 text-[#C4C4C4] text-[13px] md:text-base lg:text-lg h-[130px] xxs:h-[120px] sm:h-[87px] lg:h-auto">
                   {item.detail}
                 </p>
               </div>
 
               <Link
                 href="/solutions"
-                className="flex items-center relative text-white text-lg group transition-all duration-300 mt-6 see-more-link w-fit"
+                className="flex items-center relative text-white text-lg group transition-all duration-300 mt-3 md:mt-6 see-more-link w-fit"
               >
                 Tìm hiểu thêm
                 <ArrowUpRight
@@ -85,8 +85,8 @@ function HomeSwiper() {
                 />
               </Link>
             </div>
-            <div className="max-sm:w-full relative flex self-center justify-end overflow-hidden rounded-b-[20px] sm:rounded-s-[20px]">
-              <Image src={homeInsightCi} alt="swipe-1" quality={100} className="w-full md:w-[424px] lg:w-[548px] xl:w-[648px] "/>
+            <div className="relative flex self-center w-[100%] lg:w-auto justify-end overflow-hidden sm:rounded-[20px] lg:rounded-none lg:rounded-b-[20px] lg:rounded-s-[20px] lg:rounded-br-none mb-[60px] sm:mb-[40px] lg:mb-[0]">
+              <Image src={homeInsightCi} alt="swipe-1" quality={100} className="w-full lg:w-[548px] xl:w-[648px] "/>
             </div>
             
             <div className={`absolute bottom-0 left-0 right-0 w-full h-full bg-[#c5c5c5] rounded-[20px] pointer-events-none transition-opacity duration-700 ease-in-out ${activeIndex === index ? "opacity-0" : "opacity-60"}`} />
@@ -111,7 +111,7 @@ function HomeSwiper() {
         />
       </button>
 
-      <div className="swiper-pagination !absolute !w-fit px-4 min-h-[20px] bg-black rounded-full !bottom-2 md:!bottom-6 !left-2 md:!left-16 flex items-center gap-3"></div>
+      <div className="swiper-pagination !absolute !w-fit px-4 min-h-[20px] bg-black rounded-full !bottom-[15px] md:!bottom-6 !left-[36px] md:!left-16 flex items-center gap-3"></div>
      
     </Swiper>
     {/* BUTTON BÊN PHẢI */}

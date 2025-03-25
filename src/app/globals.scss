@@ -242,5 +242,22 @@ html {
     align-items: center;
 
   }
+
+  @media (max-width: 768px) {
+      bottom: 28px;
+      right: 25px;
+    }
+
+    @media (max-width: 640px) {
+      display: none;
+    }
+}
+
+@media (max-width: 640px) {
+  .swiper-pagination-bullets {
+    left: 50% !important;
+    transform: translateX(-50%);
+    bottom: 12px !important;
+  }
 }
 }
