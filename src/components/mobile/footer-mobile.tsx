@@ -49,10 +49,10 @@ export default function FooterMobile() {
           className={`${roboto.className} text-sm text-black space-y-2 flex flex-col max-w-[297px] self-end`}
         >
           <div>
-            Điện thoại: <a href="tel:02462656168">02462656168</a>
+            Điện thoại: <a href="tel:02462656168">0353887887</a>
           </div>
           <div>
-            Email: <a href="mailto:viettelcx.com.vn">cskh@viettel.com.vn</a>
+            Email: <a href="mailto:dvkh@viettel.com.vn">dvkh@viettel.com.vn</a>
           </div>
           <div>
             Địa chỉ: Toà nhà OCT 3B Khu Đô thị mới Resco, Cổ Nhuế, Xuân Đỉnh,

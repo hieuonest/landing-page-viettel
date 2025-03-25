@@ -108,7 +108,7 @@ export default function Home() {
             muted
             playsInline
           >
-            <source src="/videos/intro.mp4" type="video/mp4" />
+            <source src="/videos/Intro_vr2.mp4" type="video/mp4" />
             Your browser does not support the video tag
           </video>
           <button className="absolute bottom-4 left-0 right-0 translate-x-1/2">
@@ -245,8 +245,9 @@ export default function Home() {
               variants={fadeInBottomVariants}
               className={`${roboto.className} text-sm md:text-[20px] text-center text-black max-w-[95%] sm:max-w-[70%] md:max-w-[633px] mx-auto mt-4 leading-[25px] `}
             >
-              Viettel Customer Service là chuyên gia dẫn đầu về dịch vụ khách hàng, mang đến
-              trải nghiệm xuất sắc bằng việc lắng nghe, kết nối, thấu hiểu
+              Viettel Customer Service là chuyên gia dẫn đầu về dịch vụ khách
+              hàng, mang đến trải nghiệm xuất sắc bằng việc lắng nghe, kết nối,
+              thấu hiểu
             </MotionWrapper>
           </div>
 
@@ -258,23 +259,26 @@ export default function Home() {
           />
         </section>
 
-        <MotionWrapper
-          initial="hidden"
-          viewport={{ once: true, amount: 0.4 }}
-          whileInView="visible"
-          variants={fadeInBottomVariants}
-        >
+        <div>
           <section className="relative flex flex-col items-center justify-center mt-16">
-            <Link
-              href="/services"
-              className={`${roboto.className} text-[#D8D8D8] text-sm md:text-[20px] font-medium flex items-center gap-2 border-solid bg-black rounded-sm px-4 py-2 overflow-hidden group absolute top-0 -translate-y-1/2 z-10`}
+            <MotionWrapper
+              initial="hidden"
+              viewport={{ once: true, amount: 0.4 }}
+              whileInView="visible"
+              variants={fadeInBottomVariants}
+              className="relative flex flex-col items-center justify-center w-[100%]"
             >
-              <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
-              <MoveRight className="relative transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
-              <span className="relative transition-all duration-300 group-hover:text-white">
-                Tất cả dịch vụ
-              </span>
-            </Link>
+              <Link
+                href="/services"
+                className={`${roboto.className} text-[#D8D8D8] text-sm md:text-[20px] font-medium flex items-center gap-2 border-solid bg-black rounded-sm px-4 py-2 overflow-hidden group absolute top-0 -translate-y-1/2 z-10`}
+              >
+                <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
+                <MoveRight className="relative transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
+                <span className="relative transition-all duration-300 group-hover:text-white">
+                  Tất cả dịch vụ
+                </span>
+              </Link>
+            </MotionWrapper>
             <div className="relative bg-white">
               <HomeCarousel />
               <Image
@@ -285,7 +289,7 @@ export default function Home() {
               />
             </div>
           </section>
-        </MotionWrapper>
+        </div>
 
         <section className="relative flex flex-col items-center justify-center">
           <div className="pt-14 md:pt-32 relavtive w-full">

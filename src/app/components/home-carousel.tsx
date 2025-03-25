@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
 import Image from "next/image";
 import { ArrowUpRight} from "lucide-react";
 import { roboto } from "@/lib/font";
@@ -14,10 +14,21 @@ import { dataServicesHome } from "@/lib/define-data";
 function HomeCarousel() {
   return (
     <Swiper
-      modules={[Pagination, Navigation]}
+      modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
+      effect="coverflow"
+      centeredSlides={true}
+      slidesPerView="auto"
+      coverflowEffect={{
+        rotate: 20,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      }}
+      speed={1500}
       loop={true}
       autoplay={{
-        delay: 250,
+        delay: 5000,
         disableOnInteraction: false,
       }}
       pagination={{
