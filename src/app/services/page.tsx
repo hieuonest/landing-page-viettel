@@ -25,11 +25,11 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Viettel Customer Services | Dịch vụ",
       description:
         "Viettel Customer Service cung cấp hệ sinh thái: dịch vụ tổng đài Contact center outsourcing, BPO, Upsell, telesales, tư vấn trải nghiệm khách hàng CX, Voice of Customer, loyalty, quà tặng…",
-      url: "http://171.244.63.137:8280/services",
+      url: "https://viettelcx.com.vn/services",
       type: "website",
       images: [
         {
-          url: "http://171.244.63.137:8280/images/website.png",
+          url: "https://viettelcx.com.vn/images/website.png",
           width: 1151,
           height: 768,
           alt: "Viettel Customer Services",
@@ -41,10 +41,10 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Viettel Customer Services | Dịch vụ",
       description:
         "Viettel Customer Service cung cấp hệ sinh thái: dịch vụ tổng đài Contact center outsourcing, BPO, Upsell, telesales, tư vấn trải nghiệm khách hàng CX, Voice of Customer, loyalty, quà tặng…",
-      images: ["http://171.244.63.137:8280/images/website.png"],
+      images: ["https://viettelcx.com.vn/images/website.png"],
     },
     alternates: {
-      canonical: "http://171.244.63.137:8280/images/services",
+      canonical: "https://viettelcx.com.vn/images/services",
     },
   };
 }

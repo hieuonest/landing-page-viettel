@@ -66,7 +66,7 @@ export default function FooterDestop() {
           >
             <div className="flex flex-col gap-[10px] absolute top-0 right-0 xl:relative xl:top-auto xl:right-auto">
               <div className="flex items-center gap-1 justify-start xl:justify-end">
-                <Link href="/" className="">
+                <Link href="https://www.facebook.com/viettelcustomerservice" target="_blank" className="">
                   <Image src="/svg/facebook.svg" alt="Facebook" width={28} height={28} />
                 </Link>
                 <Link href="https://zalo.me/1570758701534064697" target="_blank" rel="noopener noreferrer">

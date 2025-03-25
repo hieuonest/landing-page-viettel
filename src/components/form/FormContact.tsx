@@ -20,13 +20,13 @@ function FormContact() {
     if (!name.trim() || !email.trim() || !phone.trim()) {
       return null;
     }
-    const mailtoLink = `mailto:viettelcx.com.vn?subject=Contact Form Submission&body=Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}`;
+    const mailtoLink = `mailto:cskh@viettel.com.vn?subject=Contact Form Submission&body=Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}`;
     window.location.href = mailtoLink;
   };
 
   return (
     <form
-      className={`flex items-center justify-center flex-col w-[100%] flex-1 md:flex-row gap-5 xs:gap-2 [&>div]:min-h-10 ${roboto.className}`}
+      className={`flex items-center justify-center flex-col w-[100%] flex-1 md:flex-row gap-5 xs:gap-5 [&>div]:min-h-10 ${roboto.className}`}
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="relative w-[calc(100%-42px)] md:w-auto max-xs:min-w-[80%] min-[1600px]:min-w-[267px] flex justify-center">

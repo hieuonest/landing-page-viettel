@@ -13,11 +13,11 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Viettel Customer Services | về chúng tôi",
       description:
         "Viettel Customer Service tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo. Chúng tôi là chuyên gia dẫn đầu về các giải pháp, dịch vụ khách hàng.",
-      url: "http://171.244.63.137:8280/about",
+      url: "https://viettelcx.com.vn/about",
       type: "website",
       images: [
         {
-          url: "http://171.244.63.137:8280/images/website.png",
+          url: "https://viettelcx.com.vn/images/website.png",
           width: 1151,
           height: 768,
           alt: "Viettel Customer Services",
@@ -29,10 +29,10 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Viettel Customer Services | về chúng tôi",
       description:
         "Viettel Customer Service tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo. Chúng tôi là chuyên gia dẫn đầu về các giải pháp, dịch vụ khách hàng.",
-      images: ["http://171.244.63.137:8280/images/website.png"],
+      images: ["https://viettelcx.com.vn/images/website.png"],
     },
     alternates: {
-      canonical: "http://171.244.63.137:8280/about",
+      canonical: "https://viettelcx.com.vn/about",
     },
   };
 }

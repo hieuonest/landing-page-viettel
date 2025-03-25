@@ -30,11 +30,11 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Viettel Customer Services",
       description:
         "Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…",
-      url: "http://171.244.63.137:8280/",
+      url: "https://viettelcx.com.vn/",
       type: "website",
       images: [
         {
-          url: "http://171.244.63.137:8280/images/website.png",
+          url: "https://viettelcx.com.vn/images/website.png",
           width: 1151,
           height: 768,
           alt: "Viettel Cx",
@@ -46,10 +46,10 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Viettel Cx",
       description:
         "Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…",
-      images: ["http://171.244.63.137:8280/images/website.png"],
+      images: ["https://viettelcx.com.vn/images/website.png"],
     },
     alternates: {
-      canonical: "http://171.244.63.137:8280/",
+      canonical: "https://viettelcx.com.vn/",
     },
   };
 }

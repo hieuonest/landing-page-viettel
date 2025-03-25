@@ -9,7 +9,7 @@
     "scope": "/",
     "icons": [
       {
-        "src": "http://171.244.63.137:8280/images/website.png",
+        "src": "https://viettelcx.com.vn/images/website.png",
         "sizes": "192x192",
         "type": "image/png"
       },
@@ -23,22 +23,22 @@
       {
         "name": "Trang Chủ",
         "url": "/",
-        "icons": [{ "src": "http://171.244.63.137:8280/images/website.png", "sizes": "192x192" }]
+        "icons": [{ "src": "https://viettelcx.com.vn/images/website.png", "sizes": "192x192" }]
       },
       {
         "name": "Giới Thiệu",
         "url": "/about",
-        "icons": [{ "src": "http://171.244.63.137:8280/images/website.png", "sizes": "192x192" }]
+        "icons": [{ "src": "https://viettelcx.com.vn/images/website.png", "sizes": "192x192" }]
       },
       {
         "name": "Dịch Vụ",
         "url": "/services",
-        "icons": [{ "src": "http://171.244.63.137:8280/images/website.png", "sizes": "192x192" }]
+        "icons": [{ "src": "https://viettelcx.com.vn/images/website.png", "sizes": "192x192" }]
       },
       {
         "name": "Giải Pháp",
         "url": "/solutions",
-        "icons": [{ "src": "http://171.244.63.137:8280/images/website.png", "sizes": "192x192" }]
+        "icons": [{ "src": "https://viettelcx.com.vn/images/website.png", "sizes": "192x192" }]
       }
     ]
   }

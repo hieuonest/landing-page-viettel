@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://171.244.63.137:8280/sitemap.xml
+Sitemap: https://viettelcx.com.vn/sitemap.xml

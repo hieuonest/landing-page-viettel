@@ -65,7 +65,7 @@ export default function FooterMobile() {
       <div className="flex flex-col justify-between">
         <div className="flex flex-col gap-[6px] sm:gap-[8px] absolute top-0 right-0 xl:relative xl:top-auto xl:right-auto">
           <div className="flex items-center gap-1 justify-center">
-            <Link href="/" className="w-fit">
+            <Link href="https://www.facebook.com/viettelcustomerservice" target="_blank" className="w-fit">
               <Image
                 src="/svg/facebook.svg"
                 alt="Facebook"
