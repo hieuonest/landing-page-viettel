@@ -30,18 +30,28 @@ export default function BodyAbout() {
             className={`${roboto.className} flex flex-col items-center gap-2 xs:gap-6 p-2 px-0 xs:px-2 lg:p-4`}
           >
             <div className="min-h-[91px] flex align-bottom">
-              <Image src={item.icon} alt="Setting Icon" quality={100}/>
+              <Image src={item.icon} alt="Setting Icon" quality={100} />
             </div>
             <h6 className="text-center text-[22px] xxs:text-[18px] xs:text-[18px] xm:text-[22px] md:text-3xl xl-2:text-[26px] font-semibold">
               {item.title}
             </h6>
             <ul className="text-lg text-[#595959] leading-[23px] flex flex-col w-full space-y-4">
-              {item.desc.map((desc, index) => (
+              {item.desc.map((sentence, index) => (
                 <li key={index} className="">
                   <p
                     className="text-center text-[16px] md:text-[18px] text-[#595959] break-keep whitespace-normal"
-                    dangerouslySetInnerHTML={{ __html: desc }}
-                  ></p>
+                    // dangerouslySetInnerHTML={{ __html: desc }}
+                  >
+                    {sentence.map((part, i) =>
+                      typeof part === "string" ? (
+                        part
+                      ) : (
+                        <span key={i} className="whitespace-nowrap">
+                          {part.text}
+                        </span>
+                      )
+                    )}
+                  </p>
                 </li>
               ))}
             </ul>

@@ -150,45 +150,88 @@ export const dataServicesLinks: {
   },
 ];
 
+// export const dataWhyUs: {
+//   icon: StaticImageData;
+//   title: string;
+//   desc: string[];
+// }[] = [
+//   {
+//     title: "Chuyên nghiệp",
+//     icon: settingIcon,
+//     desc: [
+//       "Hơn 20 năm kinh nghiệm triển&nbsp;khai&nbsp;dịch&nbsp;vụ",
+//       "Đội ngũ quản lý chuyên nghiệp, chất&nbsp;lượng&nbsp;cao",
+//       "Kho tri thức phong phú và&nbsp;đa&nbsp;dạng",
+//     ],
+//   },
+//   {
+//     title: "Hiệu quả",
+//     icon: checkIcon,
+//     desc: [
+//       "Giám sát và quản lý chủ động, toàn&nbsp;diện&nbsp;mọi&nbsp;hoạt&nbsp;động",
+//       "Quy trình chuyên nghiệp, nhanh&nbsp;chóng",
+//       "Tối ưu quy trình và chi&nbsp;phí&nbsp;vận&nbsp;hành",
+//     ],
+//   },
+//   {
+//     title: "Công nghệ tiên phong",
+//     icon: logicIcon,
+//     desc: [
+//       "Tích hợp công nghệ AI, Big Data, Robotics, Cloud&nbsp;computing",
+//       "Phát triển hệ thống linh hoạt, bắt kịp xu&nbsp;hướng&nbsp;thế&nbsp;giới",
+//       "Hệ thống tiêu biểu: Trung tâm điều hành thông&nbsp;minh&nbsp;vCOC",
+//     ],
+//   },
+//   {
+//     title: "Bảo mật",
+//     icon: shieldIcon,
+//     desc: [
+//       "Bảo vệ dữ liệu và hệ thống bằng các biện pháp an ninh mạng tiên&nbsp;tiến",
+//       "Tuân thủ các tiêu chuẩn bảo mật quốc tế: GDPR,&nbsp;ISO&nbsp;27001",
+//       "Kiểm toán, đánh giá định kỳ, chủ động 24/7, phát hiện và xử lý mọi&nbsp;rủi&nbsp;ro",
+//     ],
+//   },
+// ];
+
 export const dataWhyUs: {
   icon: StaticImageData;
   title: string;
-  desc: string[];
+  desc: (Array<string | { text: string; nowrap: boolean }>)[]; // Each sentence is an array of fragments
 }[] = [
   {
-    title: "Chuyên nghiệp",
+    title: "Chuyên nghiệp",
     icon: settingIcon,
     desc: [
-      "Hơn 20 năm kinh nghiệm triển&nbsp;khai&nbsp;dịch&nbsp;vụ",
-      "Đội ngũ quản lý chuyên nghiệp, chất&nbsp;lượng&nbsp;cao",
-      "Kho tri thức phong phú và&nbsp;đa&nbsp;dạng",
+      ["Hơn 20 năm kinh nghiệm ", { text: "triển khai dịch vụ", nowrap: true }],
+      ["Đội ngũ quản lý chuyên nghiệp, ", { text: "chất lượng cao", nowrap: true }],
+      ["Kho tri thức phong phú ", { text: "và đa dạng", nowrap: true }],
     ],
   },
   {
     title: "Hiệu quả",
     icon: checkIcon,
     desc: [
-      "Giám sát và quản lý chủ động, toàn&nbsp;diện&nbsp;mọi&nbsp;hoạt&nbsp;động",
-      "Quy trình chuyên nghiệp, nhanh&nbsp;chóng",
-      "Tối ưu quy trình và chi&nbsp;phí&nbsp;vận&nbsp;hành",
+      ["Giám sát và quản lý chủ động, ", { text: "toàn diện mọi hoạt động", nowrap: true }],
+      ["Quy trình chuyên nghiệp, ", { text: "nhanh chóng", nowrap: true }],
+      ["Tối ưu quy trình và ", { text: "chi phí vận hành", nowrap: true }],
     ],
   },
   {
     title: "Công nghệ tiên phong",
     icon: logicIcon,
     desc: [
-      "Tích hợp công nghệ AI, Big Data, Robotics, Cloud&nbsp;computing",
-      "Phát triển hệ thống linh hoạt, bắt kịp xu&nbsp;hướng&nbsp;thế&nbsp;giới",
-      "Hệ thống tiêu biểu: Trung tâm điều hành thông&nbsp;minh&nbsp;vCOC",
+      ["Tích hợp công nghệ AI, Big Data, Robotics, ", { text: "Cloud computing", nowrap: true }],
+      ["Phát triển hệ thống linh hoạt, bắt kịp ", { text: "xu hướng thế giới", nowrap: true }],
+      ["Hệ thống tiêu biểu: Trung tâm điều hành ", { text: "thông minh vCOC", nowrap: true }],
     ],
   },
   {
     title: "Bảo mật",
     icon: shieldIcon,
     desc: [
-      "Bảo vệ dữ liệu và hệ thống bằng các biện pháp an ninh mạng tiên&nbsp;tiến",
-      "Tuân thủ các tiêu chuẩn bảo mật quốc tế: GDPR,&nbsp;ISO&nbsp;27001",
-      "Kiểm toán, đánh giá định kỳ, chủ động 24/7, phát hiện và xử lý mọi&nbsp;rủi&nbsp;ro",
+      ["Bảo vệ dữ liệu và hệ thống bằng các biện pháp an ninh mạng ", {text: "tiên tiến", nowrap: true}],
+      ["Tuân thủ các tiêu chuẩn bảo mật quốc tế: ", { text: "GDPR, ISO 27001", nowrap: true }],
+      ["Kiểm toán, đánh giá định kỳ, chủ động 24/7, phát hiện và xử lý ", { text: "mọi rủi ro", nowrap: true }],
     ],
   },
 ];

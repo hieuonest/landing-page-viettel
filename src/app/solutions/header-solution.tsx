@@ -44,7 +44,7 @@ export default function HeaderSolution() {
             {" "}
             bằng{" "}
             <span className="text-[#000000] font-medium">
-              công nghệ sáng&nbsp;tạo
+              công nghệ <span className="whitespace-nowrap font-medium">sáng tạo</span>
             </span>
           </div>
         </MotionWrapper>

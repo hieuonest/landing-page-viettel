@@ -49,8 +49,8 @@ export default function HeaderAbout() {
               <div className="flex items-center text-center justify-center">
                 <p className="text-[#ffffff] text-[20px] xxs:text-[32px] sm:text-[38px] lg:text-[50px] pt-[2px]">
                   Chăm sóc và{" "}
-                  <span className="bg-gradient-to-tr from-red-950 via-red-700 to-red-600 bg-clip-text text-transparent text-[20px] xxs:text-[32px] sm:text-[38px] lg:text-[50px]">
-                    thấu&nbsp;hiểu
+                  <span className="bg-gradient-to-tr from-red-950 via-red-700 to-red-600 bg-clip-text text-transparent text-[20px] xxs:text-[32px] sm:text-[38px] lg:text-[50px] whitespace-nowrap">
+                    thấu hiểu
                   </span>
                 </p>
               </div>

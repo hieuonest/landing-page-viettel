@@ -341,7 +341,7 @@ export default function Home() {
             variants={fadeInBottomVariants}
             className={`${fsMagistralBook.className} text-[28px] xl:text-[35px] max-lg:text-center lg:max-w-[245px] basis-1/3`}
           >
-            Khách hàng của chúng tôi
+            Khách hàng <span className="whitespace-nowrap">của chúng tôi</span>
           </MotionWrapper>
 
           <div className="flex-1">
