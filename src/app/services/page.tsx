@@ -128,9 +128,16 @@ function Services() {
 
         <ServicesSection />
 
-        <div className="overflow-visible relative w-[85%] xs:w-[90%] lg:w-[90%] xl:w-[93%] min-[1596px]:w-[90%]">
-          <ServicesCarousel />
-        </div>
+        {/* <MotionWrapper
+          initial="hidden"
+          viewport={{ once: true, amount: 0.3 }}
+          whileInView="visible"
+          variants={fadeInBottomVariants}
+        > */}
+          <div className="relative w-[85%] xs:w-[90%] lg:w-[90%] xl:w-[93%] min-[1596px]:w-[90%]">
+            <ServicesCarousel />
+          </div>
+        {/* </MotionWrapper> */}
 
         <Separator className="mt-16 bg-[#D9D9D9] w-[90dvw] mx-auto" />
       </main>

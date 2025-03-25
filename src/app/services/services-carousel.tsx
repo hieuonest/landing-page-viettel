@@ -7,19 +7,13 @@ import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import { roboto } from "@/lib/font";
-import MotionWrapper from "@/components/ui/motion-wrapper";
-import { fadeInBottomVariants } from "@/lib/utils";
 import { dataServicesHome } from "@/lib/define-data";
 
 function ServicesCarousel({}) {
   const [activeIndex, setActiveIndex] = React.useState(0);
 
   return (
-    <MotionWrapper
-      initial="hidden"
-      viewport={{ once: true, amount: 0.5 }}
-      whileInView="visible"
-      variants={fadeInBottomVariants}
+    <div
       className="max-[350px]:w-[100dvw] w-[97dvw] xl:w-[85dvw] 2xl:w-[85dvw] 3xl:w-[85dvw] mt-28 overflow-visible"
     >
       <Swiper
@@ -37,9 +31,9 @@ function ServicesCarousel({}) {
           console.log("Is at beginning?", swiper.isBeginning);
           setActiveIndex(swiper.realIndex);
         }}
-        // autoplay={{
-        //   delay: 5000,
-        // }}
+        autoplay={{
+          delay: 5000,
+        }}
         loop={true}
         watchSlidesProgress={true}
         slidesPerView={"auto"}
@@ -139,12 +133,12 @@ function ServicesCarousel({}) {
               </div>
             </SwiperSlide>
           ))}
-        <div className="absolute !top-[-10%] xs:[!top-0] !translate-y-[-100%] xl:!translate-y-[100%] !right-[0] !translate-x-1/2 flex justify-between min-h-[40px] min-w-[92px] z-10">
+        <div className="!absolute !top-[-10%] xs:[!top-0] !translate-y-[-100%] xl:!translate-y-[100%] !right-[0] !translate-x-1/2 flex justify-between min-h-[40px] min-w-[92px] z-10">
           <button className="services-carousel__swiper-button-next swiper-button-next !relative !translate-y-0 !top-0 !mt-0"></button>
           <button className="services-carousel__swiper-button-prev swiper-button-prev !relative !translate-y-0 !top-0 !mt-0"></button>
         </div>
       </Swiper>
-    </MotionWrapper>
+    </div>
   );
 }
 
