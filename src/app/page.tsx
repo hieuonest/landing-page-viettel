@@ -266,7 +266,7 @@ export default function Home() {
               viewport={{ once: true, amount: 0.4 }}
               whileInView="visible"
               variants={fadeInBottomVariants}
-              className="relative flex flex-col items-center justify-center w-[100%]"
+              className="relative flex flex-col items-center justify-center w-[100%] z-[2]"
             >
               <Link
                 href="/services"
