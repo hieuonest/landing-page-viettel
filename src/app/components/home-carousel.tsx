@@ -48,7 +48,7 @@ function HomeCarousel() {
               </h2>
 
               <p className="text-[#D9D9D9] text-sm md:text-lg max-w-[90%] xs:max-w-[80%] md:max-w-[485px]">
-                {item.detail}
+                {item.detailHome}
               </p>
               <Link
                 href="/services"
