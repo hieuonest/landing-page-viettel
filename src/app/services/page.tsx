@@ -88,7 +88,7 @@ function Services() {
             className={`${roboto.className} text-base md:text-lg text-center text-[#EA0033] flex justify-center mt-6`}
           >
             <Link
-              href="/services"
+              href="/about"
               className="flex items-center relative see-more-link group transition-all duration-300"
             >
               Tìm hiểu thêm
