@@ -35,8 +35,8 @@ export default function FooterDestop() {
           <div
             className={`${roboto.className} text-sm text-black space-y-3 flex flex-col max-w-[297px] self-end`}
           >
-            <p>Điện thoại: <a href="tel:0353887887">
-              0353887887
+            <p>Điện thoại: <a href="tel:0969966699">
+              0969966699
             </a></p>
             <p>Email: <a href="mailto:dvkh@viettel.com.vn">dvkh@viettel.com.vn</a></p>
             <p>
