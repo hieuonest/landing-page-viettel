@@ -49,7 +49,6 @@ function HomeSwiper() {
           setActiveIndex(swiper.realIndex);
         }}
         watchSlidesProgress={true}
-
         pagination={{
           clickable: true,
           el: ".swiper-pagination",
@@ -91,12 +90,12 @@ function HomeSwiper() {
                   />
                 </Link>
               </div>
-              <div className="relative flex self-center w-[100%] lg:w-auto justify-end overflow-hidden sm:rounded-[20px] lg:rounded-none lg:rounded-b-[20px] lg:rounded-s-[20px] lg:rounded-br-none mb-[60px] sm:mb-[40px] lg:mb-[0]">
+              <div className="relative flex self-center lg:w-auto justify-center items-center overflow-hidden sm:rounded-[20px] lg:rounded-none lg:rounded-b-[20px] lg:rounded-s-[20px] lg:rounded-br-none mb-[60px] sm:mb-[40px] lg:mb-[0] h-[275px] md:h-[350px] lg:h-[475px] xl:h-[510px] w-full lg:min-w-[548px] lg:max-w-[548px] xl:min-w-[648px] bg-white max-lg:mt-3">
                 <Image
-                  src={homeInsightCi}
+                  src={item.image}
                   alt="swipe-1"
                   quality={100}
-                  className="w-full lg:w-[548px] xl:w-[648px] "
+                  className="object-contain w-[90%] h-[90%]"
                 />
               </div>
 
