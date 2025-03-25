@@ -50,11 +50,11 @@ function ServicesCarousel({}) {
           .filter((item) => item.value !== "outsourcing")
           .map((item, index) => (
             <SwiperSlide
-              className="!w-[350px] xs:!w-[450px] lg:!w-[465px]"
+              className="!w-[368px] xs:!w-[475px] lg:!w-[510px]"
               key={index}
             >
               <div
-                className={`${roboto.className} w-[350px] h-[350px] xs:w-[450px] xs:h-[450px] lg:w-[465px] lg:h-[465px] overflow-hidden bg-white rounded-[20px] relative p-8 !text-left`}
+                className={`${roboto.className} w-[350px] h-[450px] xs:w-[475px] xs:h-[475px] lg:w-[510px] lg:h-[510px] overflow-hidden bg-white rounded-[20px] relative p-8 !text-left`}
               >
                 <div className="overflow-hidden absolute top-0 right-0 left-0 bottom-0 z-1 ">
                   <Image
@@ -89,37 +89,53 @@ function ServicesCarousel({}) {
                 </h1>
 
                 <p
-                  className={`text-sm xs:text-base lg:text-lg relative z-[2] mt-4 lg:mt-6 ${
+                  className={`text-[13px] xs:text-base relative z-[2] mt-4 lg:mt-6 ${
                     activeIndex === index ? "text-white" : "text-[#595959]"
                   }`}
                 >
                   {item.detailHome}
                 </p>
-                {Array.isArray(item.detail) && (
-                  <ul
-                    className={`${
-                      activeIndex === index ? "text-white" : "text-[#595959]"
-                    } mt-2 ml-4 space-y-1 relative z-[2] text-[13px] xs:text-base lg:text-lg text-left`}
-                    style={{ direction: "ltr", listStylePosition: "outside" }}
-                  >
-                    {item.detail.map((item, index) => (
+                <div
+                  className={`${
+                    activeIndex === index ? "text-white" : "text-[#595959]"
+                  } mt-2 relative z-[2] text-[13px] xs:text-sm lg:text-base text-left`}
+                  style={{
+                    direction: "ltr",
+                  }}
+                >
+                  {Array.isArray(item.detail) &&
+                    item.detail.map((item, index) => (
                       <>
-                        <p>{item.title}</p>
-                        <li key={index} className="list-disc">
-                          {item.list}
-                        </li>
+                        <p className="font-medium">{item.title}</p>
+                        <ul className="ml-4 space-y-1"
+                        >
+                          {item.list.map((item, index) => (
+                            <li key={index} className="list-disc">
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
                       </>
                     ))}
-                  </ul>
-                )}
 
-                <p
-                  className={`text-sm xs:text-base lg:text-lg relative z-[2] mt-4 lg:mt-6 ${
-                    activeIndex === index ? "text-white" : "text-[#595959]"
-                  }`}
-                >
-                  {item.additional}
-                </p>
+                  {Array.isArray(item.additional) ? (
+                    <ul
+                      className="mt-2 ml-4 space-y-1"
+                    >
+                      {item.additional.map((item, index) => (
+                        <li key={index} className="">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p
+                      className="mt-2"
+                    >
+                      {item.additional}
+                    </p>
+                  )}
+                </div>
               </div>
             </SwiperSlide>
           ))}
