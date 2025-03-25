@@ -261,3 +261,22 @@ html {
   }
 }
 }
+
+  .active-year__about{
+    color: rgba(162, 143, 93, 1);
+    line-height: 20px;
+    font-size: 65px;
+    font-weight: 300;
+
+    @media (max-width: 992px){
+      font-size: 50px;
+    }
+
+    @media (max-width: 640px){
+      font-size: 32px;
+    }
+
+    @media (max-width: 480px){
+      font-size: 26px;
+    }
+}

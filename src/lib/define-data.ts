@@ -505,3 +505,80 @@ export const homeSolutions: {
       "ReputaX là công cụ giám sát và phân tích thương hiệu mạnh mẽ, sử dụng AI và Big Data để theo dõi phản hồi của khách hàng trên mạng xã hội. Giúp doanh nghiệp bảo vệ danh tiếng, ứng phó kịp thời với khủng hoảng truyền thông, đồng thời cung cấp báo cáo chi tiết về hình ảnh thương hiệu so với đối thủ cạnh tranh.",
   },
 ];
+
+export const historyAbout = [2004, 2009, 2014, 2017, 2024, 2025];
+
+type HistoryDetail = {
+  year: number;
+  id?: string;
+  title: string;
+  content: {
+    header?: string;
+    title: string;
+    detail: string;
+  };
+};
+export const historyDetailAbout: HistoryDetail[] = [
+  {
+    year: 2004,
+    title: "Trung tâm giải đáp khách hàng - Những cuộc gọi đầu tiên",
+    content: {
+      title: "Khởi nguyên",
+      detail:
+        "Từ những đường dây nóng đầu tiên, tổng đài Viettel không chỉ tiếp nhận yêu cầu của khách hàng mà còn lắng nghe, đồng hành và giải quyết từng vấn đề của người dùng dịch vụ.",
+    },
+  },
+  {
+    year: 2009,
+    title: "Thành lập trung tâm chăm sóc khách hàng",
+    content: {
+      header: "Chuyển mình",
+      title: "Chuyển từ tiếp nhận sang hỗ trợ toàn diện",
+      detail:
+        "Viettel đưa hoạt động CSKH lên tầm cao mới với khả năng tiếp nhận và giải đáp thắc mắc nhanh chóng, hỗ trợ xử lý lỗi kỹ thuật chuyên sâu.",
+    },
+  },
+  {
+    year: 2014,
+    id: "2010 - 2014",
+    title: "Trung tâm giải đáp khách hàng - Những cuộc gọi đầu tiên",
+    content: {
+      header: "Mở rộng",
+      title: "Từ phản hồi đến chủ động kết nối",
+      detail:
+        "Tiên phong triển khai tổng đài tư vấn đa lĩnh vực 106x, cung cấp thông tin kinh tế, văn hóa, thể thao. Đồng thời, mở rộng hoạt động telesales và marketing, chủ động kết nối tới KH.",
+    },
+  },
+  {
+    year: 2017,
+    id: "2015 - 2017",
+    title: "Vươn tầm quốc tế",
+    content: {
+      title: "Dịch vụ không biên giới - kết nối vững bền",
+      detail:
+        "Mở rộng quy mô CSKH ra ngoài lãnh thổ Việt Nam, cung cấp giải pháp tổng đài và hỗ trợ khách hàng tại 10 thị trường Viettel đầu tư, từ châu Á, châu Phi đến châu Mỹ.",
+    },
+  },
+  {
+    id: "2017 - 2024",
+    year: 2024,
+    title: "Chuyển đổi thành trung tâm dịch vụ khách hàng",
+    content: {
+      title:
+        "Cung cấp dịch vụ cskh đến các doanh nghiệp trong & ngoài tập đoàn",
+      detail:
+        "Viettel mở rộng chăm sóc khách hàng cho nhiều doanh nghiệp, ứng dụng AI và phân tích dữ liệu để dự đoán hành vi, tối ưu trải nghiệm khách hàng.",
+    },
+  },
+  {
+    id: "2025",
+    year: 2025,
+    title: "Thành lập Công ty Dịch vụ Khách hàng Viettel",
+    content: {
+      title:
+        "Tiên phong nâng tầm trải nghiệm khách hàng bằng công nghệ sáng tạo",
+      detail:
+        "Đánh dấu bước chuyển mình mạnh mẽ từ Chăm sóc khách hàng (CS) truyền thống sang Trải nghiệm khách hàng (CX) toàn diện.",
+    },
+  },
+];
