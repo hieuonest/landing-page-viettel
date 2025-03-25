@@ -77,7 +77,7 @@ function Services() {
             variants={fadeInBottomVariants}
             className={`${roboto.className} text-sm md:text-[20px] text-center text-black mt-3 max-w-[85dvw] md:max-w-[496px]`}
           >
-            Viettel Customer services sẽ giúp bạn kết nối, lắng nghe khách hàng
+            Viettel Customer Service sẽ giúp bạn kết nối, lắng nghe khách hàng
             trên mọi hành trình trải nghiệm
           </MotionWrapper>
           <MotionWrapper
@@ -128,16 +128,15 @@ function Services() {
 
         <ServicesSection />
 
-        {/* <MotionWrapper
+        <MotionWrapper
           initial="hidden"
           viewport={{ once: true, amount: 0.3 }}
           whileInView="visible"
           variants={fadeInBottomVariants}
-        > */}
-          <div className="relative w-[85%] xs:w-[90%] lg:w-[90%] xl:w-[93%] min-[1596px]:w-[90%]">
-            <ServicesCarousel />
-          </div>
-        {/* </MotionWrapper> */}
+          className="relative w-[85%] xs:w-[90%] lg:w-[90%] xl:w-[93%] min-[1596px]:w-[90%]"
+        >
+          <ServicesCarousel />
+        </MotionWrapper>
 
         <Separator className="mt-16 bg-[#D9D9D9] w-[90dvw] mx-auto" />
       </main>

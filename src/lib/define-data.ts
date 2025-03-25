@@ -32,6 +32,13 @@ import loyalty from "../../public/images/05. Loyalty.png";
 import vip from "../../public/images/06. VIP.png";
 import voiceofcustomer from "../../public/images/07. Voice of Customer.png";
 import customerexperience from "../../public/images/08. Customer Experience.png";
+import imgSolution from "../../public/images/image-solution.png";
+import imgSolution1 from "../../public/images/image-solution-1.png";
+import imgSolution2 from "../../public/images/image-solution-2.png";
+import imgSolution3 from "../../public/images/image-solution-3.png";
+import imgSolution4 from "../../public/images/image-solution-4.png";
+import imgSolution5 from "../../public/images/image-solution-5.png";
+import Omni from "../../public/images/Omni.png";
 import { JSX } from "react";
 
 export const dataLink: {
@@ -444,6 +451,7 @@ export const slug_solution: {
 export const homeSolutions: {
   key: string;
   icon: StaticImageData;
+  image: StaticImageData;
   title: string;
   desc: string | JSX.Element;
   detail: string;
@@ -451,6 +459,7 @@ export const homeSolutions: {
   {
     key: "omni-x",
     icon: omnix,
+    image: Omni,
     title: "Omni-X",
     desc: "Tổng đài đa kênh hợp nhất, nâng tầm trải nghiệm khách hàng",
     detail:
@@ -459,6 +468,7 @@ export const homeSolutions: {
   {
     key: "insightci",
     icon: insightci,
+    image: imgSolution1,
     title: "Insight CI",
     desc: "Hiểu khách hàng sâu hơn, tối ưu dịch vụ tốt hơn",
     detail:
@@ -467,6 +477,7 @@ export const homeSolutions: {
   {
     key: "workforcex",
     icon: workforcex,
+    image: imgSolution4,
     title: "Workforce X",
     desc: "Quản lý nguồn lực thông minh, tối ưu hiệu suất tổng đài",
     detail:
@@ -475,6 +486,7 @@ export const homeSolutions: {
   {
     key: "vcoc",
     icon: vcoc,
+    image: imgSolution2,
     title: "vCOC",
     desc: "Điều hành dịch vụ khách hàng theo thời gian thực",
     detail:
@@ -483,6 +495,7 @@ export const homeSolutions: {
   {
     key: "cxbot",
     icon: cxbot,
+    image: imgSolution,
     title: "CXBOT",
     desc: "Nhân viên tổng đài AI ảo, tăng tốc hỗ trợ khách hàng",
     detail:
@@ -491,6 +504,7 @@ export const homeSolutions: {
   {
     key: "knowxhub",
     icon: knowxhub,
+    image: imgSolution3,
     title: "KnowX Hub",
     desc: "Quản lý tri thức thông minh, hỗ trợ nhân viên & khách hàng",
     detail:
@@ -499,6 +513,7 @@ export const homeSolutions: {
   {
     key: "reputax",
     icon: reputax,
+    image: imgSolution5,
     title: "Reputa X",
     desc: " Theo dõi & quản lý danh tiếng thương hiệu bằng AI",
     detail:
