@@ -22,12 +22,12 @@ import HomeSolutionsCarousel from "./components/home-solutions-carousel";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Viettel Customer Services",
+    title: "Viettel Customer Service",
     description:
       "Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…",
     openGraph: {
-      title: "Viettel Customer Services",
-      siteName: "Viettel Customer Services",
+      title: "Viettel Customer Service",
+      siteName: "Viettel Customer Service",
       description:
         "Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…",
       url: "https://viettelcx.com.vn/",
@@ -43,7 +43,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Viettel Cx",
+      title: "Viettel Customer Service",
       description:
         "Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…",
       images: ["https://viettelcx.com.vn/images/website.png"],
