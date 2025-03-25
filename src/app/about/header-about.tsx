@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import bgHeader from "../../../public/images/bg-header-about.png";
-import titleThauHieu from "../../../public/images/title-thau-hieu2.png";
+// import titleThauHieu from "../../../public/images/title-thau-hieu2.png";
 import imgYear from "../../../public/images/img-year-desk.png";
 import imgYearMobile from "../../../public/images/img-year-mobile.png";
 import imgYearMobilexm from "../../../public/images/img-year-mobile-sm.png";

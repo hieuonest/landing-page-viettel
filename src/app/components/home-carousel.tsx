@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
-import upsale from "../../../public/images/upsale.png";
 import { ArrowUpRight} from "lucide-react";
 import { roboto } from "@/lib/font";
 import Link from "next/link";

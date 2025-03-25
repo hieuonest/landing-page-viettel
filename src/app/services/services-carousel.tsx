@@ -7,11 +7,9 @@ import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import { roboto } from "@/lib/font";
-import loyalty from "../../../public/images/loyalty.png";
 import MotionWrapper from "@/components/ui/motion-wrapper";
 import { fadeInBottomVariants } from "@/lib/utils";
 import { dataServicesHome } from "@/lib/define-data";
-import { FormItem } from "@/components/ui/form";
 
 function ServicesCarousel({}) {
   const [activeIndex, setActiveIndex] = React.useState(0);

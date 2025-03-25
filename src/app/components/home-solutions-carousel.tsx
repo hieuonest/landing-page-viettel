@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+// } from "@/components/ui/carousel";
+// import Autoplay from "embla-carousel-autoplay";
 import { homeSolutions } from "@/lib/define-data";
 import MarqueeWrapper from "@/components/ui/marquee-wrapper";
 
