@@ -53,7 +53,7 @@ export const dataServicesHome: {
     list: string[];
     title?: string;
   }[];
-  additional?: string | JSX.Element;
+  additional?: string | string[];
 }[] = [
   {
     value: "outsourcing",
@@ -165,8 +165,9 @@ export const dataServicesHome: {
           "Dịch vụ phát triển thương hiệu và xử lý sự cố:  Seeding/pha loãng/ xử lý sự cố",
           "Dịch vụ khảo sát khách hàng",
         ],
-      }
-    ]
+      },
+    ],
+    additional: ["20.000++ tương tác/tháng", "12.000++ lượt seeding/tháng"],
   },
   {
     value: "customer-experience",
@@ -175,6 +176,25 @@ export const dataServicesHome: {
     desc: "Dịch vụ Customer Experience",
     detailHome:
       "Dịch vụ Đánh giá & Nâng cao Trải nghiệm Khách hàng (CX) của Viettel Customer Service giúp doanh nghiệp đo lường, phân tích và tối ưu hóa hành trình khách hàng, từ đó cải thiện sự hài lòng và tăng tỷ lệ trung thành",
+    detail: [
+      {
+        title: "Giải pháp của Viettel Customer Service:",
+        list: [
+          "Đánh giá Trải nghiệm khách hàng",
+          "Phân tích hành trình khách hàng",
+          "Tư vấn và triển khai các giải pháp nâng cao trải nghiệm khách hàng",
+          "Cá nhân hoá dịch vụ bằng AI và Automation",
+        ],
+      },
+      {
+        title: "Giúp:",
+        list: [
+          "Tăng 25% tỷ lệ giữ chân khách hàng",
+          "Cải thiện 30% chỉ số NPS",
+          "Tối ưu quy trình chăm sóc khách hàng, giảm thời gian xử lý yêu cầu tối 40%",
+        ],
+      },
+    ],
   },
 ];
 
