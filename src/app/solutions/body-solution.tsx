@@ -15,7 +15,7 @@ export default function BodySolution() {
   return (
     <main className="bg-white">
       <div className="max-w-[90%] pt-[50px] xl:max-w-[1120px] mx-auto container relative z-20">
-        <div className="block sm:grid sm:grid-cols-7 justify-between gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-7 justify-between gap-8">
           <MotionWrapper
             element="div"
             viewport={{ once: true, amount: 0.4 }}
@@ -25,7 +25,7 @@ export default function BodySolution() {
               hidden: { opacity: 0, x: -100 },
               visible: { opacity: 1, x: 0, transition: { duration: 1.5 } },
             }}
-            className="col-span-3 mb-[12px] sm:mb[0]"
+            className="col-span-3 mb-[12px] sm:mb[0] flex items-center justify-center"
           >
             <Image src={imgSolution} alt="" quality={100}/>
           </MotionWrapper>
@@ -52,7 +52,7 @@ export default function BodySolution() {
 
         <hr className="mt-[50px] mb-[50px] sm:mt-[74px] sm:mb-[74px]" />
 
-        <div className="block sm:grid sm:grid-cols-2 justify-between gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-8">
           <div className="col-span-1 mb-[12px] sm:mb-[0]">
             <div
               className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px]`}
@@ -86,7 +86,7 @@ export default function BodySolution() {
               hidden: { opacity: 0, x: 100 },
               visible: { opacity: 1, x: 0, transition: { duration: 1.5 } },
             }}
-            className="col-span-1"
+            className="col-span-1 flex items-center justify-center"
           >
             <Image src={imgSolution1} alt="" quality={100}/>
           </MotionWrapper>
@@ -94,7 +94,7 @@ export default function BodySolution() {
 
         <hr className="mt-[50px] mb-[50px] sm:mt-[74px] sm:mb-[74px]" />
 
-        <div className="block sm:grid sm:grid-cols-7 justify-between gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-7 justify-between gap-8">
           <MotionWrapper
             element="div"
             // initial={{ opacity: 0, x: -100 }}
@@ -108,7 +108,7 @@ export default function BodySolution() {
               hidden: { opacity: 0, x: -100 },
               visible: { opacity: 1, x: 0, transition: { duration: 1.5 } },
             }}
-            className="col-span-3 mb-[12px] sm:mb[0]"
+            className="col-span-3 mb-[12px] sm:mb[0] flex items-center justify-center"
           >
             <Image src={imgSolution2} alt="" className="h-[100%]" quality={100}/>
           </MotionWrapper>
@@ -160,7 +160,7 @@ export default function BodySolution() {
           quality={100}
         />
         <div className="max-w-[90%] xl:max-w-[1120px] mx-auto container relative z-20">
-          <div className="block sm:grid  sm:grid-cols-2 justify-between gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-8">
             <div className="col-span-1  mb-[12px] sm:mb-[0px]">
               <div
                 className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px]`}
@@ -177,7 +177,7 @@ export default function BodySolution() {
                 trữ, tổ chức và truy xuất thông tin nhanh chóng. Tích hợp AI để
                 hỗ trợ tìm kiếm thông minh, giúp nhân viên tổng đài và khách
                 hàng tiếp cận thông tin chính xác tức thì, tối ưu hóa quy trình
-                giải quyết vấn đề.
+                giải quyết <span className="whitespace-nowrap">vấn đề</span>.
               </div>
             </div>
 
@@ -198,16 +198,16 @@ export default function BodySolution() {
                   transition: { duration: 2 },
                 },
               }}
-              className="col-span-1"
+              className="col-span-1 flex items-center justify-center"
             >
               <Image src={imgSolution3} alt="" quality={100}/>
             </MotionWrapper>
           </div>
 
-          <div className="block sm:grid  sm:grid-cols-7 justify-between mt-[50px] gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-7 justify-between mt-[50px] gap-8">
             <MotionWrapper
               element="div"
-              className="col-span-3 mb-[12px] sm:mb-[0]"
+              className="col-span-3 mb-[12px] sm:mb-[0] flex justify-center items-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.4 }}
@@ -244,7 +244,7 @@ export default function BodySolution() {
             </div>
           </div>
 
-          <div className="block sm:grid  sm:grid-cols-2 justify-between mt-[50px] gap-8 pb-[0px] sm:pb-[30px] xl:pb-[0px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 justify-between mt-[50px] gap-8 pb-[0px] md:pb-[30px] xl:pb-[0px]">
             <div className="col-span-1">
               <div
                 className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px]`}
