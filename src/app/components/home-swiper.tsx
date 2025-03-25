@@ -57,7 +57,7 @@ function HomeSwiper() {
           className={`!flex items-center justify-center `}
           key={index}
         >
-          <div className="w-full min-h-[520px] lg:min-h-[650px] rounded-[20px] bg-[#3E3E3E] flex max-lg:flex-col max-sm:gap-3 relative justify-between pt-4 sm:py-[20px] md:py-[48px] lg:py-[70px] pl-0 sm:pl-[36px] sm:pr-[36px] gap-[10px] md:gap-[0]">
+          <div className="w-full min-h-[520px] lg:min-h-[650px] rounded-[20px] bg-[#3E3E3E] flex max-lg:flex-col max-sm:gap-3 relative justify-between pt-4 sm:py-[20px] md:py-[48px] lg:py-[70px] pl-0 sm:pl-[36px] sm:pr-[36px] lg:pr-[0px] gap-[10px] md:gap-[0]">
             <div
               className={`${roboto.className} lg:max-w-[408px] flex flex-col pr-2 md:pr-[42px] flex-1 pl-4 sm:pl-0`}
             >
