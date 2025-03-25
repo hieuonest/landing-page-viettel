@@ -207,7 +207,7 @@ export default function BodySolution() {
           <div className="grid grid-cols-1 md:grid-cols-7 justify-between mt-[50px] gap-8">
             <MotionWrapper
               element="div"
-              className="col-span-3 mb-[12px] sm:mb-[0] flex justify-center items-center"
+              className="col-span-7 md:col-span-3 mb-[12px] sm:mb-[0] flex justify-center items-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.4 }}
@@ -223,7 +223,7 @@ export default function BodySolution() {
             >
               <Image src={imgSolution4} alt="" className="h-[100%]" quality={100}/>
             </MotionWrapper>
-            <div className="col-span-4">
+            <div className="col-span-7 md:col-span-4">
               <div
                 className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px]`}
               >

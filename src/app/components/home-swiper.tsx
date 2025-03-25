@@ -112,7 +112,6 @@ function HomeSwiper() {
       </button>
 
       <div className="swiper-pagination !absolute !w-fit px-4 min-h-[20px] bg-black rounded-full !bottom-2 md:!bottom-6 !left-2 md:!left-16 flex items-center gap-3"></div>
-      <div className="swiper-pagination !absolute !w-fit px-4 min-h-[20px] bg-black rounded-full !bottom-2 md:!bottom-6 !left-2 md:!left-16 flex items-center gap-3"></div>
      
     </Swiper>
     {/* BUTTON BÊN PHẢI */}

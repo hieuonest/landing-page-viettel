@@ -34,6 +34,7 @@ function HomeSolutionsCarousel() {
       // gradient
       pauseOnClick
       pauseOnHover
+      className="max-md:mt-10"
     >
       {homeSolutions.map((item, index) => (
           <div
