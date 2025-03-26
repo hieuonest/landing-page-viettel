@@ -69,6 +69,7 @@ export default function Home() {
       title: "20",
       tailing: "năm",
       desc: "kinh nghiệm",
+      
     },
     {
       icon: <ClientsIcon color="#858585" />,
