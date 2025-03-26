@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { fsMagistralBook, roboto } from "@/lib/font";
@@ -12,47 +13,12 @@ import HomeSwiper from "./components/home-swiper";
 import HomeCounUp from "./components/home-count-up";
 import MotionWrapper from "@/components/ui/motion-wrapper";
 import ArrowDownIcon from "@/components/icons/arrow-down-icon";
-import { Metadata } from "next";
 import gradientBg from "../../public/images/gradient-bg.png";
 import gradientRedBg from "../../public/images/gradient-bg-red.png";
 import HomeCarousel from "./components/home-carousel";
-
+import { NextSeo } from 'next-seo';
 import HomePartnersCarousel from "./components/home-partners-carousel";
 import HomeSolutionsCarousel from "./components/home-solutions-carousel";
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "Viettel Customer Service",
-    description:
-      "Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…",
-    openGraph: {
-      title: "Viettel Customer Service",
-      siteName: "Viettel Customer Service",
-      description:
-        "Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…",
-      url: "https://viettelcx.com.vn/",
-      type: "website",
-      images: [
-        {
-          url: "https://viettelcx.com.vn/images/website.png",
-          width: 1151,
-          height: 768,
-          alt: "Viettel Cx",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "Viettel Customer Service",
-      description:
-        "Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…",
-      images: ["https://viettelcx.com.vn/images/website.png"],
-    },
-    alternates: {
-      canonical: "https://viettelcx.com.vn/",
-    },
-  };
-}
 
 type ExpItem = {
   icon: React.JSX.Element;
@@ -99,6 +65,39 @@ export default function Home() {
   ];
 
   return (
+    <>
+    <NextSeo
+      title="Viettel Customer Service"
+      description="Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…"
+      canonical="https://viettelcx.com.vn/"
+      openGraph={{
+        url: 'https://viettelcx.com.vn/',
+        title: 'Viettel Customer Service',
+        description: 'Viettel Customer Service - công ty công nghệ, cung cấp hệ sinh thái về dịch vụ khách hàng; nền tảng, giải pháp phần mềm đa kênh từ trực tiếp đến trực tuyến, AI bot, tổng đài thông minh…',
+        images: [
+          {
+            url: 'https://viettelcx.com.vn/images/website.png',
+            width: 1151,
+            height: 768,
+            alt: 'Og Image Alt',
+            type: 'image/png',
+          },
+          {
+            url: 'https://viettelcx.com.vn/images/website.png',
+            width: 900,
+            height: 800,
+            alt: 'Og Image Alt Second',
+            type: 'image/png',
+          },
+        ],
+        siteName: 'SiteName',
+      }}
+      twitter={{
+        handle: '@handle',
+        site: '@site',
+        cardType: 'summary_large_image',
+      }}
+    />
     <div>
       <main className="">
         <section className="lg:bg-[#e7e7e7] lg:h-[932px] relative">
@@ -355,5 +354,6 @@ export default function Home() {
         </section>
       </main>
     </div>
+    </>
   );
 }
