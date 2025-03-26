@@ -13,9 +13,7 @@ function ServicesCarousel({}) {
   const [activeIndex, setActiveIndex] = React.useState(0);
 
   return (
-    <div
-      className="max-[350px]:w-[100dvw] w-[97dvw] xl:w-[85dvw] 2xl:w-[85dvw] 3xl:w-[85dvw] mt-28 overflow-visible"
-    >
+    <div className="max-[350px]:w-[100dvw] w-[97dvw] xl:w-[85dvw] 2xl:w-[85dvw] 3xl:w-[85dvw] mt-28 overflow-visible">
       <Swiper
         modules={[Navigation, Autoplay]}
         navigation={{
@@ -81,13 +79,45 @@ function ServicesCarousel({}) {
                   </span>
                 </h1>
 
-                <p
+                {/* <p
                   className={`text-[13px] xs:text-base relative z-[2] mt-4 lg:mt-6 ${
                     activeIndex === index ? "text-white" : "text-[#595959]"
                   }`}
                 >
                   {item.detailHome}
-                </p>
+                </p> */}
+                <div
+                  className={`${
+                    activeIndex === index ? "text-white" : "text-[#595959]"
+                  }`}
+                >
+                  {Array.isArray(item.detailHome) ? (
+                    item.detailHome.map((sentence, index) => (
+                      <p
+                        key={index}
+                        className={`text-[13px] xs:text-base relative z-[2] mt-4 lg:mt-6 `}
+                      >
+                        {sentence.map((part, i) =>
+                          typeof part === "string" ? (
+                            part
+                          ) : (
+                            <span key={i} className="whitespace-nowrap ">
+                              {part.text}
+                            </span>
+                          )
+                        )}
+                      </p>
+                    ))
+                  ) : (
+                    <p
+                      className={`text-[13px] xs:text-base relative z-[2] mt-4 lg:mt-6 ${
+                        activeIndex === index ? "text-white" : "text-[#595959]"
+                      }`}
+                    >
+                      {item.detailHome}
+                    </p>
+                  )}
+                </div>
                 <div
                   className={`${
                     activeIndex === index ? "text-white" : "text-[#595959]"
@@ -100,8 +130,7 @@ function ServicesCarousel({}) {
                     item.detail.map((item, index) => (
                       <Fragment key={`detail_${index}`}>
                         <p className="font-medium">{item.title}</p>
-                        <ul className="ml-4 space-y-1"
-                        >
+                        <ul className="ml-4 space-y-1">
                           {item.list.map((item, index) => (
                             <li key={`list_${index}`} className="list-disc">
                               {item}
@@ -112,9 +141,7 @@ function ServicesCarousel({}) {
                     ))}
 
                   {Array.isArray(item.additional) ? (
-                    <ul
-                      className="mt-2 ml-4 space-y-1"
-                    >
+                    <ul className="mt-2 ml-4 space-y-1">
                       {item.additional.map((item, index) => (
                         <li key={`add_${index}`} className="">
                           {item}
@@ -122,11 +149,7 @@ function ServicesCarousel({}) {
                       ))}
                     </ul>
                   ) : (
-                    <p
-                      className="mt-2"
-                    >
-                      {item.additional}
-                    </p>
+                    <p className="mt-2">{item.additional}</p>
                   )}
                 </div>
               </div>
