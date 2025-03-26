@@ -55,7 +55,7 @@ export const dataServicesHome: {
   label: string;
   image: StaticImageData;
   desc: string;
-  detailHome: string;
+  detailHome: Array<string | { text: string; nowrap: boolean }>[] | string;
   detail?: {
     list: string[];
     title?: string;
@@ -67,16 +67,30 @@ export const dataServicesHome: {
     label: "Outsourcing Contact Center",
     image: outsourcing,
     desc: "Dịch vụ Outsourcing Contact Center",
-    detailHome:
-      "Viettel Customer Service cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng của doanh nghiệp",
+    detailHome: [
+      [
+        "Viettel Customer Service cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng ",
+        {
+          text: "doanh nghiệp",
+          nowrap: true,
+        },
+      ],
+    ],
   },
   {
     value: "bpo",
     label: "BPO",
     image: bpo,
     desc: "Dịch vụ BPO",
-    detailHome:
-      "Tối ưu vận hành, tiết kiệm chi phí và nâng cao hiệu suất bằng dịch vụ BPO - thuê ngoài các quy trình, nhân sự nghiệp vụ",
+    detailHome: [
+      [
+        "Tối ưu vận hành, tiết kiệm chi phí và nâng cao hiệu suất bằng dịch vụ BPO - thuê ngoài các quy trình, nhân sự ",
+        {
+          text: "nghiệp vụ",
+          nowrap: true,
+        },
+      ],
+    ],
     detail: [
       {
         list: [
@@ -93,8 +107,15 @@ export const dataServicesHome: {
     label: "Upsale",
     image: upsale,
     desc: "Dịch vụ gia tăng doanh số",
-    detailHome:
-      "Tiếp cận khách hàng đa kênh, gia tăng độ phủ về kênh bán, thúc đẩy gia tăng doanh số cùng giải pháp từ Viettel Customer Service",
+    detailHome: [
+      [
+        "Tiếp cận khách hàng đa kênh, gia tăng độ phủ về kênh bán, thúc đẩy gia tăng doanh số cùng giải pháp từ ",
+        {
+          text: "Viettel Customer Service",
+          nowrap: true,
+        },
+      ],
+    ],
     detail: [
       {
         list: [
@@ -111,8 +132,15 @@ export const dataServicesHome: {
     label: "Bảo hành",
     image: baohanh,
     desc: "Dịch vụ Bảo hành",
-    detailHome:
-      "Viettel Customer Service cung cấp cho doanh nghiệp giải pháp bảo hành toàn diện, với đội ngũ nhân sự trên 10 năm kinh nghiệm và trạm sửa chữa trên 63 tỉnh thành",
+    detailHome: [
+      [
+        "Viettel Customer Service cung cấp cho doanh nghiệp giải pháp bảo hành toàn diện, với đội ngũ nhân sự trên 10 năm kinh nghiệm và trạm sửa chữa ",
+        {
+          text: "trên 63 tỉnh thành",
+          nowrap: true,
+        },
+      ],
+    ],
     detail: [
       {
         list: [
@@ -130,8 +158,15 @@ export const dataServicesHome: {
     label: "Loyalty",
     image: loyalty,
     desc: "Dịch vụ Loyalty",
-    detailHome:
-      "Giải pháp của Viettel Customer Service giúp doanh nghiệp xây dựng, duy trì và gia tăng sự gắn bó của khách hàng thông qua các chương trình tích điểm, ưu đãi, đặc quyền và cá nhân hóa trải nghiệm",
+    detailHome: [
+      [
+        "Giải pháp của Viettel Customer Service giúp doanh nghiệp xây dựng, duy trì và gia tăng sự gắn bó của khách hàng thông qua các chương trình tích điểm, ưu đãi, đặc quyền và ",
+        {
+          text: "cá nhân hóa trải nghiệm",
+          nowrap: true,
+        },
+      ],
+    ],
     detail: [
       {
         list: [
@@ -147,8 +182,15 @@ export const dataServicesHome: {
     label: "CSKH VIP / Ưu tiên",
     image: vip,
     desc: "Dịch vụ CSKH VIP / Ưu tiên",
-    detailHome:
-      "Giải pháp cung cấp quà tặng cá nhân hóa theo từng nhóm khách hàng, dịch vụ sự kiện giúp doanh nghiệp tri ân, gắn kết và nâng cao trải nghiệm khách hàng",
+    detailHome: [
+      [
+        "Giải pháp cung cấp quà tặng cá nhân hóa theo từng nhóm khách hàng, dịch vụ sự kiện giúp doanh nghiệp tri ân, gắn kết và nâng cao ",
+        {
+          text: "trải nghiệm khách hàng",
+          nowrap: true,
+        },
+      ],
+    ],
     detail: [
       {
         list: [
@@ -163,8 +205,15 @@ export const dataServicesHome: {
     label: "Voice of Customer",
     image: voiceofcustomer,
     desc: "Dịch vụ Voice of Customer",
-    detailHome:
-      "Bảo vệ và phát triển thương hiệu của doanh nghiệp trên môi trường số. Viettel Customer Service giúp doanh nghiệp thu thập, phân tích và khai thác ý kiến khách hàng từ nhiều kênh khác nhau, từ đó phát hiện và cảnh báo khủng hoảng truyền thông",
+    detailHome: [
+      [
+        "Bảo vệ và phát triển thương hiệu của doanh nghiệp trên môi trường số. Viettel Customer Service giúp doanh nghiệp thu thập, phân tích và khai thác ý kiến khách hàng từ nhiều kênh khác nhau, từ đó phát hiện và cảnh báo khủng hoảng ",
+        {
+          text: "truyền thông",
+          nowrap: true,
+        },
+      ],
+    ],
     detail: [
       {
         list: [
@@ -181,8 +230,15 @@ export const dataServicesHome: {
     label: "Customer Experience",
     image: customerexperience,
     desc: "Dịch vụ Customer Experience",
-    detailHome:
-      "Dịch vụ Đánh giá & Nâng cao Trải nghiệm Khách hàng (CX) của Viettel Customer Service giúp doanh nghiệp đo lường, phân tích và tối ưu hóa hành trình khách hàng, từ đó cải thiện sự hài lòng và tăng tỷ lệ trung thành",
+    detailHome: [
+      [
+        "Dịch vụ Đánh giá & Nâng cao Trải nghiệm Khách hàng (CX) của Viettel Customer Service giúp doanh nghiệp đo lường, phân tích và tối ưu hóa hành trình khách hàng, từ đó cải thiện sự hài lòng và tăng tỷ lệ ",
+        {
+          text: "trung thành",
+          nowrap: true,
+        },
+      ],
+    ],
     detail: [
       {
         title: "Giải pháp của Viettel Customer Service:",
@@ -556,7 +612,8 @@ export const historyDetailAbout: HistoryDetail[] = [
   {
     year: 2014,
     id: "2010 - 2014",
-    title: "Trung tâm giải đáp khách hàng - Những cuộc gọi đầu tiên",
+    // title: "Trung tâm giải đáp khách hàng - Những cuộc gọi đầu tiên",
+    title: "Triển khai dịch vụ tổng đài & telesales",
     content: {
       header: "Mở rộng",
       title: "Từ phản hồi đến chủ động kết nối",
