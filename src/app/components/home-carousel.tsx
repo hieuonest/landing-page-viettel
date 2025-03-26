@@ -4,9 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
+import {
+  Pagination,
+  Navigation,
+  Autoplay,
+  EffectCoverflow,
+} from "swiper/modules";
 import Image from "next/image";
-import { ArrowUpRight} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { roboto } from "@/lib/font";
 import Link from "next/link";
 import { dataServicesHome } from "@/lib/define-data";
@@ -21,7 +26,7 @@ function HomeCarousel() {
       coverflowEffect={{
         rotate: 0,
         stretch: 0,
-        depth: 100, 
+        depth: 100,
         modifier: 1,
         slideShadows: true,
       }}
@@ -48,20 +53,58 @@ function HomeCarousel() {
       {dataServicesHome.map((item, index) => (
         <SwiperSlide className="relative !w-full" key={index}>
           <div className="relative overflow-hidden">
-            <Image src={item.image} alt={item.value} className={`${item.value === "outsourcing" ? "object-[65%_0]" : ""}${item.value === "bpo" ? "object-[85%_0]" : ""}${item.value === "upsale" ? "object-[55%_0]" : ""}${item.value === "loyalty" ? "object-[40%_0]" : ""}${item.value === "cskh" ? "object-[80%_0]" : ""}${item.value === "customer-experience" ? "object-[70%_0]" : ""} md:object-center object-cover w-[100dvw] min-h-[500px] sm:min-h-[375px] h-full`} quality={100}/>
+            <Image
+              src={item.image}
+              alt={item.value}
+              className={`${
+                item.value === "outsourcing" ? "object-[65%_0]" : ""
+              }${item.value === "bpo" ? "object-[85%_0]" : ""}${
+                item.value === "upsale" ? "object-[55%_0]" : ""
+              }${item.value === "loyalty" ? "object-[40%_0]" : ""}${
+                item.value === "cskh" ? "object-[80%_0]" : ""
+              }${
+                item.value === "customer-experience" ? "object-[70%_0]" : ""
+              } md:object-center object-cover w-[100dvw] min-h-[500px] sm:min-h-[375px] h-full`}
+              quality={100}
+            />
           </div>
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black min-h-[351px] flex items-end justify-center">
             <div
               className={`${roboto.className} flex flex-col gap-4 items-center text-center justify-end pb-12 md:pb-9 text-white `}
             >
-              <h1 className="text-[40px] md:text-[55px] font-light leading-[60px]">{item.label}</h1>
+              <h1 className="text-[40px] md:text-[55px] font-light leading-[60px]">
+                {item.label}
+              </h1>
               <h2 className="text-sm md:text-lg font-medium uppercase">
                 {item.desc}
               </h2>
 
-              <p className="text-[#D9D9D9] text-sm md:text-lg max-w-[90%] xs:max-w-[80%] md:max-w-[485px]">
-                {item.detailHome}
-              </p>
+              {Array.isArray(item.detailHome) ? (
+                item.detailHome.map((sentence, index) => (
+                  <p
+                    key={index}
+                    className="text-[#D9D9D9] text-sm md:text-lg max-w-[90%] xs:max-w-[80%] md:max-w-[485px]"
+                  >
+                    {sentence.map((part, i) =>
+                      typeof part === "string" ? (
+                        part
+                      ) : (
+                        <span key={i} className="whitespace-nowrap">
+                          {part.text}
+                        </span>
+                      )
+                    )}
+                  </p>
+                ))
+              ) : (
+                <p
+                  key={index}
+                  className="text-[#D9D9D9] text-sm md:text-lg max-w-[90%] xs:max-w-[80%] md:max-w-[485px]"
+                >
+                  {item.detailHome}
+                </p>
+              )}
+
               <Link
                 href="/services"
                 className="flex items-center relative text-[#EA0033] text-lg group transition-all duration-300 see-more-link"

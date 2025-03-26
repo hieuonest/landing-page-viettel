@@ -209,9 +209,9 @@ function ServicesSection() {
               </span>
             </h1>
             <p className="max-w-[645px] text-sm xs:text-base xl:text-lg mt-3">
-              Viettel Customer Service cung cấp dịch vụ toàn trình, bao gồm: Nhân sự, nền tảng
-              giải pháp, quy trình,... cho hệ thống tổng đài chăm sóc khách hàng
-              của doanh nghiệp, giúp:
+              Viettel Customer Service cung cấp dịch vụ toàn trình, bao gồm:
+              Nhân sự, nền tảng giải pháp, quy trình,... cho hệ thống tổng đài
+              chăm sóc khách hàng của doanh nghiệp, giúp:
             </p>
           </div>
 
@@ -225,10 +225,7 @@ function ServicesSection() {
             </ul>
 
             <div>
-              <p>
-                Với hệ thống tổng đài hiện đại và đội ngũ chuyên nghiệp, Viettel
-                CX giúp:
-              </p>
+              <p>Hệ thống tổng đài hiện đại và đội ngũ chuyên nghiệp giúp:</p>
               <div className="space-y-3 1080px:space-y-6 mt-2 1080px:mt-6">
                 <div className="flex items-center gap-2 xl:gap-3">
                   <p className="flex items-end text-right text-[20px] lg:text-[23px] xl:text-[28px] text-black">
@@ -251,8 +248,6 @@ function ServicesSection() {
                   <p>cuộc gọi / ngày</p>
                 </div>
               </div>
-
-              
             </div>
           </div>
         </div>
