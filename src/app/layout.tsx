@@ -3,6 +3,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { roboto } from "@/lib/font";
 import ButtonToTop from "@/components/ui/button-to-top";
+import Chat from "./components/chat";
 
 export default function RootLayout({
   children,
@@ -12,6 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased max-w-[100dvw] overflow-x-hidden">
+        <Chat />
         <Header />
         <a href="tel:0969966699">
           <aside

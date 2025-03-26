@@ -21,7 +21,7 @@ function ButtonToTop() {
 
   return showButton ? (
     <button
-      className="w-[40px] h-[40px] bg-[#fff] rounded-full fixed bottom-9 right-4 z-50 flex items-center justify-center shadow-[0_4px_4px_0_rgba(0,0,0,0.1)]"
+      className="w-[40px] h-[40px] bg-[#fff] rounded-full fixed bottom-[120px] right-[27px] z-50 flex items-center justify-center shadow-[0_4px_4px_0_rgba(0,0,0,0.1)]"
       onClick={handleOnClick}
     >
       <Image src={iconScroll} alt="Scroll to top" width={17.5} height={23} />
