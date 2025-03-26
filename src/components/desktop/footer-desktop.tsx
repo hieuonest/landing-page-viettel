@@ -35,9 +35,9 @@ export default function FooterDestop() {
           <div
             className={`${roboto.className} text-sm text-black space-y-3 flex flex-col max-w-[297px] self-end`}
           >
-            <p>Điện thoại: <a href="tel:02462656168">
+            {/* <p>Điện thoại: <a href="tel:02462656168">
               02462656168
-            </a></p>
+            </a></p> */}
             <p>Email: <a href="mailto:dvkh@viettel.com.vn">dvkh@viettel.com.vn</a></p>
             <p>
               Địa chỉ: Toà nhà OCT 3B Khu Đô thị mới Resco, Cổ Nhuế, Xuân Đỉnh,

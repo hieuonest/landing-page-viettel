@@ -48,9 +48,9 @@ export default function FooterMobile() {
         <div
           className={`${roboto.className} text-sm text-black space-y-2 flex flex-col max-w-[297px] self-end`}
         >
-          <div>
+          {/* <div>
             Điện thoại: <a href="tel:02462656168">02462656168</a>
-          </div>
+          </div> */}
           <div>
             Email: <a href="mailto:dvkh@viettel.com.vn">dvkh@viettel.com.vn</a>
           </div>
