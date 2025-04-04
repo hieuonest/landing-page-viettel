@@ -51,6 +51,17 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: "https://viettelcx.com.vn/",
     },
+    keywords: [
+      "Viettel",
+      "Viettel chăm sóc khách hàng",
+      "Viettel Customer Service",
+      "Viettel Cx",
+      "Chăm sóc khách hàng",
+      "chăm sóc khách hàng Viettel",
+      "dịch vụ khách hàng Viettel",
+      "giải pháp CX",
+    ],
+    robots: "index, follow",
   };
 }
 
@@ -69,7 +80,6 @@ export default function Home() {
       title: "20",
       tailing: "năm",
       desc: "kinh nghiệm",
-      
     },
     {
       icon: <ClientsIcon color="#858585" />,
@@ -336,7 +346,7 @@ export default function Home() {
         </section>
 
         <HomeSolutionsCarousel />
-        
+
         <section className="relative flex flex-col lg:flex-row items-center gap-4 md:gap-3 max-w-[1560px] py-9 md:py-20 mx-auto px-3 md:px-8">
           <MotionWrapper
             element="h1"

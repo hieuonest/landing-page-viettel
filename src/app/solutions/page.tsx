@@ -34,6 +34,18 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: "https://viettelcx.com.vn/solutions",
     },
+    keywords: [
+      "Viettel",
+      "viettelcx solutions",
+      "Viettel chăm sóc khách hàng",
+      "Viettel Customer Service",
+      "Viettel Cx",
+      "Chăm sóc khách hàng",
+      "chăm sóc khách hàng Viettel",
+      "dịch vụ khách hàng Viettel",
+      "giải pháp CX",
+    ],
+    robots: "index, follow",
   };
 }
 
