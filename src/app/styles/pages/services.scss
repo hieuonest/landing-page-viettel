@@ -1,6 +1,6 @@
 .services-carousel {
-  position: unset!important;
-  
+  position: unset !important;
+
   .services-carousel__swiper-button-prev {
     background-image: url("../../../../public/svg/chevron-left.svg");
     left: 0;
@@ -32,4 +32,12 @@
   &::-webkit-scrollbar {
     height: 3px;
   }
+}
+
+.book-wrapper {
+  // div {
+  //   background: transparent !important;
+  // }
+  color: white !important;
+
 }

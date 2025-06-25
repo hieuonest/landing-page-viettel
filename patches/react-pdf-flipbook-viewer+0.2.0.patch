@@ -1,0 +1,59 @@
+diff --git a/node_modules/react-pdf-flipbook-viewer/dist/components/flipbook-viewer/flipbook-viewer.js b/node_modules/react-pdf-flipbook-viewer/dist/components/flipbook-viewer/flipbook-viewer.js
+index b070a41..3f98df6 100644
+--- a/node_modules/react-pdf-flipbook-viewer/dist/components/flipbook-viewer/flipbook-viewer.js
++++ b/node_modules/react-pdf-flipbook-viewer/dist/components/flipbook-viewer/flipbook-viewer.js
+@@ -35,7 +35,7 @@ const FlipbookViewer = ({ pdfUrl, shareUrl, className, disableShare = false }) =
+             setPdfLoading(false); // Ensure loading stops even on error
+         }
+     }, []);
+-    return (React.createElement("div", { ref: containerRef, className: cn("relative h-[30.244rem] xs:h-[37.744rem] lg:h-[49.744rem] xl:h-[51.99rem] bg-gray-800 w-full overflow-hidden", className ?? '') },
++    return (React.createElement("div", { ref: containerRef, className: cn("relative h-[30.244rem] xs:h-[37.744rem] lg:h-[49.744rem] xl:h-[51.99rem] bg-transparent w-full overflow-hidden", className ?? '') },
+         " ",
+         pdfLoading && React.createElement(PdfLoading, null),
+         React.createElement(Document, { file: pdfUrl, onLoadSuccess: onDocumentLoadSuccess, onLoadError: (error) => {
+@@ -43,7 +43,7 @@ const FlipbookViewer = ({ pdfUrl, shareUrl, className, disableShare = false }) =
+                 setPdfLoading(false); // Stop loading on error
+             }, loading: React.createElement(React.Fragment, null) }, (pdfDetails && !pdfLoading) &&
+             React.createElement(TransformWrapper, { doubleClick: { disabled: true }, pinch: { step: 2 }, disablePadding: viewerStates?.zoomScale <= 1, initialScale: 1, minScale: 1, maxScale: 5, onTransformed: ({ state }) => setViewerStates(prev => ({ ...prev, zoomScale: state.scale })) },
+-                React.createElement("div", { className: "w-full h-full relative bg-gray-700 flex flex-col" },
++                React.createElement("div", { className: "w-full h-full relative bg-transparent flex flex-col" },
+                     React.createElement(Flipbook, { viewerStates: viewerStates, setViewerStates: setViewerStates, ref: flipbookRef, screenfull: screenfull, pdfDetails: pdfDetails }),
+                     React.createElement(Toolbar, { viewerStates: viewerStates, setViewerStates: setViewerStates, containerRef: containerRef, flipbookRef: flipbookRef, screenfull: screenfull, pdfDetails: pdfDetails, shareUrl: shareUrl, disableShare: disableShare }))))));
+ };
+diff --git a/node_modules/react-pdf-flipbook-viewer/dist/components/flipbook-viewer/flipbook/flipbook-loader.js b/node_modules/react-pdf-flipbook-viewer/dist/components/flipbook-viewer/flipbook/flipbook-loader.js
+index a83efa0..7290405 100644
+--- a/node_modules/react-pdf-flipbook-viewer/dist/components/flipbook-viewer/flipbook/flipbook-loader.js
++++ b/node_modules/react-pdf-flipbook-viewer/dist/components/flipbook-viewer/flipbook/flipbook-loader.js
+@@ -30,7 +30,7 @@ const FlipbookLoader = forwardRef(({ pdfDetails, scale, viewerStates, setViewerS
+         }));
+     }, [viewerStates, viewRange, setViewRange, setViewerStates, pdfDetails.totalPages]);
+     return (React.createElement("div", { className: "relative" },
+-        React.createElement(HTMLFlipBook, { ref: ref, key: scale, startPage: viewerStates.currentPageIndex, width: pdfDetails.width * scale * 5, height: pdfDetails.height * scale * 5, size: "stretch", drawShadow: false, flippingTime: 700, usePortrait: false, showCover: true, showPageCorners: false, onFlip: onFlip, disableFlipByClick: width < 768 ? true : false, className: viewerStates.zoomScale > 1 ? 'pointer-events-none md:pointer-events-none' : '' }, Array.from({ length: pdfDetails.totalPages }, (_, index) => (React.createElement(MemoizedPdfPage, { key: index, height: pdfDetails.height * scale, zoomScale: debouncedZoom, page: index + 1, isPageInViewRange: isPageInViewRange(index), isPageInView: isPageInView(index) }))))));
++        React.createElement(HTMLFlipBook, { ref: ref, key: scale, startPage: viewerStates.currentPageIndex, width: pdfDetails.width * scale * 5, height: pdfDetails.height * scale * 5, size: "stretch", drawShadow: true, maxShadowOpacity: 0.2, flippingTime: 700, usePortrait: true, showCover: true, showPageCorners: false, onFlip: onFlip, disableFlipByClick: width < 768 ? true : false, className: viewerStates.zoomScale > 1 ? 'pointer-events-none md:pointer-events-none' : '' }, Array.from({ length: pdfDetails.totalPages }, (_, index) => (React.createElement(MemoizedPdfPage, { key: index, height: pdfDetails.height * scale, zoomScale: debouncedZoom, page: index + 1, isPageInViewRange: isPageInViewRange(index), isPageInView: isPageInView(index) }))))));
+ });
+ FlipbookLoader.displayName = 'FlipbookLoader';
+ export default FlipbookLoader;
+diff --git a/node_modules/react-pdf-flipbook-viewer/dist/components/flipbook-viewer/toolbar/toolbar.js b/node_modules/react-pdf-flipbook-viewer/dist/components/flipbook-viewer/toolbar/toolbar.js
+index 1ff4541..a9abc67 100644
+--- a/node_modules/react-pdf-flipbook-viewer/dist/components/flipbook-viewer/toolbar/toolbar.js
++++ b/node_modules/react-pdf-flipbook-viewer/dist/components/flipbook-viewer/toolbar/toolbar.js
+@@ -53,9 +53,9 @@ const Toolbar = ({ flipbookRef, containerRef, screenfull, pdfDetails, viewerStat
+     }, [flipbookRef]); // Dependency: flipbookRef
+     const canFlipPrev = viewerStates.currentPageIndex > 0;
+     const canFlipNext = viewerStates.currentPageIndex < pdfDetails.totalPages - 1;
+-    return (React.createElement("div", { className: "fixed bottom-0 left-0 right-0 w-full bg-background shadow-lg z-40 p-2 print:hidden" },
++    return (React.createElement("div", { className: "fixed bottom-0 left-0 right-0 w-full bg-transparent shadow-lg z-40 p-2 print:hidden" },
+         React.createElement("div", { className: "mb-1" },
+-            React.createElement(SliderNav, { flipbookRef: flipbookRef, pdfDetails: pdfDetails, viewerStates: viewerStates, setViewerStates: setViewerStates })),
++            // React.createElement(SliderNav, { flipbookRef: flipbookRef, pdfDetails: pdfDetails, viewerStates: viewerStates, setViewerStates: setViewerStates })),
+         React.createElement("div", { className: "flex items-center justify-between gap-x-1 sm:gap-x-2" },
+             React.createElement("div", { className: "hidden md:flex items-center flex-shrink-0 min-w-[100px]" },
+                 " ",
+@@ -89,6 +89,6 @@ const Toolbar = ({ flipbookRef, containerRef, screenfull, pdfDetails, viewerStat
+                 screenfull && screenfull.isEnabled && ( // Only show button if screenfull is available
+                 React.createElement(Button, { onClick: fullScreen, variant: 'secondary', size: 'icon', className: 'size-8 min-w-8', "aria-label": screenfull.isFullscreen ? "Exit fullscreen" : "Enter fullscreen" }, screenfull.isFullscreen ?
+                     React.createElement(Minimize, { className: "size-4 min-w-4" }) :
+-                    React.createElement(Maximize, { className: "size-4 min-w-4" })))))));
++                    React.createElement(Maximize, { className: "size-4 min-w-4" }))))))));
+ };
+ export default Toolbar;
