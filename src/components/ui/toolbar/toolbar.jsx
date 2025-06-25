@@ -43,8 +43,8 @@ const Toolbar = ({ flipbookRef, pdfDetails, viewerStates }) => {
                 <div className="hidden lg:block flex-1"></div>
                 <Button
                     onClick={() => { 
-                        screenWidth < 768 ? 
-                            flipbookRef.current.pageFlip().turnToPrevPage() : 
+                        // screenWidth < 768 ? 
+                        //     flipbookRef.current.pageFlip().turnToPrevPage() : 
                             flipbookRef.current.pageFlip().flipPrev() 
                     }}
                     disabled={viewerStates.currentPageIndex === 0}
@@ -60,7 +60,11 @@ const Toolbar = ({ flipbookRef, pdfDetails, viewerStates }) => {
                         //     flipbookRef.current.pageFlip().turnToNextPage() : 
                             flipbookRef.current.pageFlip().flipNext() 
                     }}
-                    disabled={viewerStates.currentPageIndex === pdfDetails?.totalPages - 1 || viewerStates.currentPageIndex === pdfDetails?.totalPages - 2}
+                    disabled={
+                        screenWidth < 768 
+                            ? viewerStates.currentPageIndex === pdfDetails?.totalPages - 1  // Mobile: disable only on last page
+                            : viewerStates.currentPageIndex === pdfDetails?.totalPages - 1 || viewerStates.currentPageIndex === pdfDetails?.totalPages - 2  // Desktop: disable on last 2 pages
+                    }
                     variant='default'
                     size='icon'
                     className='size-8 min-w-8 text-white hover:text-[#EA0033]'

@@ -48,16 +48,16 @@ const FlipbookLoader = forwardRef(({ pdfDetails, scale, viewerStates, setViewerS
                 size={isMobile ? 'fixed' : 'stretch'}
                 drawShadow={true}
                 maxShadowOpacity={0.5}
-                flippingTime={1000}
+                flippingTime={700}
                 usePortrait={isMobile}
                 showCover={false}
                 mobileScrollSupport={false}
                 showPageCorners={false}
                 onFlip={onFlip}
-                disableFlipByClick={isMobile}
+                // disableFlipByClick={isMobile}
                 className={cn(
                     viewerStates.zoomScale > 1 && 'pointer-events-none md:pointer-events-none',
-                    isMobile && 'touch-none select-none'
+                    isMobile && '!touch-none select-none'
                 )}
             >
                 {

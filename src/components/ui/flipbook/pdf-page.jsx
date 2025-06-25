@@ -7,7 +7,7 @@ const PdfPage = forwardRef(
     return (
       <div
         ref={ref}
-        className={cn(page % 2 === 0 ? "bg-background" : "bg-muted")}
+        className={cn(page % 2 === 0 ? "bg-background" : "bg-muted", 'touch-none')}
       >
         {isPageInViewRange && (
           <Page
