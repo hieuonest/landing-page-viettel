@@ -5,8 +5,6 @@ import Image from "next/image";
 import { Metadata } from "next";
 import MotionWrapper from "@/components/ui/motion-wrapper";
 import { fadeInBottomVariants } from "@/lib/utils";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import ServicesCarousel from "./services-carousel";
 import "../styles/pages/services.scss";
 import { Separator } from "@/components/ui/separator";
@@ -14,7 +12,6 @@ import guy from "../../../public/images/guy.png";
 import woman from "../../../public/images/woman.png";
 import woman2 from "../../../public/images/woman-2.png";
 import lady from "../../../public/images/lady.png";
-import BookWrapper from "../components/book-wrapper";
 import EBookLink from "./e-book-link";
 import { BookWrapperProvider } from "@/contexts/book-wrapper-context";
 

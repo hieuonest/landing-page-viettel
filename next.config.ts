@@ -12,10 +12,6 @@ const nextConfig: NextConfig = {
       },
     },
   },
-  // turn off error warning for 'any type'
-  typescript: {
-    ignoreBuildErrors: true,
-  },
 };
 
 export default nextConfig;

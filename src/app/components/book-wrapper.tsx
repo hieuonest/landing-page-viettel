@@ -1,25 +1,92 @@
 "use client";
-import CloseIcon from "@/components/icons/close-icon";
 import { Button } from "@/components/ui/button";
-import { CrossIcon, X } from "lucide-react";
-import { useState } from "react";
-import { FlipbookViewer } from "react-pdf-flipbook-viewer";
-
+import FlipbookViewer from "@/components/ui/flipbook-viewer";
+import { X } from "lucide-react";
+import { useEffect } from "react";
+import { motion } from "framer-motion";
 interface BookWrapperProps {
   onClose?: () => void;
+  pdfUrl?: string;
+  initialPage?: number;
+  width?: number;
+  height?: number;
 }
 
-export default function BookWrapper({ onClose }: BookWrapperProps) {
+export default function BookWrapper({
+  onClose,
+  pdfUrl = "/demo.pdf",
+}: BookWrapperProps) {
+  useEffect(() => {
+      const htmlElement = document.querySelector("html");
+      if (htmlElement) {
+        htmlElement.style.overflowY = "hidden";
+      }
+      
+      return () => {
+        if (htmlElement) {
+          htmlElement.style.overflowY = "auto";
+        }
+      };
+    }, []);
+
   return (
-    <div className='book-wrapper flex flex-col md:items-center md:justify-center fixed inset-0 z-[10000] bg-[#000000e5]'>
-      <Button
-        className='absolute top-4 right-4 z-50 p-2 h-[32px] w-[32px] !text-black'
-        variant='outline'
-        onClick={onClose}
+    <motion.div 
+      className="fixed inset-0 z-[10000] top-0 left-0 right-0 bottom-0 w-screen h-screen overflow-hidden "
+      initial={{ opacity: 0, scale: 1.1, rotateX: -10 }}
+      animate={{ opacity: 1, scale: 1, rotateX: 0 }}
+      exit={{ opacity: 0, scale: 0.9, rotateX: 10 }}
+      transition={{ 
+        duration: 0.6, 
+        ease: [0.16, 1, 0.3, 1]
+      }}
+    >
+      <motion.div 
+        className="absolute inset-0 w-full h-full backdrop-blur-sm"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.4 }}
+      />
+      
+      <motion.div 
+        className="absolute top-4 right-4 z-50"
+        initial={{ opacity: 0, scale: 0, rotate: -180 }}
+        animate={{ opacity: 1, scale: 1, rotate: 0 }}
+        exit={{ opacity: 0, scale: 0, rotate: 180 }}
+        transition={{ 
+          duration: 0.5, 
+          delay: 0.3,
+          type: "spring",
+          stiffness: 200,
+          damping: 15
+        }}
       >
-        <X />
-      </Button>
-      <FlipbookViewer pdfUrl='/sample.pdf' disableShare className="page-flip-book" />
-    </div>
+        <Button
+          variant="default"
+          size="icon"
+          aria-label="Close"
+          data-testid="close-button"
+          className="bg-black text-white px-4 py-2 rounded hover:text-[#EA0033] shadow-lg"
+          onClick={onClose}
+        >
+          <X />
+        </Button>
+      </motion.div>
+      
+      <motion.div
+        className="h-full w-full flex items-center justify-center bg-[#000000cb]"
+        style={{ transformOrigin: "center center" }}
+        initial={{ opacity: 0, scale: 0.3 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.3 }}
+        transition={{ 
+          duration: 0.5, 
+          delay: 0.2,
+          ease: [0.25, 0.46, 0.45, 0.94]
+        }}
+      >
+        <FlipbookViewer pdfUrl={pdfUrl} className='' disableShare={false} shareUrl='' />
+      </motion.div>
+    </motion.div>
   );
 }
