@@ -4,7 +4,6 @@ import FlipbookViewer from "@/components/ui/flipbook-viewer";
 import { X } from "lucide-react";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 interface BookWrapperProps {
   onClose?: () => void;
   pdfUrl?: string;
@@ -14,7 +13,7 @@ interface BookWrapperProps {
 }
 
 export default function BookWrapper({
-  onClose,
+  // onClose,
   pdfUrl = "/demo.pdf",
 }: BookWrapperProps) {
   useEffect(() => {
@@ -74,7 +73,7 @@ export default function BookWrapper({
       </motion.div>
 
       <motion.div
-        className="h-full w-full flex items-center justify-center bg-[#000000e7]"
+        className="h-full w-full flex items-center justify-center bg-[#000000be]"
         style={{ transformOrigin: "center center" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
-import { useBookWrapper } from "@/contexts/book-wrapper-context";
 import Link from "next/link";
 
 interface EBookLink {
