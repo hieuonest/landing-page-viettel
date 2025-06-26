@@ -1,11 +1,18 @@
+'use client'
 import React from "react";
 import FooterArrow from "./icons/footer-arrow";
 import { fsMagistralBook } from "@/lib/font";
 import FormContact from "./form/FormContact";
 import FooterMobile from "./mobile/footer-mobile";
 import FooterDestop from "./desktop/footer-desktop";
+import { arrRouterHiddenLayout } from "@/constants";
+import { usePathname } from "next/navigation";
 
 function Footer() {
+  const pathname = usePathname();
+  if (arrRouterHiddenLayout.includes(pathname)) {
+    return;
+  }
   return (
     <div>
       <div className="bg-[#595959] p-8 min-h-[175px] flex items-center flex-col xl:flex-row justify-start xl:justify-center gap-5 xl:gap-11">

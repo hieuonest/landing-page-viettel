@@ -1,9 +1,16 @@
 "use client";
 
+import { arrRouterHiddenLayout } from "@/constants";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 export default function Chat() {
+  const pathname = usePathname();
   useEffect(() => {
+    if (arrRouterHiddenLayout.includes(pathname)) {
+      return;
+    }
+
     function loadJsAsync(src: string, callback: (error: any, event: Event) => void) {
       const script = document.createElement("script");
       script.type = "text/javascript";
@@ -29,7 +36,7 @@ export default function Chat() {
 
     return () => {
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }

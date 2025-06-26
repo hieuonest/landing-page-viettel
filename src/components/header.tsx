@@ -9,6 +9,7 @@ import { Globe, Search } from 'lucide-react';
 import { dataLink } from '@/lib/define-data';
 import { usePathname } from 'next/navigation';
 import { HiOutlineBars3 } from "react-icons/hi2";
+import { arrRouterHiddenLayout } from '@/constants'
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -23,6 +24,10 @@ function Header() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  if (arrRouterHiddenLayout.includes(pathname)) {
+    return null;
+  }
 
   return (
     <header className={`
@@ -59,8 +64,8 @@ function Header() {
       </nav>
       {/* mobile */}
       <div className='md:hidden block items-center'>
-        <HiOutlineBars3 
-          className='text-[30px] cursor-pointer' 
+        <HiOutlineBars3
+          className='text-[30px] cursor-pointer'
           onClick={() => setIsMenuOpen(true)}
         />
       </div>
@@ -74,28 +79,27 @@ function Header() {
       )}
       {isMenuOpen && (
         // <div className='fixed inset-0  z-[101]'>
-          <div className='fixed top-0 right-0 h-full bg-white z-[102] w-[500px] max-w-[70%] shadow-xl'>
+        <div className='fixed top-0 right-0 h-full bg-white z-[102] w-[500px] max-w-[70%] shadow-xl'>
           <div className='flex justify-between items-center p-4'>
             <Link href='/' onClick={() => setIsMenuOpen(false)}>
               <Image src={logo} alt='Viettel CX' priority width={109} />
             </Link>
-            <button 
+            <button
               onClick={() => setIsMenuOpen(false)}
               className='text-2xl'
             >
               ✕
             </button>
           </div>
-          
+
           <div className='px-4'>
             <ul className='flex flex-col gap-4'>
               {dataLink.map(({ href, label }) => (
                 <li key={`${href}${label}`}>
-                  <Link 
-                    href={href} 
-                    className={`${sarabun.className} font-semibold uppercase block py-2 ${
-                      pathname === href ? 'text-[#ED1B36]' : 'text-black'
-                    }`}
+                  <Link
+                    href={href}
+                    className={`${sarabun.className} font-semibold uppercase block py-2 ${pathname === href ? 'text-[#ED1B36]' : 'text-black'
+                      }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {label}
@@ -109,7 +113,7 @@ function Header() {
               <Globe size={18} />
             </div>
           </div>
-          </div>
+        </div>
         // </div>
       )}
     </header>

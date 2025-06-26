@@ -12,7 +12,7 @@ import guy from "../../../public/images/guy.png";
 import woman from "../../../public/images/woman.png";
 import woman2 from "../../../public/images/woman-2.png";
 import lady from "../../../public/images/lady.png";
-import EBookLink from "./e-book-link";
+import EBookLink from "../components/e-book-link";
 import { BookWrapperProvider } from "@/contexts/book-wrapper-context";
 
 export async function generateMetadata(): Promise<Metadata> {

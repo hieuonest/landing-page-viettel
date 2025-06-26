@@ -14,9 +14,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
+import EBookLink from "../components/e-book-link";
+import { BookWrapperProvider } from "@/contexts/book-wrapper-context";
 
 export default function HeaderSolution() {
   return (
+    <BookWrapperProvider>
     <div className="w-[100%] h-[100%] pb-[40px] lg:pb-[80px] bg-[#E6E7E9] relative">
       <Image
         src={BgHeader}
@@ -55,7 +58,7 @@ export default function HeaderSolution() {
           transition={{ duration: 0.75 }}
           className={`${roboto.className} text-lg text-center text-[#EA0033] flex justify-center mt-2 sm:mt-6`}
         >
-          <Link
+          {/* <Link
             href="/about"
             className="text-[14px] sm:text-[18px] flex items-center relative see-more-link group transition-all duration-300"
           >
@@ -65,7 +68,8 @@ export default function HeaderSolution() {
               size={18}
               className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
             />
-          </Link>
+          </Link> */}
+          <EBookLink />
         </MotionWrapper>
 
         <div className="w-full px-5 py-5 xs:px-7 lg:px-10 xs:py-[30px] lg:py-[45px] bg-[#ffffff] mt-[40px] sm:mt-[60px] rounded-[20px]">
@@ -183,5 +187,6 @@ export default function HeaderSolution() {
         </div>
       </div>
     </div>
+    </BookWrapperProvider>
   );
 }

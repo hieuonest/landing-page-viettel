@@ -19,7 +19,8 @@ import HomeCarousel from "./components/home-carousel";
 
 import HomePartnersCarousel from "./components/home-partners-carousel";
 import HomeSolutionsCarousel from "./components/home-solutions-carousel";
-
+import EBookLink from "./components/e-book-link";
+import { BookWrapperProvider } from "@/contexts/book-wrapper-context";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Viettel Customer Service",
@@ -109,6 +110,7 @@ export default function Home() {
   ];
 
   return (
+    <BookWrapperProvider>
     <div>
       <main className="">
         <section className="lg:bg-[#e7e7e7] lg:h-[932px] relative">
@@ -169,7 +171,7 @@ export default function Home() {
                   variants={fadeInBottomVariants}
                   className={`${roboto.className} text-base md:text-lg text-center text-[#EA0033] flex justify-center mt-6`}
                 >
-                  <Link
+                  {/* <Link
                     href="/about"
                     className="flex items-center relative see-more-link group transition-all duration-300 max-xs:text-sm"
                   >
@@ -179,7 +181,8 @@ export default function Home() {
                       size={18}
                       className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                     />
-                  </Link>
+                  </Link> */}
+                  <EBookLink />
                 </MotionWrapper>
               </div>
               <div className="h-[80px] md:h-[108px] lg:h-[158px] w-[18px] xs:w-[28px] md:w-[62px] bg-transparent relative">
@@ -365,5 +368,6 @@ export default function Home() {
         </section>
       </main>
     </div>
+    </BookWrapperProvider>
   );
 }
