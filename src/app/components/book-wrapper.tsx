@@ -31,7 +31,7 @@ export default function BookWrapper({
 
   return (
     <motion.div 
-      className="fixed inset-0 z-[10000] top-0 left-0 right-0 bottom-0 w-screen h-screen overflow-hidden "
+      className="fixed inset-0 z-[10000] top-0 left-0 right-0 bottom-0 w-screen h-[100%] overflow-hidden "
       initial={{ opacity: 0, scale: 1.1, rotateX: -10 }}
       animate={{ opacity: 1, scale: 1, rotateX: 0 }}
       exit={{ opacity: 0, scale: 0.9, rotateX: 10 }}
