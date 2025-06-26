@@ -70,7 +70,9 @@ const Flipbook = memo(
       <div
         ref={ref}
         className={cn(
-          "relative h-full lg:h-[90vw] pt-6 w-full md:w-[90vw] mx-auto bg-transparent flex justify-center items-center overflow-hidden",
+          // "relative h-full lg:h-[90vw] pt-6 w-full md:w-[90vw] mx-auto bg-transparent flex justify-center items-center overflow-hidden",
+          "relative h-full lg:h-[90vw] pt-6 w-full  mx-auto bg-transparent flex justify-center items-center overflow-hidden",
+
           screenfull?.isFullscreen &&
             "h-[calc(100vh-5.163rem)] xs:h-[calc(100vh-5.163rem)] lg:h-[calc(100vh-5.163rem)] xl:h-[calc(100vh-4.66rem)]"
         )}

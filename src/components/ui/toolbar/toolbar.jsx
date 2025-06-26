@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../button';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import Zoom from './zoom';
 import useScreenSize from '@/hooks/use-screensize';
 import { on } from 'events';
@@ -53,9 +53,9 @@ const Toolbar = ({ flipbookRef, pdfDetails, viewerStates }) => {
                     disabled={viewerStates.currentPageIndex === 0}
                     variant='default'
                     size='icon'
-                    className='size-8 min-w-8 text-white hover:text-[#EA0033]'
+                    className='size-10 rounded-full bg-black border-[2px] border-white hover:border-[#EA0033] min-w-8 text-white hover:text-[#EA0033] absolute left-2 top-1/2 translate-y-1/2'
                 >
-                    <ChevronLeft className="size-4 min-w-4" />
+                    <ArrowLeft className="size-4 min-w-4" />
                 </Button>
                 <Button
                     onClick={() => {
@@ -70,16 +70,16 @@ const Toolbar = ({ flipbookRef, pdfDetails, viewerStates }) => {
                     }
                     variant='default'
                     size='icon'
-                    className='size-8 min-w-8 text-white hover:text-[#EA0033]'
+                    className='size-10 rounded-full bg-black border-[2px] border-white hover:border-[#EA0033] min-w-8 text-white hover:text-[#EA0033] absolute right-2 top-1/2 translate-y-1/2'
                 >
-                    <ChevronRight className="size-4 min-w-4" />
+                    <ArrowRight className="size-4 min-w-4" />
                 </Button>
                 <Zoom zoomScale={viewerStates.zoomScale} screenWidth={screenWidth} />
                 <Link href={"/PDFViewer"} target="_blank" rel="noopener noreferrer">
                     <Button
                         variant="default"
                         size="icon"
-                        className="size-8 min-w-8 text-white hover:text-[#EA0033]"
+                        className="size-10 rounded-full min-w-8 text-white hover:text-[#EA0033]"
                     >
                         <Download className="size-4 min-w-4" />
                     </Button>

@@ -2,20 +2,22 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useBookWrapper } from "@/contexts/book-wrapper-context";
+import Link from "next/link";
 
 interface EBookLink {
   className?: string;
 }
 
 export default function EBookLink({ className = "" }: EBookLink) {
-  const { openBook } = useBookWrapper();
+  // const { openBook } = useBookWrapper();
 
   return (
-    <button
-      onClick={(e) => {
-        e.preventDefault();
-        openBook();
-      }}
+    <Link
+      href={"/company-profile"}
+      // onClick={(e) => {
+      //   e.preventDefault();
+      //   openBook();
+      // }}
       className={`flex items-center relative see-more-link group transition-all duration-300 ${className}`}
     >
       Tìm hiểu thêm
@@ -24,6 +26,6 @@ export default function EBookLink({ className = "" }: EBookLink) {
         size={18}
         className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
       />
-    </button>
+    </Link>
   );
 }

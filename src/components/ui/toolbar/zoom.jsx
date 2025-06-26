@@ -14,7 +14,7 @@ const Zoom = ({ zoomScale, screenWidth }) => {
             disabled={zoomScale == 1}
             variant="default"
             size="icon"
-            className="size-8 min-w-8 text-white hover:text-[#EA0033]"
+            className="size-10 rounded-full  min-w-8 text-white hover:text-[#EA0033]"
           >
             <ZoomOut className="size-4 min-w-4" />
           </Button>
@@ -23,7 +23,7 @@ const Zoom = ({ zoomScale, screenWidth }) => {
             disabled={zoomScale >= 5}
             variant="default"
             size="icon"
-            className="size-8 min-w-8 text-white hover:text-[#EA0033]"
+            className="size-10 rounded-full  min-w-8 text-white hover:text-[#EA0033]"
           >
             <ZoomIn className="size-4 min-w-4" />
           </Button>
@@ -31,7 +31,7 @@ const Zoom = ({ zoomScale, screenWidth }) => {
             onClick={() => resetTransform()}
             variant="default"
             size="icon"
-            className="size-8 min-w-8 text-white hover:text-[#EA0033]"
+            className="size-10 rounded-full  min-w-8 text-white hover:text-[#EA0033]"
           >
             <RotateCcw className="size-4 min-w-4" />
           </Button>
