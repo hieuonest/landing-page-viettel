@@ -5,8 +5,6 @@ import BgHeader from "../../../public/images/bg-solution.png";
 import Omni from "../../../public/images/Omni.png";
 import { roboto } from "@/lib/font";
 import MotionWrapper from "@/components/ui/motion-wrapper";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import iconOnix from "../../../public/svg/icon-omnix.svg";
 import { slug_solution } from "@/lib/define-data";
 import { Swiper, SwiperSlide } from "swiper/react";

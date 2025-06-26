@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { fsMagistralBook, roboto } from "@/lib/font";
 import ExperienceIcon from "@/components/icons/experience-icon";
-import { ArrowUpRight, MoveRight } from "lucide-react";
+import { MoveRight } from "lucide-react";
 import ClientsIcon from "@/components/icons/clients-icon";
 import SupportIcon from "@/components/icons/support-icon";
 import React from "react";
