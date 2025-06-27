@@ -1,7 +1,7 @@
 "use client";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import FlipbookViewer from "@/components/ui/flipbook-viewer";
-import { X } from "lucide-react";
+// import { X } from "lucide-react";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 interface BookWrapperProps {
@@ -47,7 +47,7 @@ export default function BookWrapper({
         transition={{ duration: 0.4 }}
       />
 
-      <motion.div
+      {/* <motion.div
         className="absolute top-4 right-4 z-50"
         initial={{ opacity: 0, scale: 0, rotate: -180 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -70,7 +70,7 @@ export default function BookWrapper({
         >
           <X />
         </Button>
-      </motion.div>
+      </motion.div> */}
 
       <motion.div
         className="h-full w-full flex items-center justify-center bg-[#000000be]"

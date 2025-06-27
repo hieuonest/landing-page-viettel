@@ -17,6 +17,7 @@ export default function EBookLink({ className = "" }: EBookLink) {
       //   e.preventDefault();
       //   openBook();
       // }}
+      target="_blank"
       className={`flex items-center relative see-more-link group transition-all duration-300 ${className}`}
     >
       Tìm hiểu thêm
