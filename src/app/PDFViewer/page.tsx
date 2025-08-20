@@ -28,7 +28,7 @@ export default function PageViewer() {
     <div style={{ height: '100vh', overflowY: 'auto', padding: 8 }}>
       {isMobile ? (
         <Document
-          file="/demo.pdf"
+          file="/PROFILE _VCX_2_PAGE_LAYOUT.pdf"
           onLoadSuccess={onDocumentLoadSuccess}
           loading="Đang tải PDF..."
         >
@@ -42,7 +42,7 @@ export default function PageViewer() {
         </Document>
       ) : (
         <iframe
-          src="/demo.pdf"
+          src="/PROFILE _VCX_2_PAGE_LAYOUT.pdf"
           width="100%"
           height="100%"
           style={{ border: 'none' }}
