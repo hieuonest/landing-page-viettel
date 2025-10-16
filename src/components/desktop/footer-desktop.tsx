@@ -40,8 +40,7 @@ export default function FooterDestop() {
             </a></p>
             <p>Email: <a href="mailto:dvkh@viettel.com.vn">dvkh@viettel.com.vn</a></p>
             <p>
-              Địa chỉ: Toà nhà OCT 3B Khu Đô thị mới Resco, Cổ Nhuế, Xuân Đỉnh,
-              Bắc Từ Liêm, Hà Nội
+              Địa chỉ: Tầng 23, tòa nhà Vinacomin, số 3 Dương Đình Nghệ, Cầu Giấy, Hà Nội
             </p>
           </div>
 
