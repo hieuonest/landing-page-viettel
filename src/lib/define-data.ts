@@ -22,7 +22,7 @@ import workforcex from "../../public/svg/workforce-x.svg";
 import vcoc from "../../public/svg/vcoc.svg";
 import cxbot from "../../public/svg/cxbot.svg";
 import knowxhub from "../../public/svg/knowx-hub.svg";
-import reputax from "../../public/svg/reputa-x.svg";
+// import reputax from "../../public/svg/reputa-x.svg";
 import omnix from "../../public/svg/omnix.svg";
 import outsourcing from "../../public/images/01. Outsousce Contact center.png";
 import bpo from "../../public/images/02. BPO.png";
@@ -30,14 +30,14 @@ import upsale from "../../public/images/03. Upsale.png";
 import baohanh from "../../public/images/04. BAO HANH.png";
 import loyalty from "../../public/images/05. Loyalty.png";
 import vip from "../../public/images/06. VIP.png";
-import voiceofcustomer from "../../public/images/07. Voice of Customer.png";
+// import voiceofcustomer from "../../public/images/07. Voice of Customer.png";
 import customerexperience from "../../public/images/08. Customer Experience.png";
 import imgSolution from "../../public/images/image-solution.png";
 import imgSolution1 from "../../public/images/image-solution-1.png";
 import imgSolution2 from "../../public/images/image-solution-2.png";
 import imgSolution3 from "../../public/images/image-solution-3.png";
 import imgSolution4 from "../../public/images/image-solution-4.png";
-import imgSolution5 from "../../public/images/image-solution-5.png";
+// import imgSolution5 from "../../public/images/image-solution-5.png";
 import Omni from "../../public/images/Omni.png";
 import { JSX } from "react";
 
@@ -200,31 +200,31 @@ export const dataServicesHome: {
       },
     ],
   },
-  {
-    value: "voice-of-customer",
-    label: "Voice of Customer",
-    image: voiceofcustomer,
-    desc: "Dịch vụ Voice of Customer",
-    detailHome: [
-      [
-        "Bảo vệ và phát triển thương hiệu của doanh nghiệp trên môi trường số. Viettel Customer Service giúp doanh nghiệp thu thập, phân tích và khai thác ý kiến khách hàng từ nhiều kênh khác nhau, từ đó phát hiện và cảnh báo khủng hoảng ",
-        {
-          text: "truyền thông",
-          nowrap: true,
-        },
-      ],
-    ],
-    detail: [
-      {
-        list: [
-          "Theo dõi các thông tin, bài viết, bình luận, phản hồi từ đa kênh MXH về thương hiệu của DN. Phân tích và tổng hợp báo cáo về sức khỏe của thương hiệu",
-          "Dịch vụ phát triển thương hiệu và xử lý sự cố:  Seeding/pha loãng/ xử lý sự cố",
-          "Dịch vụ khảo sát khách hàng",
-        ],
-      },
-    ],
-    additional: ["20.000++ tương tác/tháng", "12.000++ lượt seeding/tháng"],
-  },
+  // {
+  //   value: "voice-of-customer",
+  //   label: "Voice of Customer",
+  //   image: voiceofcustomer,
+  //   desc: "Dịch vụ Voice of Customer",
+  //   detailHome: [
+  //     [
+  //       "Bảo vệ và phát triển thương hiệu của doanh nghiệp trên môi trường số. Viettel Customer Service giúp doanh nghiệp thu thập, phân tích và khai thác ý kiến khách hàng từ nhiều kênh khác nhau, từ đó phát hiện và cảnh báo khủng hoảng ",
+  //       {
+  //         text: "truyền thông",
+  //         nowrap: true,
+  //       },
+  //     ],
+  //   ],
+  //   detail: [
+  //     {
+  //       list: [
+  //         "Theo dõi các thông tin, bài viết, bình luận, phản hồi từ đa kênh MXH về thương hiệu của DN. Phân tích và tổng hợp báo cáo về sức khỏe của thương hiệu",
+  //         "Dịch vụ phát triển thương hiệu và xử lý sự cố:  Seeding/pha loãng/ xử lý sự cố",
+  //         "Dịch vụ khảo sát khách hàng",
+  //       ],
+  //     },
+  //   ],
+  //   additional: ["20.000++ tương tác/tháng", "12.000++ lượt seeding/tháng"],
+  // },
   {
     value: "customer-experience",
     label: "Customer Experience",
@@ -281,10 +281,10 @@ export const dataServicesLinks: {
     href: "#",
     label: "LOYATY",
   },
-  {
-    href: "#",
-    label: "VOICE OF CUSTOMER",
-  },
+  // {
+  //   href: "#",
+  //   label: "VOICE OF CUSTOMER",
+  // },
   {
     href: "#",
     label: "CUSTOMER EXPRIENCE",
@@ -566,15 +566,15 @@ export const homeSolutions: {
     detail:
       "KnowX Hub là trung tâm tri thức hiện đại giúp doanh nghiệp lưu trữ, tổ chức và truy xuất thông tin nhanh chóng. Tích hợp AI để hỗ trợ tìm kiếm thông minh, giúp nhân viên tổng đài và khách hàng tiếp cận thông tin chính xác tức thì, tối ưu hóa quy trình giải quyết vấn đề.",
   },
-  {
-    key: "reputax",
-    icon: reputax,
-    image: imgSolution5,
-    title: "Reputa X",
-    desc: " Theo dõi & quản lý danh tiếng thương hiệu bằng AI",
-    detail:
-      "ReputaX là công cụ giám sát và phân tích thương hiệu mạnh mẽ, sử dụng AI và Big Data để theo dõi phản hồi của khách hàng trên mạng xã hội. Giúp doanh nghiệp bảo vệ danh tiếng, ứng phó kịp thời với khủng hoảng truyền thông, đồng thời cung cấp báo cáo chi tiết về hình ảnh thương hiệu so với đối thủ cạnh tranh.",
-  },
+  // {
+  //   key: "reputax",
+  //   icon: reputax,
+  //   image: imgSolution5,
+  //   title: "Reputa X",
+  //   desc: " Theo dõi & quản lý danh tiếng thương hiệu bằng AI",
+  //   detail:
+  //     "ReputaX là công cụ giám sát và phân tích thương hiệu mạnh mẽ, sử dụng AI và Big Data để theo dõi phản hồi của khách hàng trên mạng xã hội. Giúp doanh nghiệp bảo vệ danh tiếng, ứng phó kịp thời với khủng hoảng truyền thông, đồng thời cung cấp báo cáo chi tiết về hình ảnh thương hiệu so với đối thủ cạnh tranh.",
+  // },
 ];
 
 export const historyAbout = [2004, 2009, 2014, 2017, 2024, 2025];

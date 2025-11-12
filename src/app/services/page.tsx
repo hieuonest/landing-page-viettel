@@ -19,12 +19,12 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Viettel Customer Services | Dịch vụ",
     description:
-      "Viettel Customer Service cung cấp hệ sinh thái: dịch vụ tổng đài Contact center outsourcing, BPO, Upsell, telesales, tư vấn trải nghiệm khách hàng CX, Voice of Customer, loyalty, quà tặng…",
+      "Viettel Customer Service cung cấp hệ sinh thái: dịch vụ tổng đài Contact center outsourcing, BPO, Upsell, telesales, tư vấn trải nghiệm khách hàng CX, loyalty, quà tặng…",
     openGraph: {
       siteName: "Viettel Customer Services",
       title: "Viettel Customer Services | Dịch vụ",
       description:
-        "Viettel Customer Service cung cấp hệ sinh thái: dịch vụ tổng đài Contact center outsourcing, BPO, Upsell, telesales, tư vấn trải nghiệm khách hàng CX, Voice of Customer, loyalty, quà tặng…",
+        "Viettel Customer Service cung cấp hệ sinh thái: dịch vụ tổng đài Contact center outsourcing, BPO, Upsell, telesales, tư vấn trải nghiệm khách hàng CX, loyalty, quà tặng…",
       url: "https://viettelcx.com.vn/services",
       type: "website",
       images: [
@@ -40,7 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "Viettel Customer Services | Dịch vụ",
       description:
-        "Viettel Customer Service cung cấp hệ sinh thái: dịch vụ tổng đài Contact center outsourcing, BPO, Upsell, telesales, tư vấn trải nghiệm khách hàng CX, Voice of Customer, loyalty, quà tặng…",
+        "Viettel Customer Service cung cấp hệ sinh thái: dịch vụ tổng đài Contact center outsourcing, BPO, Upsell, telesales, tư vấn trải nghiệm khách hàng CX, loyalty, quà tặng…",
       images: ["https://viettelcx.com.vn/images/website.png"],
     },
     alternates: {

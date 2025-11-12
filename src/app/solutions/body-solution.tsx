@@ -6,7 +6,7 @@ import imgSolution1 from "../../../public/images/image-solution-1.png";
 import imgSolution2 from "../../../public/images/image-solution-2.png";
 import imgSolution3 from "../../../public/images/image-solution-3.png";
 import imgSolution4 from "../../../public/images/image-solution-4.png";
-import imgSolution5 from "../../../public/images/image-solution-5.png";
+// import imgSolution5 from "../../../public/images/image-solution-5.png";
 import imgBgFooter1 from "../../../public/images/shutterstock.png";
 import imgBgFooter2 from "../../../public/images/shutterstock-1.png";
 import MotionWrapper from "@/components/ui/motion-wrapper";
@@ -244,7 +244,7 @@ export default function BodySolution() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 justify-between mt-[50px] gap-8 pb-[0px] md:pb-[30px] xl:pb-[0px]">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 justify-between mt-[50px] gap-8 pb-[0px] md:pb-[30px] xl:pb-[0px]">
             <div className="col-span-1">
               <div
                 className={`${roboto.className} font-medium text-[24px] leading-[30px] sm:text-[35px] sm:leading-[35px]`}
@@ -263,18 +263,6 @@ export default function BodySolution() {
                 thời với khủng hoảng truyền thông, đồng thời cung cấp báo cáo
                 chi tiết về hình ảnh thương hiệu so với đối thủ cạnh tranh.
               </div>
-              {/* <div className={`${roboto.className} mt-[30px] `}>
-                <Link
-                  href="#"
-                  className={`${roboto.className} w-[160px] sm:w-[180px] lg:w-[200px] text-[#000] text-[14px] sm:text-[16px] lg:text-[20px] flex items-center gap-2 border border-[#000000] rounded-[5px] bg-white px-4 py-2 overflow-hidden group relative justify-between z-10`}
-                >
-                  <span className="absolute inset-0 bg-[#EA0033] transition-transform duration-300 ease-in-out -translate-x-full group-hover:translate-x-0" />
-                  <MoveRight className="relative transition-colors duration-300 text-[#EA0033] group-hover:text-white" />
-                  <span className="relative font-medium transition-all duration-300 group-hover:text-white">
-                    Yêu cầu Demo
-                  </span>
-                </Link>
-              </div> */}
             </div>
 
             <MotionWrapper
@@ -290,7 +278,7 @@ export default function BodySolution() {
             >
               <Image src={imgSolution5} alt="" quality={100}/>
             </MotionWrapper>
-          </div>
+          </div> */}
         </div>
       </div>
     </main>

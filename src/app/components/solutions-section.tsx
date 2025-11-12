@@ -9,7 +9,7 @@ import reputa from "../../../public/images/solution-reputa.png";
 import coc from "../../../public/images/solution-coc.png";
 import interaction from "../../../public/images/solution-interaction.png";
 import knowledge from "../../../public/images/solution-knowledge.png";
-import workforce from "../../../public/images/solution-workforce.png";
+// import workforce from "../../../public/images/solution-workforce.png";
 import crm from "../../../public/images/solution-crm.png";
 import loyalty from "../../../public/images/solution-loyalty.png";
 import { MoveRight } from "lucide-react";
@@ -160,22 +160,22 @@ const solutions = [
     href: "#x-omni",
     hrefText: <NextComponent />,
   },
-  {
-    title: "ReputaX – Theo dõi & quản lý danh tiếng thương hiệu bằng AI",
-    image: workforce,
-    alt: "ReputaX",
-    desc: (
-      <p className="text-[#595959]">
-        ReputaX là công cụ giám sát và phân tích thương hiệu mạnh mẽ, sử dụng AI
-        và Big Data để theo dõi phản hồi của khách hàng trên mạng xã hội. Giúp
-        doanh nghiệp bảo vệ danh tiếng, ứng phó kịp thời với khủng hoảng truyền
-        thông, đồng thời cung cấp báo cáo chi tiết về hình ảnh thương hiệu so
-        với đối thủ cạnh tranh.
-      </p>
-    ),
-    href: "#x-omni",
-    hrefText: <NextComponent />,
-  },
+  // {
+  //   title: "ReputaX – Theo dõi & quản lý danh tiếng thương hiệu bằng AI",
+  //   image: workforce,
+  //   alt: "ReputaX",
+  //   desc: (
+  //     <p className="text-[#595959]">
+  //       ReputaX là công cụ giám sát và phân tích thương hiệu mạnh mẽ, sử dụng AI
+  //       và Big Data để theo dõi phản hồi của khách hàng trên mạng xã hội. Giúp
+  //       doanh nghiệp bảo vệ danh tiếng, ứng phó kịp thời với khủng hoảng truyền
+  //       thông, đồng thời cung cấp báo cáo chi tiết về hình ảnh thương hiệu so
+  //       với đối thủ cạnh tranh.
+  //     </p>
+  //   ),
+  //   href: "#x-omni",
+  //   hrefText: <NextComponent />,
+  // },
   {
     title: "LiteCRM – Xây dựng mối quan hệ khách hàng bền vững",
     image: crm,
