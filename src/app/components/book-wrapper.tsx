@@ -14,7 +14,7 @@ interface BookWrapperProps {
 
 export default function BookWrapper({
   // onClose,
-  pdfUrl = "/PROFILE_VCX.pdf",
+  pdfUrl = "/PROFILE_VCX_UPDATED.pdf",
 }: BookWrapperProps) {
   useEffect(() => {
     const htmlElement = document.querySelector("html");
