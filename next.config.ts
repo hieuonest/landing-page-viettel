@@ -5,13 +5,14 @@ const nextConfig: NextConfig = {
   sassOptions: {
     additionalData: `$var: red;`,
   },
-  experimental: {
-    turbo: {
-      resolveAlias: {
-        canvas: "./empty-module.ts",
-      },
-    },
-  },
+  // experimental: {
+  //   turbo: {
+  //     resolveAlias: {
+  //       canvas: "./empty-module.ts",
+  //     },
+  //   },
+  // },
+  experimental: {},
 };
 
 export default nextConfig;
